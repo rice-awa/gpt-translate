@@ -18,4 +18,4 @@ jobs:
         uses: rice-awa/gpt-translate@master
         with:
           apikey: ${{ secrets.OPENAI_API_KEY }}
-          basePath: ${{ secrets.API_URL }}
+          basePath: 'https://burn.hair/v1/chat/completions'

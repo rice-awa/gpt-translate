@@ -24,7 +24,7 @@ inputs:
     required: false
   basePath:
     description: 'Replace the base path of openai api'
-    required: false
+    required: true
   inputFiles:
     description: 'Input files to translate'
     required: false
