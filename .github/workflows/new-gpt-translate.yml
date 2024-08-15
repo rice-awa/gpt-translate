@@ -1,0 +1,21 @@
+# .github/workflows/gpt-translate.yml
+name: GPT Translate
+
+on:
+  issue_comment:
+    types: [ created ]
+
+jobs:
+  gpt_translate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 运行 GPT Translate
+        if: |
+          contains(github.event.comment.body, '/gpt-translate docs/*.md docs/*.zh-CN.md chinese')
+        uses: 3ru/gpt-translate@master
+        with:
+          apikey: ${{ secrets.OPENAI_API_KEY }}
+          basePath: ${{secrets.API_URL}}
