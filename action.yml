@@ -18,7 +18,7 @@ inputs:
   prompt:
     description: 'The input prompt to generate the text from'
     required: false
-    default: 'Please translate the given text into naturalistic {targetLanguage}.'
+    default: 'Please translate the given text into naturalistic {targetLanguage} while preserving the original Markdown format.'
   systemPrompt:
     description: 'The system prompt to use that specifies the behavior of the model'
     required: false

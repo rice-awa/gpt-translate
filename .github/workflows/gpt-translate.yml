@@ -19,4 +19,4 @@ jobs:
         with:
           apikey: ${{ secrets.OPENAI_API_KEY }}
           basePath: 'https://burn.hair/v1'
-          systemPrompt: '将markdown文本翻译成对应文本，需要保保留原始md格式'
+          systemPrompt: '将markdown文本翻译成对应文本，需要保留原始md格式'
