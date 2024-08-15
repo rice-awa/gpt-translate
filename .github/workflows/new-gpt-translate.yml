@@ -1,4 +1,4 @@
-name: GPT Translate
+name: New GPT Translate
 
 on:
   issue_comment:
