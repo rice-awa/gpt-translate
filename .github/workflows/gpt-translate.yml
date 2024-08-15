@@ -19,5 +19,4 @@ jobs:
         with:
           apikey: ${{ secrets.OPENAI_API_KEY }}
           basePath: ${{ secrets.OPENAI_API_KEY }}
-          model: ${{ secrets.MODEL }}
           systemPrompt: '将markdown文本翻译成对应文本，需要保保留原始md格式'
