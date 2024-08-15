@@ -18,4 +18,5 @@ jobs:
         uses: rice-awa/gpt-translate@master
         with:
           apikey: ${{ secrets.OPENAI_API_KEY }}
-          basePath: 'https://burn.hair/v1'
+          basePath: ${{ secrets.OPENAI_API_KEY }}
+          model: ${{ secrets.MODEL }}
