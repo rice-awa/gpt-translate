@@ -1,7 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 2645:
+/***/ 9588:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -28,7 +28,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.issue = exports.issueCommand = void 0;
 const os = __importStar(__nccwpck_require__(2037));
-const utils_1 = __nccwpck_require__(7609);
+const utils_1 = __nccwpck_require__(3134);
 /**
  * Commands
  *
@@ -100,7 +100,7 @@ function escapeProperty(s) {
 
 /***/ }),
 
-/***/ 3945:
+/***/ 8490:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -135,12 +135,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getIDToken = exports.getState = exports.saveState = exports.group = exports.endGroup = exports.startGroup = exports.info = exports.notice = exports.warning = exports.error = exports.debug = exports.isDebug = exports.setFailed = exports.setCommandEcho = exports.setOutput = exports.getBooleanInput = exports.getMultilineInput = exports.getInput = exports.addPath = exports.setSecret = exports.exportVariable = exports.ExitCode = void 0;
-const command_1 = __nccwpck_require__(2645);
-const file_command_1 = __nccwpck_require__(4915);
-const utils_1 = __nccwpck_require__(7609);
+const command_1 = __nccwpck_require__(9588);
+const file_command_1 = __nccwpck_require__(134);
+const utils_1 = __nccwpck_require__(3134);
 const os = __importStar(__nccwpck_require__(2037));
 const path = __importStar(__nccwpck_require__(1017));
-const oidc_utils_1 = __nccwpck_require__(3077);
+const oidc_utils_1 = __nccwpck_require__(6405);
 /**
  * The code to exit an action
  */
@@ -425,17 +425,17 @@ exports.getIDToken = getIDToken;
 /**
  * Summary exports
  */
-var summary_1 = __nccwpck_require__(3407);
+var summary_1 = __nccwpck_require__(4621);
 Object.defineProperty(exports, "summary", ({ enumerable: true, get: function () { return summary_1.summary; } }));
 /**
  * @deprecated use core.summary
  */
-var summary_2 = __nccwpck_require__(3407);
+var summary_2 = __nccwpck_require__(4621);
 Object.defineProperty(exports, "markdownSummary", ({ enumerable: true, get: function () { return summary_2.markdownSummary; } }));
 /**
  * Path exports
  */
-var path_utils_1 = __nccwpck_require__(6352);
+var path_utils_1 = __nccwpck_require__(715);
 Object.defineProperty(exports, "toPosixPath", ({ enumerable: true, get: function () { return path_utils_1.toPosixPath; } }));
 Object.defineProperty(exports, "toWin32Path", ({ enumerable: true, get: function () { return path_utils_1.toWin32Path; } }));
 Object.defineProperty(exports, "toPlatformPath", ({ enumerable: true, get: function () { return path_utils_1.toPlatformPath; } }));
@@ -443,7 +443,7 @@ Object.defineProperty(exports, "toPlatformPath", ({ enumerable: true, get: funct
 
 /***/ }),
 
-/***/ 4915:
+/***/ 134:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -474,8 +474,8 @@ exports.prepareKeyValueMessage = exports.issueFileCommand = void 0;
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const fs = __importStar(__nccwpck_require__(7147));
 const os = __importStar(__nccwpck_require__(2037));
-const uuid_1 = __nccwpck_require__(8755);
-const utils_1 = __nccwpck_require__(7609);
+const uuid_1 = __nccwpck_require__(669);
+const utils_1 = __nccwpck_require__(3134);
 function issueFileCommand(command, message) {
     const filePath = process.env[`GITHUB_${command}`];
     if (!filePath) {
@@ -508,7 +508,7 @@ exports.prepareKeyValueMessage = prepareKeyValueMessage;
 
 /***/ }),
 
-/***/ 3077:
+/***/ 6405:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -524,9 +524,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.OidcClient = void 0;
-const http_client_1 = __nccwpck_require__(6837);
-const auth_1 = __nccwpck_require__(4);
-const core_1 = __nccwpck_require__(3945);
+const http_client_1 = __nccwpck_require__(3361);
+const auth_1 = __nccwpck_require__(5462);
+const core_1 = __nccwpck_require__(8490);
 class OidcClient {
     static createHttpClient(allowRetry = true, maxRetry = 10) {
         const requestOptions = {
@@ -592,7 +592,7 @@ exports.OidcClient = OidcClient;
 
 /***/ }),
 
-/***/ 6352:
+/***/ 715:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -657,7 +657,7 @@ exports.toPlatformPath = toPlatformPath;
 
 /***/ }),
 
-/***/ 3407:
+/***/ 4621:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -947,7 +947,7 @@ exports.summary = _summary;
 
 /***/ }),
 
-/***/ 7609:
+/***/ 3134:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -994,7 +994,7 @@ exports.toCommandProperties = toCommandProperties;
 
 /***/ }),
 
-/***/ 8537:
+/***/ 9715:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -1030,7 +1030,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getExecOutput = exports.exec = void 0;
 const string_decoder_1 = __nccwpck_require__(1576);
-const tr = __importStar(__nccwpck_require__(4071));
+const tr = __importStar(__nccwpck_require__(3176));
 /**
  * Exec a command.
  * Output will be streamed to the live console.
@@ -1104,7 +1104,7 @@ exports.getExecOutput = getExecOutput;
 
 /***/ }),
 
-/***/ 4071:
+/***/ 3176:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -1143,8 +1143,8 @@ const os = __importStar(__nccwpck_require__(2037));
 const events = __importStar(__nccwpck_require__(2361));
 const child = __importStar(__nccwpck_require__(2081));
 const path = __importStar(__nccwpck_require__(1017));
-const io = __importStar(__nccwpck_require__(341));
-const ioUtil = __importStar(__nccwpck_require__(2557));
+const io = __importStar(__nccwpck_require__(1440));
+const ioUtil = __importStar(__nccwpck_require__(9919));
 const timers_1 = __nccwpck_require__(9512);
 /* eslint-disable @typescript-eslint/unbound-method */
 const IS_WINDOWS = process.platform === 'win32';
@@ -1729,7 +1729,7 @@ class ExecState extends events.EventEmitter {
 
 /***/ }),
 
-/***/ 9336:
+/***/ 3982:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -1791,7 +1791,7 @@ exports.Context = Context;
 
 /***/ }),
 
-/***/ 8253:
+/***/ 9225:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -1821,8 +1821,8 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getOctokit = exports.context = void 0;
-const Context = __importStar(__nccwpck_require__(9336));
-const utils_1 = __nccwpck_require__(3430);
+const Context = __importStar(__nccwpck_require__(3982));
+const utils_1 = __nccwpck_require__(7521);
 exports.context = new Context.Context();
 /**
  * Returns a hydrated octokit ready to use for GitHub Actions
@@ -1839,7 +1839,7 @@ exports.getOctokit = getOctokit;
 
 /***/ }),
 
-/***/ 6951:
+/***/ 6815:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -1878,8 +1878,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getApiBaseUrl = exports.getProxyFetch = exports.getProxyAgentDispatcher = exports.getProxyAgent = exports.getAuthString = void 0;
-const httpClient = __importStar(__nccwpck_require__(6837));
-const undici_1 = __nccwpck_require__(575);
+const httpClient = __importStar(__nccwpck_require__(3361));
+const undici_1 = __nccwpck_require__(6484);
 function getAuthString(token, options) {
     if (!token && !options.auth) {
         throw new Error('Parameter token or opts.auth is required');
@@ -1916,7 +1916,7 @@ exports.getApiBaseUrl = getApiBaseUrl;
 
 /***/ }),
 
-/***/ 3430:
+/***/ 7521:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -1946,12 +1946,12 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getOctokitOptions = exports.GitHub = exports.defaults = exports.context = void 0;
-const Context = __importStar(__nccwpck_require__(9336));
-const Utils = __importStar(__nccwpck_require__(6951));
+const Context = __importStar(__nccwpck_require__(3982));
+const Utils = __importStar(__nccwpck_require__(6815));
 // octokit + plugins
-const core_1 = __nccwpck_require__(9944);
-const plugin_rest_endpoint_methods_1 = __nccwpck_require__(2254);
-const plugin_paginate_rest_1 = __nccwpck_require__(4097);
+const core_1 = __nccwpck_require__(3631);
+const plugin_rest_endpoint_methods_1 = __nccwpck_require__(6367);
+const plugin_paginate_rest_1 = __nccwpck_require__(2278);
 exports.context = new Context.Context();
 const baseUrl = Utils.getApiBaseUrl();
 exports.defaults = {
@@ -1982,7 +1982,7 @@ exports.getOctokitOptions = getOctokitOptions;
 
 /***/ }),
 
-/***/ 4:
+/***/ 5462:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -2070,7 +2070,7 @@ exports.PersonalAccessTokenCredentialHandler = PersonalAccessTokenCredentialHand
 
 /***/ }),
 
-/***/ 6837:
+/***/ 3361:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -2112,9 +2112,9 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.HttpClient = exports.isHttps = exports.HttpClientResponse = exports.HttpClientError = exports.getProxyUrl = exports.MediaTypes = exports.Headers = exports.HttpCodes = void 0;
 const http = __importStar(__nccwpck_require__(3685));
 const https = __importStar(__nccwpck_require__(5687));
-const pm = __importStar(__nccwpck_require__(2073));
-const tunnel = __importStar(__nccwpck_require__(8711));
-const undici_1 = __nccwpck_require__(575);
+const pm = __importStar(__nccwpck_require__(8683));
+const tunnel = __importStar(__nccwpck_require__(5880));
+const undici_1 = __nccwpck_require__(6484);
 var HttpCodes;
 (function (HttpCodes) {
     HttpCodes[HttpCodes["OK"] = 200] = "OK";
@@ -2729,7 +2729,7 @@ const lowercaseKeys = (obj) => Object.keys(obj).reduce((c, k) => ((c[k.toLowerCa
 
 /***/ }),
 
-/***/ 2073:
+/***/ 8683:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -2818,7 +2818,7 @@ function isLoopbackAddress(host) {
 
 /***/ }),
 
-/***/ 2557:
+/***/ 9919:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -3008,7 +3008,7 @@ exports.getCmdPath = getCmdPath;
 
 /***/ }),
 
-/***/ 341:
+/***/ 1440:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -3045,7 +3045,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.findInPath = exports.which = exports.mkdirP = exports.rmRF = exports.mv = exports.cp = void 0;
 const assert_1 = __nccwpck_require__(9491);
 const path = __importStar(__nccwpck_require__(1017));
-const ioUtil = __importStar(__nccwpck_require__(2557));
+const ioUtil = __importStar(__nccwpck_require__(9919));
 /**
  * Copies a file or folder.
  * Based off of shelljs - https://github.com/shelljs/shelljs/blob/9237f66c52e5daa40458f94f9565e18e8132f5a6/src/cp.js
@@ -3314,7 +3314,7 @@ function copyFile(srcFile, destFile, force) {
 
 /***/ }),
 
-/***/ 8564:
+/***/ 4766:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -3347,16 +3347,16 @@ __export(src_exports, {
 module.exports = __toCommonJS(src_exports);
 
 // src/anthropic-facade.ts
-var import_provider_utils4 = __nccwpck_require__(9448);
+var import_provider_utils4 = __nccwpck_require__(9508);
 
 // src/anthropic-messages-language-model.ts
-var import_provider2 = __nccwpck_require__(5667);
-var import_provider_utils3 = __nccwpck_require__(9448);
-var import_zod2 = __nccwpck_require__(756);
+var import_provider2 = __nccwpck_require__(3711);
+var import_provider_utils3 = __nccwpck_require__(9508);
+var import_zod2 = __nccwpck_require__(7861);
 
 // src/anthropic-error.ts
-var import_provider_utils = __nccwpck_require__(9448);
-var import_zod = __nccwpck_require__(756);
+var import_provider_utils = __nccwpck_require__(9508);
+var import_zod = __nccwpck_require__(7861);
 var anthropicErrorDataSchema = import_zod.z.object({
   type: import_zod.z.literal("error"),
   error: import_zod.z.object({
@@ -3370,8 +3370,8 @@ var anthropicFailedResponseHandler = (0, import_provider_utils.createJsonErrorRe
 });
 
 // src/convert-to-anthropic-messages-prompt.ts
-var import_provider = __nccwpck_require__(5667);
-var import_provider_utils2 = __nccwpck_require__(9448);
+var import_provider = __nccwpck_require__(3711);
+var import_provider_utils2 = __nccwpck_require__(9508);
 async function convertToAnthropicMessagesPrompt({
   prompt,
   downloadImplementation = import_provider_utils2.download
@@ -3978,7 +3978,7 @@ var Anthropic = class {
 };
 
 // src/anthropic-provider.ts
-var import_provider_utils5 = __nccwpck_require__(9448);
+var import_provider_utils5 = __nccwpck_require__(9508);
 function createAnthropic(options = {}) {
   var _a, _b;
   const baseURL = (_b = (0, import_provider_utils5.withoutTrailingSlash)((_a = options.baseURL) != null ? _a : options.baseUrl)) != null ? _b : "https://api.anthropic.com/v1";
@@ -4017,7 +4017,7 @@ var anthropic = createAnthropic();
 
 /***/ }),
 
-/***/ 6947:
+/***/ 733:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -4049,8 +4049,8 @@ __export(src_exports, {
 module.exports = __toCommonJS(src_exports);
 
 // src/azure-openai-provider.ts
-var import_internal = __nccwpck_require__(9189);
-var import_provider_utils = __nccwpck_require__(9448);
+var import_internal = __nccwpck_require__(728);
+var import_provider_utils = __nccwpck_require__(9508);
 function createAzure(options = {}) {
   const getHeaders = () => ({
     "api-key": (0, import_provider_utils.loadApiKey)({
@@ -4109,7 +4109,7 @@ var azure = createAzure({});
 
 /***/ }),
 
-/***/ 785:
+/***/ 4752:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -4141,16 +4141,16 @@ __export(src_exports, {
 module.exports = __toCommonJS(src_exports);
 
 // src/cohere-provider.ts
-var import_provider_utils3 = __nccwpck_require__(9448);
+var import_provider_utils3 = __nccwpck_require__(9508);
 
 // src/cohere-chat-language-model.ts
-var import_provider2 = __nccwpck_require__(5667);
-var import_provider_utils2 = __nccwpck_require__(9448);
-var import_zod2 = __nccwpck_require__(756);
+var import_provider2 = __nccwpck_require__(3711);
+var import_provider_utils2 = __nccwpck_require__(9508);
+var import_zod2 = __nccwpck_require__(7861);
 
 // src/cohere-error.ts
-var import_provider_utils = __nccwpck_require__(9448);
-var import_zod = __nccwpck_require__(756);
+var import_provider_utils = __nccwpck_require__(9508);
+var import_zod = __nccwpck_require__(7861);
 var cohereErrorDataSchema = import_zod.z.object({
   message: import_zod.z.string()
 });
@@ -4160,7 +4160,7 @@ var cohereFailedResponseHandler = (0, import_provider_utils.createJsonErrorRespo
 });
 
 // src/convert-to-cohere-chat-prompt.ts
-var import_provider = __nccwpck_require__(5667);
+var import_provider = __nccwpck_require__(3711);
 function convertToCohereChatPrompt(prompt) {
   const messages = [];
   for (const { role, content } of prompt) {
@@ -4505,7 +4505,7 @@ var cohere = createCohere();
 
 /***/ }),
 
-/***/ 9092:
+/***/ 6650:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -4538,15 +4538,15 @@ __export(src_exports, {
 module.exports = __toCommonJS(src_exports);
 
 // src/google-facade.ts
-var import_provider_utils4 = __nccwpck_require__(9448);
+var import_provider_utils4 = __nccwpck_require__(9508);
 
 // src/google-generative-ai-language-model.ts
-var import_provider = __nccwpck_require__(5667);
-var import_provider_utils3 = __nccwpck_require__(9448);
-var import_zod2 = __nccwpck_require__(756);
+var import_provider = __nccwpck_require__(3711);
+var import_provider_utils3 = __nccwpck_require__(9508);
+var import_zod2 = __nccwpck_require__(7861);
 
 // src/convert-to-google-generative-ai-messages.ts
-var import_provider_utils = __nccwpck_require__(9448);
+var import_provider_utils = __nccwpck_require__(9508);
 async function convertToGoogleGenerativeAIMessages({
   prompt,
   downloadImplementation = import_provider_utils.download
@@ -4638,8 +4638,8 @@ async function convertToGoogleGenerativeAIMessages({
 }
 
 // src/google-error.ts
-var import_provider_utils2 = __nccwpck_require__(9448);
-var import_zod = __nccwpck_require__(756);
+var import_provider_utils2 = __nccwpck_require__(9508);
+var import_zod = __nccwpck_require__(7861);
 var googleErrorDataSchema = import_zod.z.object({
   error: import_zod.z.object({
     code: import_zod.z.number().nullable(),
@@ -5059,7 +5059,7 @@ var Google = class {
 };
 
 // src/google-provider.ts
-var import_provider_utils5 = __nccwpck_require__(9448);
+var import_provider_utils5 = __nccwpck_require__(9508);
 function createGoogleGenerativeAI(options = {}) {
   var _a, _b;
   const baseURL = (_b = (0, import_provider_utils5.withoutTrailingSlash)((_a = options.baseURL) != null ? _a : options.baseUrl)) != null ? _b : "https://generativelanguage.googleapis.com/v1beta";
@@ -5101,7 +5101,7 @@ var google = createGoogleGenerativeAI();
 
 /***/ }),
 
-/***/ 239:
+/***/ 5122:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5134,15 +5134,15 @@ __export(src_exports, {
 module.exports = __toCommonJS(src_exports);
 
 // src/mistral-facade.ts
-var import_provider_utils3 = __nccwpck_require__(9448);
+var import_provider_utils3 = __nccwpck_require__(9508);
 
 // src/mistral-chat-language-model.ts
-var import_provider2 = __nccwpck_require__(5667);
-var import_provider_utils2 = __nccwpck_require__(9448);
-var import_zod2 = __nccwpck_require__(756);
+var import_provider2 = __nccwpck_require__(3711);
+var import_provider_utils2 = __nccwpck_require__(9508);
+var import_zod2 = __nccwpck_require__(7861);
 
 // src/convert-to-mistral-chat-messages.ts
-var import_provider = __nccwpck_require__(5667);
+var import_provider = __nccwpck_require__(3711);
 function convertToMistralChatMessages(prompt) {
   const messages = [];
   for (const { role, content } of prompt) {
@@ -5241,8 +5241,8 @@ function mapMistralFinishReason(finishReason) {
 }
 
 // src/mistral-error.ts
-var import_provider_utils = __nccwpck_require__(9448);
-var import_zod = __nccwpck_require__(756);
+var import_provider_utils = __nccwpck_require__(9508);
+var import_zod = __nccwpck_require__(7861);
 var mistralErrorDataSchema = import_zod.z.object({
   object: import_zod.z.literal("error"),
   message: import_zod.z.string(),
@@ -5579,12 +5579,12 @@ var Mistral = class {
 };
 
 // src/mistral-provider.ts
-var import_provider_utils5 = __nccwpck_require__(9448);
+var import_provider_utils5 = __nccwpck_require__(9508);
 
 // src/mistral-embedding-model.ts
-var import_provider3 = __nccwpck_require__(5667);
-var import_provider_utils4 = __nccwpck_require__(9448);
-var import_zod3 = __nccwpck_require__(756);
+var import_provider3 = __nccwpck_require__(3711);
+var import_provider_utils4 = __nccwpck_require__(9508);
+var import_zod3 = __nccwpck_require__(7861);
 var MistralEmbeddingModel = class {
   constructor(modelId, settings, config) {
     this.specificationVersion = "v1";
@@ -5694,7 +5694,7 @@ var mistral = createMistral();
 
 /***/ }),
 
-/***/ 3652:
+/***/ 1776:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5727,15 +5727,15 @@ __export(src_exports, {
 module.exports = __toCommonJS(src_exports);
 
 // src/openai-facade.ts
-var import_provider_utils5 = __nccwpck_require__(9448);
+var import_provider_utils5 = __nccwpck_require__(9508);
 
 // src/openai-chat-language-model.ts
-var import_provider = __nccwpck_require__(5667);
-var import_provider_utils3 = __nccwpck_require__(9448);
-var import_zod2 = __nccwpck_require__(756);
+var import_provider = __nccwpck_require__(3711);
+var import_provider_utils3 = __nccwpck_require__(9508);
+var import_zod2 = __nccwpck_require__(7861);
 
 // src/convert-to-openai-chat-messages.ts
-var import_provider_utils = __nccwpck_require__(9448);
+var import_provider_utils = __nccwpck_require__(9508);
 function convertToOpenAIChatMessages(prompt) {
   const messages = [];
   for (const { role, content } of prompt) {
@@ -5853,8 +5853,8 @@ function mapOpenAIFinishReason(finishReason) {
 }
 
 // src/openai-error.ts
-var import_zod = __nccwpck_require__(756);
-var import_provider_utils2 = __nccwpck_require__(9448);
+var import_zod = __nccwpck_require__(7861);
+var import_provider_utils2 = __nccwpck_require__(9508);
 var openAIErrorDataSchema = import_zod.z.object({
   error: import_zod.z.object({
     message: import_zod.z.string(),
@@ -6275,12 +6275,12 @@ function prepareToolsAndToolChoice(mode) {
 }
 
 // src/openai-completion-language-model.ts
-var import_provider3 = __nccwpck_require__(5667);
-var import_provider_utils4 = __nccwpck_require__(9448);
-var import_zod3 = __nccwpck_require__(756);
+var import_provider3 = __nccwpck_require__(3711);
+var import_provider_utils4 = __nccwpck_require__(9508);
+var import_zod3 = __nccwpck_require__(7861);
 
 // src/convert-to-openai-completion-prompt.ts
-var import_provider2 = __nccwpck_require__(5667);
+var import_provider2 = __nccwpck_require__(3711);
 function convertToOpenAICompletionPrompt({
   prompt,
   inputFormat,
@@ -6661,12 +6661,12 @@ var OpenAI = class {
 };
 
 // src/openai-provider.ts
-var import_provider_utils7 = __nccwpck_require__(9448);
+var import_provider_utils7 = __nccwpck_require__(9508);
 
 // src/openai-embedding-model.ts
-var import_provider4 = __nccwpck_require__(5667);
-var import_provider_utils6 = __nccwpck_require__(9448);
-var import_zod4 = __nccwpck_require__(756);
+var import_provider4 = __nccwpck_require__(3711);
+var import_provider_utils6 = __nccwpck_require__(9508);
+var import_zod4 = __nccwpck_require__(7861);
 var OpenAIEmbeddingModel = class {
   constructor(modelId, settings, config) {
     this.specificationVersion = "v1";
@@ -6801,7 +6801,7 @@ var openai = createOpenAI({
 
 /***/ }),
 
-/***/ 9189:
+/***/ 728:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6834,12 +6834,12 @@ __export(internal_exports, {
 module.exports = __toCommonJS(internal_exports);
 
 // src/openai-chat-language-model.ts
-var import_provider = __nccwpck_require__(5667);
-var import_provider_utils3 = __nccwpck_require__(9448);
-var import_zod2 = __nccwpck_require__(756);
+var import_provider = __nccwpck_require__(3711);
+var import_provider_utils3 = __nccwpck_require__(9508);
+var import_zod2 = __nccwpck_require__(7861);
 
 // src/convert-to-openai-chat-messages.ts
-var import_provider_utils = __nccwpck_require__(9448);
+var import_provider_utils = __nccwpck_require__(9508);
 function convertToOpenAIChatMessages(prompt) {
   const messages = [];
   for (const { role, content } of prompt) {
@@ -6957,8 +6957,8 @@ function mapOpenAIFinishReason(finishReason) {
 }
 
 // src/openai-error.ts
-var import_zod = __nccwpck_require__(756);
-var import_provider_utils2 = __nccwpck_require__(9448);
+var import_zod = __nccwpck_require__(7861);
+var import_provider_utils2 = __nccwpck_require__(9508);
 var openAIErrorDataSchema = import_zod.z.object({
   error: import_zod.z.object({
     message: import_zod.z.string(),
@@ -7379,12 +7379,12 @@ function prepareToolsAndToolChoice(mode) {
 }
 
 // src/openai-completion-language-model.ts
-var import_provider3 = __nccwpck_require__(5667);
-var import_provider_utils4 = __nccwpck_require__(9448);
-var import_zod3 = __nccwpck_require__(756);
+var import_provider3 = __nccwpck_require__(3711);
+var import_provider_utils4 = __nccwpck_require__(9508);
+var import_zod3 = __nccwpck_require__(7861);
 
 // src/convert-to-openai-completion-prompt.ts
-var import_provider2 = __nccwpck_require__(5667);
+var import_provider2 = __nccwpck_require__(3711);
 function convertToOpenAICompletionPrompt({
   prompt,
   inputFormat,
@@ -7718,9 +7718,9 @@ var openaiCompletionChunkSchema = import_zod3.z.union([
 ]);
 
 // src/openai-embedding-model.ts
-var import_provider4 = __nccwpck_require__(5667);
-var import_provider_utils5 = __nccwpck_require__(9448);
-var import_zod4 = __nccwpck_require__(756);
+var import_provider4 = __nccwpck_require__(3711);
+var import_provider_utils5 = __nccwpck_require__(9508);
+var import_zod4 = __nccwpck_require__(7861);
 var OpenAIEmbeddingModel = class {
   constructor(modelId, settings, config) {
     this.specificationVersion = "v1";
@@ -7791,7 +7791,7 @@ var openaiTextEmbeddingResponseSchema = import_zod4.z.object({
 
 /***/ }),
 
-/***/ 9448:
+/***/ 9508:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7895,7 +7895,7 @@ function convertAsyncGeneratorToReadableStream(stream) {
 }
 
 // src/download.ts
-var import_provider = __nccwpck_require__(5667);
+var import_provider = __nccwpck_require__(3711);
 async function download({
   url,
   fetchImplementation = fetch
@@ -7933,7 +7933,7 @@ function extractResponseHeaders(response) {
 }
 
 // src/generate-id.ts
-var import_non_secure = __nccwpck_require__(6458);
+var import_non_secure = __nccwpck_require__(3084);
 var generateId = (0, import_non_secure.customAlphabet)(
   "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
   7
@@ -7959,7 +7959,7 @@ function isAbortError(error) {
 }
 
 // src/load-api-key.ts
-var import_provider2 = __nccwpck_require__(5667);
+var import_provider2 = __nccwpck_require__(3711);
 function loadApiKey({
   apiKey,
   environmentVariableName,
@@ -7994,7 +7994,7 @@ function loadApiKey({
 }
 
 // src/load-setting.ts
-var import_provider3 = __nccwpck_require__(5667);
+var import_provider3 = __nccwpck_require__(3711);
 function loadSetting({
   settingValue,
   environmentVariableName,
@@ -8029,11 +8029,11 @@ function loadSetting({
 }
 
 // src/parse-json.ts
-var import_provider5 = __nccwpck_require__(5667);
-var import_secure_json_parse = __toESM(__nccwpck_require__(3947));
+var import_provider5 = __nccwpck_require__(3711);
+var import_secure_json_parse = __toESM(__nccwpck_require__(9752));
 
 // src/validate-types.ts
-var import_provider4 = __nccwpck_require__(5667);
+var import_provider4 = __nccwpck_require__(3711);
 function validateTypes({
   value,
   schema
@@ -8120,7 +8120,7 @@ function isParsableJson(input) {
 var isParseableJson = isParsableJson;
 
 // src/post-to-api.ts
-var import_provider6 = __nccwpck_require__(5667);
+var import_provider6 = __nccwpck_require__(3711);
 
 // src/remove-undefined-entries.ts
 function removeUndefinedEntries(record) {
@@ -8237,8 +8237,8 @@ var postToApi = async ({
 };
 
 // src/response-handler.ts
-var import_provider7 = __nccwpck_require__(5667);
-var import_stream = __nccwpck_require__(588);
+var import_provider7 = __nccwpck_require__(3711);
+var import_stream = __nccwpck_require__(6457);
 var createJsonErrorResponseHandler = ({
   errorSchema,
   errorToMessage,
@@ -8392,7 +8392,602 @@ function withoutTrailingSlash(url) {
 
 /***/ }),
 
-/***/ 5667:
+/***/ 1545:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+var __create = Object.create;
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __getProtoOf = Object.getPrototypeOf;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  // If the importer is in node compatibility mode or this is not an ESM
+  // file that has been converted to a CommonJS file using a Babel-
+  // compatible transform (i.e. "__esModule" has not been set), then set
+  // "default" to the CommonJS "module.exports" for node compatibility.
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+
+// src/index.ts
+var src_exports = {};
+__export(src_exports, {
+  asValidator: () => asValidator,
+  combineHeaders: () => combineHeaders,
+  convertAsyncGeneratorToReadableStream: () => convertAsyncGeneratorToReadableStream,
+  convertBase64ToUint8Array: () => convertBase64ToUint8Array,
+  convertUint8ArrayToBase64: () => convertUint8ArrayToBase64,
+  createEventSourceResponseHandler: () => createEventSourceResponseHandler,
+  createJsonErrorResponseHandler: () => createJsonErrorResponseHandler,
+  createJsonResponseHandler: () => createJsonResponseHandler,
+  createJsonStreamResponseHandler: () => createJsonStreamResponseHandler,
+  extractResponseHeaders: () => extractResponseHeaders,
+  generateId: () => generateId,
+  getErrorMessage: () => getErrorMessage,
+  isAbortError: () => isAbortError,
+  isParsableJson: () => isParsableJson,
+  isParseableJson: () => isParseableJson,
+  isValidator: () => isValidator,
+  loadApiKey: () => loadApiKey,
+  loadSetting: () => loadSetting,
+  parseJSON: () => parseJSON,
+  postJsonToApi: () => postJsonToApi,
+  postToApi: () => postToApi,
+  safeParseJSON: () => safeParseJSON,
+  safeValidateTypes: () => safeValidateTypes,
+  validateTypes: () => validateTypes,
+  validator: () => validator,
+  validatorSymbol: () => validatorSymbol,
+  withoutTrailingSlash: () => withoutTrailingSlash,
+  zodValidator: () => zodValidator
+});
+module.exports = __toCommonJS(src_exports);
+
+// src/combine-headers.ts
+function combineHeaders(...headers) {
+  return headers.reduce(
+    (combinedHeaders, currentHeaders) => ({
+      ...combinedHeaders,
+      ...currentHeaders != null ? currentHeaders : {}
+    }),
+    {}
+  );
+}
+
+// src/convert-async-generator-to-readable-stream.ts
+function convertAsyncGeneratorToReadableStream(stream) {
+  return new ReadableStream({
+    /**
+     * Called when the consumer wants to pull more data from the stream.
+     *
+     * @param {ReadableStreamDefaultController<T>} controller - The controller to enqueue data into the stream.
+     * @returns {Promise<void>}
+     */
+    async pull(controller) {
+      try {
+        const { value, done } = await stream.next();
+        if (done) {
+          controller.close();
+        } else {
+          controller.enqueue(value);
+        }
+      } catch (error) {
+        controller.error(error);
+      }
+    },
+    /**
+     * Called when the consumer cancels the stream.
+     */
+    cancel() {
+    }
+  });
+}
+
+// src/extract-response-headers.ts
+function extractResponseHeaders(response) {
+  const headers = {};
+  response.headers.forEach((value, key) => {
+    headers[key] = value;
+  });
+  return headers;
+}
+
+// src/generate-id.ts
+var import_non_secure = __nccwpck_require__(3084);
+var generateId = (0, import_non_secure.customAlphabet)(
+  "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+  7
+);
+
+// src/get-error-message.ts
+function getErrorMessage(error) {
+  if (error == null) {
+    return "unknown error";
+  }
+  if (typeof error === "string") {
+    return error;
+  }
+  if (error instanceof Error) {
+    return error.message;
+  }
+  return JSON.stringify(error);
+}
+
+// src/is-abort-error.ts
+function isAbortError(error) {
+  return error instanceof Error && (error.name === "AbortError" || error.name === "TimeoutError");
+}
+
+// src/load-api-key.ts
+var import_provider = __nccwpck_require__(7503);
+function loadApiKey({
+  apiKey,
+  environmentVariableName,
+  apiKeyParameterName = "apiKey",
+  description
+}) {
+  if (typeof apiKey === "string") {
+    return apiKey;
+  }
+  if (apiKey != null) {
+    throw new import_provider.LoadAPIKeyError({
+      message: `${description} API key must be a string.`
+    });
+  }
+  if (typeof process === "undefined") {
+    throw new import_provider.LoadAPIKeyError({
+      message: `${description} API key is missing. Pass it using the '${apiKeyParameterName}' parameter. Environment variables is not supported in this environment.`
+    });
+  }
+  apiKey = process.env[environmentVariableName];
+  if (apiKey == null) {
+    throw new import_provider.LoadAPIKeyError({
+      message: `${description} API key is missing. Pass it using the '${apiKeyParameterName}' parameter or the ${environmentVariableName} environment variable.`
+    });
+  }
+  if (typeof apiKey !== "string") {
+    throw new import_provider.LoadAPIKeyError({
+      message: `${description} API key must be a string. The value of the ${environmentVariableName} environment variable is not a string.`
+    });
+  }
+  return apiKey;
+}
+
+// src/load-setting.ts
+var import_provider2 = __nccwpck_require__(7503);
+function loadSetting({
+  settingValue,
+  environmentVariableName,
+  settingName,
+  description
+}) {
+  if (typeof settingValue === "string") {
+    return settingValue;
+  }
+  if (settingValue != null) {
+    throw new import_provider2.LoadSettingError({
+      message: `${description} setting must be a string.`
+    });
+  }
+  if (typeof process === "undefined") {
+    throw new import_provider2.LoadSettingError({
+      message: `${description} setting is missing. Pass it using the '${settingName}' parameter. Environment variables is not supported in this environment.`
+    });
+  }
+  settingValue = process.env[environmentVariableName];
+  if (settingValue == null) {
+    throw new import_provider2.LoadSettingError({
+      message: `${description} setting is missing. Pass it using the '${settingName}' parameter or the ${environmentVariableName} environment variable.`
+    });
+  }
+  if (typeof settingValue !== "string") {
+    throw new import_provider2.LoadSettingError({
+      message: `${description} setting must be a string. The value of the ${environmentVariableName} environment variable is not a string.`
+    });
+  }
+  return settingValue;
+}
+
+// src/parse-json.ts
+var import_provider4 = __nccwpck_require__(7503);
+var import_secure_json_parse = __toESM(__nccwpck_require__(9752));
+
+// src/validate-types.ts
+var import_provider3 = __nccwpck_require__(7503);
+
+// src/validator.ts
+var validatorSymbol = Symbol.for("vercel.ai.validator");
+function validator(validate) {
+  return { [validatorSymbol]: true, validate };
+}
+function isValidator(value) {
+  return typeof value === "object" && value !== null && validatorSymbol in value && value[validatorSymbol] === true && "validate" in value;
+}
+function asValidator(value) {
+  return isValidator(value) ? value : zodValidator(value);
+}
+function zodValidator(zodSchema) {
+  return validator((value) => {
+    const result = zodSchema.safeParse(value);
+    return result.success ? { success: true, value: result.data } : { success: false, error: result.error };
+  });
+}
+
+// src/validate-types.ts
+function validateTypes({
+  value,
+  schema: inputSchema
+}) {
+  const result = safeValidateTypes({ value, schema: inputSchema });
+  if (!result.success) {
+    throw import_provider3.TypeValidationError.wrap({ value, cause: result.error });
+  }
+  return result.value;
+}
+function safeValidateTypes({
+  value,
+  schema
+}) {
+  const validator2 = asValidator(schema);
+  try {
+    if (validator2.validate == null) {
+      return { success: true, value };
+    }
+    const result = validator2.validate(value);
+    if (result.success) {
+      return result;
+    }
+    return {
+      success: false,
+      error: import_provider3.TypeValidationError.wrap({ value, cause: result.error })
+    };
+  } catch (error) {
+    return {
+      success: false,
+      error: import_provider3.TypeValidationError.wrap({ value, cause: error })
+    };
+  }
+}
+
+// src/parse-json.ts
+function parseJSON({
+  text,
+  schema
+}) {
+  try {
+    const value = import_secure_json_parse.default.parse(text);
+    if (schema == null) {
+      return value;
+    }
+    return validateTypes({ value, schema });
+  } catch (error) {
+    if (import_provider4.JSONParseError.isJSONParseError(error) || import_provider4.TypeValidationError.isTypeValidationError(error)) {
+      throw error;
+    }
+    throw new import_provider4.JSONParseError({ text, cause: error });
+  }
+}
+function safeParseJSON({
+  text,
+  schema
+}) {
+  try {
+    const value = import_secure_json_parse.default.parse(text);
+    if (schema == null) {
+      return {
+        success: true,
+        value
+      };
+    }
+    return safeValidateTypes({ value, schema });
+  } catch (error) {
+    return {
+      success: false,
+      error: import_provider4.JSONParseError.isJSONParseError(error) ? error : new import_provider4.JSONParseError({ text, cause: error })
+    };
+  }
+}
+function isParsableJson(input) {
+  try {
+    import_secure_json_parse.default.parse(input);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+var isParseableJson = isParsableJson;
+
+// src/post-to-api.ts
+var import_provider5 = __nccwpck_require__(7503);
+
+// src/remove-undefined-entries.ts
+function removeUndefinedEntries(record) {
+  return Object.fromEntries(
+    Object.entries(record).filter(([_key, value]) => value != null)
+  );
+}
+
+// src/post-to-api.ts
+var getOriginalFetch = () => fetch;
+var postJsonToApi = async ({
+  url,
+  headers,
+  body,
+  failedResponseHandler,
+  successfulResponseHandler,
+  abortSignal,
+  fetch: fetch2
+}) => postToApi({
+  url,
+  headers: {
+    "Content-Type": "application/json",
+    ...headers
+  },
+  body: {
+    content: JSON.stringify(body),
+    values: body
+  },
+  failedResponseHandler,
+  successfulResponseHandler,
+  abortSignal,
+  fetch: fetch2
+});
+var postToApi = async ({
+  url,
+  headers = {},
+  body,
+  successfulResponseHandler,
+  failedResponseHandler,
+  abortSignal,
+  fetch: fetch2 = getOriginalFetch()
+}) => {
+  try {
+    const response = await fetch2(url, {
+      method: "POST",
+      headers: removeUndefinedEntries(headers),
+      body: body.content,
+      signal: abortSignal
+    });
+    const responseHeaders = extractResponseHeaders(response);
+    if (!response.ok) {
+      let errorInformation;
+      try {
+        errorInformation = await failedResponseHandler({
+          response,
+          url,
+          requestBodyValues: body.values
+        });
+      } catch (error) {
+        if (isAbortError(error) || import_provider5.APICallError.isAPICallError(error)) {
+          throw error;
+        }
+        throw new import_provider5.APICallError({
+          message: "Failed to process error response",
+          cause: error,
+          statusCode: response.status,
+          url,
+          responseHeaders,
+          requestBodyValues: body.values
+        });
+      }
+      throw errorInformation.value;
+    }
+    try {
+      return await successfulResponseHandler({
+        response,
+        url,
+        requestBodyValues: body.values
+      });
+    } catch (error) {
+      if (error instanceof Error) {
+        if (isAbortError(error) || import_provider5.APICallError.isAPICallError(error)) {
+          throw error;
+        }
+      }
+      throw new import_provider5.APICallError({
+        message: "Failed to process successful response",
+        cause: error,
+        statusCode: response.status,
+        url,
+        responseHeaders,
+        requestBodyValues: body.values
+      });
+    }
+  } catch (error) {
+    if (isAbortError(error)) {
+      throw error;
+    }
+    if (error instanceof TypeError && error.message === "fetch failed") {
+      const cause = error.cause;
+      if (cause != null) {
+        throw new import_provider5.APICallError({
+          message: `Cannot connect to API: ${cause.message}`,
+          cause,
+          url,
+          requestBodyValues: body.values,
+          isRetryable: true
+          // retry when network error
+        });
+      }
+    }
+    throw error;
+  }
+};
+
+// src/response-handler.ts
+var import_provider6 = __nccwpck_require__(7503);
+var import_stream = __nccwpck_require__(6457);
+var createJsonErrorResponseHandler = ({
+  errorSchema,
+  errorToMessage,
+  isRetryable
+}) => async ({ response, url, requestBodyValues }) => {
+  const responseBody = await response.text();
+  const responseHeaders = extractResponseHeaders(response);
+  if (responseBody.trim() === "") {
+    return {
+      responseHeaders,
+      value: new import_provider6.APICallError({
+        message: response.statusText,
+        url,
+        requestBodyValues,
+        statusCode: response.status,
+        responseHeaders,
+        responseBody,
+        isRetryable: isRetryable == null ? void 0 : isRetryable(response)
+      })
+    };
+  }
+  try {
+    const parsedError = parseJSON({
+      text: responseBody,
+      schema: errorSchema
+    });
+    return {
+      responseHeaders,
+      value: new import_provider6.APICallError({
+        message: errorToMessage(parsedError),
+        url,
+        requestBodyValues,
+        statusCode: response.status,
+        responseHeaders,
+        responseBody,
+        data: parsedError,
+        isRetryable: isRetryable == null ? void 0 : isRetryable(response, parsedError)
+      })
+    };
+  } catch (parseError) {
+    return {
+      responseHeaders,
+      value: new import_provider6.APICallError({
+        message: response.statusText,
+        url,
+        requestBodyValues,
+        statusCode: response.status,
+        responseHeaders,
+        responseBody,
+        isRetryable: isRetryable == null ? void 0 : isRetryable(response)
+      })
+    };
+  }
+};
+var createEventSourceResponseHandler = (chunkSchema) => async ({ response }) => {
+  const responseHeaders = extractResponseHeaders(response);
+  if (response.body == null) {
+    throw new import_provider6.EmptyResponseBodyError({});
+  }
+  return {
+    responseHeaders,
+    value: response.body.pipeThrough(new TextDecoderStream()).pipeThrough(new import_stream.EventSourceParserStream()).pipeThrough(
+      new TransformStream({
+        transform({ data }, controller) {
+          if (data === "[DONE]") {
+            return;
+          }
+          controller.enqueue(
+            safeParseJSON({
+              text: data,
+              schema: chunkSchema
+            })
+          );
+        }
+      })
+    )
+  };
+};
+var createJsonStreamResponseHandler = (chunkSchema) => async ({ response }) => {
+  const responseHeaders = extractResponseHeaders(response);
+  if (response.body == null) {
+    throw new import_provider6.EmptyResponseBodyError({});
+  }
+  let buffer = "";
+  return {
+    responseHeaders,
+    value: response.body.pipeThrough(new TextDecoderStream()).pipeThrough(
+      new TransformStream({
+        transform(chunkText, controller) {
+          if (chunkText.endsWith("\n")) {
+            controller.enqueue(
+              safeParseJSON({
+                text: buffer + chunkText,
+                schema: chunkSchema
+              })
+            );
+            buffer = "";
+          } else {
+            buffer += chunkText;
+          }
+        }
+      })
+    )
+  };
+};
+var createJsonResponseHandler = (responseSchema) => async ({ response, url, requestBodyValues }) => {
+  const responseBody = await response.text();
+  const parsedResult = safeParseJSON({
+    text: responseBody,
+    schema: responseSchema
+  });
+  const responseHeaders = extractResponseHeaders(response);
+  if (!parsedResult.success) {
+    throw new import_provider6.APICallError({
+      message: "Invalid JSON response",
+      cause: parsedResult.error,
+      statusCode: response.status,
+      responseHeaders,
+      responseBody,
+      url,
+      requestBodyValues
+    });
+  }
+  return {
+    responseHeaders,
+    value: parsedResult.value
+  };
+};
+
+// src/uint8-utils.ts
+var { btoa, atob } = globalThis;
+function convertBase64ToUint8Array(base64String) {
+  const base64Url = base64String.replace(/-/g, "+").replace(/_/g, "/");
+  const latin1string = atob(base64Url);
+  return Uint8Array.from(latin1string, (byte) => byte.codePointAt(0));
+}
+function convertUint8ArrayToBase64(array) {
+  let latin1string = "";
+  for (let i = 0; i < array.length; i++) {
+    latin1string += String.fromCodePoint(array[i]);
+  }
+  return btoa(latin1string);
+}
+
+// src/without-trailing-slash.ts
+function withoutTrailingSlash(url) {
+  return url == null ? void 0 : url.replace(/\/$/, "");
+}
+// Annotate the CommonJS export names for ESM import in node:
+0 && (0);
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 3711:
 /***/ ((module) => {
 
 "use strict";
@@ -8962,7 +9557,535 @@ var UnsupportedJSONSchemaError = class extends Error {
 
 /***/ }),
 
-/***/ 4809:
+/***/ 7503:
+/***/ ((module) => {
+
+"use strict";
+
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __export = (target, all) => {
+  for (var name12 in all)
+    __defProp(target, name12, { get: all[name12], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+
+// src/index.ts
+var src_exports = {};
+__export(src_exports, {
+  AISDKError: () => AISDKError,
+  APICallError: () => APICallError,
+  EmptyResponseBodyError: () => EmptyResponseBodyError,
+  InvalidPromptError: () => InvalidPromptError,
+  InvalidResponseDataError: () => InvalidResponseDataError,
+  JSONParseError: () => JSONParseError,
+  LoadAPIKeyError: () => LoadAPIKeyError,
+  LoadSettingError: () => LoadSettingError,
+  NoContentGeneratedError: () => NoContentGeneratedError,
+  TooManyEmbeddingValuesForCallError: () => TooManyEmbeddingValuesForCallError,
+  TypeValidationError: () => TypeValidationError,
+  UnsupportedFunctionalityError: () => UnsupportedFunctionalityError,
+  getErrorMessage: () => getErrorMessage
+});
+module.exports = __toCommonJS(src_exports);
+
+// src/errors/ai-sdk-error.ts
+var marker = "vercel.ai.error";
+var symbol = Symbol.for(marker);
+var _a;
+var _AISDKError = class _AISDKError extends Error {
+  /**
+   * Creates an AI SDK Error.
+   *
+   * @param {Object} params - The parameters for creating the error.
+   * @param {string} params.name - The name of the error.
+   * @param {string} params.message - The error message.
+   * @param {unknown} [params.cause] - The underlying cause of the error.
+   */
+  constructor({
+    name: name12,
+    message,
+    cause
+  }) {
+    super(message);
+    this[_a] = true;
+    this.name = name12;
+    this.cause = cause;
+  }
+  /**
+   * Checks if the given error is an AI SDK Error.
+   * @param {unknown} error - The error to check.
+   * @returns {boolean} True if the error is an AI SDK Error, false otherwise.
+   */
+  static isInstance(error) {
+    return _AISDKError.hasMarker(error, marker);
+  }
+  static hasMarker(error, marker13) {
+    const markerSymbol = Symbol.for(marker13);
+    return error != null && typeof error === "object" && markerSymbol in error && typeof error[markerSymbol] === "boolean" && error[markerSymbol] === true;
+  }
+  /**
+   * Returns a JSON representation of the error.
+   * @returns {Object} An object containing the error's name, message, and cause.
+   *
+   * @deprecated Do not use this method. It will be removed in the next major version.
+   */
+  toJSON() {
+    return {
+      name: this.name,
+      message: this.message
+    };
+  }
+};
+_a = symbol;
+var AISDKError = _AISDKError;
+
+// src/errors/api-call-error.ts
+var name = "AI_APICallError";
+var marker2 = `vercel.ai.error.${name}`;
+var symbol2 = Symbol.for(marker2);
+var _a2;
+var APICallError = class extends AISDKError {
+  constructor({
+    message,
+    url,
+    requestBodyValues,
+    statusCode,
+    responseHeaders,
+    responseBody,
+    cause,
+    isRetryable = statusCode != null && (statusCode === 408 || // request timeout
+    statusCode === 409 || // conflict
+    statusCode === 429 || // too many requests
+    statusCode >= 500),
+    // server error
+    data
+  }) {
+    super({ name, message, cause });
+    this[_a2] = true;
+    this.url = url;
+    this.requestBodyValues = requestBodyValues;
+    this.statusCode = statusCode;
+    this.responseHeaders = responseHeaders;
+    this.responseBody = responseBody;
+    this.isRetryable = isRetryable;
+    this.data = data;
+  }
+  static isInstance(error) {
+    return AISDKError.hasMarker(error, marker2);
+  }
+  /**
+   * @deprecated Use isInstance instead.
+   */
+  static isAPICallError(error) {
+    return error instanceof Error && error.name === name && typeof error.url === "string" && typeof error.requestBodyValues === "object" && (error.statusCode == null || typeof error.statusCode === "number") && (error.responseHeaders == null || typeof error.responseHeaders === "object") && (error.responseBody == null || typeof error.responseBody === "string") && (error.cause == null || typeof error.cause === "object") && typeof error.isRetryable === "boolean" && (error.data == null || typeof error.data === "object");
+  }
+  /**
+   * @deprecated Do not use this method. It will be removed in the next major version.
+   */
+  toJSON() {
+    return {
+      name: this.name,
+      message: this.message,
+      url: this.url,
+      requestBodyValues: this.requestBodyValues,
+      statusCode: this.statusCode,
+      responseHeaders: this.responseHeaders,
+      responseBody: this.responseBody,
+      cause: this.cause,
+      isRetryable: this.isRetryable,
+      data: this.data
+    };
+  }
+};
+_a2 = symbol2;
+
+// src/errors/empty-response-body-error.ts
+var name2 = "AI_EmptyResponseBodyError";
+var marker3 = `vercel.ai.error.${name2}`;
+var symbol3 = Symbol.for(marker3);
+var _a3;
+var EmptyResponseBodyError = class extends AISDKError {
+  // used in isInstance
+  constructor({ message = "Empty response body" } = {}) {
+    super({ name: name2, message });
+    this[_a3] = true;
+  }
+  static isInstance(error) {
+    return AISDKError.hasMarker(error, marker3);
+  }
+  /**
+   * @deprecated use `isInstance` instead
+   */
+  static isEmptyResponseBodyError(error) {
+    return error instanceof Error && error.name === name2;
+  }
+};
+_a3 = symbol3;
+
+// src/errors/get-error-message.ts
+function getErrorMessage(error) {
+  if (error == null) {
+    return "unknown error";
+  }
+  if (typeof error === "string") {
+    return error;
+  }
+  if (error instanceof Error) {
+    return error.message;
+  }
+  return JSON.stringify(error);
+}
+
+// src/errors/invalid-prompt-error.ts
+var name3 = "AI_InvalidPromptError";
+var marker4 = `vercel.ai.error.${name3}`;
+var symbol4 = Symbol.for(marker4);
+var _a4;
+var InvalidPromptError = class extends AISDKError {
+  constructor({ prompt: prompt2, message }) {
+    super({
+      name: name3,
+      message: `Invalid prompt: ${message}`
+    });
+    this[_a4] = true;
+    this.prompt = prompt2;
+  }
+  static isInstance(error) {
+    return AISDKError.hasMarker(error, marker4);
+  }
+  /**
+   * @deprecated use `isInstance` instead
+   */
+  static isInvalidPromptError(error) {
+    return error instanceof Error && error.name === name3 && prompt != null;
+  }
+  /**
+   * @deprecated Do not use this method. It will be removed in the next major version.
+   */
+  toJSON() {
+    return {
+      name: this.name,
+      message: this.message,
+      stack: this.stack,
+      prompt: this.prompt
+    };
+  }
+};
+_a4 = symbol4;
+
+// src/errors/invalid-response-data-error.ts
+var name4 = "AI_InvalidResponseDataError";
+var marker5 = `vercel.ai.error.${name4}`;
+var symbol5 = Symbol.for(marker5);
+var _a5;
+var InvalidResponseDataError = class extends AISDKError {
+  constructor({
+    data,
+    message = `Invalid response data: ${JSON.stringify(data)}.`
+  }) {
+    super({ name: name4, message });
+    this[_a5] = true;
+    this.data = data;
+  }
+  static isInstance(error) {
+    return AISDKError.hasMarker(error, marker5);
+  }
+  /**
+   * @deprecated use `isInstance` instead
+   */
+  static isInvalidResponseDataError(error) {
+    return error instanceof Error && error.name === name4 && error.data != null;
+  }
+  /**
+   * @deprecated Do not use this method. It will be removed in the next major version.
+   */
+  toJSON() {
+    return {
+      name: this.name,
+      message: this.message,
+      stack: this.stack,
+      data: this.data
+    };
+  }
+};
+_a5 = symbol5;
+
+// src/errors/json-parse-error.ts
+var name5 = "AI_JSONParseError";
+var marker6 = `vercel.ai.error.${name5}`;
+var symbol6 = Symbol.for(marker6);
+var _a6;
+var JSONParseError = class extends AISDKError {
+  constructor({ text, cause }) {
+    super({
+      name: name5,
+      message: `JSON parsing failed: Text: ${text}.
+Error message: ${getErrorMessage(cause)}`,
+      cause
+    });
+    this[_a6] = true;
+    this.text = text;
+  }
+  static isInstance(error) {
+    return AISDKError.hasMarker(error, marker6);
+  }
+  /**
+   * @deprecated use `isInstance` instead
+   */
+  static isJSONParseError(error) {
+    return error instanceof Error && error.name === name5 && "text" in error && typeof error.text === "string";
+  }
+  /**
+   * @deprecated Do not use this method. It will be removed in the next major version.
+   */
+  toJSON() {
+    return {
+      name: this.name,
+      message: this.message,
+      cause: this.cause,
+      stack: this.stack,
+      valueText: this.text
+    };
+  }
+};
+_a6 = symbol6;
+
+// src/errors/load-api-key-error.ts
+var name6 = "AI_LoadAPIKeyError";
+var marker7 = `vercel.ai.error.${name6}`;
+var symbol7 = Symbol.for(marker7);
+var _a7;
+var LoadAPIKeyError = class extends AISDKError {
+  // used in isInstance
+  constructor({ message }) {
+    super({ name: name6, message });
+    this[_a7] = true;
+  }
+  static isInstance(error) {
+    return AISDKError.hasMarker(error, marker7);
+  }
+  /**
+   * @deprecated Use isInstance instead.
+   */
+  static isLoadAPIKeyError(error) {
+    return error instanceof Error && error.name === name6;
+  }
+};
+_a7 = symbol7;
+
+// src/errors/load-setting-error.ts
+var name7 = "AI_LoadSettingError";
+var marker8 = `vercel.ai.error.${name7}`;
+var symbol8 = Symbol.for(marker8);
+var _a8;
+var LoadSettingError = class extends AISDKError {
+  // used in isInstance
+  constructor({ message }) {
+    super({ name: name7, message });
+    this[_a8] = true;
+  }
+  static isInstance(error) {
+    return AISDKError.hasMarker(error, marker8);
+  }
+  /**
+   * @deprecated Use isInstance instead.
+   */
+  static isLoadSettingError(error) {
+    return error instanceof Error && error.name === name7;
+  }
+};
+_a8 = symbol8;
+
+// src/errors/no-content-generated-error.ts
+var name8 = "AI_NoContentGeneratedError";
+var marker9 = `vercel.ai.error.${name8}`;
+var symbol9 = Symbol.for(marker9);
+var _a9;
+var NoContentGeneratedError = class extends AISDKError {
+  // used in isInstance
+  constructor({
+    message = "No content generated."
+  } = {}) {
+    super({ name: name8, message });
+    this[_a9] = true;
+  }
+  static isInstance(error) {
+    return AISDKError.hasMarker(error, marker9);
+  }
+  /**
+   * @deprecated Use isInstance instead.
+   */
+  static isNoContentGeneratedError(error) {
+    return error instanceof Error && error.name === name8;
+  }
+  /**
+   * @deprecated Do not use this method. It will be removed in the next major version.
+   */
+  toJSON() {
+    return {
+      name: this.name,
+      cause: this.cause,
+      message: this.message,
+      stack: this.stack
+    };
+  }
+};
+_a9 = symbol9;
+
+// src/errors/too-many-embedding-values-for-call-error.ts
+var name9 = "AI_TooManyEmbeddingValuesForCallError";
+var marker10 = `vercel.ai.error.${name9}`;
+var symbol10 = Symbol.for(marker10);
+var _a10;
+var TooManyEmbeddingValuesForCallError = class extends AISDKError {
+  constructor(options) {
+    super({
+      name: name9,
+      message: `Too many values for a single embedding call. The ${options.provider} model "${options.modelId}" can only embed up to ${options.maxEmbeddingsPerCall} values per call, but ${options.values.length} values were provided.`
+    });
+    this[_a10] = true;
+    this.provider = options.provider;
+    this.modelId = options.modelId;
+    this.maxEmbeddingsPerCall = options.maxEmbeddingsPerCall;
+    this.values = options.values;
+  }
+  static isInstance(error) {
+    return AISDKError.hasMarker(error, marker10);
+  }
+  /**
+   * @deprecated use `isInstance` instead
+   */
+  static isTooManyEmbeddingValuesForCallError(error) {
+    return error instanceof Error && error.name === name9 && "provider" in error && typeof error.provider === "string" && "modelId" in error && typeof error.modelId === "string" && "maxEmbeddingsPerCall" in error && typeof error.maxEmbeddingsPerCall === "number" && "values" in error && Array.isArray(error.values);
+  }
+  /**
+   * @deprecated Do not use this method. It will be removed in the next major version.
+   */
+  toJSON() {
+    return {
+      name: this.name,
+      message: this.message,
+      stack: this.stack,
+      provider: this.provider,
+      modelId: this.modelId,
+      maxEmbeddingsPerCall: this.maxEmbeddingsPerCall,
+      values: this.values
+    };
+  }
+};
+_a10 = symbol10;
+
+// src/errors/type-validation-error.ts
+var name10 = "AI_TypeValidationError";
+var marker11 = `vercel.ai.error.${name10}`;
+var symbol11 = Symbol.for(marker11);
+var _a11;
+var _TypeValidationError = class _TypeValidationError extends AISDKError {
+  constructor({ value, cause }) {
+    super({
+      name: name10,
+      message: `Type validation failed: Value: ${JSON.stringify(value)}.
+Error message: ${getErrorMessage(cause)}`,
+      cause
+    });
+    this[_a11] = true;
+    this.value = value;
+  }
+  static isInstance(error) {
+    return AISDKError.hasMarker(error, marker11);
+  }
+  /**
+   * Wraps an error into a TypeValidationError.
+   * If the cause is already a TypeValidationError with the same value, it returns the cause.
+   * Otherwise, it creates a new TypeValidationError.
+   *
+   * @param {Object} params - The parameters for wrapping the error.
+   * @param {unknown} params.value - The value that failed validation.
+   * @param {unknown} params.cause - The original error or cause of the validation failure.
+   * @returns {TypeValidationError} A TypeValidationError instance.
+   */
+  static wrap({
+    value,
+    cause
+  }) {
+    return _TypeValidationError.isInstance(cause) && cause.value === value ? cause : new _TypeValidationError({ value, cause });
+  }
+  /**
+   * @deprecated use `isInstance` instead
+   */
+  static isTypeValidationError(error) {
+    return error instanceof Error && error.name === name10;
+  }
+  /**
+   * @deprecated Do not use this method. It will be removed in the next major version.
+   */
+  toJSON() {
+    return {
+      name: this.name,
+      message: this.message,
+      cause: this.cause,
+      stack: this.stack,
+      value: this.value
+    };
+  }
+};
+_a11 = symbol11;
+var TypeValidationError = _TypeValidationError;
+
+// src/errors/unsupported-functionality-error.ts
+var name11 = "AI_UnsupportedFunctionalityError";
+var marker12 = `vercel.ai.error.${name11}`;
+var symbol12 = Symbol.for(marker12);
+var _a12;
+var UnsupportedFunctionalityError = class extends AISDKError {
+  constructor({ functionality }) {
+    super({
+      name: name11,
+      message: `'${functionality}' functionality not supported.`
+    });
+    this[_a12] = true;
+    this.functionality = functionality;
+  }
+  static isInstance(error) {
+    return AISDKError.hasMarker(error, marker12);
+  }
+  /**
+   * @deprecated Use isInstance instead.
+   */
+  static isUnsupportedFunctionalityError(error) {
+    return error instanceof Error && error.name === name11 && typeof error.functionality === "string";
+  }
+  /**
+   * @deprecated Do not use this method. It will be removed in the next major version.
+   */
+  toJSON() {
+    return {
+      name: this.name,
+      message: this.message,
+      stack: this.stack,
+      functionality: this.functionality
+    };
+  }
+};
+_a12 = symbol12;
+// Annotate the CommonJS export names for ESM import in node:
+0 && (0);
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 6399:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -8998,703 +10121,30 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.ts
 var src_exports = {};
 __export(src_exports, {
+  asSchema: () => asSchema,
   callChatApi: () => callChatApi,
   callCompletionApi: () => callCompletionApi,
   createChunkDecoder: () => createChunkDecoder,
   formatStreamPart: () => formatStreamPart,
-  generateId: () => import_provider_utils2.generateId,
+  generateId: () => import_provider_utils3.generateId,
+  getTextFromDataUrl: () => getTextFromDataUrl,
   isDeepEqualData: () => isDeepEqualData,
+  jsonSchema: () => jsonSchema,
   parseComplexResponse: () => parseComplexResponse,
   parsePartialJson: () => parsePartialJson,
   parseStreamPart: () => parseStreamPart,
   processChatStream: () => processChatStream,
-  readDataStream: () => readDataStream
+  readDataStream: () => readDataStream,
+  zodSchema: () => zodSchema
 });
 module.exports = __toCommonJS(src_exports);
-var import_provider_utils2 = __nccwpck_require__(9448);
+var import_provider_utils3 = __nccwpck_require__(1545);
 
 // src/parse-complex-response.ts
-var import_provider_utils = __nccwpck_require__(9448);
-
-// src/stream-parts.ts
-var textStreamPart = {
-  code: "0",
-  name: "text",
-  parse: (value) => {
-    if (typeof value !== "string") {
-      throw new Error('"text" parts expect a string value.');
-    }
-    return { type: "text", value };
-  }
-};
-var functionCallStreamPart = {
-  code: "1",
-  name: "function_call",
-  parse: (value) => {
-    if (value == null || typeof value !== "object" || !("function_call" in value) || typeof value.function_call !== "object" || value.function_call == null || !("name" in value.function_call) || !("arguments" in value.function_call) || typeof value.function_call.name !== "string" || typeof value.function_call.arguments !== "string") {
-      throw new Error(
-        '"function_call" parts expect an object with a "function_call" property.'
-      );
-    }
-    return {
-      type: "function_call",
-      value
-    };
-  }
-};
-var dataStreamPart = {
-  code: "2",
-  name: "data",
-  parse: (value) => {
-    if (!Array.isArray(value)) {
-      throw new Error('"data" parts expect an array value.');
-    }
-    return { type: "data", value };
-  }
-};
-var errorStreamPart = {
-  code: "3",
-  name: "error",
-  parse: (value) => {
-    if (typeof value !== "string") {
-      throw new Error('"error" parts expect a string value.');
-    }
-    return { type: "error", value };
-  }
-};
-var assistantMessageStreamPart = {
-  code: "4",
-  name: "assistant_message",
-  parse: (value) => {
-    if (value == null || typeof value !== "object" || !("id" in value) || !("role" in value) || !("content" in value) || typeof value.id !== "string" || typeof value.role !== "string" || value.role !== "assistant" || !Array.isArray(value.content) || !value.content.every(
-      (item) => item != null && typeof item === "object" && "type" in item && item.type === "text" && "text" in item && item.text != null && typeof item.text === "object" && "value" in item.text && typeof item.text.value === "string"
-    )) {
-      throw new Error(
-        '"assistant_message" parts expect an object with an "id", "role", and "content" property.'
-      );
-    }
-    return {
-      type: "assistant_message",
-      value
-    };
-  }
-};
-var assistantControlDataStreamPart = {
-  code: "5",
-  name: "assistant_control_data",
-  parse: (value) => {
-    if (value == null || typeof value !== "object" || !("threadId" in value) || !("messageId" in value) || typeof value.threadId !== "string" || typeof value.messageId !== "string") {
-      throw new Error(
-        '"assistant_control_data" parts expect an object with a "threadId" and "messageId" property.'
-      );
-    }
-    return {
-      type: "assistant_control_data",
-      value: {
-        threadId: value.threadId,
-        messageId: value.messageId
-      }
-    };
-  }
-};
-var dataMessageStreamPart = {
-  code: "6",
-  name: "data_message",
-  parse: (value) => {
-    if (value == null || typeof value !== "object" || !("role" in value) || !("data" in value) || typeof value.role !== "string" || value.role !== "data") {
-      throw new Error(
-        '"data_message" parts expect an object with a "role" and "data" property.'
-      );
-    }
-    return {
-      type: "data_message",
-      value
-    };
-  }
-};
-var toolCallsStreamPart = {
-  code: "7",
-  name: "tool_calls",
-  parse: (value) => {
-    if (value == null || typeof value !== "object" || !("tool_calls" in value) || typeof value.tool_calls !== "object" || value.tool_calls == null || !Array.isArray(value.tool_calls) || value.tool_calls.some(
-      (tc) => tc == null || typeof tc !== "object" || !("id" in tc) || typeof tc.id !== "string" || !("type" in tc) || typeof tc.type !== "string" || !("function" in tc) || tc.function == null || typeof tc.function !== "object" || !("arguments" in tc.function) || typeof tc.function.name !== "string" || typeof tc.function.arguments !== "string"
-    )) {
-      throw new Error(
-        '"tool_calls" parts expect an object with a ToolCallPayload.'
-      );
-    }
-    return {
-      type: "tool_calls",
-      value
-    };
-  }
-};
-var messageAnnotationsStreamPart = {
-  code: "8",
-  name: "message_annotations",
-  parse: (value) => {
-    if (!Array.isArray(value)) {
-      throw new Error('"message_annotations" parts expect an array value.');
-    }
-    return { type: "message_annotations", value };
-  }
-};
-var toolCallStreamPart = {
-  code: "9",
-  name: "tool_call",
-  parse: (value) => {
-    if (value == null || typeof value !== "object" || !("toolCallId" in value) || typeof value.toolCallId !== "string" || !("toolName" in value) || typeof value.toolName !== "string" || !("args" in value) || typeof value.args !== "object") {
-      throw new Error(
-        '"tool_call" parts expect an object with a "toolCallId", "toolName", and "args" property.'
-      );
-    }
-    return {
-      type: "tool_call",
-      value
-    };
-  }
-};
-var toolResultStreamPart = {
-  code: "a",
-  name: "tool_result",
-  parse: (value) => {
-    if (value == null || typeof value !== "object" || !("toolCallId" in value) || typeof value.toolCallId !== "string" || !("toolName" in value) || typeof value.toolName !== "string" || !("args" in value) || typeof value.args !== "object" || !("result" in value)) {
-      throw new Error(
-        '"tool_result" parts expect an object with a "toolCallId", "toolName", "args", and "result" property.'
-      );
-    }
-    return {
-      type: "tool_result",
-      value
-    };
-  }
-};
-var streamParts = [
-  textStreamPart,
-  functionCallStreamPart,
-  dataStreamPart,
-  errorStreamPart,
-  assistantMessageStreamPart,
-  assistantControlDataStreamPart,
-  dataMessageStreamPart,
-  toolCallsStreamPart,
-  messageAnnotationsStreamPart,
-  toolCallStreamPart,
-  toolResultStreamPart
-];
-var streamPartsByCode = {
-  [textStreamPart.code]: textStreamPart,
-  [functionCallStreamPart.code]: functionCallStreamPart,
-  [dataStreamPart.code]: dataStreamPart,
-  [errorStreamPart.code]: errorStreamPart,
-  [assistantMessageStreamPart.code]: assistantMessageStreamPart,
-  [assistantControlDataStreamPart.code]: assistantControlDataStreamPart,
-  [dataMessageStreamPart.code]: dataMessageStreamPart,
-  [toolCallsStreamPart.code]: toolCallsStreamPart,
-  [messageAnnotationsStreamPart.code]: messageAnnotationsStreamPart,
-  [toolCallStreamPart.code]: toolCallStreamPart,
-  [toolResultStreamPart.code]: toolResultStreamPart
-};
-var StreamStringPrefixes = {
-  [textStreamPart.name]: textStreamPart.code,
-  [functionCallStreamPart.name]: functionCallStreamPart.code,
-  [dataStreamPart.name]: dataStreamPart.code,
-  [errorStreamPart.name]: errorStreamPart.code,
-  [assistantMessageStreamPart.name]: assistantMessageStreamPart.code,
-  [assistantControlDataStreamPart.name]: assistantControlDataStreamPart.code,
-  [dataMessageStreamPart.name]: dataMessageStreamPart.code,
-  [toolCallsStreamPart.name]: toolCallsStreamPart.code,
-  [messageAnnotationsStreamPart.name]: messageAnnotationsStreamPart.code,
-  [toolCallStreamPart.name]: toolCallStreamPart.code,
-  [toolResultStreamPart.name]: toolResultStreamPart.code
-};
-var validCodes = streamParts.map((part) => part.code);
-var parseStreamPart = (line) => {
-  const firstSeparatorIndex = line.indexOf(":");
-  if (firstSeparatorIndex === -1) {
-    throw new Error("Failed to parse stream string. No separator found.");
-  }
-  const prefix = line.slice(0, firstSeparatorIndex);
-  if (!validCodes.includes(prefix)) {
-    throw new Error(`Failed to parse stream string. Invalid code ${prefix}.`);
-  }
-  const code = prefix;
-  const textValue = line.slice(firstSeparatorIndex + 1);
-  const jsonValue = JSON.parse(textValue);
-  return streamPartsByCode[code].parse(jsonValue);
-};
-function formatStreamPart(type, value) {
-  const streamPart = streamParts.find((part) => part.name === type);
-  if (!streamPart) {
-    throw new Error(`Invalid stream part type: ${type}`);
-  }
-  return `${streamPart.code}:${JSON.stringify(value)}
-`;
-}
-
-// src/read-data-stream.ts
-var NEWLINE = "\n".charCodeAt(0);
-function concatChunks(chunks, totalLength) {
-  const concatenatedChunks = new Uint8Array(totalLength);
-  let offset = 0;
-  for (const chunk of chunks) {
-    concatenatedChunks.set(chunk, offset);
-    offset += chunk.length;
-  }
-  chunks.length = 0;
-  return concatenatedChunks;
-}
-async function* readDataStream(reader, {
-  isAborted
-} = {}) {
-  const decoder = new TextDecoder();
-  const chunks = [];
-  let totalLength = 0;
-  while (true) {
-    const { value } = await reader.read();
-    if (value) {
-      chunks.push(value);
-      totalLength += value.length;
-      if (value[value.length - 1] !== NEWLINE) {
-        continue;
-      }
-    }
-    if (chunks.length === 0) {
-      break;
-    }
-    const concatenatedChunks = concatChunks(chunks, totalLength);
-    totalLength = 0;
-    const streamParts2 = decoder.decode(concatenatedChunks, { stream: true }).split("\n").filter((line) => line !== "").map(parseStreamPart);
-    for (const streamPart of streamParts2) {
-      yield streamPart;
-    }
-    if (isAborted == null ? void 0 : isAborted()) {
-      reader.cancel();
-      break;
-    }
-  }
-}
-
-// src/parse-complex-response.ts
-function assignAnnotationsToMessage(message, annotations) {
-  if (!message || !annotations || !annotations.length)
-    return message;
-  return { ...message, annotations: [...annotations] };
-}
-async function parseComplexResponse({
-  reader,
-  abortControllerRef,
-  update,
-  onToolCall,
-  onFinish,
-  generateId: generateId2 = import_provider_utils.generateId,
-  getCurrentDate = () => /* @__PURE__ */ new Date()
-}) {
-  const createdAt = getCurrentDate();
-  const prefixMap = {
-    data: []
-  };
-  let message_annotations = void 0;
-  for await (const { type, value } of readDataStream(reader, {
-    isAborted: () => (abortControllerRef == null ? void 0 : abortControllerRef.current) === null
-  })) {
-    if (type === "text") {
-      if (prefixMap["text"]) {
-        prefixMap["text"] = {
-          ...prefixMap["text"],
-          content: (prefixMap["text"].content || "") + value
-        };
-      } else {
-        prefixMap["text"] = {
-          id: generateId2(),
-          role: "assistant",
-          content: value,
-          createdAt
-        };
-      }
-    }
-    if (type === "tool_call") {
-      if (prefixMap.text == null) {
-        prefixMap.text = {
-          id: generateId2(),
-          role: "assistant",
-          content: "",
-          createdAt
-        };
-      }
-      if (prefixMap.text.toolInvocations == null) {
-        prefixMap.text.toolInvocations = [];
-      }
-      prefixMap.text.toolInvocations.push(value);
-      if (onToolCall) {
-        const result = await onToolCall({ toolCall: value });
-        if (result != null) {
-          prefixMap.text.toolInvocations[prefixMap.text.toolInvocations.length - 1] = { ...value, result };
-        }
-      }
-    } else if (type === "tool_result") {
-      if (prefixMap.text == null) {
-        prefixMap.text = {
-          id: generateId2(),
-          role: "assistant",
-          content: "",
-          createdAt
-        };
-      }
-      if (prefixMap.text.toolInvocations == null) {
-        prefixMap.text.toolInvocations = [];
-      }
-      const toolInvocationIndex = prefixMap.text.toolInvocations.findIndex(
-        (invocation) => invocation.toolCallId === value.toolCallId
-      );
-      if (toolInvocationIndex !== -1) {
-        prefixMap.text.toolInvocations[toolInvocationIndex] = value;
-      } else {
-        prefixMap.text.toolInvocations.push(value);
-      }
-    }
-    let functionCallMessage = null;
-    if (type === "function_call") {
-      prefixMap["function_call"] = {
-        id: generateId2(),
-        role: "assistant",
-        content: "",
-        function_call: value.function_call,
-        name: value.function_call.name,
-        createdAt
-      };
-      functionCallMessage = prefixMap["function_call"];
-    }
-    let toolCallMessage = null;
-    if (type === "tool_calls") {
-      prefixMap["tool_calls"] = {
-        id: generateId2(),
-        role: "assistant",
-        content: "",
-        tool_calls: value.tool_calls,
-        createdAt
-      };
-      toolCallMessage = prefixMap["tool_calls"];
-    }
-    if (type === "data") {
-      prefixMap["data"].push(...value);
-    }
-    let responseMessage = prefixMap["text"];
-    if (type === "message_annotations") {
-      if (!message_annotations) {
-        message_annotations = [...value];
-      } else {
-        message_annotations.push(...value);
-      }
-      functionCallMessage = assignAnnotationsToMessage(
-        prefixMap["function_call"],
-        message_annotations
-      );
-      toolCallMessage = assignAnnotationsToMessage(
-        prefixMap["tool_calls"],
-        message_annotations
-      );
-      responseMessage = assignAnnotationsToMessage(
-        prefixMap["text"],
-        message_annotations
-      );
-    }
-    if (message_annotations == null ? void 0 : message_annotations.length) {
-      const messagePrefixKeys = [
-        "text",
-        "function_call",
-        "tool_calls"
-      ];
-      messagePrefixKeys.forEach((key) => {
-        if (prefixMap[key]) {
-          prefixMap[key].annotations = [...message_annotations];
-        }
-      });
-    }
-    const merged = [functionCallMessage, toolCallMessage, responseMessage].filter(Boolean).map((message) => ({
-      ...assignAnnotationsToMessage(message, message_annotations)
-    }));
-    update(merged, [...prefixMap["data"]]);
-  }
-  onFinish == null ? void 0 : onFinish(prefixMap);
-  return {
-    messages: [
-      prefixMap.text,
-      prefixMap.function_call,
-      prefixMap.tool_calls
-    ].filter(Boolean),
-    data: prefixMap.data
-  };
-}
-
-// src/call-chat-api.ts
-var getOriginalFetch = () => fetch;
-async function callChatApi({
-  api,
-  body,
-  streamMode = "stream-data",
-  credentials,
-  headers,
-  abortController,
-  restoreMessagesOnFailure,
-  onResponse,
-  onUpdate,
-  onFinish,
-  onToolCall,
-  generateId: generateId2,
-  fetch: fetch2 = getOriginalFetch()
-}) {
-  var _a, _b;
-  const response = await fetch2(api, {
-    method: "POST",
-    body: JSON.stringify(body),
-    headers: {
-      "Content-Type": "application/json",
-      ...headers
-    },
-    signal: (_a = abortController == null ? void 0 : abortController()) == null ? void 0 : _a.signal,
-    credentials
-  }).catch((err) => {
-    restoreMessagesOnFailure();
-    throw err;
-  });
-  if (onResponse) {
-    try {
-      await onResponse(response);
-    } catch (err) {
-      throw err;
-    }
-  }
-  if (!response.ok) {
-    restoreMessagesOnFailure();
-    throw new Error(
-      (_b = await response.text()) != null ? _b : "Failed to fetch the chat response."
-    );
-  }
-  if (!response.body) {
-    throw new Error("The response body is empty.");
-  }
-  const reader = response.body.getReader();
-  switch (streamMode) {
-    case "text": {
-      const decoder = createChunkDecoder();
-      const resultMessage = {
-        id: generateId2(),
-        createdAt: /* @__PURE__ */ new Date(),
-        role: "assistant",
-        content: ""
-      };
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) {
-          break;
-        }
-        resultMessage.content += decoder(value);
-        resultMessage.id = generateId2();
-        onUpdate([{ ...resultMessage }], []);
-        if ((abortController == null ? void 0 : abortController()) === null) {
-          reader.cancel();
-          break;
-        }
-      }
-      onFinish == null ? void 0 : onFinish(resultMessage);
-      return {
-        messages: [resultMessage],
-        data: []
-      };
-    }
-    case "stream-data": {
-      return await parseComplexResponse({
-        reader,
-        abortControllerRef: abortController != null ? { current: abortController() } : void 0,
-        update: onUpdate,
-        onToolCall,
-        onFinish(prefixMap) {
-          if (onFinish && prefixMap.text != null) {
-            onFinish(prefixMap.text);
-          }
-        },
-        generateId: generateId2
-      });
-    }
-    default: {
-      const exhaustiveCheck = streamMode;
-      throw new Error(`Unknown stream mode: ${exhaustiveCheck}`);
-    }
-  }
-}
-
-// src/call-completion-api.ts
-var getOriginalFetch2 = () => fetch;
-async function callCompletionApi({
-  api,
-  prompt,
-  credentials,
-  headers,
-  body,
-  streamMode = "stream-data",
-  setCompletion,
-  setLoading,
-  setError,
-  setAbortController,
-  onResponse,
-  onFinish,
-  onError,
-  onData,
-  fetch: fetch2 = getOriginalFetch2()
-}) {
-  try {
-    setLoading(true);
-    setError(void 0);
-    const abortController = new AbortController();
-    setAbortController(abortController);
-    setCompletion("");
-    const res = await fetch2(api, {
-      method: "POST",
-      body: JSON.stringify({
-        prompt,
-        ...body
-      }),
-      credentials,
-      headers: {
-        "Content-Type": "application/json",
-        ...headers
-      },
-      signal: abortController.signal
-    }).catch((err) => {
-      throw err;
-    });
-    if (onResponse) {
-      try {
-        await onResponse(res);
-      } catch (err) {
-        throw err;
-      }
-    }
-    if (!res.ok) {
-      throw new Error(
-        await res.text() || "Failed to fetch the chat response."
-      );
-    }
-    if (!res.body) {
-      throw new Error("The response body is empty.");
-    }
-    let result = "";
-    const reader = res.body.getReader();
-    switch (streamMode) {
-      case "text": {
-        const decoder = createChunkDecoder();
-        while (true) {
-          const { done, value } = await reader.read();
-          if (done) {
-            break;
-          }
-          result += decoder(value);
-          setCompletion(result);
-          if (abortController === null) {
-            reader.cancel();
-            break;
-          }
-        }
-        break;
-      }
-      case "stream-data": {
-        for await (const { type, value } of readDataStream(reader, {
-          isAborted: () => abortController === null
-        })) {
-          switch (type) {
-            case "text": {
-              result += value;
-              setCompletion(result);
-              break;
-            }
-            case "data": {
-              onData == null ? void 0 : onData(value);
-              break;
-            }
-          }
-        }
-        break;
-      }
-      default: {
-        const exhaustiveCheck = streamMode;
-        throw new Error(`Unknown stream mode: ${exhaustiveCheck}`);
-      }
-    }
-    if (onFinish) {
-      onFinish(prompt, result);
-    }
-    setAbortController(null);
-    return result;
-  } catch (err) {
-    if (err.name === "AbortError") {
-      setAbortController(null);
-      return null;
-    }
-    if (err instanceof Error) {
-      if (onError) {
-        onError(err);
-      }
-    }
-    setError(err);
-  } finally {
-    setLoading(false);
-  }
-}
-
-// src/create-chunk-decoder.ts
-function createChunkDecoder(complex) {
-  const decoder = new TextDecoder();
-  if (!complex) {
-    return function(chunk) {
-      if (!chunk)
-        return "";
-      return decoder.decode(chunk, { stream: true });
-    };
-  }
-  return function(chunk) {
-    const decoded = decoder.decode(chunk, { stream: true }).split("\n").filter((line) => line !== "");
-    return decoded.map(parseStreamPart).filter(Boolean);
-  };
-}
-
-// src/is-deep-equal-data.ts
-function isDeepEqualData(obj1, obj2) {
-  if (obj1 === obj2)
-    return true;
-  if (obj1 == null || obj2 == null)
-    return false;
-  if (typeof obj1 !== "object" && typeof obj2 !== "object")
-    return obj1 === obj2;
-  if (obj1.constructor !== obj2.constructor)
-    return false;
-  if (obj1 instanceof Date && obj2 instanceof Date) {
-    return obj1.getTime() === obj2.getTime();
-  }
-  if (Array.isArray(obj1)) {
-    if (obj1.length !== obj2.length)
-      return false;
-    for (let i = 0; i < obj1.length; i++) {
-      if (!isDeepEqualData(obj1[i], obj2[i]))
-        return false;
-    }
-    return true;
-  }
-  const keys1 = Object.keys(obj1);
-  const keys2 = Object.keys(obj2);
-  if (keys1.length !== keys2.length)
-    return false;
-  for (const key of keys1) {
-    if (!keys2.includes(key))
-      return false;
-    if (!isDeepEqualData(obj1[key], obj2[key]))
-      return false;
-  }
-  return true;
-}
+var import_provider_utils = __nccwpck_require__(1545);
 
 // src/parse-partial-json.ts
-var import_secure_json_parse = __toESM(__nccwpck_require__(3947));
+var import_secure_json_parse = __toESM(__nccwpck_require__(9752));
 
 // src/fix-json.ts
 function fixJson(input) {
@@ -10031,6 +10481,818 @@ function parsePartialJson(jsonText) {
   return void 0;
 }
 
+// src/stream-parts.ts
+var textStreamPart = {
+  code: "0",
+  name: "text",
+  parse: (value) => {
+    if (typeof value !== "string") {
+      throw new Error('"text" parts expect a string value.');
+    }
+    return { type: "text", value };
+  }
+};
+var functionCallStreamPart = {
+  code: "1",
+  name: "function_call",
+  parse: (value) => {
+    if (value == null || typeof value !== "object" || !("function_call" in value) || typeof value.function_call !== "object" || value.function_call == null || !("name" in value.function_call) || !("arguments" in value.function_call) || typeof value.function_call.name !== "string" || typeof value.function_call.arguments !== "string") {
+      throw new Error(
+        '"function_call" parts expect an object with a "function_call" property.'
+      );
+    }
+    return {
+      type: "function_call",
+      value
+    };
+  }
+};
+var dataStreamPart = {
+  code: "2",
+  name: "data",
+  parse: (value) => {
+    if (!Array.isArray(value)) {
+      throw new Error('"data" parts expect an array value.');
+    }
+    return { type: "data", value };
+  }
+};
+var errorStreamPart = {
+  code: "3",
+  name: "error",
+  parse: (value) => {
+    if (typeof value !== "string") {
+      throw new Error('"error" parts expect a string value.');
+    }
+    return { type: "error", value };
+  }
+};
+var assistantMessageStreamPart = {
+  code: "4",
+  name: "assistant_message",
+  parse: (value) => {
+    if (value == null || typeof value !== "object" || !("id" in value) || !("role" in value) || !("content" in value) || typeof value.id !== "string" || typeof value.role !== "string" || value.role !== "assistant" || !Array.isArray(value.content) || !value.content.every(
+      (item) => item != null && typeof item === "object" && "type" in item && item.type === "text" && "text" in item && item.text != null && typeof item.text === "object" && "value" in item.text && typeof item.text.value === "string"
+    )) {
+      throw new Error(
+        '"assistant_message" parts expect an object with an "id", "role", and "content" property.'
+      );
+    }
+    return {
+      type: "assistant_message",
+      value
+    };
+  }
+};
+var assistantControlDataStreamPart = {
+  code: "5",
+  name: "assistant_control_data",
+  parse: (value) => {
+    if (value == null || typeof value !== "object" || !("threadId" in value) || !("messageId" in value) || typeof value.threadId !== "string" || typeof value.messageId !== "string") {
+      throw new Error(
+        '"assistant_control_data" parts expect an object with a "threadId" and "messageId" property.'
+      );
+    }
+    return {
+      type: "assistant_control_data",
+      value: {
+        threadId: value.threadId,
+        messageId: value.messageId
+      }
+    };
+  }
+};
+var dataMessageStreamPart = {
+  code: "6",
+  name: "data_message",
+  parse: (value) => {
+    if (value == null || typeof value !== "object" || !("role" in value) || !("data" in value) || typeof value.role !== "string" || value.role !== "data") {
+      throw new Error(
+        '"data_message" parts expect an object with a "role" and "data" property.'
+      );
+    }
+    return {
+      type: "data_message",
+      value
+    };
+  }
+};
+var toolCallsStreamPart = {
+  code: "7",
+  name: "tool_calls",
+  parse: (value) => {
+    if (value == null || typeof value !== "object" || !("tool_calls" in value) || typeof value.tool_calls !== "object" || value.tool_calls == null || !Array.isArray(value.tool_calls) || value.tool_calls.some(
+      (tc) => tc == null || typeof tc !== "object" || !("id" in tc) || typeof tc.id !== "string" || !("type" in tc) || typeof tc.type !== "string" || !("function" in tc) || tc.function == null || typeof tc.function !== "object" || !("arguments" in tc.function) || typeof tc.function.name !== "string" || typeof tc.function.arguments !== "string"
+    )) {
+      throw new Error(
+        '"tool_calls" parts expect an object with a ToolCallPayload.'
+      );
+    }
+    return {
+      type: "tool_calls",
+      value
+    };
+  }
+};
+var messageAnnotationsStreamPart = {
+  code: "8",
+  name: "message_annotations",
+  parse: (value) => {
+    if (!Array.isArray(value)) {
+      throw new Error('"message_annotations" parts expect an array value.');
+    }
+    return { type: "message_annotations", value };
+  }
+};
+var toolCallStreamPart = {
+  code: "9",
+  name: "tool_call",
+  parse: (value) => {
+    if (value == null || typeof value !== "object" || !("toolCallId" in value) || typeof value.toolCallId !== "string" || !("toolName" in value) || typeof value.toolName !== "string" || !("args" in value) || typeof value.args !== "object") {
+      throw new Error(
+        '"tool_call" parts expect an object with a "toolCallId", "toolName", and "args" property.'
+      );
+    }
+    return {
+      type: "tool_call",
+      value
+    };
+  }
+};
+var toolResultStreamPart = {
+  code: "a",
+  name: "tool_result",
+  parse: (value) => {
+    if (value == null || typeof value !== "object" || !("toolCallId" in value) || typeof value.toolCallId !== "string" || !("result" in value)) {
+      throw new Error(
+        '"tool_result" parts expect an object with a "toolCallId" and a "result" property.'
+      );
+    }
+    return {
+      type: "tool_result",
+      value
+    };
+  }
+};
+var toolCallStreamingStartStreamPart = {
+  code: "b",
+  name: "tool_call_streaming_start",
+  parse: (value) => {
+    if (value == null || typeof value !== "object" || !("toolCallId" in value) || typeof value.toolCallId !== "string" || !("toolName" in value) || typeof value.toolName !== "string") {
+      throw new Error(
+        '"tool_call_streaming_start" parts expect an object with a "toolCallId" and "toolName" property.'
+      );
+    }
+    return {
+      type: "tool_call_streaming_start",
+      value
+    };
+  }
+};
+var toolCallDeltaStreamPart = {
+  code: "c",
+  name: "tool_call_delta",
+  parse: (value) => {
+    if (value == null || typeof value !== "object" || !("toolCallId" in value) || typeof value.toolCallId !== "string" || !("argsTextDelta" in value) || typeof value.argsTextDelta !== "string") {
+      throw new Error(
+        '"tool_call_delta" parts expect an object with a "toolCallId" and "argsTextDelta" property.'
+      );
+    }
+    return {
+      type: "tool_call_delta",
+      value
+    };
+  }
+};
+var finishMessageStreamPart = {
+  code: "d",
+  name: "finish_message",
+  parse: (value) => {
+    if (value == null || typeof value !== "object" || !("finishReason" in value) || typeof value.finishReason !== "string" || !("usage" in value) || value.usage == null || typeof value.usage !== "object" || !("promptTokens" in value.usage) || !("completionTokens" in value.usage)) {
+      throw new Error(
+        '"finish_message" parts expect an object with a "finishReason" and "usage" property.'
+      );
+    }
+    if (typeof value.usage.promptTokens !== "number") {
+      value.usage.promptTokens = Number.NaN;
+    }
+    if (typeof value.usage.completionTokens !== "number") {
+      value.usage.completionTokens = Number.NaN;
+    }
+    return {
+      type: "finish_message",
+      value
+    };
+  }
+};
+var streamParts = [
+  textStreamPart,
+  functionCallStreamPart,
+  dataStreamPart,
+  errorStreamPart,
+  assistantMessageStreamPart,
+  assistantControlDataStreamPart,
+  dataMessageStreamPart,
+  toolCallsStreamPart,
+  messageAnnotationsStreamPart,
+  toolCallStreamPart,
+  toolResultStreamPart,
+  toolCallStreamingStartStreamPart,
+  toolCallDeltaStreamPart,
+  finishMessageStreamPart
+];
+var streamPartsByCode = {
+  [textStreamPart.code]: textStreamPart,
+  [functionCallStreamPart.code]: functionCallStreamPart,
+  [dataStreamPart.code]: dataStreamPart,
+  [errorStreamPart.code]: errorStreamPart,
+  [assistantMessageStreamPart.code]: assistantMessageStreamPart,
+  [assistantControlDataStreamPart.code]: assistantControlDataStreamPart,
+  [dataMessageStreamPart.code]: dataMessageStreamPart,
+  [toolCallsStreamPart.code]: toolCallsStreamPart,
+  [messageAnnotationsStreamPart.code]: messageAnnotationsStreamPart,
+  [toolCallStreamPart.code]: toolCallStreamPart,
+  [toolResultStreamPart.code]: toolResultStreamPart,
+  [toolCallStreamingStartStreamPart.code]: toolCallStreamingStartStreamPart,
+  [toolCallDeltaStreamPart.code]: toolCallDeltaStreamPart,
+  [finishMessageStreamPart.code]: finishMessageStreamPart
+};
+var StreamStringPrefixes = {
+  [textStreamPart.name]: textStreamPart.code,
+  [functionCallStreamPart.name]: functionCallStreamPart.code,
+  [dataStreamPart.name]: dataStreamPart.code,
+  [errorStreamPart.name]: errorStreamPart.code,
+  [assistantMessageStreamPart.name]: assistantMessageStreamPart.code,
+  [assistantControlDataStreamPart.name]: assistantControlDataStreamPart.code,
+  [dataMessageStreamPart.name]: dataMessageStreamPart.code,
+  [toolCallsStreamPart.name]: toolCallsStreamPart.code,
+  [messageAnnotationsStreamPart.name]: messageAnnotationsStreamPart.code,
+  [toolCallStreamPart.name]: toolCallStreamPart.code,
+  [toolResultStreamPart.name]: toolResultStreamPart.code,
+  [toolCallStreamingStartStreamPart.name]: toolCallStreamingStartStreamPart.code,
+  [toolCallDeltaStreamPart.name]: toolCallDeltaStreamPart.code,
+  [finishMessageStreamPart.name]: finishMessageStreamPart.code
+};
+var validCodes = streamParts.map((part) => part.code);
+var parseStreamPart = (line) => {
+  const firstSeparatorIndex = line.indexOf(":");
+  if (firstSeparatorIndex === -1) {
+    throw new Error("Failed to parse stream string. No separator found.");
+  }
+  const prefix = line.slice(0, firstSeparatorIndex);
+  if (!validCodes.includes(prefix)) {
+    throw new Error(`Failed to parse stream string. Invalid code ${prefix}.`);
+  }
+  const code = prefix;
+  const textValue = line.slice(firstSeparatorIndex + 1);
+  const jsonValue = JSON.parse(textValue);
+  return streamPartsByCode[code].parse(jsonValue);
+};
+function formatStreamPart(type, value) {
+  const streamPart = streamParts.find((part) => part.name === type);
+  if (!streamPart) {
+    throw new Error(`Invalid stream part type: ${type}`);
+  }
+  return `${streamPart.code}:${JSON.stringify(value)}
+`;
+}
+
+// src/read-data-stream.ts
+var NEWLINE = "\n".charCodeAt(0);
+function concatChunks(chunks, totalLength) {
+  const concatenatedChunks = new Uint8Array(totalLength);
+  let offset = 0;
+  for (const chunk of chunks) {
+    concatenatedChunks.set(chunk, offset);
+    offset += chunk.length;
+  }
+  chunks.length = 0;
+  return concatenatedChunks;
+}
+async function* readDataStream(reader, {
+  isAborted
+} = {}) {
+  const decoder = new TextDecoder();
+  const chunks = [];
+  let totalLength = 0;
+  while (true) {
+    const { value } = await reader.read();
+    if (value) {
+      chunks.push(value);
+      totalLength += value.length;
+      if (value[value.length - 1] !== NEWLINE) {
+        continue;
+      }
+    }
+    if (chunks.length === 0) {
+      break;
+    }
+    const concatenatedChunks = concatChunks(chunks, totalLength);
+    totalLength = 0;
+    const streamParts2 = decoder.decode(concatenatedChunks, { stream: true }).split("\n").filter((line) => line !== "").map(parseStreamPart);
+    for (const streamPart of streamParts2) {
+      yield streamPart;
+    }
+    if (isAborted == null ? void 0 : isAborted()) {
+      reader.cancel();
+      break;
+    }
+  }
+}
+
+// src/parse-complex-response.ts
+function assignAnnotationsToMessage(message, annotations) {
+  if (!message || !annotations || !annotations.length)
+    return message;
+  return { ...message, annotations: [...annotations] };
+}
+async function parseComplexResponse({
+  reader,
+  abortControllerRef,
+  update,
+  onToolCall,
+  onFinish,
+  generateId: generateId2 = import_provider_utils.generateId,
+  getCurrentDate = () => /* @__PURE__ */ new Date()
+}) {
+  var _a;
+  const createdAt = getCurrentDate();
+  const prefixMap = {
+    data: []
+  };
+  let message_annotations = void 0;
+  const partialToolCalls = {};
+  let usage = {
+    completionTokens: NaN,
+    promptTokens: NaN,
+    totalTokens: NaN
+  };
+  let finishReason = "unknown";
+  for await (const { type, value } of readDataStream(reader, {
+    isAborted: () => (abortControllerRef == null ? void 0 : abortControllerRef.current) === null
+  })) {
+    if (type === "error") {
+      throw new Error(value);
+    }
+    if (type === "text") {
+      if (prefixMap["text"]) {
+        prefixMap["text"] = {
+          ...prefixMap["text"],
+          content: (prefixMap["text"].content || "") + value
+        };
+      } else {
+        prefixMap["text"] = {
+          id: generateId2(),
+          role: "assistant",
+          content: value,
+          createdAt
+        };
+      }
+    }
+    if (type === "finish_message") {
+      const { completionTokens, promptTokens } = value.usage;
+      finishReason = value.finishReason;
+      usage = {
+        completionTokens,
+        promptTokens,
+        totalTokens: completionTokens + promptTokens
+      };
+    }
+    if (type === "tool_call_streaming_start") {
+      if (prefixMap.text == null) {
+        prefixMap.text = {
+          id: generateId2(),
+          role: "assistant",
+          content: "",
+          createdAt
+        };
+      }
+      if (prefixMap.text.toolInvocations == null) {
+        prefixMap.text.toolInvocations = [];
+      }
+      partialToolCalls[value.toolCallId] = {
+        text: "",
+        toolName: value.toolName,
+        prefixMapIndex: prefixMap.text.toolInvocations.length
+      };
+      prefixMap.text.toolInvocations.push({
+        state: "partial-call",
+        toolCallId: value.toolCallId,
+        toolName: value.toolName,
+        args: void 0
+      });
+    } else if (type === "tool_call_delta") {
+      const partialToolCall = partialToolCalls[value.toolCallId];
+      partialToolCall.text += value.argsTextDelta;
+      prefixMap.text.toolInvocations[partialToolCall.prefixMapIndex] = {
+        state: "partial-call",
+        toolCallId: value.toolCallId,
+        toolName: partialToolCall.toolName,
+        args: parsePartialJson(partialToolCall.text)
+      };
+      prefixMap.text.internalUpdateId = generateId2();
+    } else if (type === "tool_call") {
+      if (partialToolCalls[value.toolCallId] != null) {
+        prefixMap.text.toolInvocations[partialToolCalls[value.toolCallId].prefixMapIndex] = { state: "call", ...value };
+      } else {
+        if (prefixMap.text == null) {
+          prefixMap.text = {
+            id: generateId2(),
+            role: "assistant",
+            content: "",
+            createdAt
+          };
+        }
+        if (prefixMap.text.toolInvocations == null) {
+          prefixMap.text.toolInvocations = [];
+        }
+        prefixMap.text.toolInvocations.push({
+          state: "call",
+          ...value
+        });
+      }
+      prefixMap.text.internalUpdateId = generateId2();
+      if (onToolCall) {
+        const result = await onToolCall({ toolCall: value });
+        if (result != null) {
+          prefixMap.text.toolInvocations[prefixMap.text.toolInvocations.length - 1] = { state: "result", ...value, result };
+        }
+      }
+    } else if (type === "tool_result") {
+      const toolInvocations = (_a = prefixMap.text) == null ? void 0 : _a.toolInvocations;
+      if (toolInvocations == null) {
+        throw new Error("tool_result must be preceded by a tool_call");
+      }
+      const toolInvocationIndex = toolInvocations.findIndex(
+        (invocation) => invocation.toolCallId === value.toolCallId
+      );
+      if (toolInvocationIndex === -1) {
+        throw new Error(
+          "tool_result must be preceded by a tool_call with the same toolCallId"
+        );
+      }
+      toolInvocations[toolInvocationIndex] = {
+        ...toolInvocations[toolInvocationIndex],
+        state: "result",
+        ...value
+      };
+    }
+    let functionCallMessage = null;
+    if (type === "function_call") {
+      prefixMap["function_call"] = {
+        id: generateId2(),
+        role: "assistant",
+        content: "",
+        function_call: value.function_call,
+        name: value.function_call.name,
+        createdAt
+      };
+      functionCallMessage = prefixMap["function_call"];
+    }
+    let toolCallMessage = null;
+    if (type === "tool_calls") {
+      prefixMap["tool_calls"] = {
+        id: generateId2(),
+        role: "assistant",
+        content: "",
+        tool_calls: value.tool_calls,
+        createdAt
+      };
+      toolCallMessage = prefixMap["tool_calls"];
+    }
+    if (type === "data") {
+      prefixMap["data"].push(...value);
+    }
+    let responseMessage = prefixMap["text"];
+    if (type === "message_annotations") {
+      if (!message_annotations) {
+        message_annotations = [...value];
+      } else {
+        message_annotations.push(...value);
+      }
+      functionCallMessage = assignAnnotationsToMessage(
+        prefixMap["function_call"],
+        message_annotations
+      );
+      toolCallMessage = assignAnnotationsToMessage(
+        prefixMap["tool_calls"],
+        message_annotations
+      );
+      responseMessage = assignAnnotationsToMessage(
+        prefixMap["text"],
+        message_annotations
+      );
+    }
+    if (message_annotations == null ? void 0 : message_annotations.length) {
+      const messagePrefixKeys = [
+        "text",
+        "function_call",
+        "tool_calls"
+      ];
+      messagePrefixKeys.forEach((key) => {
+        if (prefixMap[key]) {
+          prefixMap[key].annotations = [...message_annotations];
+        }
+      });
+    }
+    const merged = [functionCallMessage, toolCallMessage, responseMessage].filter(Boolean).map((message) => ({
+      ...assignAnnotationsToMessage(message, message_annotations)
+    }));
+    update(merged, [...prefixMap["data"]]);
+  }
+  onFinish == null ? void 0 : onFinish({ prefixMap, finishReason, usage });
+  return {
+    messages: [
+      prefixMap.text,
+      prefixMap.function_call,
+      prefixMap.tool_calls
+    ].filter(Boolean),
+    data: prefixMap.data
+  };
+}
+
+// src/call-chat-api.ts
+var getOriginalFetch = () => fetch;
+async function callChatApi({
+  api,
+  body,
+  streamProtocol = "data",
+  credentials,
+  headers,
+  abortController,
+  restoreMessagesOnFailure,
+  onResponse,
+  onUpdate,
+  onFinish,
+  onToolCall,
+  generateId: generateId2,
+  fetch: fetch2 = getOriginalFetch()
+}) {
+  var _a, _b;
+  const response = await fetch2(api, {
+    method: "POST",
+    body: JSON.stringify(body),
+    headers: {
+      "Content-Type": "application/json",
+      ...headers
+    },
+    signal: (_a = abortController == null ? void 0 : abortController()) == null ? void 0 : _a.signal,
+    credentials
+  }).catch((err) => {
+    restoreMessagesOnFailure();
+    throw err;
+  });
+  if (onResponse) {
+    try {
+      await onResponse(response);
+    } catch (err) {
+      throw err;
+    }
+  }
+  if (!response.ok) {
+    restoreMessagesOnFailure();
+    throw new Error(
+      (_b = await response.text()) != null ? _b : "Failed to fetch the chat response."
+    );
+  }
+  if (!response.body) {
+    throw new Error("The response body is empty.");
+  }
+  const reader = response.body.getReader();
+  switch (streamProtocol) {
+    case "text": {
+      const decoder = createChunkDecoder();
+      const resultMessage = {
+        id: generateId2(),
+        createdAt: /* @__PURE__ */ new Date(),
+        role: "assistant",
+        content: ""
+      };
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) {
+          break;
+        }
+        resultMessage.content += decoder(value);
+        onUpdate([{ ...resultMessage }], []);
+        if ((abortController == null ? void 0 : abortController()) === null) {
+          reader.cancel();
+          break;
+        }
+      }
+      onFinish == null ? void 0 : onFinish(resultMessage, {
+        usage: { completionTokens: NaN, promptTokens: NaN, totalTokens: NaN },
+        finishReason: "unknown"
+      });
+      return {
+        messages: [resultMessage],
+        data: []
+      };
+    }
+    case "data": {
+      return await parseComplexResponse({
+        reader,
+        abortControllerRef: abortController != null ? { current: abortController() } : void 0,
+        update: onUpdate,
+        onToolCall,
+        onFinish({ prefixMap, finishReason, usage }) {
+          if (onFinish && prefixMap.text != null) {
+            onFinish(prefixMap.text, { usage, finishReason });
+          }
+        },
+        generateId: generateId2
+      });
+    }
+    default: {
+      const exhaustiveCheck = streamProtocol;
+      throw new Error(`Unknown stream protocol: ${exhaustiveCheck}`);
+    }
+  }
+}
+
+// src/call-completion-api.ts
+var getOriginalFetch2 = () => fetch;
+async function callCompletionApi({
+  api,
+  prompt,
+  credentials,
+  headers,
+  body,
+  streamProtocol = "data",
+  setCompletion,
+  setLoading,
+  setError,
+  setAbortController,
+  onResponse,
+  onFinish,
+  onError,
+  onData,
+  fetch: fetch2 = getOriginalFetch2()
+}) {
+  try {
+    setLoading(true);
+    setError(void 0);
+    const abortController = new AbortController();
+    setAbortController(abortController);
+    setCompletion("");
+    const res = await fetch2(api, {
+      method: "POST",
+      body: JSON.stringify({
+        prompt,
+        ...body
+      }),
+      credentials,
+      headers: {
+        "Content-Type": "application/json",
+        ...headers
+      },
+      signal: abortController.signal
+    }).catch((err) => {
+      throw err;
+    });
+    if (onResponse) {
+      try {
+        await onResponse(res);
+      } catch (err) {
+        throw err;
+      }
+    }
+    if (!res.ok) {
+      throw new Error(
+        await res.text() || "Failed to fetch the chat response."
+      );
+    }
+    if (!res.body) {
+      throw new Error("The response body is empty.");
+    }
+    let result = "";
+    const reader = res.body.getReader();
+    switch (streamProtocol) {
+      case "text": {
+        const decoder = createChunkDecoder();
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) {
+            break;
+          }
+          result += decoder(value);
+          setCompletion(result);
+          if (abortController === null) {
+            reader.cancel();
+            break;
+          }
+        }
+        break;
+      }
+      case "data": {
+        for await (const { type, value } of readDataStream(reader, {
+          isAborted: () => abortController === null
+        })) {
+          switch (type) {
+            case "text": {
+              result += value;
+              setCompletion(result);
+              break;
+            }
+            case "data": {
+              onData == null ? void 0 : onData(value);
+              break;
+            }
+          }
+        }
+        break;
+      }
+      default: {
+        const exhaustiveCheck = streamProtocol;
+        throw new Error(`Unknown stream protocol: ${exhaustiveCheck}`);
+      }
+    }
+    if (onFinish) {
+      onFinish(prompt, result);
+    }
+    setAbortController(null);
+    return result;
+  } catch (err) {
+    if (err.name === "AbortError") {
+      setAbortController(null);
+      return null;
+    }
+    if (err instanceof Error) {
+      if (onError) {
+        onError(err);
+      }
+    }
+    setError(err);
+  } finally {
+    setLoading(false);
+  }
+}
+
+// src/create-chunk-decoder.ts
+function createChunkDecoder(complex) {
+  const decoder = new TextDecoder();
+  if (!complex) {
+    return function(chunk) {
+      if (!chunk)
+        return "";
+      return decoder.decode(chunk, { stream: true });
+    };
+  }
+  return function(chunk) {
+    const decoded = decoder.decode(chunk, { stream: true }).split("\n").filter((line) => line !== "");
+    return decoded.map(parseStreamPart).filter(Boolean);
+  };
+}
+
+// src/data-url.ts
+function getTextFromDataUrl(dataUrl) {
+  const [header, base64Content] = dataUrl.split(",");
+  const mimeType = header.split(";")[0].split(":")[1];
+  if (mimeType == null || base64Content == null) {
+    throw new Error("Invalid data URL format");
+  }
+  try {
+    return window.atob(base64Content);
+  } catch (error) {
+    throw new Error(`Error decoding data URL`);
+  }
+}
+
+// src/is-deep-equal-data.ts
+function isDeepEqualData(obj1, obj2) {
+  if (obj1 === obj2)
+    return true;
+  if (obj1 == null || obj2 == null)
+    return false;
+  if (typeof obj1 !== "object" && typeof obj2 !== "object")
+    return obj1 === obj2;
+  if (obj1.constructor !== obj2.constructor)
+    return false;
+  if (obj1 instanceof Date && obj2 instanceof Date) {
+    return obj1.getTime() === obj2.getTime();
+  }
+  if (Array.isArray(obj1)) {
+    if (obj1.length !== obj2.length)
+      return false;
+    for (let i = 0; i < obj1.length; i++) {
+      if (!isDeepEqualData(obj1[i], obj2[i]))
+        return false;
+    }
+    return true;
+  }
+  const keys1 = Object.keys(obj1);
+  const keys2 = Object.keys(obj2);
+  if (keys1.length !== keys2.length)
+    return false;
+  for (const key of keys1) {
+    if (!keys2.includes(key))
+      return false;
+    if (!isDeepEqualData(obj1[key], obj2[key]))
+      return false;
+  }
+  return true;
+}
+
 // src/process-chat-stream.ts
 async function processChatStream({
   getStreamedResponse,
@@ -10146,13 +11408,48 @@ async function processChatStream({
     }
   }
 }
+
+// src/schema.ts
+var import_provider_utils2 = __nccwpck_require__(1545);
+var import_zod_to_json_schema = __toESM(__nccwpck_require__(3706));
+var schemaSymbol = Symbol.for("vercel.ai.schema");
+function jsonSchema(jsonSchema2, {
+  validate
+} = {}) {
+  return {
+    [schemaSymbol]: true,
+    _type: void 0,
+    // should never be used directly
+    [import_provider_utils2.validatorSymbol]: true,
+    jsonSchema: jsonSchema2,
+    validate
+  };
+}
+function isSchema(value) {
+  return typeof value === "object" && value !== null && schemaSymbol in value && value[schemaSymbol] === true && "jsonSchema" in value && "validate" in value;
+}
+function asSchema(schema) {
+  return isSchema(schema) ? schema : zodSchema(schema);
+}
+function zodSchema(zodSchema2) {
+  return jsonSchema(
+    // we assume that zodToJsonSchema will return a valid JSONSchema7:
+    (0, import_zod_to_json_schema.default)(zodSchema2),
+    {
+      validate: (value) => {
+        const result = zodSchema2.safeParse(value);
+        return result.success ? { success: true, value: result.data } : { success: false, error: result.error };
+      }
+    }
+  );
+}
 // Annotate the CommonJS export names for ESM import in node:
 0 && (0);
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 9613:
+/***/ 3809:
 /***/ ((module) => {
 
 "use strict";
@@ -10237,7 +11534,7 @@ var createTokenAuth = function createTokenAuth2(token) {
 
 /***/ }),
 
-/***/ 9944:
+/***/ 3631:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10266,11 +11563,11 @@ __export(dist_src_exports, {
   Octokit: () => Octokit
 });
 module.exports = __toCommonJS(dist_src_exports);
-var import_universal_user_agent = __nccwpck_require__(4828);
-var import_before_after_hook = __nccwpck_require__(9477);
-var import_request = __nccwpck_require__(8789);
-var import_graphql = __nccwpck_require__(6044);
-var import_auth_token = __nccwpck_require__(9613);
+var import_universal_user_agent = __nccwpck_require__(8444);
+var import_before_after_hook = __nccwpck_require__(2626);
+var import_request = __nccwpck_require__(1916);
+var import_graphql = __nccwpck_require__(1538);
+var import_auth_token = __nccwpck_require__(3809);
 
 // pkg/dist-src/version.js
 var VERSION = "5.2.0";
@@ -10406,7 +11703,7 @@ var Octokit = class {
 
 /***/ }),
 
-/***/ 9167:
+/***/ 6434:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10437,7 +11734,7 @@ __export(dist_src_exports, {
 module.exports = __toCommonJS(dist_src_exports);
 
 // pkg/dist-src/defaults.js
-var import_universal_user_agent = __nccwpck_require__(4828);
+var import_universal_user_agent = __nccwpck_require__(8444);
 
 // pkg/dist-src/version.js
 var VERSION = "9.0.5";
@@ -10790,7 +12087,7 @@ var endpoint = withDefaults(null, DEFAULTS);
 
 /***/ }),
 
-/***/ 6044:
+/***/ 1538:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10821,17 +12118,17 @@ __export(dist_src_exports, {
   withCustomRequest: () => withCustomRequest
 });
 module.exports = __toCommonJS(dist_src_exports);
-var import_request3 = __nccwpck_require__(8789);
-var import_universal_user_agent = __nccwpck_require__(4828);
+var import_request3 = __nccwpck_require__(1916);
+var import_universal_user_agent = __nccwpck_require__(8444);
 
 // pkg/dist-src/version.js
 var VERSION = "7.1.0";
 
 // pkg/dist-src/with-defaults.js
-var import_request2 = __nccwpck_require__(8789);
+var import_request2 = __nccwpck_require__(1916);
 
 // pkg/dist-src/graphql.js
-var import_request = __nccwpck_require__(8789);
+var import_request = __nccwpck_require__(1916);
 
 // pkg/dist-src/error.js
 function _buildMessageForResponseErrors(data) {
@@ -10948,7 +12245,7 @@ function withCustomRequest(customRequest) {
 
 /***/ }),
 
-/***/ 4097:
+/***/ 2278:
 /***/ ((module) => {
 
 "use strict";
@@ -11349,7 +12646,7 @@ paginateRest.VERSION = VERSION;
 
 /***/ }),
 
-/***/ 2254:
+/***/ 6367:
 /***/ ((module) => {
 
 "use strict";
@@ -13519,7 +14816,7 @@ legacyRestEndpointMethods.VERSION = VERSION;
 
 /***/ }),
 
-/***/ 9569:
+/***/ 5167:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13558,8 +14855,8 @@ __export(dist_src_exports, {
   RequestError: () => RequestError
 });
 module.exports = __toCommonJS(dist_src_exports);
-var import_deprecation = __nccwpck_require__(8245);
-var import_once = __toESM(__nccwpck_require__(363));
+var import_deprecation = __nccwpck_require__(8861);
+var import_once = __toESM(__nccwpck_require__(8012));
 var logOnceCode = (0, import_once.default)((deprecation) => console.warn(deprecation));
 var logOnceHeaders = (0, import_once.default)((deprecation) => console.warn(deprecation));
 var RequestError = class extends Error {
@@ -13617,7 +14914,7 @@ var RequestError = class extends Error {
 
 /***/ }),
 
-/***/ 8789:
+/***/ 1916:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13646,8 +14943,8 @@ __export(dist_src_exports, {
   request: () => request
 });
 module.exports = __toCommonJS(dist_src_exports);
-var import_endpoint = __nccwpck_require__(9167);
-var import_universal_user_agent = __nccwpck_require__(4828);
+var import_endpoint = __nccwpck_require__(6434);
+var import_universal_user_agent = __nccwpck_require__(8444);
 
 // pkg/dist-src/version.js
 var VERSION = "8.4.0";
@@ -13666,7 +14963,7 @@ function isPlainObject(value) {
 }
 
 // pkg/dist-src/fetch-wrapper.js
-var import_request_error = __nccwpck_require__(9569);
+var import_request_error = __nccwpck_require__(5167);
 
 // pkg/dist-src/get-buffer-response.js
 function getBufferResponse(response) {
@@ -13847,20 +15144,2744 @@ var request = withDefaults(import_endpoint.endpoint, {
 
 /***/ }),
 
-/***/ 7649:
+/***/ 9603:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.ContextAPI = void 0;
+const NoopContextManager_1 = __nccwpck_require__(9886);
+const global_utils_1 = __nccwpck_require__(5353);
+const diag_1 = __nccwpck_require__(7799);
+const API_NAME = 'context';
+const NOOP_CONTEXT_MANAGER = new NoopContextManager_1.NoopContextManager();
+/**
+ * Singleton object which represents the entry point to the OpenTelemetry Context API
+ */
+class ContextAPI {
+    /** Empty private constructor prevents end users from constructing a new instance of the API */
+    constructor() { }
+    /** Get the singleton instance of the Context API */
+    static getInstance() {
+        if (!this._instance) {
+            this._instance = new ContextAPI();
+        }
+        return this._instance;
+    }
+    /**
+     * Set the current context manager.
+     *
+     * @returns true if the context manager was successfully registered, else false
+     */
+    setGlobalContextManager(contextManager) {
+        return (0, global_utils_1.registerGlobal)(API_NAME, contextManager, diag_1.DiagAPI.instance());
+    }
+    /**
+     * Get the currently active context
+     */
+    active() {
+        return this._getContextManager().active();
+    }
+    /**
+     * Execute a function with an active context
+     *
+     * @param context context to be active during function execution
+     * @param fn function to execute in a context
+     * @param thisArg optional receiver to be used for calling fn
+     * @param args optional arguments forwarded to fn
+     */
+    with(context, fn, thisArg, ...args) {
+        return this._getContextManager().with(context, fn, thisArg, ...args);
+    }
+    /**
+     * Bind a context to a target function or event emitter
+     *
+     * @param context context to bind to the event emitter or function. Defaults to the currently active context
+     * @param target function or event emitter to bind
+     */
+    bind(context, target) {
+        return this._getContextManager().bind(context, target);
+    }
+    _getContextManager() {
+        return (0, global_utils_1.getGlobal)(API_NAME) || NOOP_CONTEXT_MANAGER;
+    }
+    /** Disable and remove the global context manager */
+    disable() {
+        this._getContextManager().disable();
+        (0, global_utils_1.unregisterGlobal)(API_NAME, diag_1.DiagAPI.instance());
+    }
+}
+exports.ContextAPI = ContextAPI;
+//# sourceMappingURL=context.js.map
+
+/***/ }),
+
+/***/ 7799:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.DiagAPI = void 0;
+const ComponentLogger_1 = __nccwpck_require__(4228);
+const logLevelLogger_1 = __nccwpck_require__(3743);
+const types_1 = __nccwpck_require__(9648);
+const global_utils_1 = __nccwpck_require__(5353);
+const API_NAME = 'diag';
+/**
+ * Singleton object which represents the entry point to the OpenTelemetry internal
+ * diagnostic API
+ */
+class DiagAPI {
+    /**
+     * Private internal constructor
+     * @private
+     */
+    constructor() {
+        function _logProxy(funcName) {
+            return function (...args) {
+                const logger = (0, global_utils_1.getGlobal)('diag');
+                // shortcut if logger not set
+                if (!logger)
+                    return;
+                return logger[funcName](...args);
+            };
+        }
+        // Using self local variable for minification purposes as 'this' cannot be minified
+        const self = this;
+        // DiagAPI specific functions
+        const setLogger = (logger, optionsOrLogLevel = { logLevel: types_1.DiagLogLevel.INFO }) => {
+            var _a, _b, _c;
+            if (logger === self) {
+                // There isn't much we can do here.
+                // Logging to the console might break the user application.
+                // Try to log to self. If a logger was previously registered it will receive the log.
+                const err = new Error('Cannot use diag as the logger for itself. Please use a DiagLogger implementation like ConsoleDiagLogger or a custom implementation');
+                self.error((_a = err.stack) !== null && _a !== void 0 ? _a : err.message);
+                return false;
+            }
+            if (typeof optionsOrLogLevel === 'number') {
+                optionsOrLogLevel = {
+                    logLevel: optionsOrLogLevel,
+                };
+            }
+            const oldLogger = (0, global_utils_1.getGlobal)('diag');
+            const newLogger = (0, logLevelLogger_1.createLogLevelDiagLogger)((_b = optionsOrLogLevel.logLevel) !== null && _b !== void 0 ? _b : types_1.DiagLogLevel.INFO, logger);
+            // There already is an logger registered. We'll let it know before overwriting it.
+            if (oldLogger && !optionsOrLogLevel.suppressOverrideMessage) {
+                const stack = (_c = new Error().stack) !== null && _c !== void 0 ? _c : '<failed to generate stacktrace>';
+                oldLogger.warn(`Current logger will be overwritten from ${stack}`);
+                newLogger.warn(`Current logger will overwrite one already registered from ${stack}`);
+            }
+            return (0, global_utils_1.registerGlobal)('diag', newLogger, self, true);
+        };
+        self.setLogger = setLogger;
+        self.disable = () => {
+            (0, global_utils_1.unregisterGlobal)(API_NAME, self);
+        };
+        self.createComponentLogger = (options) => {
+            return new ComponentLogger_1.DiagComponentLogger(options);
+        };
+        self.verbose = _logProxy('verbose');
+        self.debug = _logProxy('debug');
+        self.info = _logProxy('info');
+        self.warn = _logProxy('warn');
+        self.error = _logProxy('error');
+    }
+    /** Get the singleton instance of the DiagAPI API */
+    static instance() {
+        if (!this._instance) {
+            this._instance = new DiagAPI();
+        }
+        return this._instance;
+    }
+}
+exports.DiagAPI = DiagAPI;
+//# sourceMappingURL=diag.js.map
+
+/***/ }),
+
+/***/ 5261:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.MetricsAPI = void 0;
+const NoopMeterProvider_1 = __nccwpck_require__(6705);
+const global_utils_1 = __nccwpck_require__(5353);
+const diag_1 = __nccwpck_require__(7799);
+const API_NAME = 'metrics';
+/**
+ * Singleton object which represents the entry point to the OpenTelemetry Metrics API
+ */
+class MetricsAPI {
+    /** Empty private constructor prevents end users from constructing a new instance of the API */
+    constructor() { }
+    /** Get the singleton instance of the Metrics API */
+    static getInstance() {
+        if (!this._instance) {
+            this._instance = new MetricsAPI();
+        }
+        return this._instance;
+    }
+    /**
+     * Set the current global meter provider.
+     * Returns true if the meter provider was successfully registered, else false.
+     */
+    setGlobalMeterProvider(provider) {
+        return (0, global_utils_1.registerGlobal)(API_NAME, provider, diag_1.DiagAPI.instance());
+    }
+    /**
+     * Returns the global meter provider.
+     */
+    getMeterProvider() {
+        return (0, global_utils_1.getGlobal)(API_NAME) || NoopMeterProvider_1.NOOP_METER_PROVIDER;
+    }
+    /**
+     * Returns a meter from the global meter provider.
+     */
+    getMeter(name, version, options) {
+        return this.getMeterProvider().getMeter(name, version, options);
+    }
+    /** Remove the global meter provider */
+    disable() {
+        (0, global_utils_1.unregisterGlobal)(API_NAME, diag_1.DiagAPI.instance());
+    }
+}
+exports.MetricsAPI = MetricsAPI;
+//# sourceMappingURL=metrics.js.map
+
+/***/ }),
+
+/***/ 3726:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.PropagationAPI = void 0;
+const global_utils_1 = __nccwpck_require__(5353);
+const NoopTextMapPropagator_1 = __nccwpck_require__(4846);
+const TextMapPropagator_1 = __nccwpck_require__(6424);
+const context_helpers_1 = __nccwpck_require__(9466);
+const utils_1 = __nccwpck_require__(1542);
+const diag_1 = __nccwpck_require__(7799);
+const API_NAME = 'propagation';
+const NOOP_TEXT_MAP_PROPAGATOR = new NoopTextMapPropagator_1.NoopTextMapPropagator();
+/**
+ * Singleton object which represents the entry point to the OpenTelemetry Propagation API
+ */
+class PropagationAPI {
+    /** Empty private constructor prevents end users from constructing a new instance of the API */
+    constructor() {
+        this.createBaggage = utils_1.createBaggage;
+        this.getBaggage = context_helpers_1.getBaggage;
+        this.getActiveBaggage = context_helpers_1.getActiveBaggage;
+        this.setBaggage = context_helpers_1.setBaggage;
+        this.deleteBaggage = context_helpers_1.deleteBaggage;
+    }
+    /** Get the singleton instance of the Propagator API */
+    static getInstance() {
+        if (!this._instance) {
+            this._instance = new PropagationAPI();
+        }
+        return this._instance;
+    }
+    /**
+     * Set the current propagator.
+     *
+     * @returns true if the propagator was successfully registered, else false
+     */
+    setGlobalPropagator(propagator) {
+        return (0, global_utils_1.registerGlobal)(API_NAME, propagator, diag_1.DiagAPI.instance());
+    }
+    /**
+     * Inject context into a carrier to be propagated inter-process
+     *
+     * @param context Context carrying tracing data to inject
+     * @param carrier carrier to inject context into
+     * @param setter Function used to set values on the carrier
+     */
+    inject(context, carrier, setter = TextMapPropagator_1.defaultTextMapSetter) {
+        return this._getGlobalPropagator().inject(context, carrier, setter);
+    }
+    /**
+     * Extract context from a carrier
+     *
+     * @param context Context which the newly created context will inherit from
+     * @param carrier Carrier to extract context from
+     * @param getter Function used to extract keys from a carrier
+     */
+    extract(context, carrier, getter = TextMapPropagator_1.defaultTextMapGetter) {
+        return this._getGlobalPropagator().extract(context, carrier, getter);
+    }
+    /**
+     * Return a list of all fields which may be used by the propagator.
+     */
+    fields() {
+        return this._getGlobalPropagator().fields();
+    }
+    /** Remove the global propagator */
+    disable() {
+        (0, global_utils_1.unregisterGlobal)(API_NAME, diag_1.DiagAPI.instance());
+    }
+    _getGlobalPropagator() {
+        return (0, global_utils_1.getGlobal)(API_NAME) || NOOP_TEXT_MAP_PROPAGATOR;
+    }
+}
+exports.PropagationAPI = PropagationAPI;
+//# sourceMappingURL=propagation.js.map
+
+/***/ }),
+
+/***/ 1245:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.TraceAPI = void 0;
+const global_utils_1 = __nccwpck_require__(5353);
+const ProxyTracerProvider_1 = __nccwpck_require__(5470);
+const spancontext_utils_1 = __nccwpck_require__(1040);
+const context_utils_1 = __nccwpck_require__(8316);
+const diag_1 = __nccwpck_require__(7799);
+const API_NAME = 'trace';
+/**
+ * Singleton object which represents the entry point to the OpenTelemetry Tracing API
+ */
+class TraceAPI {
+    /** Empty private constructor prevents end users from constructing a new instance of the API */
+    constructor() {
+        this._proxyTracerProvider = new ProxyTracerProvider_1.ProxyTracerProvider();
+        this.wrapSpanContext = spancontext_utils_1.wrapSpanContext;
+        this.isSpanContextValid = spancontext_utils_1.isSpanContextValid;
+        this.deleteSpan = context_utils_1.deleteSpan;
+        this.getSpan = context_utils_1.getSpan;
+        this.getActiveSpan = context_utils_1.getActiveSpan;
+        this.getSpanContext = context_utils_1.getSpanContext;
+        this.setSpan = context_utils_1.setSpan;
+        this.setSpanContext = context_utils_1.setSpanContext;
+    }
+    /** Get the singleton instance of the Trace API */
+    static getInstance() {
+        if (!this._instance) {
+            this._instance = new TraceAPI();
+        }
+        return this._instance;
+    }
+    /**
+     * Set the current global tracer.
+     *
+     * @returns true if the tracer provider was successfully registered, else false
+     */
+    setGlobalTracerProvider(provider) {
+        const success = (0, global_utils_1.registerGlobal)(API_NAME, this._proxyTracerProvider, diag_1.DiagAPI.instance());
+        if (success) {
+            this._proxyTracerProvider.setDelegate(provider);
+        }
+        return success;
+    }
+    /**
+     * Returns the global tracer provider.
+     */
+    getTracerProvider() {
+        return (0, global_utils_1.getGlobal)(API_NAME) || this._proxyTracerProvider;
+    }
+    /**
+     * Returns a tracer from the global tracer provider.
+     */
+    getTracer(name, version) {
+        return this.getTracerProvider().getTracer(name, version);
+    }
+    /** Remove the global tracer provider */
+    disable() {
+        (0, global_utils_1.unregisterGlobal)(API_NAME, diag_1.DiagAPI.instance());
+        this._proxyTracerProvider = new ProxyTracerProvider_1.ProxyTracerProvider();
+    }
+}
+exports.TraceAPI = TraceAPI;
+//# sourceMappingURL=trace.js.map
+
+/***/ }),
+
+/***/ 9466:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.deleteBaggage = exports.setBaggage = exports.getActiveBaggage = exports.getBaggage = void 0;
+const context_1 = __nccwpck_require__(9603);
+const context_2 = __nccwpck_require__(6456);
+/**
+ * Baggage key
+ */
+const BAGGAGE_KEY = (0, context_2.createContextKey)('OpenTelemetry Baggage Key');
+/**
+ * Retrieve the current baggage from the given context
+ *
+ * @param {Context} Context that manage all context values
+ * @returns {Baggage} Extracted baggage from the context
+ */
+function getBaggage(context) {
+    return context.getValue(BAGGAGE_KEY) || undefined;
+}
+exports.getBaggage = getBaggage;
+/**
+ * Retrieve the current baggage from the active/current context
+ *
+ * @returns {Baggage} Extracted baggage from the context
+ */
+function getActiveBaggage() {
+    return getBaggage(context_1.ContextAPI.getInstance().active());
+}
+exports.getActiveBaggage = getActiveBaggage;
+/**
+ * Store a baggage in the given context
+ *
+ * @param {Context} Context that manage all context values
+ * @param {Baggage} baggage that will be set in the actual context
+ */
+function setBaggage(context, baggage) {
+    return context.setValue(BAGGAGE_KEY, baggage);
+}
+exports.setBaggage = setBaggage;
+/**
+ * Delete the baggage stored in the given context
+ *
+ * @param {Context} Context that manage all context values
+ */
+function deleteBaggage(context) {
+    return context.deleteValue(BAGGAGE_KEY);
+}
+exports.deleteBaggage = deleteBaggage;
+//# sourceMappingURL=context-helpers.js.map
+
+/***/ }),
+
+/***/ 3961:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.BaggageImpl = void 0;
+class BaggageImpl {
+    constructor(entries) {
+        this._entries = entries ? new Map(entries) : new Map();
+    }
+    getEntry(key) {
+        const entry = this._entries.get(key);
+        if (!entry) {
+            return undefined;
+        }
+        return Object.assign({}, entry);
+    }
+    getAllEntries() {
+        return Array.from(this._entries.entries()).map(([k, v]) => [k, v]);
+    }
+    setEntry(key, entry) {
+        const newBaggage = new BaggageImpl(this._entries);
+        newBaggage._entries.set(key, entry);
+        return newBaggage;
+    }
+    removeEntry(key) {
+        const newBaggage = new BaggageImpl(this._entries);
+        newBaggage._entries.delete(key);
+        return newBaggage;
+    }
+    removeEntries(...keys) {
+        const newBaggage = new BaggageImpl(this._entries);
+        for (const key of keys) {
+            newBaggage._entries.delete(key);
+        }
+        return newBaggage;
+    }
+    clear() {
+        return new BaggageImpl();
+    }
+}
+exports.BaggageImpl = BaggageImpl;
+//# sourceMappingURL=baggage-impl.js.map
+
+/***/ }),
+
+/***/ 7954:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.baggageEntryMetadataSymbol = void 0;
+/**
+ * Symbol used to make BaggageEntryMetadata an opaque type
+ */
+exports.baggageEntryMetadataSymbol = Symbol('BaggageEntryMetadata');
+//# sourceMappingURL=symbol.js.map
+
+/***/ }),
+
+/***/ 1542:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.baggageEntryMetadataFromString = exports.createBaggage = void 0;
+const diag_1 = __nccwpck_require__(7799);
+const baggage_impl_1 = __nccwpck_require__(3961);
+const symbol_1 = __nccwpck_require__(7954);
+const diag = diag_1.DiagAPI.instance();
+/**
+ * Create a new Baggage with optional entries
+ *
+ * @param entries An array of baggage entries the new baggage should contain
+ */
+function createBaggage(entries = {}) {
+    return new baggage_impl_1.BaggageImpl(new Map(Object.entries(entries)));
+}
+exports.createBaggage = createBaggage;
+/**
+ * Create a serializable BaggageEntryMetadata object from a string.
+ *
+ * @param str string metadata. Format is currently not defined by the spec and has no special meaning.
+ *
+ */
+function baggageEntryMetadataFromString(str) {
+    if (typeof str !== 'string') {
+        diag.error(`Cannot create baggage metadata from unknown type: ${typeof str}`);
+        str = '';
+    }
+    return {
+        __TYPE__: symbol_1.baggageEntryMetadataSymbol,
+        toString() {
+            return str;
+        },
+    };
+}
+exports.baggageEntryMetadataFromString = baggageEntryMetadataFromString;
+//# sourceMappingURL=utils.js.map
+
+/***/ }),
+
+/***/ 7118:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.context = void 0;
+// Split module-level variable definition into separate files to allow
+// tree-shaking on each api instance.
+const context_1 = __nccwpck_require__(9603);
+/** Entrypoint for context API */
+exports.context = context_1.ContextAPI.getInstance();
+//# sourceMappingURL=context-api.js.map
+
+/***/ }),
+
+/***/ 9886:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.NoopContextManager = void 0;
+const context_1 = __nccwpck_require__(6456);
+class NoopContextManager {
+    active() {
+        return context_1.ROOT_CONTEXT;
+    }
+    with(_context, fn, thisArg, ...args) {
+        return fn.call(thisArg, ...args);
+    }
+    bind(_context, target) {
+        return target;
+    }
+    enable() {
+        return this;
+    }
+    disable() {
+        return this;
+    }
+}
+exports.NoopContextManager = NoopContextManager;
+//# sourceMappingURL=NoopContextManager.js.map
+
+/***/ }),
+
+/***/ 6456:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.ROOT_CONTEXT = exports.createContextKey = void 0;
+/** Get a key to uniquely identify a context value */
+function createContextKey(description) {
+    // The specification states that for the same input, multiple calls should
+    // return different keys. Due to the nature of the JS dependency management
+    // system, this creates problems where multiple versions of some package
+    // could hold different keys for the same property.
+    //
+    // Therefore, we use Symbol.for which returns the same key for the same input.
+    return Symbol.for(description);
+}
+exports.createContextKey = createContextKey;
+class BaseContext {
+    /**
+     * Construct a new context which inherits values from an optional parent context.
+     *
+     * @param parentContext a context from which to inherit values
+     */
+    constructor(parentContext) {
+        // for minification
+        const self = this;
+        self._currentContext = parentContext ? new Map(parentContext) : new Map();
+        self.getValue = (key) => self._currentContext.get(key);
+        self.setValue = (key, value) => {
+            const context = new BaseContext(self._currentContext);
+            context._currentContext.set(key, value);
+            return context;
+        };
+        self.deleteValue = (key) => {
+            const context = new BaseContext(self._currentContext);
+            context._currentContext.delete(key);
+            return context;
+        };
+    }
+}
+/** The root context is used as the default parent context when there is no active context */
+exports.ROOT_CONTEXT = new BaseContext();
+//# sourceMappingURL=context.js.map
+
+/***/ }),
+
+/***/ 6480:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.diag = void 0;
+// Split module-level variable definition into separate files to allow
+// tree-shaking on each api instance.
+const diag_1 = __nccwpck_require__(7799);
+/**
+ * Entrypoint for Diag API.
+ * Defines Diagnostic handler used for internal diagnostic logging operations.
+ * The default provides a Noop DiagLogger implementation which may be changed via the
+ * diag.setLogger(logger: DiagLogger) function.
+ */
+exports.diag = diag_1.DiagAPI.instance();
+//# sourceMappingURL=diag-api.js.map
+
+/***/ }),
+
+/***/ 4228:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.DiagComponentLogger = void 0;
+const global_utils_1 = __nccwpck_require__(5353);
+/**
+ * Component Logger which is meant to be used as part of any component which
+ * will add automatically additional namespace in front of the log message.
+ * It will then forward all message to global diag logger
+ * @example
+ * const cLogger = diag.createComponentLogger({ namespace: '@opentelemetry/instrumentation-http' });
+ * cLogger.debug('test');
+ * // @opentelemetry/instrumentation-http test
+ */
+class DiagComponentLogger {
+    constructor(props) {
+        this._namespace = props.namespace || 'DiagComponentLogger';
+    }
+    debug(...args) {
+        return logProxy('debug', this._namespace, args);
+    }
+    error(...args) {
+        return logProxy('error', this._namespace, args);
+    }
+    info(...args) {
+        return logProxy('info', this._namespace, args);
+    }
+    warn(...args) {
+        return logProxy('warn', this._namespace, args);
+    }
+    verbose(...args) {
+        return logProxy('verbose', this._namespace, args);
+    }
+}
+exports.DiagComponentLogger = DiagComponentLogger;
+function logProxy(funcName, namespace, args) {
+    const logger = (0, global_utils_1.getGlobal)('diag');
+    // shortcut if logger not set
+    if (!logger) {
+        return;
+    }
+    args.unshift(namespace);
+    return logger[funcName](...args);
+}
+//# sourceMappingURL=ComponentLogger.js.map
+
+/***/ }),
+
+/***/ 455:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.DiagConsoleLogger = void 0;
+const consoleMap = [
+    { n: 'error', c: 'error' },
+    { n: 'warn', c: 'warn' },
+    { n: 'info', c: 'info' },
+    { n: 'debug', c: 'debug' },
+    { n: 'verbose', c: 'trace' },
+];
+/**
+ * A simple Immutable Console based diagnostic logger which will output any messages to the Console.
+ * If you want to limit the amount of logging to a specific level or lower use the
+ * {@link createLogLevelDiagLogger}
+ */
+class DiagConsoleLogger {
+    constructor() {
+        function _consoleFunc(funcName) {
+            return function (...args) {
+                if (console) {
+                    // Some environments only expose the console when the F12 developer console is open
+                    // eslint-disable-next-line no-console
+                    let theFunc = console[funcName];
+                    if (typeof theFunc !== 'function') {
+                        // Not all environments support all functions
+                        // eslint-disable-next-line no-console
+                        theFunc = console.log;
+                    }
+                    // One last final check
+                    if (typeof theFunc === 'function') {
+                        return theFunc.apply(console, args);
+                    }
+                }
+            };
+        }
+        for (let i = 0; i < consoleMap.length; i++) {
+            this[consoleMap[i].n] = _consoleFunc(consoleMap[i].c);
+        }
+    }
+}
+exports.DiagConsoleLogger = DiagConsoleLogger;
+//# sourceMappingURL=consoleLogger.js.map
+
+/***/ }),
+
+/***/ 3743:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.createLogLevelDiagLogger = void 0;
+const types_1 = __nccwpck_require__(9648);
+function createLogLevelDiagLogger(maxLevel, logger) {
+    if (maxLevel < types_1.DiagLogLevel.NONE) {
+        maxLevel = types_1.DiagLogLevel.NONE;
+    }
+    else if (maxLevel > types_1.DiagLogLevel.ALL) {
+        maxLevel = types_1.DiagLogLevel.ALL;
+    }
+    // In case the logger is null or undefined
+    logger = logger || {};
+    function _filterFunc(funcName, theLevel) {
+        const theFunc = logger[funcName];
+        if (typeof theFunc === 'function' && maxLevel >= theLevel) {
+            return theFunc.bind(logger);
+        }
+        return function () { };
+    }
+    return {
+        error: _filterFunc('error', types_1.DiagLogLevel.ERROR),
+        warn: _filterFunc('warn', types_1.DiagLogLevel.WARN),
+        info: _filterFunc('info', types_1.DiagLogLevel.INFO),
+        debug: _filterFunc('debug', types_1.DiagLogLevel.DEBUG),
+        verbose: _filterFunc('verbose', types_1.DiagLogLevel.VERBOSE),
+    };
+}
+exports.createLogLevelDiagLogger = createLogLevelDiagLogger;
+//# sourceMappingURL=logLevelLogger.js.map
+
+/***/ }),
+
+/***/ 9648:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.DiagLogLevel = void 0;
+/**
+ * Defines the available internal logging levels for the diagnostic logger, the numeric values
+ * of the levels are defined to match the original values from the initial LogLevel to avoid
+ * compatibility/migration issues for any implementation that assume the numeric ordering.
+ */
+var DiagLogLevel;
+(function (DiagLogLevel) {
+    /** Diagnostic Logging level setting to disable all logging (except and forced logs) */
+    DiagLogLevel[DiagLogLevel["NONE"] = 0] = "NONE";
+    /** Identifies an error scenario */
+    DiagLogLevel[DiagLogLevel["ERROR"] = 30] = "ERROR";
+    /** Identifies a warning scenario */
+    DiagLogLevel[DiagLogLevel["WARN"] = 50] = "WARN";
+    /** General informational log message */
+    DiagLogLevel[DiagLogLevel["INFO"] = 60] = "INFO";
+    /** General debug log message */
+    DiagLogLevel[DiagLogLevel["DEBUG"] = 70] = "DEBUG";
+    /**
+     * Detailed trace level logging should only be used for development, should only be set
+     * in a development environment.
+     */
+    DiagLogLevel[DiagLogLevel["VERBOSE"] = 80] = "VERBOSE";
+    /** Used to set the logging level to include all logging */
+    DiagLogLevel[DiagLogLevel["ALL"] = 9999] = "ALL";
+})(DiagLogLevel = exports.DiagLogLevel || (exports.DiagLogLevel = {}));
+//# sourceMappingURL=types.js.map
+
+/***/ }),
+
+/***/ 7256:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.trace = exports.propagation = exports.metrics = exports.diag = exports.context = exports.INVALID_SPAN_CONTEXT = exports.INVALID_TRACEID = exports.INVALID_SPANID = exports.isValidSpanId = exports.isValidTraceId = exports.isSpanContextValid = exports.createTraceState = exports.TraceFlags = exports.SpanStatusCode = exports.SpanKind = exports.SamplingDecision = exports.ProxyTracerProvider = exports.ProxyTracer = exports.defaultTextMapSetter = exports.defaultTextMapGetter = exports.ValueType = exports.createNoopMeter = exports.DiagLogLevel = exports.DiagConsoleLogger = exports.ROOT_CONTEXT = exports.createContextKey = exports.baggageEntryMetadataFromString = void 0;
+var utils_1 = __nccwpck_require__(1542);
+Object.defineProperty(exports, "baggageEntryMetadataFromString", ({ enumerable: true, get: function () { return utils_1.baggageEntryMetadataFromString; } }));
+// Context APIs
+var context_1 = __nccwpck_require__(6456);
+Object.defineProperty(exports, "createContextKey", ({ enumerable: true, get: function () { return context_1.createContextKey; } }));
+Object.defineProperty(exports, "ROOT_CONTEXT", ({ enumerable: true, get: function () { return context_1.ROOT_CONTEXT; } }));
+// Diag APIs
+var consoleLogger_1 = __nccwpck_require__(455);
+Object.defineProperty(exports, "DiagConsoleLogger", ({ enumerable: true, get: function () { return consoleLogger_1.DiagConsoleLogger; } }));
+var types_1 = __nccwpck_require__(9648);
+Object.defineProperty(exports, "DiagLogLevel", ({ enumerable: true, get: function () { return types_1.DiagLogLevel; } }));
+// Metrics APIs
+var NoopMeter_1 = __nccwpck_require__(4142);
+Object.defineProperty(exports, "createNoopMeter", ({ enumerable: true, get: function () { return NoopMeter_1.createNoopMeter; } }));
+var Metric_1 = __nccwpck_require__(983);
+Object.defineProperty(exports, "ValueType", ({ enumerable: true, get: function () { return Metric_1.ValueType; } }));
+// Propagation APIs
+var TextMapPropagator_1 = __nccwpck_require__(6424);
+Object.defineProperty(exports, "defaultTextMapGetter", ({ enumerable: true, get: function () { return TextMapPropagator_1.defaultTextMapGetter; } }));
+Object.defineProperty(exports, "defaultTextMapSetter", ({ enumerable: true, get: function () { return TextMapPropagator_1.defaultTextMapSetter; } }));
+var ProxyTracer_1 = __nccwpck_require__(5697);
+Object.defineProperty(exports, "ProxyTracer", ({ enumerable: true, get: function () { return ProxyTracer_1.ProxyTracer; } }));
+var ProxyTracerProvider_1 = __nccwpck_require__(5470);
+Object.defineProperty(exports, "ProxyTracerProvider", ({ enumerable: true, get: function () { return ProxyTracerProvider_1.ProxyTracerProvider; } }));
+var SamplingResult_1 = __nccwpck_require__(4700);
+Object.defineProperty(exports, "SamplingDecision", ({ enumerable: true, get: function () { return SamplingResult_1.SamplingDecision; } }));
+var span_kind_1 = __nccwpck_require__(3300);
+Object.defineProperty(exports, "SpanKind", ({ enumerable: true, get: function () { return span_kind_1.SpanKind; } }));
+var status_1 = __nccwpck_require__(3535);
+Object.defineProperty(exports, "SpanStatusCode", ({ enumerable: true, get: function () { return status_1.SpanStatusCode; } }));
+var trace_flags_1 = __nccwpck_require__(234);
+Object.defineProperty(exports, "TraceFlags", ({ enumerable: true, get: function () { return trace_flags_1.TraceFlags; } }));
+var utils_2 = __nccwpck_require__(9316);
+Object.defineProperty(exports, "createTraceState", ({ enumerable: true, get: function () { return utils_2.createTraceState; } }));
+var spancontext_utils_1 = __nccwpck_require__(1040);
+Object.defineProperty(exports, "isSpanContextValid", ({ enumerable: true, get: function () { return spancontext_utils_1.isSpanContextValid; } }));
+Object.defineProperty(exports, "isValidTraceId", ({ enumerable: true, get: function () { return spancontext_utils_1.isValidTraceId; } }));
+Object.defineProperty(exports, "isValidSpanId", ({ enumerable: true, get: function () { return spancontext_utils_1.isValidSpanId; } }));
+var invalid_span_constants_1 = __nccwpck_require__(535);
+Object.defineProperty(exports, "INVALID_SPANID", ({ enumerable: true, get: function () { return invalid_span_constants_1.INVALID_SPANID; } }));
+Object.defineProperty(exports, "INVALID_TRACEID", ({ enumerable: true, get: function () { return invalid_span_constants_1.INVALID_TRACEID; } }));
+Object.defineProperty(exports, "INVALID_SPAN_CONTEXT", ({ enumerable: true, get: function () { return invalid_span_constants_1.INVALID_SPAN_CONTEXT; } }));
+// Split module-level variable definition into separate files to allow
+// tree-shaking on each api instance.
+const context_api_1 = __nccwpck_require__(7118);
+Object.defineProperty(exports, "context", ({ enumerable: true, get: function () { return context_api_1.context; } }));
+const diag_api_1 = __nccwpck_require__(6480);
+Object.defineProperty(exports, "diag", ({ enumerable: true, get: function () { return diag_api_1.diag; } }));
+const metrics_api_1 = __nccwpck_require__(6101);
+Object.defineProperty(exports, "metrics", ({ enumerable: true, get: function () { return metrics_api_1.metrics; } }));
+const propagation_api_1 = __nccwpck_require__(5573);
+Object.defineProperty(exports, "propagation", ({ enumerable: true, get: function () { return propagation_api_1.propagation; } }));
+const trace_api_1 = __nccwpck_require__(3827);
+Object.defineProperty(exports, "trace", ({ enumerable: true, get: function () { return trace_api_1.trace; } }));
+// Default export.
+exports["default"] = {
+    context: context_api_1.context,
+    diag: diag_api_1.diag,
+    metrics: metrics_api_1.metrics,
+    propagation: propagation_api_1.propagation,
+    trace: trace_api_1.trace,
+};
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 5353:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.unregisterGlobal = exports.getGlobal = exports.registerGlobal = void 0;
+const platform_1 = __nccwpck_require__(4113);
+const version_1 = __nccwpck_require__(5437);
+const semver_1 = __nccwpck_require__(3164);
+const major = version_1.VERSION.split('.')[0];
+const GLOBAL_OPENTELEMETRY_API_KEY = Symbol.for(`opentelemetry.js.api.${major}`);
+const _global = platform_1._globalThis;
+function registerGlobal(type, instance, diag, allowOverride = false) {
+    var _a;
+    const api = (_global[GLOBAL_OPENTELEMETRY_API_KEY] = (_a = _global[GLOBAL_OPENTELEMETRY_API_KEY]) !== null && _a !== void 0 ? _a : {
+        version: version_1.VERSION,
+    });
+    if (!allowOverride && api[type]) {
+        // already registered an API of this type
+        const err = new Error(`@opentelemetry/api: Attempted duplicate registration of API: ${type}`);
+        diag.error(err.stack || err.message);
+        return false;
+    }
+    if (api.version !== version_1.VERSION) {
+        // All registered APIs must be of the same version exactly
+        const err = new Error(`@opentelemetry/api: Registration of version v${api.version} for ${type} does not match previously registered API v${version_1.VERSION}`);
+        diag.error(err.stack || err.message);
+        return false;
+    }
+    api[type] = instance;
+    diag.debug(`@opentelemetry/api: Registered a global for ${type} v${version_1.VERSION}.`);
+    return true;
+}
+exports.registerGlobal = registerGlobal;
+function getGlobal(type) {
+    var _a, _b;
+    const globalVersion = (_a = _global[GLOBAL_OPENTELEMETRY_API_KEY]) === null || _a === void 0 ? void 0 : _a.version;
+    if (!globalVersion || !(0, semver_1.isCompatible)(globalVersion)) {
+        return;
+    }
+    return (_b = _global[GLOBAL_OPENTELEMETRY_API_KEY]) === null || _b === void 0 ? void 0 : _b[type];
+}
+exports.getGlobal = getGlobal;
+function unregisterGlobal(type, diag) {
+    diag.debug(`@opentelemetry/api: Unregistering a global for ${type} v${version_1.VERSION}.`);
+    const api = _global[GLOBAL_OPENTELEMETRY_API_KEY];
+    if (api) {
+        delete api[type];
+    }
+}
+exports.unregisterGlobal = unregisterGlobal;
+//# sourceMappingURL=global-utils.js.map
+
+/***/ }),
+
+/***/ 3164:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.isCompatible = exports._makeCompatibilityCheck = void 0;
+const version_1 = __nccwpck_require__(5437);
+const re = /^(\d+)\.(\d+)\.(\d+)(-(.+))?$/;
+/**
+ * Create a function to test an API version to see if it is compatible with the provided ownVersion.
+ *
+ * The returned function has the following semantics:
+ * - Exact match is always compatible
+ * - Major versions must match exactly
+ *    - 1.x package cannot use global 2.x package
+ *    - 2.x package cannot use global 1.x package
+ * - The minor version of the API module requesting access to the global API must be less than or equal to the minor version of this API
+ *    - 1.3 package may use 1.4 global because the later global contains all functions 1.3 expects
+ *    - 1.4 package may NOT use 1.3 global because it may try to call functions which don't exist on 1.3
+ * - If the major version is 0, the minor version is treated as the major and the patch is treated as the minor
+ * - Patch and build tag differences are not considered at this time
+ *
+ * @param ownVersion version which should be checked against
+ */
+function _makeCompatibilityCheck(ownVersion) {
+    const acceptedVersions = new Set([ownVersion]);
+    const rejectedVersions = new Set();
+    const myVersionMatch = ownVersion.match(re);
+    if (!myVersionMatch) {
+        // we cannot guarantee compatibility so we always return noop
+        return () => false;
+    }
+    const ownVersionParsed = {
+        major: +myVersionMatch[1],
+        minor: +myVersionMatch[2],
+        patch: +myVersionMatch[3],
+        prerelease: myVersionMatch[4],
+    };
+    // if ownVersion has a prerelease tag, versions must match exactly
+    if (ownVersionParsed.prerelease != null) {
+        return function isExactmatch(globalVersion) {
+            return globalVersion === ownVersion;
+        };
+    }
+    function _reject(v) {
+        rejectedVersions.add(v);
+        return false;
+    }
+    function _accept(v) {
+        acceptedVersions.add(v);
+        return true;
+    }
+    return function isCompatible(globalVersion) {
+        if (acceptedVersions.has(globalVersion)) {
+            return true;
+        }
+        if (rejectedVersions.has(globalVersion)) {
+            return false;
+        }
+        const globalVersionMatch = globalVersion.match(re);
+        if (!globalVersionMatch) {
+            // cannot parse other version
+            // we cannot guarantee compatibility so we always noop
+            return _reject(globalVersion);
+        }
+        const globalVersionParsed = {
+            major: +globalVersionMatch[1],
+            minor: +globalVersionMatch[2],
+            patch: +globalVersionMatch[3],
+            prerelease: globalVersionMatch[4],
+        };
+        // if globalVersion has a prerelease tag, versions must match exactly
+        if (globalVersionParsed.prerelease != null) {
+            return _reject(globalVersion);
+        }
+        // major versions must match
+        if (ownVersionParsed.major !== globalVersionParsed.major) {
+            return _reject(globalVersion);
+        }
+        if (ownVersionParsed.major === 0) {
+            if (ownVersionParsed.minor === globalVersionParsed.minor &&
+                ownVersionParsed.patch <= globalVersionParsed.patch) {
+                return _accept(globalVersion);
+            }
+            return _reject(globalVersion);
+        }
+        if (ownVersionParsed.minor <= globalVersionParsed.minor) {
+            return _accept(globalVersion);
+        }
+        return _reject(globalVersion);
+    };
+}
+exports._makeCompatibilityCheck = _makeCompatibilityCheck;
+/**
+ * Test an API version to see if it is compatible with this API.
+ *
+ * - Exact match is always compatible
+ * - Major versions must match exactly
+ *    - 1.x package cannot use global 2.x package
+ *    - 2.x package cannot use global 1.x package
+ * - The minor version of the API module requesting access to the global API must be less than or equal to the minor version of this API
+ *    - 1.3 package may use 1.4 global because the later global contains all functions 1.3 expects
+ *    - 1.4 package may NOT use 1.3 global because it may try to call functions which don't exist on 1.3
+ * - If the major version is 0, the minor version is treated as the major and the patch is treated as the minor
+ * - Patch and build tag differences are not considered at this time
+ *
+ * @param version version of the API requesting an instance of the global API
+ */
+exports.isCompatible = _makeCompatibilityCheck(version_1.VERSION);
+//# sourceMappingURL=semver.js.map
+
+/***/ }),
+
+/***/ 6101:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.metrics = void 0;
+// Split module-level variable definition into separate files to allow
+// tree-shaking on each api instance.
+const metrics_1 = __nccwpck_require__(5261);
+/** Entrypoint for metrics API */
+exports.metrics = metrics_1.MetricsAPI.getInstance();
+//# sourceMappingURL=metrics-api.js.map
+
+/***/ }),
+
+/***/ 983:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.ValueType = void 0;
+/** The Type of value. It describes how the data is reported. */
+var ValueType;
+(function (ValueType) {
+    ValueType[ValueType["INT"] = 0] = "INT";
+    ValueType[ValueType["DOUBLE"] = 1] = "DOUBLE";
+})(ValueType = exports.ValueType || (exports.ValueType = {}));
+//# sourceMappingURL=Metric.js.map
+
+/***/ }),
+
+/***/ 4142:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.createNoopMeter = exports.NOOP_OBSERVABLE_UP_DOWN_COUNTER_METRIC = exports.NOOP_OBSERVABLE_GAUGE_METRIC = exports.NOOP_OBSERVABLE_COUNTER_METRIC = exports.NOOP_UP_DOWN_COUNTER_METRIC = exports.NOOP_HISTOGRAM_METRIC = exports.NOOP_GAUGE_METRIC = exports.NOOP_COUNTER_METRIC = exports.NOOP_METER = exports.NoopObservableUpDownCounterMetric = exports.NoopObservableGaugeMetric = exports.NoopObservableCounterMetric = exports.NoopObservableMetric = exports.NoopHistogramMetric = exports.NoopGaugeMetric = exports.NoopUpDownCounterMetric = exports.NoopCounterMetric = exports.NoopMetric = exports.NoopMeter = void 0;
+/**
+ * NoopMeter is a noop implementation of the {@link Meter} interface. It reuses
+ * constant NoopMetrics for all of its methods.
+ */
+class NoopMeter {
+    constructor() { }
+    /**
+     * @see {@link Meter.createGauge}
+     */
+    createGauge(_name, _options) {
+        return exports.NOOP_GAUGE_METRIC;
+    }
+    /**
+     * @see {@link Meter.createHistogram}
+     */
+    createHistogram(_name, _options) {
+        return exports.NOOP_HISTOGRAM_METRIC;
+    }
+    /**
+     * @see {@link Meter.createCounter}
+     */
+    createCounter(_name, _options) {
+        return exports.NOOP_COUNTER_METRIC;
+    }
+    /**
+     * @see {@link Meter.createUpDownCounter}
+     */
+    createUpDownCounter(_name, _options) {
+        return exports.NOOP_UP_DOWN_COUNTER_METRIC;
+    }
+    /**
+     * @see {@link Meter.createObservableGauge}
+     */
+    createObservableGauge(_name, _options) {
+        return exports.NOOP_OBSERVABLE_GAUGE_METRIC;
+    }
+    /**
+     * @see {@link Meter.createObservableCounter}
+     */
+    createObservableCounter(_name, _options) {
+        return exports.NOOP_OBSERVABLE_COUNTER_METRIC;
+    }
+    /**
+     * @see {@link Meter.createObservableUpDownCounter}
+     */
+    createObservableUpDownCounter(_name, _options) {
+        return exports.NOOP_OBSERVABLE_UP_DOWN_COUNTER_METRIC;
+    }
+    /**
+     * @see {@link Meter.addBatchObservableCallback}
+     */
+    addBatchObservableCallback(_callback, _observables) { }
+    /**
+     * @see {@link Meter.removeBatchObservableCallback}
+     */
+    removeBatchObservableCallback(_callback) { }
+}
+exports.NoopMeter = NoopMeter;
+class NoopMetric {
+}
+exports.NoopMetric = NoopMetric;
+class NoopCounterMetric extends NoopMetric {
+    add(_value, _attributes) { }
+}
+exports.NoopCounterMetric = NoopCounterMetric;
+class NoopUpDownCounterMetric extends NoopMetric {
+    add(_value, _attributes) { }
+}
+exports.NoopUpDownCounterMetric = NoopUpDownCounterMetric;
+class NoopGaugeMetric extends NoopMetric {
+    record(_value, _attributes) { }
+}
+exports.NoopGaugeMetric = NoopGaugeMetric;
+class NoopHistogramMetric extends NoopMetric {
+    record(_value, _attributes) { }
+}
+exports.NoopHistogramMetric = NoopHistogramMetric;
+class NoopObservableMetric {
+    addCallback(_callback) { }
+    removeCallback(_callback) { }
+}
+exports.NoopObservableMetric = NoopObservableMetric;
+class NoopObservableCounterMetric extends NoopObservableMetric {
+}
+exports.NoopObservableCounterMetric = NoopObservableCounterMetric;
+class NoopObservableGaugeMetric extends NoopObservableMetric {
+}
+exports.NoopObservableGaugeMetric = NoopObservableGaugeMetric;
+class NoopObservableUpDownCounterMetric extends NoopObservableMetric {
+}
+exports.NoopObservableUpDownCounterMetric = NoopObservableUpDownCounterMetric;
+exports.NOOP_METER = new NoopMeter();
+// Synchronous instruments
+exports.NOOP_COUNTER_METRIC = new NoopCounterMetric();
+exports.NOOP_GAUGE_METRIC = new NoopGaugeMetric();
+exports.NOOP_HISTOGRAM_METRIC = new NoopHistogramMetric();
+exports.NOOP_UP_DOWN_COUNTER_METRIC = new NoopUpDownCounterMetric();
+// Asynchronous instruments
+exports.NOOP_OBSERVABLE_COUNTER_METRIC = new NoopObservableCounterMetric();
+exports.NOOP_OBSERVABLE_GAUGE_METRIC = new NoopObservableGaugeMetric();
+exports.NOOP_OBSERVABLE_UP_DOWN_COUNTER_METRIC = new NoopObservableUpDownCounterMetric();
+/**
+ * Create a no-op Meter
+ */
+function createNoopMeter() {
+    return exports.NOOP_METER;
+}
+exports.createNoopMeter = createNoopMeter;
+//# sourceMappingURL=NoopMeter.js.map
+
+/***/ }),
+
+/***/ 6705:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.NOOP_METER_PROVIDER = exports.NoopMeterProvider = void 0;
+const NoopMeter_1 = __nccwpck_require__(4142);
+/**
+ * An implementation of the {@link MeterProvider} which returns an impotent Meter
+ * for all calls to `getMeter`
+ */
+class NoopMeterProvider {
+    getMeter(_name, _version, _options) {
+        return NoopMeter_1.NOOP_METER;
+    }
+}
+exports.NoopMeterProvider = NoopMeterProvider;
+exports.NOOP_METER_PROVIDER = new NoopMeterProvider();
+//# sourceMappingURL=NoopMeterProvider.js.map
+
+/***/ }),
+
+/***/ 4113:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+__exportStar(__nccwpck_require__(6562), exports);
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 5921:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports._globalThis = void 0;
+/** only globals that common to node and browsers are allowed */
+// eslint-disable-next-line node/no-unsupported-features/es-builtins
+exports._globalThis = typeof globalThis === 'object' ? globalThis : global;
+//# sourceMappingURL=globalThis.js.map
+
+/***/ }),
+
+/***/ 6562:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+__exportStar(__nccwpck_require__(5921), exports);
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 5573:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.propagation = void 0;
+// Split module-level variable definition into separate files to allow
+// tree-shaking on each api instance.
+const propagation_1 = __nccwpck_require__(3726);
+/** Entrypoint for propagation API */
+exports.propagation = propagation_1.PropagationAPI.getInstance();
+//# sourceMappingURL=propagation-api.js.map
+
+/***/ }),
+
+/***/ 4846:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.NoopTextMapPropagator = void 0;
+/**
+ * No-op implementations of {@link TextMapPropagator}.
+ */
+class NoopTextMapPropagator {
+    /** Noop inject function does nothing */
+    inject(_context, _carrier) { }
+    /** Noop extract function does nothing and returns the input context */
+    extract(context, _carrier) {
+        return context;
+    }
+    fields() {
+        return [];
+    }
+}
+exports.NoopTextMapPropagator = NoopTextMapPropagator;
+//# sourceMappingURL=NoopTextMapPropagator.js.map
+
+/***/ }),
+
+/***/ 6424:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.defaultTextMapSetter = exports.defaultTextMapGetter = void 0;
+exports.defaultTextMapGetter = {
+    get(carrier, key) {
+        if (carrier == null) {
+            return undefined;
+        }
+        return carrier[key];
+    },
+    keys(carrier) {
+        if (carrier == null) {
+            return [];
+        }
+        return Object.keys(carrier);
+    },
+};
+exports.defaultTextMapSetter = {
+    set(carrier, key, value) {
+        if (carrier == null) {
+            return;
+        }
+        carrier[key] = value;
+    },
+};
+//# sourceMappingURL=TextMapPropagator.js.map
+
+/***/ }),
+
+/***/ 3827:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.trace = void 0;
+// Split module-level variable definition into separate files to allow
+// tree-shaking on each api instance.
+const trace_1 = __nccwpck_require__(1245);
+/** Entrypoint for trace API */
+exports.trace = trace_1.TraceAPI.getInstance();
+//# sourceMappingURL=trace-api.js.map
+
+/***/ }),
+
+/***/ 692:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.NonRecordingSpan = void 0;
+const invalid_span_constants_1 = __nccwpck_require__(535);
+/**
+ * The NonRecordingSpan is the default {@link Span} that is used when no Span
+ * implementation is available. All operations are no-op including context
+ * propagation.
+ */
+class NonRecordingSpan {
+    constructor(_spanContext = invalid_span_constants_1.INVALID_SPAN_CONTEXT) {
+        this._spanContext = _spanContext;
+    }
+    // Returns a SpanContext.
+    spanContext() {
+        return this._spanContext;
+    }
+    // By default does nothing
+    setAttribute(_key, _value) {
+        return this;
+    }
+    // By default does nothing
+    setAttributes(_attributes) {
+        return this;
+    }
+    // By default does nothing
+    addEvent(_name, _attributes) {
+        return this;
+    }
+    addLink(_link) {
+        return this;
+    }
+    addLinks(_links) {
+        return this;
+    }
+    // By default does nothing
+    setStatus(_status) {
+        return this;
+    }
+    // By default does nothing
+    updateName(_name) {
+        return this;
+    }
+    // By default does nothing
+    end(_endTime) { }
+    // isRecording always returns false for NonRecordingSpan.
+    isRecording() {
+        return false;
+    }
+    // By default does nothing
+    recordException(_exception, _time) { }
+}
+exports.NonRecordingSpan = NonRecordingSpan;
+//# sourceMappingURL=NonRecordingSpan.js.map
+
+/***/ }),
+
+/***/ 8217:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.NoopTracer = void 0;
+const context_1 = __nccwpck_require__(9603);
+const context_utils_1 = __nccwpck_require__(8316);
+const NonRecordingSpan_1 = __nccwpck_require__(692);
+const spancontext_utils_1 = __nccwpck_require__(1040);
+const contextApi = context_1.ContextAPI.getInstance();
+/**
+ * No-op implementations of {@link Tracer}.
+ */
+class NoopTracer {
+    // startSpan starts a noop span.
+    startSpan(name, options, context = contextApi.active()) {
+        const root = Boolean(options === null || options === void 0 ? void 0 : options.root);
+        if (root) {
+            return new NonRecordingSpan_1.NonRecordingSpan();
+        }
+        const parentFromContext = context && (0, context_utils_1.getSpanContext)(context);
+        if (isSpanContext(parentFromContext) &&
+            (0, spancontext_utils_1.isSpanContextValid)(parentFromContext)) {
+            return new NonRecordingSpan_1.NonRecordingSpan(parentFromContext);
+        }
+        else {
+            return new NonRecordingSpan_1.NonRecordingSpan();
+        }
+    }
+    startActiveSpan(name, arg2, arg3, arg4) {
+        let opts;
+        let ctx;
+        let fn;
+        if (arguments.length < 2) {
+            return;
+        }
+        else if (arguments.length === 2) {
+            fn = arg2;
+        }
+        else if (arguments.length === 3) {
+            opts = arg2;
+            fn = arg3;
+        }
+        else {
+            opts = arg2;
+            ctx = arg3;
+            fn = arg4;
+        }
+        const parentContext = ctx !== null && ctx !== void 0 ? ctx : contextApi.active();
+        const span = this.startSpan(name, opts, parentContext);
+        const contextWithSpanSet = (0, context_utils_1.setSpan)(parentContext, span);
+        return contextApi.with(contextWithSpanSet, fn, undefined, span);
+    }
+}
+exports.NoopTracer = NoopTracer;
+function isSpanContext(spanContext) {
+    return (typeof spanContext === 'object' &&
+        typeof spanContext['spanId'] === 'string' &&
+        typeof spanContext['traceId'] === 'string' &&
+        typeof spanContext['traceFlags'] === 'number');
+}
+//# sourceMappingURL=NoopTracer.js.map
+
+/***/ }),
+
+/***/ 3364:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.NoopTracerProvider = void 0;
+const NoopTracer_1 = __nccwpck_require__(8217);
+/**
+ * An implementation of the {@link TracerProvider} which returns an impotent
+ * Tracer for all calls to `getTracer`.
+ *
+ * All operations are no-op.
+ */
+class NoopTracerProvider {
+    getTracer(_name, _version, _options) {
+        return new NoopTracer_1.NoopTracer();
+    }
+}
+exports.NoopTracerProvider = NoopTracerProvider;
+//# sourceMappingURL=NoopTracerProvider.js.map
+
+/***/ }),
+
+/***/ 5697:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.ProxyTracer = void 0;
+const NoopTracer_1 = __nccwpck_require__(8217);
+const NOOP_TRACER = new NoopTracer_1.NoopTracer();
+/**
+ * Proxy tracer provided by the proxy tracer provider
+ */
+class ProxyTracer {
+    constructor(_provider, name, version, options) {
+        this._provider = _provider;
+        this.name = name;
+        this.version = version;
+        this.options = options;
+    }
+    startSpan(name, options, context) {
+        return this._getTracer().startSpan(name, options, context);
+    }
+    startActiveSpan(_name, _options, _context, _fn) {
+        const tracer = this._getTracer();
+        return Reflect.apply(tracer.startActiveSpan, tracer, arguments);
+    }
+    /**
+     * Try to get a tracer from the proxy tracer provider.
+     * If the proxy tracer provider has no delegate, return a noop tracer.
+     */
+    _getTracer() {
+        if (this._delegate) {
+            return this._delegate;
+        }
+        const tracer = this._provider.getDelegateTracer(this.name, this.version, this.options);
+        if (!tracer) {
+            return NOOP_TRACER;
+        }
+        this._delegate = tracer;
+        return this._delegate;
+    }
+}
+exports.ProxyTracer = ProxyTracer;
+//# sourceMappingURL=ProxyTracer.js.map
+
+/***/ }),
+
+/***/ 5470:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.ProxyTracerProvider = void 0;
+const ProxyTracer_1 = __nccwpck_require__(5697);
+const NoopTracerProvider_1 = __nccwpck_require__(3364);
+const NOOP_TRACER_PROVIDER = new NoopTracerProvider_1.NoopTracerProvider();
+/**
+ * Tracer provider which provides {@link ProxyTracer}s.
+ *
+ * Before a delegate is set, tracers provided are NoOp.
+ *   When a delegate is set, traces are provided from the delegate.
+ *   When a delegate is set after tracers have already been provided,
+ *   all tracers already provided will use the provided delegate implementation.
+ */
+class ProxyTracerProvider {
+    /**
+     * Get a {@link ProxyTracer}
+     */
+    getTracer(name, version, options) {
+        var _a;
+        return ((_a = this.getDelegateTracer(name, version, options)) !== null && _a !== void 0 ? _a : new ProxyTracer_1.ProxyTracer(this, name, version, options));
+    }
+    getDelegate() {
+        var _a;
+        return (_a = this._delegate) !== null && _a !== void 0 ? _a : NOOP_TRACER_PROVIDER;
+    }
+    /**
+     * Set the delegate tracer provider
+     */
+    setDelegate(delegate) {
+        this._delegate = delegate;
+    }
+    getDelegateTracer(name, version, options) {
+        var _a;
+        return (_a = this._delegate) === null || _a === void 0 ? void 0 : _a.getTracer(name, version, options);
+    }
+}
+exports.ProxyTracerProvider = ProxyTracerProvider;
+//# sourceMappingURL=ProxyTracerProvider.js.map
+
+/***/ }),
+
+/***/ 4700:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.SamplingDecision = void 0;
+/**
+ * @deprecated use the one declared in @opentelemetry/sdk-trace-base instead.
+ * A sampling decision that determines how a {@link Span} will be recorded
+ * and collected.
+ */
+var SamplingDecision;
+(function (SamplingDecision) {
+    /**
+     * `Span.isRecording() === false`, span will not be recorded and all events
+     * and attributes will be dropped.
+     */
+    SamplingDecision[SamplingDecision["NOT_RECORD"] = 0] = "NOT_RECORD";
+    /**
+     * `Span.isRecording() === true`, but `Sampled` flag in {@link TraceFlags}
+     * MUST NOT be set.
+     */
+    SamplingDecision[SamplingDecision["RECORD"] = 1] = "RECORD";
+    /**
+     * `Span.isRecording() === true` AND `Sampled` flag in {@link TraceFlags}
+     * MUST be set.
+     */
+    SamplingDecision[SamplingDecision["RECORD_AND_SAMPLED"] = 2] = "RECORD_AND_SAMPLED";
+})(SamplingDecision = exports.SamplingDecision || (exports.SamplingDecision = {}));
+//# sourceMappingURL=SamplingResult.js.map
+
+/***/ }),
+
+/***/ 8316:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.getSpanContext = exports.setSpanContext = exports.deleteSpan = exports.setSpan = exports.getActiveSpan = exports.getSpan = void 0;
+const context_1 = __nccwpck_require__(6456);
+const NonRecordingSpan_1 = __nccwpck_require__(692);
+const context_2 = __nccwpck_require__(9603);
+/**
+ * span key
+ */
+const SPAN_KEY = (0, context_1.createContextKey)('OpenTelemetry Context Key SPAN');
+/**
+ * Return the span if one exists
+ *
+ * @param context context to get span from
+ */
+function getSpan(context) {
+    return context.getValue(SPAN_KEY) || undefined;
+}
+exports.getSpan = getSpan;
+/**
+ * Gets the span from the current context, if one exists.
+ */
+function getActiveSpan() {
+    return getSpan(context_2.ContextAPI.getInstance().active());
+}
+exports.getActiveSpan = getActiveSpan;
+/**
+ * Set the span on a context
+ *
+ * @param context context to use as parent
+ * @param span span to set active
+ */
+function setSpan(context, span) {
+    return context.setValue(SPAN_KEY, span);
+}
+exports.setSpan = setSpan;
+/**
+ * Remove current span stored in the context
+ *
+ * @param context context to delete span from
+ */
+function deleteSpan(context) {
+    return context.deleteValue(SPAN_KEY);
+}
+exports.deleteSpan = deleteSpan;
+/**
+ * Wrap span context in a NoopSpan and set as span in a new
+ * context
+ *
+ * @param context context to set active span on
+ * @param spanContext span context to be wrapped
+ */
+function setSpanContext(context, spanContext) {
+    return setSpan(context, new NonRecordingSpan_1.NonRecordingSpan(spanContext));
+}
+exports.setSpanContext = setSpanContext;
+/**
+ * Get the span context of the span if it exists.
+ *
+ * @param context context to get values from
+ */
+function getSpanContext(context) {
+    var _a;
+    return (_a = getSpan(context)) === null || _a === void 0 ? void 0 : _a.spanContext();
+}
+exports.getSpanContext = getSpanContext;
+//# sourceMappingURL=context-utils.js.map
+
+/***/ }),
+
+/***/ 1769:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.TraceStateImpl = void 0;
+const tracestate_validators_1 = __nccwpck_require__(5664);
+const MAX_TRACE_STATE_ITEMS = 32;
+const MAX_TRACE_STATE_LEN = 512;
+const LIST_MEMBERS_SEPARATOR = ',';
+const LIST_MEMBER_KEY_VALUE_SPLITTER = '=';
+/**
+ * TraceState must be a class and not a simple object type because of the spec
+ * requirement (https://www.w3.org/TR/trace-context/#tracestate-field).
+ *
+ * Here is the list of allowed mutations:
+ * - New key-value pair should be added into the beginning of the list
+ * - The value of any key can be updated. Modified keys MUST be moved to the
+ * beginning of the list.
+ */
+class TraceStateImpl {
+    constructor(rawTraceState) {
+        this._internalState = new Map();
+        if (rawTraceState)
+            this._parse(rawTraceState);
+    }
+    set(key, value) {
+        // TODO: Benchmark the different approaches(map vs list) and
+        // use the faster one.
+        const traceState = this._clone();
+        if (traceState._internalState.has(key)) {
+            traceState._internalState.delete(key);
+        }
+        traceState._internalState.set(key, value);
+        return traceState;
+    }
+    unset(key) {
+        const traceState = this._clone();
+        traceState._internalState.delete(key);
+        return traceState;
+    }
+    get(key) {
+        return this._internalState.get(key);
+    }
+    serialize() {
+        return this._keys()
+            .reduce((agg, key) => {
+            agg.push(key + LIST_MEMBER_KEY_VALUE_SPLITTER + this.get(key));
+            return agg;
+        }, [])
+            .join(LIST_MEMBERS_SEPARATOR);
+    }
+    _parse(rawTraceState) {
+        if (rawTraceState.length > MAX_TRACE_STATE_LEN)
+            return;
+        this._internalState = rawTraceState
+            .split(LIST_MEMBERS_SEPARATOR)
+            .reverse() // Store in reverse so new keys (.set(...)) will be placed at the beginning
+            .reduce((agg, part) => {
+            const listMember = part.trim(); // Optional Whitespace (OWS) handling
+            const i = listMember.indexOf(LIST_MEMBER_KEY_VALUE_SPLITTER);
+            if (i !== -1) {
+                const key = listMember.slice(0, i);
+                const value = listMember.slice(i + 1, part.length);
+                if ((0, tracestate_validators_1.validateKey)(key) && (0, tracestate_validators_1.validateValue)(value)) {
+                    agg.set(key, value);
+                }
+                else {
+                    // TODO: Consider to add warning log
+                }
+            }
+            return agg;
+        }, new Map());
+        // Because of the reverse() requirement, trunc must be done after map is created
+        if (this._internalState.size > MAX_TRACE_STATE_ITEMS) {
+            this._internalState = new Map(Array.from(this._internalState.entries())
+                .reverse() // Use reverse same as original tracestate parse chain
+                .slice(0, MAX_TRACE_STATE_ITEMS));
+        }
+    }
+    _keys() {
+        return Array.from(this._internalState.keys()).reverse();
+    }
+    _clone() {
+        const traceState = new TraceStateImpl();
+        traceState._internalState = new Map(this._internalState);
+        return traceState;
+    }
+}
+exports.TraceStateImpl = TraceStateImpl;
+//# sourceMappingURL=tracestate-impl.js.map
+
+/***/ }),
+
+/***/ 5664:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.validateValue = exports.validateKey = void 0;
+const VALID_KEY_CHAR_RANGE = '[_0-9a-z-*/]';
+const VALID_KEY = `[a-z]${VALID_KEY_CHAR_RANGE}{0,255}`;
+const VALID_VENDOR_KEY = `[a-z0-9]${VALID_KEY_CHAR_RANGE}{0,240}@[a-z]${VALID_KEY_CHAR_RANGE}{0,13}`;
+const VALID_KEY_REGEX = new RegExp(`^(?:${VALID_KEY}|${VALID_VENDOR_KEY})$`);
+const VALID_VALUE_BASE_REGEX = /^[ -~]{0,255}[!-~]$/;
+const INVALID_VALUE_COMMA_EQUAL_REGEX = /,|=/;
+/**
+ * Key is opaque string up to 256 characters printable. It MUST begin with a
+ * lowercase letter, and can only contain lowercase letters a-z, digits 0-9,
+ * underscores _, dashes -, asterisks *, and forward slashes /.
+ * For multi-tenant vendor scenarios, an at sign (@) can be used to prefix the
+ * vendor name. Vendors SHOULD set the tenant ID at the beginning of the key.
+ * see https://www.w3.org/TR/trace-context/#key
+ */
+function validateKey(key) {
+    return VALID_KEY_REGEX.test(key);
+}
+exports.validateKey = validateKey;
+/**
+ * Value is opaque string up to 256 characters printable ASCII RFC0020
+ * characters (i.e., the range 0x20 to 0x7E) except comma , and =.
+ */
+function validateValue(value) {
+    return (VALID_VALUE_BASE_REGEX.test(value) &&
+        !INVALID_VALUE_COMMA_EQUAL_REGEX.test(value));
+}
+exports.validateValue = validateValue;
+//# sourceMappingURL=tracestate-validators.js.map
+
+/***/ }),
+
+/***/ 9316:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.createTraceState = void 0;
+const tracestate_impl_1 = __nccwpck_require__(1769);
+function createTraceState(rawTraceState) {
+    return new tracestate_impl_1.TraceStateImpl(rawTraceState);
+}
+exports.createTraceState = createTraceState;
+//# sourceMappingURL=utils.js.map
+
+/***/ }),
+
+/***/ 535:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.INVALID_SPAN_CONTEXT = exports.INVALID_TRACEID = exports.INVALID_SPANID = void 0;
+const trace_flags_1 = __nccwpck_require__(234);
+exports.INVALID_SPANID = '0000000000000000';
+exports.INVALID_TRACEID = '00000000000000000000000000000000';
+exports.INVALID_SPAN_CONTEXT = {
+    traceId: exports.INVALID_TRACEID,
+    spanId: exports.INVALID_SPANID,
+    traceFlags: trace_flags_1.TraceFlags.NONE,
+};
+//# sourceMappingURL=invalid-span-constants.js.map
+
+/***/ }),
+
+/***/ 3300:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.SpanKind = void 0;
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+var SpanKind;
+(function (SpanKind) {
+    /** Default value. Indicates that the span is used internally. */
+    SpanKind[SpanKind["INTERNAL"] = 0] = "INTERNAL";
+    /**
+     * Indicates that the span covers server-side handling of an RPC or other
+     * remote request.
+     */
+    SpanKind[SpanKind["SERVER"] = 1] = "SERVER";
+    /**
+     * Indicates that the span covers the client-side wrapper around an RPC or
+     * other remote request.
+     */
+    SpanKind[SpanKind["CLIENT"] = 2] = "CLIENT";
+    /**
+     * Indicates that the span describes producer sending a message to a
+     * broker. Unlike client and server, there is no direct critical path latency
+     * relationship between producer and consumer spans.
+     */
+    SpanKind[SpanKind["PRODUCER"] = 3] = "PRODUCER";
+    /**
+     * Indicates that the span describes consumer receiving a message from a
+     * broker. Unlike client and server, there is no direct critical path latency
+     * relationship between producer and consumer spans.
+     */
+    SpanKind[SpanKind["CONSUMER"] = 4] = "CONSUMER";
+})(SpanKind = exports.SpanKind || (exports.SpanKind = {}));
+//# sourceMappingURL=span_kind.js.map
+
+/***/ }),
+
+/***/ 1040:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.wrapSpanContext = exports.isSpanContextValid = exports.isValidSpanId = exports.isValidTraceId = void 0;
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const invalid_span_constants_1 = __nccwpck_require__(535);
+const NonRecordingSpan_1 = __nccwpck_require__(692);
+const VALID_TRACEID_REGEX = /^([0-9a-f]{32})$/i;
+const VALID_SPANID_REGEX = /^[0-9a-f]{16}$/i;
+function isValidTraceId(traceId) {
+    return VALID_TRACEID_REGEX.test(traceId) && traceId !== invalid_span_constants_1.INVALID_TRACEID;
+}
+exports.isValidTraceId = isValidTraceId;
+function isValidSpanId(spanId) {
+    return VALID_SPANID_REGEX.test(spanId) && spanId !== invalid_span_constants_1.INVALID_SPANID;
+}
+exports.isValidSpanId = isValidSpanId;
+/**
+ * Returns true if this {@link SpanContext} is valid.
+ * @return true if this {@link SpanContext} is valid.
+ */
+function isSpanContextValid(spanContext) {
+    return (isValidTraceId(spanContext.traceId) && isValidSpanId(spanContext.spanId));
+}
+exports.isSpanContextValid = isSpanContextValid;
+/**
+ * Wrap the given {@link SpanContext} in a new non-recording {@link Span}
+ *
+ * @param spanContext span context to be wrapped
+ * @returns a new non-recording {@link Span} with the provided context
+ */
+function wrapSpanContext(spanContext) {
+    return new NonRecordingSpan_1.NonRecordingSpan(spanContext);
+}
+exports.wrapSpanContext = wrapSpanContext;
+//# sourceMappingURL=spancontext-utils.js.map
+
+/***/ }),
+
+/***/ 3535:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.SpanStatusCode = void 0;
+/**
+ * An enumeration of status codes.
+ */
+var SpanStatusCode;
+(function (SpanStatusCode) {
+    /**
+     * The default status.
+     */
+    SpanStatusCode[SpanStatusCode["UNSET"] = 0] = "UNSET";
+    /**
+     * The operation has been validated by an Application developer or
+     * Operator to have completed successfully.
+     */
+    SpanStatusCode[SpanStatusCode["OK"] = 1] = "OK";
+    /**
+     * The operation contains an error.
+     */
+    SpanStatusCode[SpanStatusCode["ERROR"] = 2] = "ERROR";
+})(SpanStatusCode = exports.SpanStatusCode || (exports.SpanStatusCode = {}));
+//# sourceMappingURL=status.js.map
+
+/***/ }),
+
+/***/ 234:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.TraceFlags = void 0;
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+var TraceFlags;
+(function (TraceFlags) {
+    /** Represents no flag set. */
+    TraceFlags[TraceFlags["NONE"] = 0] = "NONE";
+    /** Bit to represent whether trace is sampled in trace flags. */
+    TraceFlags[TraceFlags["SAMPLED"] = 1] = "SAMPLED";
+})(TraceFlags = exports.TraceFlags || (exports.TraceFlags = {}));
+//# sourceMappingURL=trace_flags.js.map
+
+/***/ }),
+
+/***/ 5437:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+/*
+ * Copyright The OpenTelemetry Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.VERSION = void 0;
+// this is autogenerated file, see scripts/version-update.js
+exports.VERSION = '1.9.0';
+//# sourceMappingURL=version.js.map
+
+/***/ }),
+
+/***/ 8464:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
-var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
-var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __export = (target, all) => {
-  for (var name in all)
-    __defProp(target, name, { get: all[name], enumerable: true });
+  for (var name12 in all)
+    __defProp(target, name12, { get: all[name12], enumerable: true });
 };
 var __copyProps = (to, from, except, desc) => {
   if (from && typeof from === "object" || typeof from === "function") {
@@ -13870,21 +17891,14 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
-var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
-  // If the importer is in node compatibility mode or this is not an ESM
-  // file that has been converted to a CommonJS file using a Babel-
-  // compatible transform (i.e. "__esModule" has not been set), then set
-  // "default" to the CommonJS "module.exports" for node compatibility.
-  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
-  mod
-));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
 // streams/index.ts
 var streams_exports = {};
 __export(streams_exports, {
+  AISDKError: () => import_provider14.AISDKError,
   AIStream: () => AIStream,
-  APICallError: () => import_provider8.APICallError,
+  APICallError: () => import_provider14.APICallError,
   AWSBedrockAnthropicMessagesStream: () => AWSBedrockAnthropicMessagesStream,
   AWSBedrockAnthropicStream: () => AWSBedrockAnthropicStream,
   AWSBedrockCohereStream: () => AWSBedrockCohereStream,
@@ -13893,44 +17907,38 @@ __export(streams_exports, {
   AnthropicStream: () => AnthropicStream,
   AssistantResponse: () => AssistantResponse,
   CohereStream: () => CohereStream,
-  EmbedManyResult: () => EmbedManyResult,
-  EmbedResult: () => EmbedResult,
-  EmptyResponseBodyError: () => import_provider8.EmptyResponseBodyError,
-  GenerateObjectResult: () => GenerateObjectResult,
-  GenerateTextResult: () => GenerateTextResult,
+  DownloadError: () => DownloadError,
+  EmptyResponseBodyError: () => import_provider14.EmptyResponseBodyError,
   GoogleGenerativeAIStream: () => GoogleGenerativeAIStream,
   HuggingFaceStream: () => HuggingFaceStream,
   InkeepStream: () => InkeepStream,
-  InvalidArgumentError: () => import_provider8.InvalidArgumentError,
-  InvalidDataContentError: () => import_provider8.InvalidDataContentError,
+  InvalidArgumentError: () => InvalidArgumentError,
+  InvalidDataContentError: () => InvalidDataContentError,
   InvalidMessageRoleError: () => InvalidMessageRoleError,
   InvalidModelIdError: () => InvalidModelIdError,
-  InvalidPromptError: () => import_provider8.InvalidPromptError,
-  InvalidResponseDataError: () => import_provider8.InvalidResponseDataError,
-  InvalidToolArgumentsError: () => import_provider8.InvalidToolArgumentsError,
-  JSONParseError: () => import_provider8.JSONParseError,
+  InvalidPromptError: () => import_provider14.InvalidPromptError,
+  InvalidResponseDataError: () => import_provider14.InvalidResponseDataError,
+  InvalidToolArgumentsError: () => InvalidToolArgumentsError,
+  JSONParseError: () => import_provider14.JSONParseError,
   LangChainAdapter: () => langchain_adapter_exports,
   LangChainStream: () => LangChainStream,
-  LoadAPIKeyError: () => import_provider8.LoadAPIKeyError,
+  LoadAPIKeyError: () => import_provider14.LoadAPIKeyError,
   MistralStream: () => MistralStream,
-  NoObjectGeneratedError: () => import_provider8.NoObjectGeneratedError,
+  NoObjectGeneratedError: () => NoObjectGeneratedError,
   NoSuchModelError: () => NoSuchModelError,
   NoSuchProviderError: () => NoSuchProviderError,
-  NoSuchToolError: () => import_provider8.NoSuchToolError,
+  NoSuchToolError: () => NoSuchToolError,
   OpenAIStream: () => OpenAIStream,
   ReplicateStream: () => ReplicateStream,
-  RetryError: () => import_provider8.RetryError,
-  StreamData: () => StreamData,
-  StreamObjectResult: () => StreamObjectResult,
-  StreamTextResult: () => StreamTextResult,
+  RetryError: () => RetryError,
+  StreamData: () => StreamData2,
   StreamingTextResponse: () => StreamingTextResponse,
-  ToolCallParseError: () => import_provider8.ToolCallParseError,
-  TypeValidationError: () => import_provider8.TypeValidationError,
-  UnsupportedFunctionalityError: () => import_provider8.UnsupportedFunctionalityError,
-  UnsupportedJSONSchemaError: () => import_provider8.UnsupportedJSONSchemaError,
+  TypeValidationError: () => import_provider14.TypeValidationError,
+  UnsupportedFunctionalityError: () => import_provider14.UnsupportedFunctionalityError,
   convertDataContentToBase64String: () => convertDataContentToBase64String,
   convertDataContentToUint8Array: () => convertDataContentToUint8Array,
   convertToCoreMessages: () => convertToCoreMessages,
+  convertUint8ArrayToText: () => convertUint8ArrayToText,
   cosineSimilarity: () => cosineSimilarity,
   createCallbacksTransformer: () => createCallbacksTransformer,
   createEventStreamTransformer: () => createEventStreamTransformer,
@@ -13945,14 +17953,15 @@ __export(streams_exports, {
   experimental_generateText: () => experimental_generateText,
   experimental_streamObject: () => experimental_streamObject,
   experimental_streamText: () => experimental_streamText,
-  formatStreamPart: () => import_ui_utils6.formatStreamPart,
+  formatStreamPart: () => import_ui_utils10.formatStreamPart,
   generateId: () => generateId2,
   generateObject: () => generateObject,
   generateText: () => generateText,
+  jsonSchema: () => import_ui_utils6.jsonSchema,
   nanoid: () => nanoid,
-  parseComplexResponse: () => import_ui_utils6.parseComplexResponse,
-  parseStreamPart: () => import_ui_utils6.parseStreamPart,
-  readDataStream: () => import_ui_utils6.readDataStream,
+  parseComplexResponse: () => import_ui_utils10.parseComplexResponse,
+  parseStreamPart: () => import_ui_utils10.parseStreamPart,
+  readDataStream: () => import_ui_utils10.readDataStream,
   readableFromAsyncIterable: () => readableFromAsyncIterable,
   streamObject: () => streamObject,
   streamText: () => streamText,
@@ -13961,19 +17970,64 @@ __export(streams_exports, {
   trimStartOfStreamHelper: () => trimStartOfStreamHelper
 });
 module.exports = __toCommonJS(streams_exports);
-var import_ui_utils6 = __nccwpck_require__(4809);
-var import_provider_utils7 = __nccwpck_require__(9448);
+var import_ui_utils10 = __nccwpck_require__(6399);
+var import_provider_utils7 = __nccwpck_require__(1545);
 
-// core/util/retry-with-exponential-backoff.ts
-var import_provider = __nccwpck_require__(5667);
-var import_provider_utils = __nccwpck_require__(9448);
+// core/index.ts
+var import_ui_utils6 = __nccwpck_require__(6399);
 
-// core/util/delay.ts
+// util/retry-with-exponential-backoff.ts
+var import_provider2 = __nccwpck_require__(7503);
+var import_provider_utils = __nccwpck_require__(1545);
+
+// util/delay.ts
 async function delay(delayInMs) {
-  return new Promise((resolve) => setTimeout(resolve, delayInMs));
+  return delayInMs === void 0 ? Promise.resolve() : new Promise((resolve) => setTimeout(resolve, delayInMs));
 }
 
-// core/util/retry-with-exponential-backoff.ts
+// util/retry-error.ts
+var import_provider = __nccwpck_require__(7503);
+var name = "AI_RetryError";
+var marker = `vercel.ai.error.${name}`;
+var symbol = Symbol.for(marker);
+var _a;
+var RetryError = class extends import_provider.AISDKError {
+  constructor({
+    message,
+    reason,
+    errors
+  }) {
+    super({ name, message });
+    this[_a] = true;
+    this.reason = reason;
+    this.errors = errors;
+    this.lastError = errors[errors.length - 1];
+  }
+  static isInstance(error) {
+    return import_provider.AISDKError.hasMarker(error, marker);
+  }
+  /**
+   * @deprecated use `isInstance` instead
+   */
+  static isRetryError(error) {
+    return error instanceof Error && error.name === name && typeof error.reason === "string" && Array.isArray(error.errors);
+  }
+  /**
+   * @deprecated Do not use this method. It will be removed in the next major version.
+   */
+  toJSON() {
+    return {
+      name: this.name,
+      message: this.message,
+      reason: this.reason,
+      lastError: this.lastError,
+      errors: this.errors
+    };
+  }
+};
+_a = symbol;
+
+// util/retry-with-exponential-backoff.ts
 var retryWithExponentialBackoff = ({
   maxRetries = 2,
   initialDelayInMs = 2e3,
@@ -14001,13 +18055,13 @@ async function _retryWithExponentialBackoff(f, {
     const newErrors = [...errors, error];
     const tryNumber = newErrors.length;
     if (tryNumber > maxRetries) {
-      throw new import_provider.RetryError({
+      throw new RetryError({
         message: `Failed after ${tryNumber} attempts. Last error: ${errorMessage}`,
         reason: "maxRetriesExceeded",
         errors: newErrors
       });
     }
-    if (error instanceof Error && import_provider.APICallError.isAPICallError(error) && error.isRetryable === true && tryNumber <= maxRetries) {
+    if (error instanceof Error && import_provider2.APICallError.isAPICallError(error) && error.isRetryable === true && tryNumber <= maxRetries) {
       await delay(delayInMs);
       return _retryWithExponentialBackoff(
         f,
@@ -14018,12 +18072,198 @@ async function _retryWithExponentialBackoff(f, {
     if (tryNumber === 1) {
       throw error;
     }
-    throw new import_provider.RetryError({
+    throw new RetryError({
       message: `Failed after ${tryNumber} attempts with non-retryable error: '${errorMessage}'`,
       reason: "errorNotRetryable",
       errors: newErrors
     });
   }
+}
+
+// core/telemetry/assemble-operation-name.ts
+function assembleOperationName({
+  operationName,
+  telemetry
+}) {
+  return {
+    "operation.name": `${operationName}${(telemetry == null ? void 0 : telemetry.functionId) != null ? ` ${telemetry.functionId}` : ""}`
+  };
+}
+
+// core/telemetry/get-base-telemetry-attributes.ts
+function getBaseTelemetryAttributes({
+  model,
+  settings,
+  telemetry,
+  headers
+}) {
+  var _a12;
+  return {
+    "ai.model.provider": model.provider,
+    "ai.model.id": model.modelId,
+    // settings:
+    ...Object.entries(settings).reduce((attributes, [key, value]) => {
+      attributes[`ai.settings.${key}`] = value;
+      return attributes;
+    }, {}),
+    // special telemetry information
+    "resource.name": telemetry == null ? void 0 : telemetry.functionId,
+    "ai.telemetry.functionId": telemetry == null ? void 0 : telemetry.functionId,
+    // add metadata as attributes:
+    ...Object.entries((_a12 = telemetry == null ? void 0 : telemetry.metadata) != null ? _a12 : {}).reduce(
+      (attributes, [key, value]) => {
+        attributes[`ai.telemetry.metadata.${key}`] = value;
+        return attributes;
+      },
+      {}
+    ),
+    // request headers
+    ...Object.entries(headers != null ? headers : {}).reduce((attributes, [key, value]) => {
+      if (value !== void 0) {
+        attributes[`ai.request.headers.${key}`] = value;
+      }
+      return attributes;
+    }, {})
+  };
+}
+
+// core/telemetry/get-tracer.ts
+var import_api = __nccwpck_require__(7256);
+
+// core/telemetry/noop-tracer.ts
+var noopTracer = {
+  startSpan() {
+    return noopSpan;
+  },
+  startActiveSpan(name12, arg1, arg2, arg3) {
+    if (typeof arg1 === "function") {
+      return arg1(noopSpan);
+    }
+    if (typeof arg2 === "function") {
+      return arg2(noopSpan);
+    }
+    if (typeof arg3 === "function") {
+      return arg3(noopSpan);
+    }
+  }
+};
+var noopSpan = {
+  spanContext() {
+    return noopSpanContext;
+  },
+  setAttribute() {
+    return this;
+  },
+  setAttributes() {
+    return this;
+  },
+  addEvent() {
+    return this;
+  },
+  addLink() {
+    return this;
+  },
+  addLinks() {
+    return this;
+  },
+  setStatus() {
+    return this;
+  },
+  updateName() {
+    return this;
+  },
+  end() {
+    return this;
+  },
+  isRecording() {
+    return false;
+  },
+  recordException() {
+    return this;
+  }
+};
+var noopSpanContext = {
+  traceId: "",
+  spanId: "",
+  traceFlags: 0
+};
+
+// core/telemetry/get-tracer.ts
+var testTracer = void 0;
+function getTracer({ isEnabled }) {
+  if (!isEnabled) {
+    return noopTracer;
+  }
+  if (testTracer) {
+    return testTracer;
+  }
+  return import_api.trace.getTracer("ai");
+}
+
+// core/telemetry/record-span.ts
+var import_api2 = __nccwpck_require__(7256);
+function recordSpan({
+  name: name12,
+  tracer,
+  attributes,
+  fn,
+  endWhenDone = true
+}) {
+  return tracer.startActiveSpan(name12, { attributes }, async (span) => {
+    try {
+      const result = await fn(span);
+      if (endWhenDone) {
+        span.end();
+      }
+      return result;
+    } catch (error) {
+      try {
+        if (error instanceof Error) {
+          span.recordException({
+            name: error.name,
+            message: error.message,
+            stack: error.stack
+          });
+          span.setStatus({
+            code: import_api2.SpanStatusCode.ERROR,
+            message: error.message
+          });
+        } else {
+          span.setStatus({ code: import_api2.SpanStatusCode.ERROR });
+        }
+      } finally {
+        span.end();
+      }
+      throw error;
+    }
+  });
+}
+
+// core/telemetry/select-telemetry-attributes.ts
+function selectTelemetryAttributes({
+  telemetry,
+  attributes
+}) {
+  return Object.entries(attributes).reduce((attributes2, [key, value]) => {
+    if (value === void 0) {
+      return attributes2;
+    }
+    if (typeof value === "object" && "input" in value && typeof value.input === "function") {
+      if ((telemetry == null ? void 0 : telemetry.recordInputs) === false) {
+        return attributes2;
+      }
+      const result = value.input();
+      return result === void 0 ? attributes2 : { ...attributes2, [key]: result };
+    }
+    if (typeof value === "object" && "output" in value && typeof value.output === "function") {
+      if ((telemetry == null ? void 0 : telemetry.recordOutputs) === false) {
+        return attributes2;
+      }
+      const result = value.output();
+      return result === void 0 ? attributes2 : { ...attributes2, [key]: result };
+    }
+    return { ...attributes2, [key]: value };
+  }, {});
 }
 
 // core/embed/embed.ts
@@ -14032,22 +18272,97 @@ async function embed({
   value,
   maxRetries,
   abortSignal,
-  headers
+  headers,
+  experimental_telemetry: telemetry
 }) {
-  const retry = retryWithExponentialBackoff({ maxRetries });
-  const modelResponse = await retry(
-    () => model.doEmbed({ values: [value], abortSignal, headers })
-  );
-  return new EmbedResult({
-    value,
-    embedding: modelResponse.embeddings[0],
-    rawResponse: modelResponse.rawResponse
+  var _a12;
+  const baseTelemetryAttributes = getBaseTelemetryAttributes({
+    model,
+    telemetry,
+    headers,
+    settings: { maxRetries }
+  });
+  const tracer = getTracer({ isEnabled: (_a12 = telemetry == null ? void 0 : telemetry.isEnabled) != null ? _a12 : false });
+  return recordSpan({
+    name: "ai.embed",
+    attributes: selectTelemetryAttributes({
+      telemetry,
+      attributes: {
+        ...assembleOperationName({ operationName: "ai.embed", telemetry }),
+        ...baseTelemetryAttributes,
+        "ai.value": { input: () => JSON.stringify(value) }
+      }
+    }),
+    tracer,
+    fn: async (span) => {
+      const retry = retryWithExponentialBackoff({ maxRetries });
+      const { embedding, usage, rawResponse } = await retry(
+        () => (
+          // nested spans to align with the embedMany telemetry data:
+          recordSpan({
+            name: "ai.embed.doEmbed",
+            attributes: selectTelemetryAttributes({
+              telemetry,
+              attributes: {
+                ...assembleOperationName({
+                  operationName: "ai.embed.doEmbed",
+                  telemetry
+                }),
+                ...baseTelemetryAttributes,
+                // specific settings that only make sense on the outer level:
+                "ai.values": { input: () => [JSON.stringify(value)] }
+              }
+            }),
+            tracer,
+            fn: async (doEmbedSpan) => {
+              var _a13;
+              const modelResponse = await model.doEmbed({
+                values: [value],
+                abortSignal,
+                headers
+              });
+              const embedding2 = modelResponse.embeddings[0];
+              const usage2 = (_a13 = modelResponse.usage) != null ? _a13 : { tokens: NaN };
+              doEmbedSpan.setAttributes(
+                selectTelemetryAttributes({
+                  telemetry,
+                  attributes: {
+                    "ai.embeddings": {
+                      output: () => modelResponse.embeddings.map(
+                        (embedding3) => JSON.stringify(embedding3)
+                      )
+                    },
+                    "ai.usage.tokens": usage2.tokens
+                  }
+                })
+              );
+              return {
+                embedding: embedding2,
+                usage: usage2,
+                rawResponse: modelResponse.rawResponse
+              };
+            }
+          })
+        )
+      );
+      span.setAttributes(
+        selectTelemetryAttributes({
+          telemetry,
+          attributes: {
+            "ai.embedding": { output: () => JSON.stringify(embedding) },
+            "ai.usage.tokens": usage.tokens
+          }
+        })
+      );
+      return new DefaultEmbedResult({ value, embedding, usage, rawResponse });
+    }
   });
 }
-var EmbedResult = class {
+var DefaultEmbedResult = class {
   constructor(options) {
     this.value = options.value;
     this.embedding = options.embedding;
+    this.usage = options.usage;
     this.rawResponse = options.rawResponse;
   }
 };
@@ -14070,47 +18385,244 @@ async function embedMany({
   values,
   maxRetries,
   abortSignal,
-  headers
+  headers,
+  experimental_telemetry: telemetry
 }) {
-  const retry = retryWithExponentialBackoff({ maxRetries });
-  const maxEmbeddingsPerCall = model.maxEmbeddingsPerCall;
-  if (maxEmbeddingsPerCall == null) {
-    const modelResponse = await retry(
-      () => model.doEmbed({ values, abortSignal, headers })
-    );
-    return new EmbedManyResult({
-      values,
-      embeddings: modelResponse.embeddings
-    });
-  }
-  const valueChunks = splitArray(values, maxEmbeddingsPerCall);
-  const embeddings = [];
-  for (const chunk of valueChunks) {
-    const modelResponse = await retry(
-      () => model.doEmbed({ values: chunk, abortSignal, headers })
-    );
-    embeddings.push(...modelResponse.embeddings);
-  }
-  return new EmbedManyResult({ values, embeddings });
+  var _a12;
+  const baseTelemetryAttributes = getBaseTelemetryAttributes({
+    model,
+    telemetry,
+    headers,
+    settings: { maxRetries }
+  });
+  const tracer = getTracer({ isEnabled: (_a12 = telemetry == null ? void 0 : telemetry.isEnabled) != null ? _a12 : false });
+  return recordSpan({
+    name: "ai.embedMany",
+    attributes: selectTelemetryAttributes({
+      telemetry,
+      attributes: {
+        ...assembleOperationName({ operationName: "ai.embedMany", telemetry }),
+        ...baseTelemetryAttributes,
+        // specific settings that only make sense on the outer level:
+        "ai.values": {
+          input: () => values.map((value) => JSON.stringify(value))
+        }
+      }
+    }),
+    tracer,
+    fn: async (span) => {
+      const retry = retryWithExponentialBackoff({ maxRetries });
+      const maxEmbeddingsPerCall = model.maxEmbeddingsPerCall;
+      if (maxEmbeddingsPerCall == null) {
+        const { embeddings: embeddings2, usage } = await retry(() => {
+          return recordSpan({
+            name: "ai.embedMany.doEmbed",
+            attributes: selectTelemetryAttributes({
+              telemetry,
+              attributes: {
+                ...assembleOperationName({
+                  operationName: "ai.embedMany.doEmbed",
+                  telemetry
+                }),
+                ...baseTelemetryAttributes,
+                // specific settings that only make sense on the outer level:
+                "ai.values": {
+                  input: () => values.map((value) => JSON.stringify(value))
+                }
+              }
+            }),
+            tracer,
+            fn: async (doEmbedSpan) => {
+              var _a13;
+              const modelResponse = await model.doEmbed({
+                values,
+                abortSignal,
+                headers
+              });
+              const embeddings3 = modelResponse.embeddings;
+              const usage2 = (_a13 = modelResponse.usage) != null ? _a13 : { tokens: NaN };
+              doEmbedSpan.setAttributes(
+                selectTelemetryAttributes({
+                  telemetry,
+                  attributes: {
+                    "ai.embeddings": {
+                      output: () => embeddings3.map((embedding) => JSON.stringify(embedding))
+                    },
+                    "ai.usage.tokens": usage2.tokens
+                  }
+                })
+              );
+              return { embeddings: embeddings3, usage: usage2 };
+            }
+          });
+        });
+        span.setAttributes(
+          selectTelemetryAttributes({
+            telemetry,
+            attributes: {
+              "ai.embeddings": {
+                output: () => embeddings2.map((embedding) => JSON.stringify(embedding))
+              },
+              "ai.usage.tokens": usage.tokens
+            }
+          })
+        );
+        return new DefaultEmbedManyResult({ values, embeddings: embeddings2, usage });
+      }
+      const valueChunks = splitArray(values, maxEmbeddingsPerCall);
+      const embeddings = [];
+      let tokens = 0;
+      for (const chunk of valueChunks) {
+        const { embeddings: responseEmbeddings, usage } = await retry(() => {
+          return recordSpan({
+            name: "ai.embedMany.doEmbed",
+            attributes: selectTelemetryAttributes({
+              telemetry,
+              attributes: {
+                ...assembleOperationName({
+                  operationName: "ai.embedMany.doEmbed",
+                  telemetry
+                }),
+                ...baseTelemetryAttributes,
+                // specific settings that only make sense on the outer level:
+                "ai.values": {
+                  input: () => chunk.map((value) => JSON.stringify(value))
+                }
+              }
+            }),
+            tracer,
+            fn: async (doEmbedSpan) => {
+              var _a13;
+              const modelResponse = await model.doEmbed({
+                values: chunk,
+                abortSignal,
+                headers
+              });
+              const embeddings2 = modelResponse.embeddings;
+              const usage2 = (_a13 = modelResponse.usage) != null ? _a13 : { tokens: NaN };
+              doEmbedSpan.setAttributes(
+                selectTelemetryAttributes({
+                  telemetry,
+                  attributes: {
+                    "ai.embeddings": {
+                      output: () => embeddings2.map((embedding) => JSON.stringify(embedding))
+                    },
+                    "ai.usage.tokens": usage2.tokens
+                  }
+                })
+              );
+              return { embeddings: embeddings2, usage: usage2 };
+            }
+          });
+        });
+        embeddings.push(...responseEmbeddings);
+        tokens += usage.tokens;
+      }
+      span.setAttributes(
+        selectTelemetryAttributes({
+          telemetry,
+          attributes: {
+            "ai.embeddings": {
+              output: () => embeddings.map((embedding) => JSON.stringify(embedding))
+            },
+            "ai.usage.tokens": tokens
+          }
+        })
+      );
+      return new DefaultEmbedManyResult({
+        values,
+        embeddings,
+        usage: { tokens }
+      });
+    }
+  });
 }
-var EmbedManyResult = class {
+var DefaultEmbedManyResult = class {
   constructor(options) {
     this.values = options.values;
     this.embeddings = options.embeddings;
+    this.usage = options.usage;
   }
 };
 
 // core/generate-object/generate-object.ts
-var import_provider5 = __nccwpck_require__(5667);
-var import_provider_utils4 = __nccwpck_require__(9448);
+var import_provider_utils4 = __nccwpck_require__(1545);
+var import_ui_utils = __nccwpck_require__(6399);
 
-// core/generate-text/token-usage.ts
-function calculateTokenUsage(usage) {
-  return {
-    promptTokens: usage.promptTokens,
-    completionTokens: usage.completionTokens,
-    totalTokens: usage.promptTokens + usage.completionTokens
-  };
+// core/prompt/convert-to-language-model-prompt.ts
+var import_provider_utils3 = __nccwpck_require__(1545);
+
+// util/download-error.ts
+var import_provider3 = __nccwpck_require__(7503);
+var name2 = "AI_DownloadError";
+var marker2 = `vercel.ai.error.${name2}`;
+var symbol2 = Symbol.for(marker2);
+var _a2;
+var DownloadError = class extends import_provider3.AISDKError {
+  constructor({
+    url,
+    statusCode,
+    statusText,
+    cause,
+    message = cause == null ? `Failed to download ${url}: ${statusCode} ${statusText}` : `Failed to download ${url}: ${cause}`
+  }) {
+    super({ name: name2, message, cause });
+    this[_a2] = true;
+    this.url = url;
+    this.statusCode = statusCode;
+    this.statusText = statusText;
+  }
+  static isInstance(error) {
+    return import_provider3.AISDKError.hasMarker(error, marker2);
+  }
+  /**
+   * @deprecated use `isInstance` instead
+   */
+  static isDownloadError(error) {
+    return error instanceof Error && error.name === name2 && typeof error.url === "string" && (error.statusCode == null || typeof error.statusCode === "number") && (error.statusText == null || typeof error.statusText === "string");
+  }
+  /**
+   * @deprecated Do not use this method. It will be removed in the next major version.
+   */
+  toJSON() {
+    return {
+      name: this.name,
+      message: this.message,
+      url: this.url,
+      statusCode: this.statusCode,
+      statusText: this.statusText,
+      cause: this.cause
+    };
+  }
+};
+_a2 = symbol2;
+
+// util/download.ts
+async function download({
+  url,
+  fetchImplementation = fetch
+}) {
+  var _a12;
+  const urlText = url.toString();
+  try {
+    const response = await fetchImplementation(urlText);
+    if (!response.ok) {
+      throw new DownloadError({
+        url: urlText,
+        statusCode: response.status,
+        statusText: response.statusText
+      });
+    }
+    return {
+      data: new Uint8Array(await response.arrayBuffer()),
+      mimeType: (_a12 = response.headers.get("content-type")) != null ? _a12 : void 0
+    };
+  } catch (error) {
+    if (DownloadError.isInstance(error)) {
+      throw error;
+    }
+    throw new DownloadError({ url: urlText, cause: error });
+  }
 }
 
 // core/util/detect-image-mimetype.ts
@@ -14130,8 +18642,49 @@ function detectImageMimeType(image) {
 }
 
 // core/prompt/data-content.ts
-var import_provider2 = __nccwpck_require__(5667);
-var import_provider_utils2 = __nccwpck_require__(9448);
+var import_provider_utils2 = __nccwpck_require__(1545);
+
+// core/prompt/invalid-data-content-error.ts
+var import_provider4 = __nccwpck_require__(7503);
+var name3 = "AI_InvalidDataContentError";
+var marker3 = `vercel.ai.error.${name3}`;
+var symbol3 = Symbol.for(marker3);
+var _a3;
+var InvalidDataContentError = class extends import_provider4.AISDKError {
+  constructor({
+    content,
+    cause,
+    message = `Invalid data content. Expected a base64 string, Uint8Array, ArrayBuffer, or Buffer, but got ${typeof content}.`
+  }) {
+    super({ name: name3, message, cause });
+    this[_a3] = true;
+    this.content = content;
+  }
+  static isInstance(error) {
+    return import_provider4.AISDKError.hasMarker(error, marker3);
+  }
+  /**
+   * @deprecated use `isInstance` instead
+   */
+  static isInvalidDataContentError(error) {
+    return error instanceof Error && error.name === name3 && error.content != null;
+  }
+  /**
+   * @deprecated Do not use this method. It will be removed in the next major version.
+   */
+  toJSON() {
+    return {
+      name: this.name,
+      message: this.message,
+      stack: this.stack,
+      cause: this.cause,
+      content: this.content
+    };
+  }
+};
+_a3 = symbol3;
+
+// core/prompt/data-content.ts
 function convertDataContentToBase64String(content) {
   if (typeof content === "string") {
     return content;
@@ -14149,8 +18702,8 @@ function convertDataContentToUint8Array(content) {
     try {
       return (0, import_provider_utils2.convertBase64ToUint8Array)(content);
     } catch (error) {
-      throw new import_provider2.InvalidDataContentError({
-        message: "Invalid data content. Content string is not a base64-encoded image.",
+      throw new InvalidDataContentError({
+        message: "Invalid data content. Content string is not a base64-encoded media.",
         content,
         cause: error
       });
@@ -14159,22 +18712,43 @@ function convertDataContentToUint8Array(content) {
   if (content instanceof ArrayBuffer) {
     return new Uint8Array(content);
   }
-  throw new import_provider2.InvalidDataContentError({ content });
+  throw new InvalidDataContentError({ content });
+}
+function convertUint8ArrayToText(uint8Array) {
+  try {
+    return new TextDecoder().decode(uint8Array);
+  } catch (error) {
+    throw new Error("Error decoding Uint8Array to text");
+  }
 }
 
 // core/prompt/invalid-message-role-error.ts
-var InvalidMessageRoleError = class extends Error {
+var import_provider5 = __nccwpck_require__(7503);
+var name4 = "AI_InvalidMessageRoleError";
+var marker4 = `vercel.ai.error.${name4}`;
+var symbol4 = Symbol.for(marker4);
+var _a4;
+var InvalidMessageRoleError = class extends import_provider5.AISDKError {
   constructor({
     role,
     message = `Invalid message role: '${role}'. Must be one of: "system", "user", "assistant", "tool".`
   }) {
-    super(message);
-    this.name = "AI_InvalidMessageRoleError";
+    super({ name: name4, message });
+    this[_a4] = true;
     this.role = role;
   }
-  static isInvalidMessageRoleError(error) {
-    return error instanceof Error && error.name === "AI_InvalidMessageRoleError" && typeof error.role === "string";
+  static isInstance(error) {
+    return import_provider5.AISDKError.hasMarker(error, marker4);
   }
+  /**
+   * @deprecated use `isInstance` instead
+   */
+  static isInvalidMessageRoleError(error) {
+    return error instanceof Error && error.name === name4 && typeof error.role === "string";
+  }
+  /**
+   * @deprecated Do not use this method. It will be removed in the next major version.
+   */
   toJSON() {
     return {
       name: this.name,
@@ -14184,14 +18758,19 @@ var InvalidMessageRoleError = class extends Error {
     };
   }
 };
+_a4 = symbol4;
 
 // core/prompt/convert-to-language-model-prompt.ts
-var import_provider_utils3 = __nccwpck_require__(9448);
-function convertToLanguageModelPrompt(prompt) {
+async function convertToLanguageModelPrompt({
+  prompt,
+  modelSupportsImageUrls = true,
+  downloadImplementation = download
+}) {
   const languageModelMessages = [];
   if (prompt.system != null) {
     languageModelMessages.push({ role: "system", content: prompt.system });
   }
+  const downloadedImages = modelSupportsImageUrls || prompt.messages == null ? null : await downloadImages(prompt.messages, downloadImplementation);
   const promptType = prompt.type;
   switch (promptType) {
     case "prompt": {
@@ -14203,7 +18782,9 @@ function convertToLanguageModelPrompt(prompt) {
     }
     case "messages": {
       languageModelMessages.push(
-        ...prompt.messages.map(convertToLanguageModelMessage)
+        ...prompt.messages.map(
+          (message) => convertToLanguageModelMessage(message, downloadedImages)
+        )
       );
       break;
     }
@@ -14214,7 +18795,7 @@ function convertToLanguageModelPrompt(prompt) {
   }
   return languageModelMessages;
 }
-function convertToLanguageModelMessage(message) {
+function convertToLanguageModelMessage(message, downloadedImages) {
   const role = message.role;
   switch (role) {
     case "system": {
@@ -14231,18 +18812,27 @@ function convertToLanguageModelMessage(message) {
         role: "user",
         content: message.content.map(
           (part) => {
-            var _a;
+            var _a12, _b, _c;
             switch (part.type) {
               case "text": {
                 return part;
               }
               case "image": {
                 if (part.image instanceof URL) {
-                  return {
-                    type: "image",
-                    image: part.image,
-                    mimeType: part.mimeType
-                  };
+                  if (downloadedImages == null) {
+                    return {
+                      type: "image",
+                      image: part.image,
+                      mimeType: part.mimeType
+                    };
+                  } else {
+                    const downloadedImage = downloadedImages[part.image.toString()];
+                    return {
+                      type: "image",
+                      image: downloadedImage.data,
+                      mimeType: (_a12 = part.mimeType) != null ? _a12 : downloadedImage.mimeType
+                    };
+                  }
                 }
                 if (typeof part.image === "string") {
                   try {
@@ -14250,11 +18840,20 @@ function convertToLanguageModelMessage(message) {
                     switch (url.protocol) {
                       case "http:":
                       case "https:": {
-                        return {
-                          type: "image",
-                          image: url,
-                          mimeType: part.mimeType
-                        };
+                        if (downloadedImages == null) {
+                          return {
+                            type: "image",
+                            image: url,
+                            mimeType: part.mimeType
+                          };
+                        } else {
+                          const downloadedImage = downloadedImages[part.image];
+                          return {
+                            type: "image",
+                            image: downloadedImage.data,
+                            mimeType: (_b = part.mimeType) != null ? _b : downloadedImage.mimeType
+                          };
+                        }
                       }
                       case "data:": {
                         try {
@@ -14289,7 +18888,7 @@ function convertToLanguageModelMessage(message) {
                 return {
                   type: "image",
                   image: imageUint8,
-                  mimeType: (_a = part.mimeType) != null ? _a : detectImageMimeType(imageUint8)
+                  mimeType: (_c = part.mimeType) != null ? _c : detectImageMimeType(imageUint8)
                 };
               }
             }
@@ -14321,21 +18920,50 @@ function convertToLanguageModelMessage(message) {
     }
   }
 }
+async function downloadImages(messages, downloadImplementation) {
+  const urls = messages.filter((message) => message.role === "user").map((message) => message.content).filter(
+    (content) => Array.isArray(content)
+  ).flat().filter((part) => part.type === "image").map((part) => part.image).map(
+    (part) => (
+      // support string urls in image parts:
+      typeof part === "string" && (part.startsWith("http:") || part.startsWith("https:")) ? new URL(part) : part
+    )
+  ).filter((image) => image instanceof URL);
+  const downloadedImages = await Promise.all(
+    urls.map(async (url) => ({
+      url,
+      data: await downloadImplementation({ url })
+    }))
+  );
+  return Object.fromEntries(
+    downloadedImages.map(({ url, data }) => [url.toString(), data])
+  );
+}
 
 // core/prompt/get-validated-prompt.ts
-var import_provider3 = __nccwpck_require__(5667);
+var import_provider6 = __nccwpck_require__(7503);
 function getValidatedPrompt(prompt) {
   if (prompt.prompt == null && prompt.messages == null) {
-    throw new import_provider3.InvalidPromptError({
+    throw new import_provider6.InvalidPromptError({
       prompt,
       message: "prompt or messages must be defined"
     });
   }
   if (prompt.prompt != null && prompt.messages != null) {
-    throw new import_provider3.InvalidPromptError({
+    throw new import_provider6.InvalidPromptError({
       prompt,
       message: "prompt and messages cannot be defined at the same time"
     });
+  }
+  if (prompt.messages != null) {
+    for (const message of prompt.messages) {
+      if (message.role === "system" && typeof message.content !== "string") {
+        throw new import_provider6.InvalidPromptError({
+          prompt,
+          message: "system message content must be a string"
+        });
+      }
+    }
   }
   return prompt.prompt != null ? {
     type: "prompt",
@@ -14351,27 +18979,68 @@ function getValidatedPrompt(prompt) {
   };
 }
 
+// errors/invalid-argument-error.ts
+var import_provider7 = __nccwpck_require__(7503);
+var name5 = "AI_InvalidArgumentError";
+var marker5 = `vercel.ai.error.${name5}`;
+var symbol5 = Symbol.for(marker5);
+var _a5;
+var InvalidArgumentError = class extends import_provider7.AISDKError {
+  constructor({
+    parameter,
+    value,
+    message
+  }) {
+    super({
+      name: name5,
+      message: `Invalid argument for parameter ${parameter}: ${message}`
+    });
+    this[_a5] = true;
+    this.parameter = parameter;
+    this.value = value;
+  }
+  static isInstance(error) {
+    return import_provider7.AISDKError.hasMarker(error, marker5);
+  }
+  /**
+   * @deprecated use `isInstance` instead
+   */
+  static isInvalidArgumentError(error) {
+    return error instanceof Error && error.name === name5 && typeof error.parameter === "string" && typeof error.value === "string";
+  }
+  toJSON() {
+    return {
+      name: this.name,
+      message: this.message,
+      stack: this.stack,
+      parameter: this.parameter,
+      value: this.value
+    };
+  }
+};
+_a5 = symbol5;
+
 // core/prompt/prepare-call-settings.ts
-var import_provider4 = __nccwpck_require__(5667);
 function prepareCallSettings({
   maxTokens,
   temperature,
   topP,
   presencePenalty,
   frequencyPenalty,
+  stopSequences,
   seed,
   maxRetries
 }) {
   if (maxTokens != null) {
     if (!Number.isInteger(maxTokens)) {
-      throw new import_provider4.InvalidArgumentError({
+      throw new InvalidArgumentError({
         parameter: "maxTokens",
         value: maxTokens,
         message: "maxTokens must be an integer"
       });
     }
     if (maxTokens < 1) {
-      throw new import_provider4.InvalidArgumentError({
+      throw new InvalidArgumentError({
         parameter: "maxTokens",
         value: maxTokens,
         message: "maxTokens must be >= 1"
@@ -14380,7 +19049,7 @@ function prepareCallSettings({
   }
   if (temperature != null) {
     if (typeof temperature !== "number") {
-      throw new import_provider4.InvalidArgumentError({
+      throw new InvalidArgumentError({
         parameter: "temperature",
         value: temperature,
         message: "temperature must be a number"
@@ -14389,7 +19058,7 @@ function prepareCallSettings({
   }
   if (topP != null) {
     if (typeof topP !== "number") {
-      throw new import_provider4.InvalidArgumentError({
+      throw new InvalidArgumentError({
         parameter: "topP",
         value: topP,
         message: "topP must be a number"
@@ -14398,7 +19067,7 @@ function prepareCallSettings({
   }
   if (presencePenalty != null) {
     if (typeof presencePenalty !== "number") {
-      throw new import_provider4.InvalidArgumentError({
+      throw new InvalidArgumentError({
         parameter: "presencePenalty",
         value: presencePenalty,
         message: "presencePenalty must be a number"
@@ -14407,7 +19076,7 @@ function prepareCallSettings({
   }
   if (frequencyPenalty != null) {
     if (typeof frequencyPenalty !== "number") {
-      throw new import_provider4.InvalidArgumentError({
+      throw new InvalidArgumentError({
         parameter: "frequencyPenalty",
         value: frequencyPenalty,
         message: "frequencyPenalty must be a number"
@@ -14416,7 +19085,7 @@ function prepareCallSettings({
   }
   if (seed != null) {
     if (!Number.isInteger(seed)) {
-      throw new import_provider4.InvalidArgumentError({
+      throw new InvalidArgumentError({
         parameter: "seed",
         value: seed,
         message: "seed must be an integer"
@@ -14425,14 +19094,14 @@ function prepareCallSettings({
   }
   if (maxRetries != null) {
     if (!Number.isInteger(maxRetries)) {
-      throw new import_provider4.InvalidArgumentError({
+      throw new InvalidArgumentError({
         parameter: "maxRetries",
         value: maxRetries,
         message: "maxRetries must be an integer"
       });
     }
     if (maxRetries < 0) {
-      throw new import_provider4.InvalidArgumentError({
+      throw new InvalidArgumentError({
         parameter: "maxRetries",
         value: maxRetries,
         message: "maxRetries must be >= 0"
@@ -14445,15 +19114,35 @@ function prepareCallSettings({
     topP,
     presencePenalty,
     frequencyPenalty,
+    stopSequences: stopSequences != null && stopSequences.length > 0 ? stopSequences : void 0,
     seed,
     maxRetries: maxRetries != null ? maxRetries : 2
   };
 }
 
-// core/util/convert-zod-to-json-schema.ts
-var import_zod_to_json_schema = __toESM(__nccwpck_require__(5862));
-function convertZodToJSONSchema(zodSchema) {
-  return (0, import_zod_to_json_schema.default)(zodSchema);
+// core/types/token-usage.ts
+function calculateCompletionTokenUsage(usage) {
+  return {
+    promptTokens: usage.promptTokens,
+    completionTokens: usage.completionTokens,
+    totalTokens: usage.promptTokens + usage.completionTokens
+  };
+}
+
+// core/util/prepare-response-headers.ts
+function prepareResponseHeaders(init, {
+  contentType,
+  dataStreamVersion
+}) {
+  var _a12;
+  const headers = new Headers((_a12 = init == null ? void 0 : init.headers) != null ? _a12 : {});
+  if (!headers.has("Content-Type")) {
+    headers.set("Content-Type", contentType);
+  }
+  if (dataStreamVersion !== void 0) {
+    headers.set("X-Vercel-AI-Data-Stream", dataStreamVersion);
+  }
+  return headers;
 }
 
 // core/generate-object/inject-json-schema-into-system.ts
@@ -14475,20 +19164,47 @@ function injectJsonSchemaIntoSystem({
   ].filter((line) => line != null).join("\n");
 }
 
-// core/util/prepare-response-headers.ts
-function prepareResponseHeaders(init, { contentType }) {
-  var _a;
-  const headers = new Headers((_a = init == null ? void 0 : init.headers) != null ? _a : {});
-  if (!headers.has("Content-Type")) {
-    headers.set("Content-Type", contentType);
+// core/generate-object/no-object-generated-error.ts
+var import_provider8 = __nccwpck_require__(7503);
+var name6 = "AI_NoObjectGeneratedError";
+var marker6 = `vercel.ai.error.${name6}`;
+var symbol6 = Symbol.for(marker6);
+var _a6;
+var NoObjectGeneratedError = class extends import_provider8.AISDKError {
+  // used in isInstance
+  constructor({ message = "No object generated." } = {}) {
+    super({ name: name6, message });
+    this[_a6] = true;
   }
-  return headers;
-}
+  static isInstance(error) {
+    return import_provider8.AISDKError.hasMarker(error, marker6);
+  }
+  /**
+   * @deprecated Use isInstance instead.
+   */
+  static isNoObjectGeneratedError(error) {
+    return error instanceof Error && error.name === name6;
+  }
+  /**
+   * @deprecated Do not use this method. It will be removed in the next major version.
+   */
+  toJSON() {
+    return {
+      name: this.name,
+      cause: this.cause,
+      message: this.message,
+      stack: this.stack
+    };
+  }
+};
+_a6 = symbol6;
 
 // core/generate-object/generate-object.ts
 async function generateObject({
   model,
-  schema,
+  schema: inputSchema,
+  schemaName,
+  schemaDescription,
   mode,
   system,
   prompt,
@@ -14496,131 +19212,264 @@ async function generateObject({
   maxRetries,
   abortSignal,
   headers,
+  experimental_telemetry: telemetry,
   ...settings
 }) {
-  var _a, _b;
-  const retry = retryWithExponentialBackoff({ maxRetries });
-  const jsonSchema = convertZodToJSONSchema(schema);
-  if (mode === "auto" || mode == null) {
-    mode = model.defaultObjectGenerationMode;
-  }
-  let result;
-  let finishReason;
-  let usage;
-  let warnings;
-  let rawResponse;
-  let logprobs;
-  switch (mode) {
-    case "json": {
-      const validatedPrompt = getValidatedPrompt({
-        system: injectJsonSchemaIntoSystem({ system, schema: jsonSchema }),
-        prompt,
-        messages
-      });
-      const generateResult = await retry(() => {
-        return model.doGenerate({
-          mode: { type: "object-json" },
-          ...prepareCallSettings(settings),
-          inputFormat: validatedPrompt.type,
-          prompt: convertToLanguageModelPrompt(validatedPrompt),
-          abortSignal,
-          headers
-        });
-      });
-      if (generateResult.text === void 0) {
-        throw new import_provider5.NoObjectGeneratedError();
+  var _a12;
+  const baseTelemetryAttributes = getBaseTelemetryAttributes({
+    model,
+    telemetry,
+    headers,
+    settings: { ...settings, maxRetries }
+  });
+  const schema = (0, import_ui_utils.asSchema)(inputSchema);
+  const tracer = getTracer({ isEnabled: (_a12 = telemetry == null ? void 0 : telemetry.isEnabled) != null ? _a12 : false });
+  return recordSpan({
+    name: "ai.generateObject",
+    attributes: selectTelemetryAttributes({
+      telemetry,
+      attributes: {
+        ...assembleOperationName({
+          operationName: "ai.generateObject",
+          telemetry
+        }),
+        ...baseTelemetryAttributes,
+        // specific settings that only make sense on the outer level:
+        "ai.prompt": {
+          input: () => JSON.stringify({ system, prompt, messages })
+        },
+        "ai.schema": {
+          input: () => JSON.stringify(schema.jsonSchema)
+        },
+        "ai.schema.name": schemaName,
+        "ai.schema.description": schemaDescription,
+        "ai.settings.mode": mode
       }
-      result = generateResult.text;
-      finishReason = generateResult.finishReason;
-      usage = generateResult.usage;
-      warnings = generateResult.warnings;
-      rawResponse = generateResult.rawResponse;
-      logprobs = generateResult.logprobs;
-      break;
-    }
-    case "grammar": {
-      const validatedPrompt = getValidatedPrompt({
-        system: injectJsonSchemaIntoSystem({ system, schema: jsonSchema }),
-        prompt,
-        messages
-      });
-      const generateResult = await retry(
-        () => model.doGenerate({
-          mode: { type: "object-grammar", schema: jsonSchema },
-          ...prepareCallSettings(settings),
-          inputFormat: validatedPrompt.type,
-          prompt: convertToLanguageModelPrompt(validatedPrompt),
-          abortSignal
-        })
-      );
-      if (generateResult.text === void 0) {
-        throw new import_provider5.NoObjectGeneratedError();
+    }),
+    tracer,
+    fn: async (span) => {
+      const retry = retryWithExponentialBackoff({ maxRetries });
+      if (mode === "auto" || mode == null) {
+        mode = model.defaultObjectGenerationMode;
       }
-      result = generateResult.text;
-      finishReason = generateResult.finishReason;
-      usage = generateResult.usage;
-      warnings = generateResult.warnings;
-      rawResponse = generateResult.rawResponse;
-      logprobs = generateResult.logprobs;
-      break;
-    }
-    case "tool": {
-      const validatedPrompt = getValidatedPrompt({
-        system,
-        prompt,
-        messages
-      });
-      const generateResult = await retry(
-        () => model.doGenerate({
-          mode: {
-            type: "object-tool",
-            tool: {
-              type: "function",
-              name: "json",
-              description: "Respond with a JSON object.",
-              parameters: jsonSchema
+      let result;
+      let finishReason;
+      let usage;
+      let warnings;
+      let rawResponse;
+      let logprobs;
+      switch (mode) {
+        case "json": {
+          const validatedPrompt = getValidatedPrompt({
+            system: model.supportsStructuredOutputs ? system : injectJsonSchemaIntoSystem({
+              system,
+              schema: schema.jsonSchema
+            }),
+            prompt,
+            messages
+          });
+          const promptMessages = await convertToLanguageModelPrompt({
+            prompt: validatedPrompt,
+            modelSupportsImageUrls: model.supportsImageUrls
+          });
+          const inputFormat = validatedPrompt.type;
+          const generateResult = await retry(
+            () => recordSpan({
+              name: "ai.generateObject.doGenerate",
+              attributes: selectTelemetryAttributes({
+                telemetry,
+                attributes: {
+                  ...assembleOperationName({
+                    operationName: "ai.generateObject.doGenerate",
+                    telemetry
+                  }),
+                  ...baseTelemetryAttributes,
+                  "ai.prompt.format": {
+                    input: () => inputFormat
+                  },
+                  "ai.prompt.messages": {
+                    input: () => JSON.stringify(promptMessages)
+                  },
+                  "ai.settings.mode": mode,
+                  // standardized gen-ai llm span attributes:
+                  "gen_ai.request.model": model.modelId,
+                  "gen_ai.system": model.provider,
+                  "gen_ai.request.max_tokens": settings.maxTokens,
+                  "gen_ai.request.temperature": settings.temperature,
+                  "gen_ai.request.top_p": settings.topP
+                }
+              }),
+              tracer,
+              fn: async (span2) => {
+                const result2 = await model.doGenerate({
+                  mode: {
+                    type: "object-json",
+                    schema: schema.jsonSchema,
+                    name: schemaName,
+                    description: schemaDescription
+                  },
+                  ...prepareCallSettings(settings),
+                  inputFormat,
+                  prompt: promptMessages,
+                  abortSignal,
+                  headers
+                });
+                if (result2.text === void 0) {
+                  throw new NoObjectGeneratedError();
+                }
+                span2.setAttributes(
+                  selectTelemetryAttributes({
+                    telemetry,
+                    attributes: {
+                      "ai.finishReason": result2.finishReason,
+                      "ai.usage.promptTokens": result2.usage.promptTokens,
+                      "ai.usage.completionTokens": result2.usage.completionTokens,
+                      "ai.result.object": { output: () => result2.text },
+                      // standardized gen-ai llm span attributes:
+                      "gen_ai.response.finish_reasons": [result2.finishReason],
+                      "gen_ai.usage.prompt_tokens": result2.usage.promptTokens,
+                      "gen_ai.usage.completion_tokens": result2.usage.completionTokens
+                    }
+                  })
+                );
+                return { ...result2, objectText: result2.text };
+              }
+            })
+          );
+          result = generateResult.objectText;
+          finishReason = generateResult.finishReason;
+          usage = generateResult.usage;
+          warnings = generateResult.warnings;
+          rawResponse = generateResult.rawResponse;
+          logprobs = generateResult.logprobs;
+          break;
+        }
+        case "tool": {
+          const validatedPrompt = getValidatedPrompt({
+            system,
+            prompt,
+            messages
+          });
+          const promptMessages = await convertToLanguageModelPrompt({
+            prompt: validatedPrompt,
+            modelSupportsImageUrls: model.supportsImageUrls
+          });
+          const inputFormat = validatedPrompt.type;
+          const generateResult = await retry(
+            () => recordSpan({
+              name: "ai.generateObject.doGenerate",
+              attributes: selectTelemetryAttributes({
+                telemetry,
+                attributes: {
+                  ...assembleOperationName({
+                    operationName: "ai.generateObject.doGenerate",
+                    telemetry
+                  }),
+                  ...baseTelemetryAttributes,
+                  "ai.prompt.format": {
+                    input: () => inputFormat
+                  },
+                  "ai.prompt.messages": {
+                    input: () => JSON.stringify(promptMessages)
+                  },
+                  "ai.settings.mode": mode,
+                  // standardized gen-ai llm span attributes:
+                  "gen_ai.request.model": model.modelId,
+                  "gen_ai.system": model.provider,
+                  "gen_ai.request.max_tokens": settings.maxTokens,
+                  "gen_ai.request.temperature": settings.temperature,
+                  "gen_ai.request.top_p": settings.topP
+                }
+              }),
+              tracer,
+              fn: async (span2) => {
+                var _a13, _b;
+                const result2 = await model.doGenerate({
+                  mode: {
+                    type: "object-tool",
+                    tool: {
+                      type: "function",
+                      name: schemaName != null ? schemaName : "json",
+                      description: schemaDescription != null ? schemaDescription : "Respond with a JSON object.",
+                      parameters: schema.jsonSchema
+                    }
+                  },
+                  ...prepareCallSettings(settings),
+                  inputFormat,
+                  prompt: promptMessages,
+                  abortSignal,
+                  headers
+                });
+                const objectText = (_b = (_a13 = result2.toolCalls) == null ? void 0 : _a13[0]) == null ? void 0 : _b.args;
+                if (objectText === void 0) {
+                  throw new NoObjectGeneratedError();
+                }
+                span2.setAttributes(
+                  selectTelemetryAttributes({
+                    telemetry,
+                    attributes: {
+                      "ai.finishReason": result2.finishReason,
+                      "ai.usage.promptTokens": result2.usage.promptTokens,
+                      "ai.usage.completionTokens": result2.usage.completionTokens,
+                      "ai.result.object": { output: () => objectText },
+                      // standardized gen-ai llm span attributes:
+                      "gen_ai.response.finish_reasons": [result2.finishReason],
+                      "gen_ai.usage.prompt_tokens": result2.usage.promptTokens,
+                      "gen_ai.usage.completion_tokens": result2.usage.completionTokens
+                    }
+                  })
+                );
+                return { ...result2, objectText };
+              }
+            })
+          );
+          result = generateResult.objectText;
+          finishReason = generateResult.finishReason;
+          usage = generateResult.usage;
+          warnings = generateResult.warnings;
+          rawResponse = generateResult.rawResponse;
+          logprobs = generateResult.logprobs;
+          break;
+        }
+        case void 0: {
+          throw new Error(
+            "Model does not have a default object generation mode."
+          );
+        }
+        default: {
+          const _exhaustiveCheck = mode;
+          throw new Error(`Unsupported mode: ${_exhaustiveCheck}`);
+        }
+      }
+      const parseResult = (0, import_provider_utils4.safeParseJSON)({ text: result, schema });
+      if (!parseResult.success) {
+        throw parseResult.error;
+      }
+      span.setAttributes(
+        selectTelemetryAttributes({
+          telemetry,
+          attributes: {
+            "ai.finishReason": finishReason,
+            "ai.usage.promptTokens": usage.promptTokens,
+            "ai.usage.completionTokens": usage.completionTokens,
+            "ai.result.object": {
+              output: () => JSON.stringify(parseResult.value)
             }
-          },
-          ...prepareCallSettings(settings),
-          inputFormat: validatedPrompt.type,
-          prompt: convertToLanguageModelPrompt(validatedPrompt),
-          abortSignal
+          }
         })
       );
-      const functionArgs = (_b = (_a = generateResult.toolCalls) == null ? void 0 : _a[0]) == null ? void 0 : _b.args;
-      if (functionArgs === void 0) {
-        throw new import_provider5.NoObjectGeneratedError();
-      }
-      result = functionArgs;
-      finishReason = generateResult.finishReason;
-      usage = generateResult.usage;
-      warnings = generateResult.warnings;
-      rawResponse = generateResult.rawResponse;
-      logprobs = generateResult.logprobs;
-      break;
+      return new DefaultGenerateObjectResult({
+        object: parseResult.value,
+        finishReason,
+        usage: calculateCompletionTokenUsage(usage),
+        warnings,
+        rawResponse,
+        logprobs
+      });
     }
-    case void 0: {
-      throw new Error("Model does not have a default object generation mode.");
-    }
-    default: {
-      const _exhaustiveCheck = mode;
-      throw new Error(`Unsupported mode: ${_exhaustiveCheck}`);
-    }
-  }
-  const parseResult = (0, import_provider_utils4.safeParseJSON)({ text: result, schema });
-  if (!parseResult.success) {
-    throw parseResult.error;
-  }
-  return new GenerateObjectResult({
-    object: parseResult.value,
-    finishReason,
-    usage: calculateTokenUsage(usage),
-    warnings,
-    rawResponse,
-    logprobs
   });
 }
-var GenerateObjectResult = class {
+var DefaultGenerateObjectResult = class {
   constructor(options) {
     this.object = options.object;
     this.finishReason = options.finishReason;
@@ -14629,14 +19478,10 @@ var GenerateObjectResult = class {
     this.rawResponse = options.rawResponse;
     this.logprobs = options.logprobs;
   }
-  /**
-  Converts the object to a JSON response.
-  The response will have a status code of 200 and a content type of `application/json; charset=utf-8`.
-     */
   toJsonResponse(init) {
-    var _a;
+    var _a12;
     return new Response(JSON.stringify(this.object), {
-      status: (_a = init == null ? void 0 : init.status) != null ? _a : 200,
+      status: (_a12 = init == null ? void 0 : init.status) != null ? _a12 : 200,
       headers: prepareResponseHeaders(init, {
         contentType: "application/json; charset=utf-8"
       })
@@ -14646,8 +19491,61 @@ var GenerateObjectResult = class {
 var experimental_generateObject = generateObject;
 
 // core/generate-object/stream-object.ts
-var import_provider_utils5 = __nccwpck_require__(9448);
-var import_ui_utils = __nccwpck_require__(4809);
+var import_provider_utils5 = __nccwpck_require__(1545);
+var import_ui_utils2 = __nccwpck_require__(6399);
+
+// util/create-resolvable-promise.ts
+function createResolvablePromise() {
+  let resolve;
+  let reject;
+  const promise = new Promise((res, rej) => {
+    resolve = res;
+    reject = rej;
+  });
+  return {
+    promise,
+    resolve,
+    reject
+  };
+}
+
+// util/delayed-promise.ts
+var DelayedPromise = class {
+  constructor() {
+    this.status = { type: "pending" };
+    this._resolve = void 0;
+    this._reject = void 0;
+  }
+  get value() {
+    if (this.promise) {
+      return this.promise;
+    }
+    this.promise = new Promise((resolve, reject) => {
+      if (this.status.type === "resolved") {
+        resolve(this.status.value);
+      } else if (this.status.type === "rejected") {
+        reject(this.status.error);
+      }
+      this._resolve = resolve;
+      this._reject = reject;
+    });
+    return this.promise;
+  }
+  resolve(value) {
+    var _a12;
+    this.status = { type: "resolved", value };
+    if (this.promise) {
+      (_a12 = this._resolve) == null ? void 0 : _a12.call(this, value);
+    }
+  }
+  reject(error) {
+    var _a12;
+    this.status = { type: "rejected", error };
+    if (this.promise) {
+      (_a12 = this._reject) == null ? void 0 : _a12.call(this, error);
+    }
+  }
+};
 
 // core/util/async-iterable-stream.ts
 function createAsyncIterableStream(source, transformer) {
@@ -14669,7 +19567,9 @@ function createAsyncIterableStream(source, transformer) {
 // core/generate-object/stream-object.ts
 async function streamObject({
   model,
-  schema,
+  schema: inputSchema,
+  schemaName,
+  schemaDescription,
   mode,
   system,
   prompt,
@@ -14677,165 +19577,228 @@ async function streamObject({
   maxRetries,
   abortSignal,
   headers,
+  experimental_telemetry: telemetry,
   onFinish,
   ...settings
 }) {
+  var _a12;
+  const baseTelemetryAttributes = getBaseTelemetryAttributes({
+    model,
+    telemetry,
+    headers,
+    settings: { ...settings, maxRetries }
+  });
+  const tracer = getTracer({ isEnabled: (_a12 = telemetry == null ? void 0 : telemetry.isEnabled) != null ? _a12 : false });
   const retry = retryWithExponentialBackoff({ maxRetries });
-  const jsonSchema = convertZodToJSONSchema(schema);
-  if (mode === "auto" || mode == null) {
-    mode = model.defaultObjectGenerationMode;
-  }
-  let callOptions;
-  let transformer;
-  switch (mode) {
-    case "json": {
-      const validatedPrompt = getValidatedPrompt({
-        system: injectJsonSchemaIntoSystem({ system, schema: jsonSchema }),
-        prompt,
-        messages
-      });
-      callOptions = {
-        mode: { type: "object-json" },
-        ...prepareCallSettings(settings),
-        inputFormat: validatedPrompt.type,
-        prompt: convertToLanguageModelPrompt(validatedPrompt),
-        abortSignal,
-        headers
-      };
-      transformer = {
-        transform: (chunk, controller) => {
-          switch (chunk.type) {
-            case "text-delta":
-              controller.enqueue(chunk.textDelta);
-              break;
-            case "finish":
-            case "error":
-              controller.enqueue(chunk);
-              break;
-          }
-        }
-      };
-      break;
-    }
-    case "grammar": {
-      const validatedPrompt = getValidatedPrompt({
-        system: injectJsonSchemaIntoSystem({ system, schema: jsonSchema }),
-        prompt,
-        messages
-      });
-      callOptions = {
-        mode: { type: "object-grammar", schema: jsonSchema },
-        ...prepareCallSettings(settings),
-        inputFormat: validatedPrompt.type,
-        prompt: convertToLanguageModelPrompt(validatedPrompt),
-        abortSignal,
-        headers
-      };
-      transformer = {
-        transform: (chunk, controller) => {
-          switch (chunk.type) {
-            case "text-delta":
-              controller.enqueue(chunk.textDelta);
-              break;
-            case "finish":
-            case "error":
-              controller.enqueue(chunk);
-              break;
-          }
-        }
-      };
-      break;
-    }
-    case "tool": {
-      const validatedPrompt = getValidatedPrompt({
-        system,
-        prompt,
-        messages
-      });
-      callOptions = {
-        mode: {
-          type: "object-tool",
-          tool: {
-            type: "function",
-            name: "json",
-            description: "Respond with a JSON object.",
-            parameters: jsonSchema
-          }
+  const schema = (0, import_ui_utils2.asSchema)(inputSchema);
+  return recordSpan({
+    name: "ai.streamObject",
+    attributes: selectTelemetryAttributes({
+      telemetry,
+      attributes: {
+        ...assembleOperationName({
+          operationName: "ai.streamObject",
+          telemetry
+        }),
+        ...baseTelemetryAttributes,
+        // specific settings that only make sense on the outer level:
+        "ai.prompt": {
+          input: () => JSON.stringify({ system, prompt, messages })
         },
-        ...prepareCallSettings(settings),
-        inputFormat: validatedPrompt.type,
-        prompt: convertToLanguageModelPrompt(validatedPrompt),
-        abortSignal,
-        headers
-      };
-      transformer = {
-        transform(chunk, controller) {
-          switch (chunk.type) {
-            case "tool-call-delta":
-              controller.enqueue(chunk.argsTextDelta);
-              break;
-            case "finish":
-            case "error":
-              controller.enqueue(chunk);
-              break;
-          }
+        "ai.schema": { input: () => JSON.stringify(schema.jsonSchema) },
+        "ai.schema.name": schemaName,
+        "ai.schema.description": schemaDescription,
+        "ai.settings.mode": mode
+      }
+    }),
+    tracer,
+    endWhenDone: false,
+    fn: async (rootSpan) => {
+      if (mode === "auto" || mode == null) {
+        mode = model.defaultObjectGenerationMode;
+      }
+      let callOptions;
+      let transformer;
+      switch (mode) {
+        case "json": {
+          const validatedPrompt = getValidatedPrompt({
+            system: model.supportsStructuredOutputs ? system : injectJsonSchemaIntoSystem({
+              system,
+              schema: schema.jsonSchema
+            }),
+            prompt,
+            messages
+          });
+          callOptions = {
+            mode: {
+              type: "object-json",
+              schema: schema.jsonSchema,
+              name: schemaName,
+              description: schemaDescription
+            },
+            ...prepareCallSettings(settings),
+            inputFormat: validatedPrompt.type,
+            prompt: await convertToLanguageModelPrompt({
+              prompt: validatedPrompt,
+              modelSupportsImageUrls: model.supportsImageUrls
+            }),
+            abortSignal,
+            headers
+          };
+          transformer = {
+            transform: (chunk, controller) => {
+              switch (chunk.type) {
+                case "text-delta":
+                  controller.enqueue(chunk.textDelta);
+                  break;
+                case "finish":
+                case "error":
+                  controller.enqueue(chunk);
+                  break;
+              }
+            }
+          };
+          break;
         }
-      };
-      break;
+        case "tool": {
+          const validatedPrompt = getValidatedPrompt({
+            system,
+            prompt,
+            messages
+          });
+          callOptions = {
+            mode: {
+              type: "object-tool",
+              tool: {
+                type: "function",
+                name: schemaName != null ? schemaName : "json",
+                description: schemaDescription != null ? schemaDescription : "Respond with a JSON object.",
+                parameters: schema.jsonSchema
+              }
+            },
+            ...prepareCallSettings(settings),
+            inputFormat: validatedPrompt.type,
+            prompt: await convertToLanguageModelPrompt({
+              prompt: validatedPrompt,
+              modelSupportsImageUrls: model.supportsImageUrls
+            }),
+            abortSignal,
+            headers
+          };
+          transformer = {
+            transform(chunk, controller) {
+              switch (chunk.type) {
+                case "tool-call-delta":
+                  controller.enqueue(chunk.argsTextDelta);
+                  break;
+                case "finish":
+                case "error":
+                  controller.enqueue(chunk);
+                  break;
+              }
+            }
+          };
+          break;
+        }
+        case void 0: {
+          throw new Error(
+            "Model does not have a default object generation mode."
+          );
+        }
+        default: {
+          const _exhaustiveCheck = mode;
+          throw new Error(`Unsupported mode: ${_exhaustiveCheck}`);
+        }
+      }
+      const {
+        result: { stream, warnings, rawResponse },
+        doStreamSpan
+      } = await retry(
+        () => recordSpan({
+          name: "ai.streamObject.doStream",
+          attributes: selectTelemetryAttributes({
+            telemetry,
+            attributes: {
+              ...assembleOperationName({
+                operationName: "ai.streamObject.doStream",
+                telemetry
+              }),
+              ...baseTelemetryAttributes,
+              "ai.prompt.format": {
+                input: () => callOptions.inputFormat
+              },
+              "ai.prompt.messages": {
+                input: () => JSON.stringify(callOptions.prompt)
+              },
+              "ai.settings.mode": mode,
+              // standardized gen-ai llm span attributes:
+              "gen_ai.request.model": model.modelId,
+              "gen_ai.system": model.provider,
+              "gen_ai.request.max_tokens": settings.maxTokens,
+              "gen_ai.request.temperature": settings.temperature,
+              "gen_ai.request.top_p": settings.topP
+            }
+          }),
+          tracer,
+          endWhenDone: false,
+          fn: async (doStreamSpan2) => ({
+            result: await model.doStream(callOptions),
+            doStreamSpan: doStreamSpan2
+          })
+        })
+      );
+      return new DefaultStreamObjectResult({
+        stream: stream.pipeThrough(new TransformStream(transformer)),
+        warnings,
+        rawResponse,
+        schema,
+        onFinish,
+        rootSpan,
+        doStreamSpan,
+        telemetry
+      });
     }
-    case void 0: {
-      throw new Error("Model does not have a default object generation mode.");
-    }
-    default: {
-      const _exhaustiveCheck = mode;
-      throw new Error(`Unsupported mode: ${_exhaustiveCheck}`);
-    }
-  }
-  const result = await retry(() => model.doStream(callOptions));
-  return new StreamObjectResult({
-    stream: result.stream.pipeThrough(new TransformStream(transformer)),
-    warnings: result.warnings,
-    rawResponse: result.rawResponse,
-    schema,
-    onFinish
   });
 }
-var StreamObjectResult = class {
+var DefaultStreamObjectResult = class {
   constructor({
     stream,
     warnings,
     rawResponse,
     schema,
-    onFinish
+    onFinish,
+    rootSpan,
+    doStreamSpan,
+    telemetry
   }) {
     this.warnings = warnings;
     this.rawResponse = rawResponse;
-    let resolveObject;
-    let rejectObject;
-    this.object = new Promise((resolve, reject) => {
-      resolveObject = resolve;
-      rejectObject = reject;
-    });
-    let resolveUsage;
-    this.usage = new Promise((resolve) => {
-      resolveUsage = resolve;
-    });
+    this.objectPromise = new DelayedPromise();
+    const { resolve: resolveUsage, promise: usagePromise } = createResolvablePromise();
+    this.usage = usagePromise;
     let usage;
+    let finishReason;
     let object;
     let error;
     let accumulatedText = "";
     let delta = "";
     let latestObject = void 0;
+    let firstChunk = true;
+    const self = this;
     this.originalStream = stream.pipeThrough(
       new TransformStream({
         async transform(chunk, controller) {
+          if (firstChunk) {
+            firstChunk = false;
+            doStreamSpan.addEvent("ai.stream.firstChunk");
+          }
           if (typeof chunk === "string") {
             accumulatedText += chunk;
             delta += chunk;
-            const currentObject = (0, import_ui_utils.parsePartialJson)(
+            const currentObject = (0, import_ui_utils2.parsePartialJson)(
               accumulatedText
             );
-            if (!(0, import_ui_utils.isDeepEqualData)(latestObject, currentObject)) {
+            if (!(0, import_ui_utils2.isDeepEqualData)(latestObject, currentObject)) {
               latestObject = currentObject;
               controller.enqueue({
                 type: "object",
@@ -14857,7 +19820,8 @@ var StreamObjectResult = class {
                   textDelta: delta
                 });
               }
-              usage = calculateTokenUsage(chunk.usage);
+              finishReason = chunk.finishReason;
+              usage = calculateCompletionTokenUsage(chunk.usage);
               controller.enqueue({ ...chunk, usage });
               resolveUsage(usage);
               const validationResult = (0, import_provider_utils5.safeValidateTypes)({
@@ -14866,10 +19830,10 @@ var StreamObjectResult = class {
               });
               if (validationResult.success) {
                 object = validationResult.value;
-                resolveObject(object);
+                self.objectPromise.resolve(object);
               } else {
                 error = validationResult.error;
-                rejectObject(error);
+                self.objectPromise.reject(error);
               }
               break;
             }
@@ -14882,12 +19846,43 @@ var StreamObjectResult = class {
         // invoke onFinish callback and resolve toolResults promise when the stream is about to close:
         async flush(controller) {
           try {
+            const finalUsage = usage != null ? usage : {
+              promptTokens: NaN,
+              completionTokens: NaN,
+              totalTokens: NaN
+            };
+            doStreamSpan.setAttributes(
+              selectTelemetryAttributes({
+                telemetry,
+                attributes: {
+                  "ai.finishReason": finishReason,
+                  "ai.usage.promptTokens": finalUsage.promptTokens,
+                  "ai.usage.completionTokens": finalUsage.completionTokens,
+                  "ai.result.object": {
+                    output: () => JSON.stringify(object)
+                  },
+                  // standardized gen-ai llm span attributes:
+                  "gen_ai.usage.prompt_tokens": finalUsage.promptTokens,
+                  "gen_ai.usage.completion_tokens": finalUsage.completionTokens,
+                  "gen_ai.response.finish_reasons": [finishReason]
+                }
+              })
+            );
+            doStreamSpan.end();
+            rootSpan.setAttributes(
+              selectTelemetryAttributes({
+                telemetry,
+                attributes: {
+                  "ai.usage.promptTokens": finalUsage.promptTokens,
+                  "ai.usage.completionTokens": finalUsage.completionTokens,
+                  "ai.result.object": {
+                    output: () => JSON.stringify(object)
+                  }
+                }
+              })
+            );
             await (onFinish == null ? void 0 : onFinish({
-              usage: usage != null ? usage : {
-                promptTokens: NaN,
-                completionTokens: NaN,
-                totalTokens: NaN
-              },
+              usage: finalUsage,
               object,
               error,
               rawResponse,
@@ -14895,17 +19890,16 @@ var StreamObjectResult = class {
             }));
           } catch (error2) {
             controller.error(error2);
+          } finally {
+            rootSpan.end();
           }
         }
       })
     );
   }
-  /**
-  Stream of partial objects. It gets more complete as the stream progresses.
-    
-  Note that the partial object is not validated. 
-  If you want to be certain that the actual content matches your schema, you need to implement your own validation for partial results.
-     */
+  get object() {
+    return this.objectPromise.value;
+  }
   get partialObjectStream() {
     return createAsyncIterableStream(this.originalStream, {
       transform(chunk, controller) {
@@ -14927,10 +19921,6 @@ var StreamObjectResult = class {
       }
     });
   }
-  /**
-  Text stream of the JSON representation of the generated object. It contains text chunks. 
-  When the stream is finished, the object is valid JSON that can be parsed.
-     */
   get textStream() {
     return createAsyncIterableStream(this.originalStream, {
       transform(chunk, controller) {
@@ -14952,9 +19942,6 @@ var StreamObjectResult = class {
       }
     });
   }
-  /**
-  Stream of different types of events, including partial objects, errors, and finish events.
-     */
   get fullStream() {
     return createAsyncIterableStream(this.originalStream, {
       transform(chunk, controller) {
@@ -14962,17 +19949,9 @@ var StreamObjectResult = class {
       }
     });
   }
-  /**
-  Writes text delta output to a Node.js response-like object.
-  It sets a `Content-Type` header to `text/plain; charset=utf-8` and 
-  writes each text delta as a separate chunk.
-  
-  @param response A Node.js response-like object (ServerResponse).
-  @param init Optional headers and status code.
-     */
   pipeTextStreamToResponse(response, init) {
-    var _a;
-    response.writeHead((_a = init == null ? void 0 : init.status) != null ? _a : 200, {
+    var _a12;
+    response.writeHead((_a12 = init == null ? void 0 : init.status) != null ? _a12 : 200, {
       "Content-Type": "text/plain; charset=utf-8",
       ...init == null ? void 0 : init.headers
     });
@@ -14993,18 +19972,10 @@ var StreamObjectResult = class {
     };
     read();
   }
-  /**
-  Creates a simple text stream response.
-  The response has a `Content-Type` header set to `text/plain; charset=utf-8`.
-  Each text delta is encoded as UTF-8 and sent as a separate chunk.
-  Non-text-delta events are ignored.
-  
-  @param init Optional headers and status code.
-     */
   toTextStreamResponse(init) {
-    var _a;
+    var _a12;
     return new Response(this.textStream.pipeThrough(new TextEncoderStream()), {
-      status: (_a = init == null ? void 0 : init.status) != null ? _a : 200,
+      status: (_a12 = init == null ? void 0 : init.status) != null ? _a12 : 200,
       headers: prepareResponseHeaders(init, {
         contentType: "text/plain; charset=utf-8"
       })
@@ -15012,6 +19983,9 @@ var StreamObjectResult = class {
   }
 };
 var experimental_streamObject = streamObject;
+
+// core/prompt/prepare-tools-and-tool-choice.ts
+var import_ui_utils3 = __nccwpck_require__(6399);
 
 // core/util/is-non-empty-object.ts
 function isNonEmptyObject(object) {
@@ -15030,40 +20004,128 @@ function prepareToolsAndToolChoice({
     };
   }
   return {
-    tools: Object.entries(tools).map(([name, tool2]) => ({
+    tools: Object.entries(tools).map(([name12, tool2]) => ({
       type: "function",
-      name,
+      name: name12,
       description: tool2.description,
-      parameters: convertZodToJSONSchema(tool2.parameters)
+      parameters: (0, import_ui_utils3.asSchema)(tool2.parameters).jsonSchema
     })),
     toolChoice: toolChoice == null ? { type: "auto" } : typeof toolChoice === "string" ? { type: toolChoice } : { type: "tool", toolName: toolChoice.toolName }
   };
 }
 
 // core/generate-text/tool-call.ts
-var import_provider6 = __nccwpck_require__(5667);
-var import_provider_utils6 = __nccwpck_require__(9448);
+var import_provider_utils6 = __nccwpck_require__(1545);
+var import_ui_utils4 = __nccwpck_require__(6399);
+
+// errors/invalid-tool-arguments-error.ts
+var import_provider9 = __nccwpck_require__(7503);
+var name7 = "AI_InvalidToolArgumentsError";
+var marker7 = `vercel.ai.error.${name7}`;
+var symbol7 = Symbol.for(marker7);
+var _a7;
+var InvalidToolArgumentsError = class extends import_provider9.AISDKError {
+  constructor({
+    toolArgs,
+    toolName,
+    cause,
+    message = `Invalid arguments for tool ${toolName}: ${(0, import_provider9.getErrorMessage)(
+      cause
+    )}`
+  }) {
+    super({ name: name7, message, cause });
+    this[_a7] = true;
+    this.toolArgs = toolArgs;
+    this.toolName = toolName;
+  }
+  static isInstance(error) {
+    return import_provider9.AISDKError.hasMarker(error, marker7);
+  }
+  /**
+   * @deprecated use `isInstance` instead
+   */
+  static isInvalidToolArgumentsError(error) {
+    return error instanceof Error && error.name === name7 && typeof error.toolName === "string" && typeof error.toolArgs === "string";
+  }
+  /**
+   * @deprecated Do not use this method. It will be removed in the next major version.
+   */
+  toJSON() {
+    return {
+      name: this.name,
+      message: this.message,
+      cause: this.cause,
+      stack: this.stack,
+      toolName: this.toolName,
+      toolArgs: this.toolArgs
+    };
+  }
+};
+_a7 = symbol7;
+
+// errors/no-such-tool-error.ts
+var import_provider10 = __nccwpck_require__(7503);
+var name8 = "AI_NoSuchToolError";
+var marker8 = `vercel.ai.error.${name8}`;
+var symbol8 = Symbol.for(marker8);
+var _a8;
+var NoSuchToolError = class extends import_provider10.AISDKError {
+  constructor({
+    toolName,
+    availableTools = void 0,
+    message = `Model tried to call unavailable tool '${toolName}'. ${availableTools === void 0 ? "No tools are available." : `Available tools: ${availableTools.join(", ")}.`}`
+  }) {
+    super({ name: name8, message });
+    this[_a8] = true;
+    this.toolName = toolName;
+    this.availableTools = availableTools;
+  }
+  static isInstance(error) {
+    return import_provider10.AISDKError.hasMarker(error, marker8);
+  }
+  /**
+   * @deprecated use `isInstance` instead
+   */
+  static isNoSuchToolError(error) {
+    return error instanceof Error && error.name === name8 && "toolName" in error && error.toolName != void 0 && typeof error.name === "string";
+  }
+  /**
+   * @deprecated Do not use this method. It will be removed in the next major version.
+   */
+  toJSON() {
+    return {
+      name: this.name,
+      message: this.message,
+      stack: this.stack,
+      toolName: this.toolName,
+      availableTools: this.availableTools
+    };
+  }
+};
+_a8 = symbol8;
+
+// core/generate-text/tool-call.ts
 function parseToolCall({
   toolCall,
   tools
 }) {
   const toolName = toolCall.toolName;
   if (tools == null) {
-    throw new import_provider6.NoSuchToolError({ toolName: toolCall.toolName });
+    throw new NoSuchToolError({ toolName: toolCall.toolName });
   }
   const tool2 = tools[toolName];
   if (tool2 == null) {
-    throw new import_provider6.NoSuchToolError({
+    throw new NoSuchToolError({
       toolName: toolCall.toolName,
       availableTools: Object.keys(tools)
     });
   }
   const parseResult = (0, import_provider_utils6.safeParseJSON)({
     text: toolCall.args,
-    schema: tool2.parameters
+    schema: (0, import_ui_utils4.asSchema)(tool2.parameters)
   });
   if (parseResult.success === false) {
-    throw new import_provider6.InvalidToolArgumentsError({
+    throw new InvalidToolArgumentsError({
       toolName,
       toolArgs: toolCall.args,
       cause: parseResult.error
@@ -15090,71 +20152,202 @@ async function generateText({
   headers,
   maxAutomaticRoundtrips = 0,
   maxToolRoundtrips = maxAutomaticRoundtrips,
+  experimental_telemetry: telemetry,
   ...settings
 }) {
-  var _a, _b, _c;
-  const retry = retryWithExponentialBackoff({ maxRetries });
-  const validatedPrompt = getValidatedPrompt({ system, prompt, messages });
-  const mode = {
-    type: "regular",
-    ...prepareToolsAndToolChoice({ tools, toolChoice })
-  };
-  const callSettings = prepareCallSettings(settings);
-  const promptMessages = convertToLanguageModelPrompt(validatedPrompt);
-  let currentModelResponse;
-  let currentToolCalls = [];
-  let currentToolResults = [];
-  let roundtrips = 0;
-  const responseMessages = [];
-  do {
-    currentModelResponse = await retry(() => {
-      return model.doGenerate({
-        mode,
-        ...callSettings,
-        // once we have a roundtrip, we need to switch to messages format:
-        inputFormat: roundtrips === 0 ? validatedPrompt.type : "messages",
-        prompt: promptMessages,
-        abortSignal,
-        headers
+  var _a12;
+  const baseTelemetryAttributes = getBaseTelemetryAttributes({
+    model,
+    telemetry,
+    headers,
+    settings: { ...settings, maxRetries }
+  });
+  const tracer = getTracer({ isEnabled: (_a12 = telemetry == null ? void 0 : telemetry.isEnabled) != null ? _a12 : false });
+  return recordSpan({
+    name: "ai.generateText",
+    attributes: selectTelemetryAttributes({
+      telemetry,
+      attributes: {
+        ...assembleOperationName({
+          operationName: "ai.generateText",
+          telemetry
+        }),
+        ...baseTelemetryAttributes,
+        // specific settings that only make sense on the outer level:
+        "ai.prompt": {
+          input: () => JSON.stringify({ system, prompt, messages })
+        },
+        "ai.settings.maxToolRoundtrips": maxToolRoundtrips
+      }
+    }),
+    tracer,
+    fn: async (span) => {
+      var _a13, _b, _c, _d;
+      const retry = retryWithExponentialBackoff({ maxRetries });
+      const validatedPrompt = getValidatedPrompt({
+        system,
+        prompt,
+        messages
       });
-    });
-    currentToolCalls = ((_a = currentModelResponse.toolCalls) != null ? _a : []).map(
-      (modelToolCall) => parseToolCall({ toolCall: modelToolCall, tools })
-    );
-    currentToolResults = tools == null ? [] : await executeTools({ toolCalls: currentToolCalls, tools });
-    const newResponseMessages = toResponseMessages({
-      text: (_b = currentModelResponse.text) != null ? _b : "",
-      toolCalls: currentToolCalls,
-      toolResults: currentToolResults
-    });
-    responseMessages.push(...newResponseMessages);
-    promptMessages.push(
-      ...newResponseMessages.map(convertToLanguageModelMessage)
-    );
-  } while (
-    // there are tool calls:
-    currentToolCalls.length > 0 && // all current tool calls have results:
-    currentToolResults.length === currentToolCalls.length && // the number of roundtrips is less than the maximum:
-    roundtrips++ < maxToolRoundtrips
-  );
-  return new GenerateTextResult({
-    // Always return a string so that the caller doesn't have to check for undefined.
-    // If they need to check if the model did not return any text,
-    // they can check the length of the string:
-    text: (_c = currentModelResponse.text) != null ? _c : "",
-    toolCalls: currentToolCalls,
-    toolResults: currentToolResults,
-    finishReason: currentModelResponse.finishReason,
-    usage: calculateTokenUsage(currentModelResponse.usage),
-    warnings: currentModelResponse.warnings,
-    rawResponse: currentModelResponse.rawResponse,
-    logprobs: currentModelResponse.logprobs,
-    responseMessages
+      const mode = {
+        type: "regular",
+        ...prepareToolsAndToolChoice({ tools, toolChoice })
+      };
+      const callSettings = prepareCallSettings(settings);
+      const promptMessages = await convertToLanguageModelPrompt({
+        prompt: validatedPrompt,
+        modelSupportsImageUrls: model.supportsImageUrls
+      });
+      let currentModelResponse;
+      let currentToolCalls = [];
+      let currentToolResults = [];
+      let roundtripCount = 0;
+      const responseMessages = [];
+      const roundtrips = [];
+      const usage = {
+        completionTokens: 0,
+        promptTokens: 0,
+        totalTokens: 0
+      };
+      do {
+        const currentInputFormat = roundtripCount === 0 ? validatedPrompt.type : "messages";
+        currentModelResponse = await retry(
+          () => recordSpan({
+            name: "ai.generateText.doGenerate",
+            attributes: selectTelemetryAttributes({
+              telemetry,
+              attributes: {
+                ...assembleOperationName({
+                  operationName: "ai.generateText.doGenerate",
+                  telemetry
+                }),
+                ...baseTelemetryAttributes,
+                "ai.prompt.format": { input: () => currentInputFormat },
+                "ai.prompt.messages": {
+                  input: () => JSON.stringify(promptMessages)
+                },
+                // standardized gen-ai llm span attributes:
+                "gen_ai.request.model": model.modelId,
+                "gen_ai.system": model.provider,
+                "gen_ai.request.max_tokens": settings.maxTokens,
+                "gen_ai.request.temperature": settings.temperature,
+                "gen_ai.request.top_p": settings.topP
+              }
+            }),
+            tracer,
+            fn: async (span2) => {
+              const result = await model.doGenerate({
+                mode,
+                ...callSettings,
+                inputFormat: currentInputFormat,
+                prompt: promptMessages,
+                abortSignal,
+                headers
+              });
+              span2.setAttributes(
+                selectTelemetryAttributes({
+                  telemetry,
+                  attributes: {
+                    "ai.finishReason": result.finishReason,
+                    "ai.usage.promptTokens": result.usage.promptTokens,
+                    "ai.usage.completionTokens": result.usage.completionTokens,
+                    "ai.result.text": {
+                      output: () => result.text
+                    },
+                    "ai.result.toolCalls": {
+                      output: () => JSON.stringify(result.toolCalls)
+                    },
+                    // standardized gen-ai llm span attributes:
+                    "gen_ai.response.finish_reasons": [result.finishReason],
+                    "gen_ai.usage.prompt_tokens": result.usage.promptTokens,
+                    "gen_ai.usage.completion_tokens": result.usage.completionTokens
+                  }
+                })
+              );
+              return result;
+            }
+          })
+        );
+        currentToolCalls = ((_a13 = currentModelResponse.toolCalls) != null ? _a13 : []).map(
+          (modelToolCall) => parseToolCall({ toolCall: modelToolCall, tools })
+        );
+        currentToolResults = tools == null ? [] : await executeTools({
+          toolCalls: currentToolCalls,
+          tools,
+          tracer,
+          telemetry
+        });
+        const currentUsage = calculateCompletionTokenUsage(
+          currentModelResponse.usage
+        );
+        usage.completionTokens += currentUsage.completionTokens;
+        usage.promptTokens += currentUsage.promptTokens;
+        usage.totalTokens += currentUsage.totalTokens;
+        roundtrips.push({
+          text: (_b = currentModelResponse.text) != null ? _b : "",
+          toolCalls: currentToolCalls,
+          toolResults: currentToolResults,
+          finishReason: currentModelResponse.finishReason,
+          usage: currentUsage,
+          warnings: currentModelResponse.warnings,
+          logprobs: currentModelResponse.logprobs
+        });
+        const newResponseMessages = toResponseMessages({
+          text: (_c = currentModelResponse.text) != null ? _c : "",
+          toolCalls: currentToolCalls,
+          toolResults: currentToolResults
+        });
+        responseMessages.push(...newResponseMessages);
+        promptMessages.push(
+          ...newResponseMessages.map(
+            (message) => convertToLanguageModelMessage(message, null)
+          )
+        );
+      } while (
+        // there are tool calls:
+        currentToolCalls.length > 0 && // all current tool calls have results:
+        currentToolResults.length === currentToolCalls.length && // the number of roundtrips is less than the maximum:
+        roundtripCount++ < maxToolRoundtrips
+      );
+      span.setAttributes(
+        selectTelemetryAttributes({
+          telemetry,
+          attributes: {
+            "ai.finishReason": currentModelResponse.finishReason,
+            "ai.usage.promptTokens": currentModelResponse.usage.promptTokens,
+            "ai.usage.completionTokens": currentModelResponse.usage.completionTokens,
+            "ai.result.text": {
+              output: () => currentModelResponse.text
+            },
+            "ai.result.toolCalls": {
+              output: () => JSON.stringify(currentModelResponse.toolCalls)
+            }
+          }
+        })
+      );
+      return new DefaultGenerateTextResult({
+        // Always return a string so that the caller doesn't have to check for undefined.
+        // If they need to check if the model did not return any text,
+        // they can check the length of the string:
+        text: (_d = currentModelResponse.text) != null ? _d : "",
+        toolCalls: currentToolCalls,
+        toolResults: currentToolResults,
+        finishReason: currentModelResponse.finishReason,
+        usage,
+        warnings: currentModelResponse.warnings,
+        rawResponse: currentModelResponse.rawResponse,
+        logprobs: currentModelResponse.logprobs,
+        responseMessages,
+        roundtrips
+      });
+    }
   });
 }
 async function executeTools({
   toolCalls,
-  tools
+  tools,
+  tracer,
+  telemetry
 }) {
   const toolResults = await Promise.all(
     toolCalls.map(async (toolCall) => {
@@ -15162,7 +20355,41 @@ async function executeTools({
       if ((tool2 == null ? void 0 : tool2.execute) == null) {
         return void 0;
       }
-      const result = await tool2.execute(toolCall.args);
+      const result = await recordSpan({
+        name: "ai.toolCall",
+        attributes: selectTelemetryAttributes({
+          telemetry,
+          attributes: {
+            ...assembleOperationName({
+              operationName: "ai.toolCall",
+              telemetry
+            }),
+            "ai.toolCall.name": toolCall.toolName,
+            "ai.toolCall.id": toolCall.toolCallId,
+            "ai.toolCall.args": {
+              output: () => JSON.stringify(toolCall.args)
+            }
+          }
+        }),
+        tracer,
+        fn: async (span) => {
+          const result2 = await tool2.execute(toolCall.args);
+          try {
+            span.setAttributes(
+              selectTelemetryAttributes({
+                telemetry,
+                attributes: {
+                  "ai.toolCall.result": {
+                    output: () => JSON.stringify(result2)
+                  }
+                }
+              })
+            );
+          } catch (ignored) {
+          }
+          return result2;
+        }
+      });
       return {
         toolCallId: toolCall.toolCallId,
         toolName: toolCall.toolName,
@@ -15175,7 +20402,7 @@ async function executeTools({
     (result) => result != null
   );
 }
-var GenerateTextResult = class {
+var DefaultGenerateTextResult = class {
   constructor(options) {
     this.text = options.text;
     this.toolCalls = options.toolCalls;
@@ -15186,6 +20413,7 @@ var GenerateTextResult = class {
     this.rawResponse = options.rawResponse;
     this.logprobs = options.logprobs;
     this.responseMessages = options.responseMessages;
+    this.roundtrips = options.roundtrips;
   }
 };
 function toResponseMessages({
@@ -15213,12 +20441,102 @@ function toResponseMessages({
 }
 var experimental_generateText = generateText;
 
+// core/util/merge-streams.ts
+function mergeStreams(stream1, stream2) {
+  const reader1 = stream1.getReader();
+  const reader2 = stream2.getReader();
+  let lastRead1 = void 0;
+  let lastRead2 = void 0;
+  let stream1Done = false;
+  let stream2Done = false;
+  async function readStream1(controller) {
+    try {
+      if (lastRead1 == null) {
+        lastRead1 = reader1.read();
+      }
+      const result = await lastRead1;
+      lastRead1 = void 0;
+      if (!result.done) {
+        controller.enqueue(result.value);
+      } else {
+        controller.close();
+      }
+    } catch (error) {
+      controller.error(error);
+    }
+  }
+  async function readStream2(controller) {
+    try {
+      if (lastRead2 == null) {
+        lastRead2 = reader2.read();
+      }
+      const result = await lastRead2;
+      lastRead2 = void 0;
+      if (!result.done) {
+        controller.enqueue(result.value);
+      } else {
+        controller.close();
+      }
+    } catch (error) {
+      controller.error(error);
+    }
+  }
+  return new ReadableStream({
+    async pull(controller) {
+      try {
+        if (stream1Done) {
+          await readStream2(controller);
+          return;
+        }
+        if (stream2Done) {
+          await readStream1(controller);
+          return;
+        }
+        if (lastRead1 == null) {
+          lastRead1 = reader1.read();
+        }
+        if (lastRead2 == null) {
+          lastRead2 = reader2.read();
+        }
+        const { result, reader } = await Promise.race([
+          lastRead1.then((result2) => ({ result: result2, reader: reader1 })),
+          lastRead2.then((result2) => ({ result: result2, reader: reader2 }))
+        ]);
+        if (!result.done) {
+          controller.enqueue(result.value);
+        }
+        if (reader === reader1) {
+          lastRead1 = void 0;
+          if (result.done) {
+            await readStream2(controller);
+            stream1Done = true;
+          }
+        } else {
+          lastRead2 = void 0;
+          if (result.done) {
+            stream2Done = true;
+            await readStream1(controller);
+          }
+        }
+      } catch (error) {
+        controller.error(error);
+      }
+    },
+    cancel() {
+      reader1.cancel();
+      reader2.cancel();
+    }
+  });
+}
+
 // core/generate-text/run-tools-transformation.ts
-var import_provider7 = __nccwpck_require__(5667);
-var import_ui_utils2 = __nccwpck_require__(4809);
+var import_ui_utils5 = __nccwpck_require__(6399);
 function runToolsTransformation({
   tools,
-  generatorStream
+  generatorStream,
+  toolCallStreaming,
+  tracer,
+  telemetry
 }) {
   let canClose = false;
   const outstandingToolCalls = /* @__PURE__ */ new Set();
@@ -15228,6 +20546,7 @@ function runToolsTransformation({
       toolResultsStreamController = controller;
     }
   });
+  const activeToolCalls = {};
   const forwardStream = new TransformStream({
     transform(chunk, controller) {
       const chunkType = chunk.type;
@@ -15237,12 +20556,31 @@ function runToolsTransformation({
           controller.enqueue(chunk);
           break;
         }
+        case "tool-call-delta": {
+          if (toolCallStreaming) {
+            if (!activeToolCalls[chunk.toolCallId]) {
+              controller.enqueue({
+                type: "tool-call-streaming-start",
+                toolCallId: chunk.toolCallId,
+                toolName: chunk.toolName
+              });
+              activeToolCalls[chunk.toolCallId] = true;
+            }
+            controller.enqueue({
+              type: "tool-call-delta",
+              toolCallId: chunk.toolCallId,
+              toolName: chunk.toolName,
+              argsTextDelta: chunk.argsTextDelta
+            });
+          }
+          break;
+        }
         case "tool-call": {
           const toolName = chunk.toolName;
           if (tools == null) {
             toolResultsStreamController.enqueue({
               type: "error",
-              error: new import_provider7.NoSuchToolError({ toolName: chunk.toolName })
+              error: new NoSuchToolError({ toolName: chunk.toolName })
             });
             break;
           }
@@ -15250,7 +20588,7 @@ function runToolsTransformation({
           if (tool2 == null) {
             toolResultsStreamController.enqueue({
               type: "error",
-              error: new import_provider7.NoSuchToolError({
+              error: new NoSuchToolError({
                 toolName: chunk.toolName,
                 availableTools: Object.keys(tools)
               })
@@ -15264,31 +20602,62 @@ function runToolsTransformation({
             });
             controller.enqueue(toolCall);
             if (tool2.execute != null) {
-              const toolExecutionId = (0, import_ui_utils2.generateId)();
+              const toolExecutionId = (0, import_ui_utils5.generateId)();
               outstandingToolCalls.add(toolExecutionId);
-              tool2.execute(toolCall.args).then(
-                (result) => {
-                  toolResultsStreamController.enqueue({
-                    ...toolCall,
-                    type: "tool-result",
-                    result
-                  });
-                  outstandingToolCalls.delete(toolExecutionId);
-                  if (canClose && outstandingToolCalls.size === 0) {
-                    toolResultsStreamController.close();
+              recordSpan({
+                name: "ai.toolCall",
+                attributes: selectTelemetryAttributes({
+                  telemetry,
+                  attributes: {
+                    ...assembleOperationName({
+                      operationName: "ai.toolCall",
+                      telemetry
+                    }),
+                    "ai.toolCall.name": toolCall.toolName,
+                    "ai.toolCall.id": toolCall.toolCallId,
+                    "ai.toolCall.args": {
+                      output: () => JSON.stringify(toolCall.args)
+                    }
                   }
-                },
-                (error) => {
-                  toolResultsStreamController.enqueue({
-                    type: "error",
-                    error
-                  });
-                  outstandingToolCalls.delete(toolExecutionId);
-                  if (canClose && outstandingToolCalls.size === 0) {
-                    toolResultsStreamController.close();
+                }),
+                tracer,
+                fn: async (span) => tool2.execute(toolCall.args).then(
+                  (result) => {
+                    toolResultsStreamController.enqueue({
+                      ...toolCall,
+                      type: "tool-result",
+                      result
+                    });
+                    outstandingToolCalls.delete(toolExecutionId);
+                    if (canClose && outstandingToolCalls.size === 0) {
+                      toolResultsStreamController.close();
+                    }
+                    try {
+                      span.setAttributes(
+                        selectTelemetryAttributes({
+                          telemetry,
+                          attributes: {
+                            "ai.toolCall.result": {
+                              output: () => JSON.stringify(result)
+                            }
+                          }
+                        })
+                      );
+                    } catch (ignored) {
+                    }
+                  },
+                  (error) => {
+                    toolResultsStreamController.enqueue({
+                      type: "error",
+                      error
+                    });
+                    outstandingToolCalls.delete(toolExecutionId);
+                    if (canClose && outstandingToolCalls.size === 0) {
+                      toolResultsStreamController.close();
+                    }
                   }
-                }
-              );
+                )
+              });
             }
           } catch (error) {
             toolResultsStreamController.enqueue({
@@ -15303,11 +20672,8 @@ function runToolsTransformation({
             type: "finish",
             finishReason: chunk.finishReason,
             logprobs: chunk.logprobs,
-            usage: calculateTokenUsage(chunk.usage)
+            usage: calculateCompletionTokenUsage(chunk.usage)
           });
-          break;
-        }
-        case "tool-call-delta": {
           break;
         }
         default: {
@@ -15361,104 +20727,227 @@ async function streamText({
   maxRetries,
   abortSignal,
   headers,
+  experimental_telemetry: telemetry,
+  experimental_toolCallStreaming: toolCallStreaming = false,
+  onChunk,
   onFinish,
   ...settings
 }) {
-  const retry = retryWithExponentialBackoff({ maxRetries });
-  const validatedPrompt = getValidatedPrompt({ system, prompt, messages });
-  const { stream, warnings, rawResponse } = await retry(
-    () => model.doStream({
-      mode: {
-        type: "regular",
-        ...prepareToolsAndToolChoice({ tools, toolChoice })
-      },
-      ...prepareCallSettings(settings),
-      inputFormat: validatedPrompt.type,
-      prompt: convertToLanguageModelPrompt(validatedPrompt),
-      abortSignal,
-      headers
-    })
-  );
-  return new StreamTextResult({
-    stream: runToolsTransformation({
-      tools,
-      generatorStream: stream
+  var _a12;
+  const baseTelemetryAttributes = getBaseTelemetryAttributes({
+    model,
+    telemetry,
+    headers,
+    settings: { ...settings, maxRetries }
+  });
+  const tracer = getTracer({ isEnabled: (_a12 = telemetry == null ? void 0 : telemetry.isEnabled) != null ? _a12 : false });
+  return recordSpan({
+    name: "ai.streamText",
+    attributes: selectTelemetryAttributes({
+      telemetry,
+      attributes: {
+        ...assembleOperationName({ operationName: "ai.streamText", telemetry }),
+        ...baseTelemetryAttributes,
+        // specific settings that only make sense on the outer level:
+        "ai.prompt": {
+          input: () => JSON.stringify({ system, prompt, messages })
+        }
+      }
     }),
-    warnings,
-    rawResponse,
-    onFinish
+    tracer,
+    endWhenDone: false,
+    fn: async (rootSpan) => {
+      const retry = retryWithExponentialBackoff({ maxRetries });
+      const validatedPrompt = getValidatedPrompt({ system, prompt, messages });
+      const promptMessages = await convertToLanguageModelPrompt({
+        prompt: validatedPrompt,
+        modelSupportsImageUrls: model.supportsImageUrls
+      });
+      const {
+        result: { stream, warnings, rawResponse },
+        doStreamSpan
+      } = await retry(
+        () => recordSpan({
+          name: "ai.streamText.doStream",
+          attributes: selectTelemetryAttributes({
+            telemetry,
+            attributes: {
+              ...assembleOperationName({
+                operationName: "ai.streamText.doStream",
+                telemetry
+              }),
+              ...baseTelemetryAttributes,
+              "ai.prompt.format": {
+                input: () => validatedPrompt.type
+              },
+              "ai.prompt.messages": {
+                input: () => JSON.stringify(promptMessages)
+              },
+              // standardized gen-ai llm span attributes:
+              "gen_ai.request.model": model.modelId,
+              "gen_ai.system": model.provider,
+              "gen_ai.request.max_tokens": settings.maxTokens,
+              "gen_ai.request.temperature": settings.temperature,
+              "gen_ai.request.top_p": settings.topP
+            }
+          }),
+          tracer,
+          endWhenDone: false,
+          fn: async (doStreamSpan2) => {
+            return {
+              result: await model.doStream({
+                mode: {
+                  type: "regular",
+                  ...prepareToolsAndToolChoice({ tools, toolChoice })
+                },
+                ...prepareCallSettings(settings),
+                inputFormat: validatedPrompt.type,
+                prompt: promptMessages,
+                abortSignal,
+                headers
+              }),
+              doStreamSpan: doStreamSpan2
+            };
+          }
+        })
+      );
+      return new DefaultStreamTextResult({
+        stream: runToolsTransformation({
+          tools,
+          generatorStream: stream,
+          toolCallStreaming,
+          tracer,
+          telemetry
+        }),
+        warnings,
+        rawResponse,
+        onChunk,
+        onFinish,
+        rootSpan,
+        doStreamSpan,
+        telemetry
+      });
+    }
   });
 }
-var StreamTextResult = class {
+var DefaultStreamTextResult = class {
   constructor({
     stream,
     warnings,
     rawResponse,
-    onFinish
+    onChunk,
+    onFinish,
+    rootSpan,
+    doStreamSpan,
+    telemetry
   }) {
     this.warnings = warnings;
     this.rawResponse = rawResponse;
-    this.onFinish = onFinish;
-    let resolveUsage;
-    this.usage = new Promise((resolve) => {
-      resolveUsage = resolve;
-    });
-    let resolveFinishReason;
-    this.finishReason = new Promise((resolve) => {
-      resolveFinishReason = resolve;
-    });
-    let resolveText;
-    this.text = new Promise((resolve) => {
-      resolveText = resolve;
-    });
-    let resolveToolCalls;
-    this.toolCalls = new Promise((resolve) => {
-      resolveToolCalls = resolve;
-    });
-    let resolveToolResults;
-    this.toolResults = new Promise((resolve) => {
-      resolveToolResults = resolve;
-    });
+    const { resolve: resolveUsage, promise: usagePromise } = createResolvablePromise();
+    this.usage = usagePromise;
+    const { resolve: resolveFinishReason, promise: finishReasonPromise } = createResolvablePromise();
+    this.finishReason = finishReasonPromise;
+    const { resolve: resolveText, promise: textPromise } = createResolvablePromise();
+    this.text = textPromise;
+    const { resolve: resolveToolCalls, promise: toolCallsPromise } = createResolvablePromise();
+    this.toolCalls = toolCallsPromise;
+    const { resolve: resolveToolResults, promise: toolResultsPromise } = createResolvablePromise();
+    this.toolResults = toolResultsPromise;
     let finishReason;
     let usage;
     let text = "";
     const toolCalls = [];
     const toolResults = [];
-    const self = this;
+    let firstChunk = true;
     this.originalStream = stream.pipeThrough(
       new TransformStream({
         async transform(chunk, controller) {
+          if (firstChunk) {
+            firstChunk = false;
+            doStreamSpan.addEvent("ai.stream.firstChunk");
+          }
+          if (chunk.type === "text-delta" && chunk.textDelta.length === 0) {
+            return;
+          }
           controller.enqueue(chunk);
-          if (chunk.type === "text-delta") {
-            text += chunk.textDelta;
-          }
-          if (chunk.type === "tool-call") {
-            toolCalls.push(chunk);
-          }
-          if (chunk.type === "tool-result") {
-            toolResults.push(chunk);
-          }
-          if (chunk.type === "finish") {
-            usage = chunk.usage;
-            finishReason = chunk.finishReason;
-            resolveUsage(usage);
-            resolveFinishReason(finishReason);
-            resolveText(text);
-            resolveToolCalls(toolCalls);
+          const chunkType = chunk.type;
+          switch (chunkType) {
+            case "text-delta":
+              text += chunk.textDelta;
+              await (onChunk == null ? void 0 : onChunk({ chunk }));
+              break;
+            case "tool-call":
+              toolCalls.push(chunk);
+              await (onChunk == null ? void 0 : onChunk({ chunk }));
+              break;
+            case "tool-result":
+              toolResults.push(chunk);
+              await (onChunk == null ? void 0 : onChunk({ chunk }));
+              break;
+            case "finish":
+              usage = chunk.usage;
+              finishReason = chunk.finishReason;
+              resolveUsage(usage);
+              resolveFinishReason(finishReason);
+              resolveText(text);
+              resolveToolCalls(toolCalls);
+              break;
+            case "tool-call-streaming-start":
+            case "tool-call-delta": {
+              await (onChunk == null ? void 0 : onChunk({ chunk }));
+              break;
+            }
+            case "error":
+              break;
+            default: {
+              const exhaustiveCheck = chunkType;
+              throw new Error(`Unknown chunk type: ${exhaustiveCheck}`);
+            }
           }
         },
         // invoke onFinish callback and resolve toolResults promise when the stream is about to close:
         async flush(controller) {
-          var _a;
           try {
+            const finalUsage = usage != null ? usage : {
+              promptTokens: NaN,
+              completionTokens: NaN,
+              totalTokens: NaN
+            };
+            const finalFinishReason = finishReason != null ? finishReason : "unknown";
+            const telemetryToolCalls = toolCalls.length > 0 ? JSON.stringify(toolCalls) : void 0;
+            doStreamSpan.setAttributes(
+              selectTelemetryAttributes({
+                telemetry,
+                attributes: {
+                  "ai.finishReason": finalFinishReason,
+                  "ai.usage.promptTokens": finalUsage.promptTokens,
+                  "ai.usage.completionTokens": finalUsage.completionTokens,
+                  "ai.result.text": { output: () => text },
+                  "ai.result.toolCalls": { output: () => telemetryToolCalls },
+                  // standardized gen-ai llm span attributes:
+                  "gen_ai.response.finish_reasons": [finalFinishReason],
+                  "gen_ai.usage.prompt_tokens": finalUsage.promptTokens,
+                  "gen_ai.usage.completion_tokens": finalUsage.completionTokens
+                }
+              })
+            );
+            doStreamSpan.end();
+            rootSpan.setAttributes(
+              selectTelemetryAttributes({
+                telemetry,
+                attributes: {
+                  "ai.finishReason": finalFinishReason,
+                  "ai.usage.promptTokens": finalUsage.promptTokens,
+                  "ai.usage.completionTokens": finalUsage.completionTokens,
+                  "ai.result.text": { output: () => text },
+                  "ai.result.toolCalls": { output: () => telemetryToolCalls }
+                }
+              })
+            );
             resolveToolResults(toolResults);
-            await ((_a = self.onFinish) == null ? void 0 : _a.call(self, {
-              finishReason: finishReason != null ? finishReason : "unknown",
-              usage: usage != null ? usage : {
-                promptTokens: NaN,
-                completionTokens: NaN,
-                totalTokens: NaN
-              },
+            await (onFinish == null ? void 0 : onFinish({
+              finishReason: finalFinishReason,
+              usage: finalUsage,
               text,
               toolCalls,
               // The tool results are inferred as a never[] type, because they are
@@ -15471,6 +20960,8 @@ var StreamTextResult = class {
             }));
           } catch (error) {
             controller.error(error);
+          } finally {
+            rootSpan.end();
           }
         }
       })
@@ -15489,53 +20980,32 @@ var StreamTextResult = class {
     this.originalStream = stream2;
     return stream1;
   }
-  /**
-  A text stream that returns only the generated text deltas. You can use it
-  as either an AsyncIterable or a ReadableStream. When an error occurs, the
-  stream will throw the error.
-     */
   get textStream() {
     return createAsyncIterableStream(this.teeStream(), {
       transform(chunk, controller) {
         if (chunk.type === "text-delta") {
-          if (chunk.textDelta.length > 0) {
-            controller.enqueue(chunk.textDelta);
-          }
+          controller.enqueue(chunk.textDelta);
         } else if (chunk.type === "error") {
-          throw chunk.error;
+          controller.error(chunk.error);
         }
       }
     });
   }
-  /**
-  A stream with all events, including text deltas, tool calls, tool results, and
-  errors.
-  You can use it as either an AsyncIterable or a ReadableStream. When an error occurs, the
-  stream will throw the error.
-     */
   get fullStream() {
     return createAsyncIterableStream(this.teeStream(), {
       transform(chunk, controller) {
-        if (chunk.type === "text-delta") {
-          if (chunk.textDelta.length > 0) {
-            controller.enqueue(chunk);
-          }
-        } else {
-          controller.enqueue(chunk);
-        }
+        controller.enqueue(chunk);
       }
     });
   }
-  /**
-  Converts the result to an `AIStream` object that is compatible with `StreamingTextResponse`.
-  It can be used with the `useChat` and `useCompletion` hooks.
-  
-  @param callbacks 
-  Stream callbacks that will be called when the stream emits events.
-  
-  @returns an `AIStream` object.
-     */
   toAIStream(callbacks = {}) {
+    return this.toDataStream({ callbacks });
+  }
+  toDataStream({
+    callbacks = {},
+    getErrorMessage: getErrorMessage4 = () => ""
+    // mask error messages for safety by default
+  } = {}) {
     let aggregatedResponse = "";
     const callbackTransformer = new TransformStream({
       async start() {
@@ -15560,15 +21030,32 @@ var StreamTextResult = class {
           await callbacks.onFinal(aggregatedResponse);
       }
     });
-    const streamDataTransformer = new TransformStream({
+    const streamPartsTransformer = new TransformStream({
       transform: async (chunk, controller) => {
-        switch (chunk.type) {
+        const chunkType = chunk.type;
+        switch (chunkType) {
           case "text-delta":
-            controller.enqueue((0, import_ui_utils6.formatStreamPart)("text", chunk.textDelta));
+            controller.enqueue((0, import_ui_utils10.formatStreamPart)("text", chunk.textDelta));
+            break;
+          case "tool-call-streaming-start":
+            controller.enqueue(
+              (0, import_ui_utils10.formatStreamPart)("tool_call_streaming_start", {
+                toolCallId: chunk.toolCallId,
+                toolName: chunk.toolName
+              })
+            );
+            break;
+          case "tool-call-delta":
+            controller.enqueue(
+              (0, import_ui_utils10.formatStreamPart)("tool_call_delta", {
+                toolCallId: chunk.toolCallId,
+                argsTextDelta: chunk.argsTextDelta
+              })
+            );
             break;
           case "tool-call":
             controller.enqueue(
-              (0, import_ui_utils6.formatStreamPart)("tool_call", {
+              (0, import_ui_utils10.formatStreamPart)("tool_call", {
                 toolCallId: chunk.toolCallId,
                 toolName: chunk.toolName,
                 args: chunk.args
@@ -15577,39 +21064,47 @@ var StreamTextResult = class {
             break;
           case "tool-result":
             controller.enqueue(
-              (0, import_ui_utils6.formatStreamPart)("tool_result", {
+              (0, import_ui_utils10.formatStreamPart)("tool_result", {
                 toolCallId: chunk.toolCallId,
-                toolName: chunk.toolName,
-                args: chunk.args,
                 result: chunk.result
               })
             );
             break;
           case "error":
             controller.enqueue(
-              (0, import_ui_utils6.formatStreamPart)("error", JSON.stringify(chunk.error))
+              (0, import_ui_utils10.formatStreamPart)("error", getErrorMessage4(chunk.error))
             );
             break;
+          case "finish":
+            controller.enqueue(
+              (0, import_ui_utils10.formatStreamPart)("finish_message", {
+                finishReason: chunk.finishReason,
+                usage: {
+                  promptTokens: chunk.usage.promptTokens,
+                  completionTokens: chunk.usage.completionTokens
+                }
+              })
+            );
+            break;
+          default: {
+            const exhaustiveCheck = chunkType;
+            throw new Error(`Unknown chunk type: ${exhaustiveCheck}`);
+          }
         }
       }
     });
-    return this.fullStream.pipeThrough(callbackTransformer).pipeThrough(streamDataTransformer).pipeThrough(new TextEncoderStream());
+    return this.fullStream.pipeThrough(callbackTransformer).pipeThrough(streamPartsTransformer).pipeThrough(new TextEncoderStream());
   }
-  /**
-  Writes stream data output to a Node.js response-like object.
-  It sets a `Content-Type` header to `text/plain; charset=utf-8` and 
-  writes each stream data part as a separate chunk.
-  
-  @param response A Node.js response-like object (ServerResponse).
-  @param init Optional headers and status code.
-     */
   pipeAIStreamToResponse(response, init) {
-    var _a;
-    response.writeHead((_a = init == null ? void 0 : init.status) != null ? _a : 200, {
+    return this.pipeDataStreamToResponse(response, init);
+  }
+  pipeDataStreamToResponse(response, init) {
+    var _a12;
+    response.writeHead((_a12 = init == null ? void 0 : init.status) != null ? _a12 : 200, {
       "Content-Type": "text/plain; charset=utf-8",
       ...init == null ? void 0 : init.headers
     });
-    const reader = this.toAIStream().getReader();
+    const reader = this.toDataStream().getReader();
     const read = async () => {
       try {
         while (true) {
@@ -15626,17 +21121,9 @@ var StreamTextResult = class {
     };
     read();
   }
-  /**
-  Writes text delta output to a Node.js response-like object.
-  It sets a `Content-Type` header to `text/plain; charset=utf-8` and 
-  writes each text delta as a separate chunk.
-  
-  @param response A Node.js response-like object (ServerResponse).
-  @param init Optional headers and status code.
-     */
   pipeTextStreamToResponse(response, init) {
-    var _a;
-    response.writeHead((_a = init == null ? void 0 : init.status) != null ? _a : 200, {
+    var _a12;
+    response.writeHead((_a12 = init == null ? void 0 : init.status) != null ? _a12 : 200, {
       "Content-Type": "text/plain; charset=utf-8",
       ...init == null ? void 0 : init.headers
     });
@@ -15657,28 +21144,32 @@ var StreamTextResult = class {
     };
     read();
   }
-  /**
-  Converts the result to a streamed response object with a stream data part stream.
-  It can be used with the `useChat` and `useCompletion` hooks.
-  
-  @param init Optional headers.
-  
-  @return A response object.
-     */
-  toAIStreamResponse(init) {
-    return new StreamingTextResponse(this.toAIStream(), init);
+  toAIStreamResponse(options) {
+    return this.toDataStreamResponse(options);
   }
-  /**
-  Creates a simple text stream response.
-  Each text delta is encoded as UTF-8 and sent as a separate chunk.
-  Non-text-delta events are ignored.
-  
-  @param init Optional headers and status code.
-     */
+  toDataStreamResponse(options) {
+    var _a12;
+    const init = options == null ? void 0 : "init" in options ? options.init : {
+      headers: "headers" in options ? options.headers : void 0,
+      status: "status" in options ? options.status : void 0,
+      statusText: "statusText" in options ? options.statusText : void 0
+    };
+    const data = options == null ? void 0 : "data" in options ? options.data : void 0;
+    const getErrorMessage4 = options == null ? void 0 : "getErrorMessage" in options ? options.getErrorMessage : void 0;
+    const stream = data ? mergeStreams(data.stream, this.toDataStream({ getErrorMessage: getErrorMessage4 })) : this.toDataStream({ getErrorMessage: getErrorMessage4 });
+    return new Response(stream, {
+      status: (_a12 = init == null ? void 0 : init.status) != null ? _a12 : 200,
+      statusText: init == null ? void 0 : init.statusText,
+      headers: prepareResponseHeaders(init, {
+        contentType: "text/plain; charset=utf-8",
+        dataStreamVersion: "v1"
+      })
+    });
+  }
   toTextStreamResponse(init) {
-    var _a;
+    var _a12;
     return new Response(this.textStream.pipeThrough(new TextEncoderStream()), {
-      status: (_a = init == null ? void 0 : init.status) != null ? _a : 200,
+      status: (_a12 = init == null ? void 0 : init.status) != null ? _a12 : 200,
       headers: prepareResponseHeaders(init, {
         contentType: "text/plain; charset=utf-8"
       })
@@ -15687,13 +21178,86 @@ var StreamTextResult = class {
 };
 var experimental_streamText = streamText;
 
+// core/prompt/attachments-to-parts.ts
+function attachmentsToParts(attachments) {
+  var _a12, _b, _c;
+  const parts = [];
+  for (const attachment of attachments) {
+    let url;
+    try {
+      url = new URL(attachment.url);
+    } catch (error) {
+      throw new Error(`Invalid URL: ${attachment.url}`);
+    }
+    switch (url.protocol) {
+      case "http:":
+      case "https:": {
+        if ((_a12 = attachment.contentType) == null ? void 0 : _a12.startsWith("image/")) {
+          parts.push({ type: "image", image: url });
+        }
+        break;
+      }
+      case "data:": {
+        let header;
+        let base64Content;
+        let mimeType;
+        try {
+          [header, base64Content] = attachment.url.split(",");
+          mimeType = header.split(";")[0].split(":")[1];
+        } catch (error) {
+          throw new Error(`Error processing data URL: ${attachment.url}`);
+        }
+        if (mimeType == null || base64Content == null) {
+          throw new Error(`Invalid data URL format: ${attachment.url}`);
+        }
+        if ((_b = attachment.contentType) == null ? void 0 : _b.startsWith("image/")) {
+          parts.push({
+            type: "image",
+            image: convertDataContentToUint8Array(base64Content)
+          });
+        } else if ((_c = attachment.contentType) == null ? void 0 : _c.startsWith("text/")) {
+          parts.push({
+            type: "text",
+            text: convertUint8ArrayToText(
+              convertDataContentToUint8Array(base64Content)
+            )
+          });
+        }
+        break;
+      }
+      default: {
+        throw new Error(`Unsupported URL protocol: ${url.protocol}`);
+      }
+    }
+  }
+  return parts;
+}
+
 // core/prompt/convert-to-core-messages.ts
 function convertToCoreMessages(messages) {
   const coreMessages = [];
-  for (const { role, content, toolInvocations } of messages) {
+  for (const {
+    role,
+    content,
+    toolInvocations,
+    experimental_attachments
+  } of messages) {
     switch (role) {
+      case "system": {
+        coreMessages.push({
+          role: "system",
+          content
+        });
+        break;
+      }
       case "user": {
-        coreMessages.push({ role: "user", content });
+        coreMessages.push({
+          role: "user",
+          content: experimental_attachments ? [
+            { type: "text", text: content },
+            ...attachmentsToParts(experimental_attachments)
+          ] : content
+        });
         break;
       }
       case "assistant": {
@@ -15737,18 +21301,32 @@ function convertToCoreMessages(messages) {
 }
 
 // core/registry/invalid-model-id-error.ts
-var InvalidModelIdError = class extends Error {
+var import_provider11 = __nccwpck_require__(7503);
+var name9 = "AI_InvalidModelIdError";
+var marker9 = `vercel.ai.error.${name9}`;
+var symbol9 = Symbol.for(marker9);
+var _a9;
+var InvalidModelIdError = class extends import_provider11.AISDKError {
   constructor({
     id,
     message = `Invalid model id: ${id}`
   }) {
-    super(message);
-    this.name = "AI_InvalidModelIdError";
+    super({ name: name9, message });
+    this[_a9] = true;
     this.id = id;
   }
-  static isInvalidModelIdError(error) {
-    return error instanceof Error && error.name === "AI_InvalidModelIdError" && typeof error.id === "string";
+  static isInstance(error) {
+    return import_provider11.AISDKError.hasMarker(error, marker9);
   }
+  /**
+   * @deprecated use `isInstance` instead
+   */
+  static isInvalidModelIdError(error) {
+    return error instanceof Error && error.name === name9 && typeof error.id === "string";
+  }
+  /**
+   * @deprecated Do not use this method. It will be removed in the next major version.
+   */
   toJSON() {
     return {
       name: this.name,
@@ -15758,22 +21336,37 @@ var InvalidModelIdError = class extends Error {
     };
   }
 };
+_a9 = symbol9;
 
 // core/registry/no-such-model-error.ts
-var NoSuchModelError = class extends Error {
+var import_provider12 = __nccwpck_require__(7503);
+var name10 = "AI_NoSuchModelError";
+var marker10 = `vercel.ai.error.${name10}`;
+var symbol10 = Symbol.for(marker10);
+var _a10;
+var NoSuchModelError = class extends import_provider12.AISDKError {
   constructor({
     modelId,
     modelType,
     message = `No such ${modelType}: ${modelId}`
   }) {
-    super(message);
-    this.name = "AI_NoSuchModelError";
+    super({ name: name10, message });
+    this[_a10] = true;
     this.modelId = modelId;
     this.modelType = modelType;
   }
-  static isNoSuchModelError(error) {
-    return error instanceof Error && error.name === "AI_NoSuchModelError" && typeof error.modelId === "string" && typeof error.modelType === "string";
+  static isInstance(error) {
+    return import_provider12.AISDKError.hasMarker(error, marker10);
   }
+  /**
+   * @deprecated use `isInstance` instead
+   */
+  static isNoSuchModelError(error) {
+    return error instanceof Error && error.name === name10 && typeof error.modelId === "string" && typeof error.modelType === "string";
+  }
+  /**
+   * @deprecated Do not use this method. It will be removed in the next major version.
+   */
   toJSON() {
     return {
       name: this.name,
@@ -15784,22 +21377,37 @@ var NoSuchModelError = class extends Error {
     };
   }
 };
+_a10 = symbol10;
 
 // core/registry/no-such-provider-error.ts
-var NoSuchProviderError = class extends Error {
+var import_provider13 = __nccwpck_require__(7503);
+var name11 = "AI_NoSuchProviderError";
+var marker11 = `vercel.ai.error.${name11}`;
+var symbol11 = Symbol.for(marker11);
+var _a11;
+var NoSuchProviderError = class extends import_provider13.AISDKError {
   constructor({
     providerId,
     availableProviders,
     message = `No such provider: ${providerId} (available providers: ${availableProviders.join()})`
   }) {
-    super(message);
-    this.name = "AI_NoSuchProviderError";
+    super({ name: name11, message });
+    this[_a11] = true;
     this.providerId = providerId;
     this.availableProviders = availableProviders;
   }
-  static isNoSuchProviderError(error) {
-    return error instanceof Error && error.name === "AI_NoSuchProviderError" && typeof error.providerId === "string" && Array.isArray(error.availableProviders);
+  static isInstance(error) {
+    return import_provider13.AISDKError.hasMarker(error, marker11);
   }
+  /**
+   * @deprecated use `isInstance` instead
+   */
+  static isNoSuchProviderError(error) {
+    return error instanceof Error && error.name === name11 && typeof error.providerId === "string" && Array.isArray(error.availableProviders);
+  }
+  /**
+   * @deprecated Do not use this method. It will be removed in the next major version.
+   */
   toJSON() {
     return {
       name: this.name,
@@ -15810,6 +21418,7 @@ var NoSuchProviderError = class extends Error {
     };
   }
 };
+_a11 = symbol11;
 
 // core/registry/provider-registry.ts
 function experimental_createProviderRegistry(providers) {
@@ -15824,7 +21433,10 @@ var DefaultProviderRegistry = class {
   constructor() {
     this.providers = {};
   }
-  registerProvider({ id, provider }) {
+  registerProvider({
+    id,
+    provider
+  }) {
     this.providers[id] = provider;
   }
   getProvider(id) {
@@ -15845,25 +21457,32 @@ var DefaultProviderRegistry = class {
     return [id.slice(0, index), id.slice(index + 1)];
   }
   languageModel(id) {
-    var _a, _b;
+    var _a12, _b;
     const [providerId, modelId] = this.splitId(id);
-    const model = (_b = (_a = this.getProvider(providerId)).languageModel) == null ? void 0 : _b.call(_a, modelId);
+    const model = (_b = (_a12 = this.getProvider(providerId)).languageModel) == null ? void 0 : _b.call(_a12, modelId);
     if (model == null) {
-      throw new NoSuchModelError({ modelId: id, modelType: "language model" });
+      throw new NoSuchModelError({ modelId: id, modelType: "languageModel" });
     }
     return model;
   }
   textEmbeddingModel(id) {
-    var _a, _b;
+    var _a12, _b, _c;
     const [providerId, modelId] = this.splitId(id);
-    const model = (_b = (_a = this.getProvider(providerId)).textEmbedding) == null ? void 0 : _b.call(_a, modelId);
+    const provider = this.getProvider(providerId);
+    const model = (_c = (_a12 = provider.textEmbeddingModel) == null ? void 0 : _a12.call(provider, modelId)) != null ? _c : (_b = provider.textEmbedding) == null ? void 0 : _b.call(provider, modelId);
     if (model == null) {
       throw new NoSuchModelError({
         modelId: id,
-        modelType: "text embedding model"
+        modelType: "textEmbeddingModel"
       });
     }
     return model;
+  }
+  /**
+   * @deprecated Use `textEmbeddingModel` instead.
+   */
+  textEmbedding(id) {
+    return this.textEmbeddingModel(id);
   }
 };
 
@@ -15871,9 +21490,6 @@ var DefaultProviderRegistry = class {
 function tool(tool2) {
   return tool2;
 }
-
-// core/types/errors.ts
-var import_provider8 = __nccwpck_require__(5667);
 
 // core/util/cosine-similarity.ts
 function cosineSimilarity(vector1, vector2) {
@@ -15894,8 +21510,11 @@ function magnitude(vector) {
   return Math.sqrt(dotProduct(vector, vector));
 }
 
+// errors/index.ts
+var import_provider14 = __nccwpck_require__(7503);
+
 // streams/ai-stream.ts
-var import_eventsource_parser = __nccwpck_require__(6742);
+var import_eventsource_parser = __nccwpck_require__(392);
 function createEventStreamTransformer(customParser) {
   const textDecoder = new TextDecoder();
   let eventSourceParser;
@@ -16010,15 +21629,20 @@ function readableFromAsyncIterable(iterable) {
         controller.enqueue(value);
     },
     async cancel(reason) {
-      var _a;
-      await ((_a = it.return) == null ? void 0 : _a.call(it, reason));
+      var _a12;
+      await ((_a12 = it.return) == null ? void 0 : _a12.call(it, reason));
     }
   });
 }
 
 // streams/stream-data.ts
-var import_ui_utils3 = __nccwpck_require__(4809);
-var StreamData = class {
+var import_ui_utils7 = __nccwpck_require__(6399);
+
+// util/constants.ts
+var HANGING_STREAM_WARNING_TIME_MS = 15 * 1e3;
+
+// streams/stream-data.ts
+var StreamData2 = class {
   constructor() {
     this.encoder = new TextEncoder();
     this.controller = null;
@@ -16033,7 +21657,7 @@ var StreamData = class {
             console.warn(
               "The data stream is hanging. Did you forget to close it with `data.close()`?"
             );
-          }, 3e3);
+          }, HANGING_STREAM_WARNING_TIME_MS);
         }
       },
       pull: (controller) => {
@@ -16064,7 +21688,7 @@ var StreamData = class {
       throw new Error("Stream controller is not initialized.");
     }
     this.controller.enqueue(
-      this.encoder.encode((0, import_ui_utils3.formatStreamPart)("data", [value]))
+      this.encoder.encode((0, import_ui_utils7.formatStreamPart)("data", [value]))
     );
   }
   appendMessageAnnotation(value) {
@@ -16075,7 +21699,7 @@ var StreamData = class {
       throw new Error("Stream controller is not initialized.");
     }
     this.controller.enqueue(
-      this.encoder.encode((0, import_ui_utils3.formatStreamPart)("message_annotations", [value]))
+      this.encoder.encode((0, import_ui_utils7.formatStreamPart)("message_annotations", [value]))
     );
   }
 };
@@ -16085,11 +21709,11 @@ function createStreamDataTransformer() {
   return new TransformStream({
     transform: async (chunk, controller) => {
       const message = decoder.decode(chunk);
-      controller.enqueue(encoder.encode((0, import_ui_utils3.formatStreamPart)("text", message)));
+      controller.enqueue(encoder.encode((0, import_ui_utils7.formatStreamPart)("text", message)));
     }
   });
 }
-var experimental_StreamData = class extends StreamData {
+var experimental_StreamData = class extends StreamData2 {
 };
 
 // streams/anthropic-stream.ts
@@ -16139,36 +21763,36 @@ function AnthropicStream(res, cb) {
 }
 
 // streams/assistant-response.ts
-var import_ui_utils4 = __nccwpck_require__(4809);
+var import_ui_utils8 = __nccwpck_require__(6399);
 function AssistantResponse({ threadId, messageId }, process2) {
   const stream = new ReadableStream({
     async start(controller) {
-      var _a;
+      var _a12;
       const textEncoder = new TextEncoder();
       const sendMessage = (message) => {
         controller.enqueue(
-          textEncoder.encode((0, import_ui_utils4.formatStreamPart)("assistant_message", message))
+          textEncoder.encode((0, import_ui_utils8.formatStreamPart)("assistant_message", message))
         );
       };
       const sendDataMessage = (message) => {
         controller.enqueue(
-          textEncoder.encode((0, import_ui_utils4.formatStreamPart)("data_message", message))
+          textEncoder.encode((0, import_ui_utils8.formatStreamPart)("data_message", message))
         );
       };
       const sendError = (errorMessage) => {
         controller.enqueue(
-          textEncoder.encode((0, import_ui_utils4.formatStreamPart)("error", errorMessage))
+          textEncoder.encode((0, import_ui_utils8.formatStreamPart)("error", errorMessage))
         );
       };
       const forwardStream = async (stream2) => {
-        var _a2, _b;
+        var _a13, _b;
         let result = void 0;
         for await (const value of stream2) {
           switch (value.event) {
             case "thread.message.created": {
               controller.enqueue(
                 textEncoder.encode(
-                  (0, import_ui_utils4.formatStreamPart)("assistant_message", {
+                  (0, import_ui_utils8.formatStreamPart)("assistant_message", {
                     id: value.data.id,
                     role: "assistant",
                     content: [{ type: "text", text: { value: "" } }]
@@ -16178,11 +21802,11 @@ function AssistantResponse({ threadId, messageId }, process2) {
               break;
             }
             case "thread.message.delta": {
-              const content = (_a2 = value.data.delta.content) == null ? void 0 : _a2[0];
+              const content = (_a13 = value.data.delta.content) == null ? void 0 : _a13[0];
               if ((content == null ? void 0 : content.type) === "text" && ((_b = content.text) == null ? void 0 : _b.value) != null) {
                 controller.enqueue(
                   textEncoder.encode(
-                    (0, import_ui_utils4.formatStreamPart)("text", content.text.value)
+                    (0, import_ui_utils8.formatStreamPart)("text", content.text.value)
                   )
                 );
               }
@@ -16199,7 +21823,7 @@ function AssistantResponse({ threadId, messageId }, process2) {
       };
       controller.enqueue(
         textEncoder.encode(
-          (0, import_ui_utils4.formatStreamPart)("assistant_control_data", {
+          (0, import_ui_utils8.formatStreamPart)("assistant_control_data", {
             threadId,
             messageId
           })
@@ -16214,7 +21838,7 @@ function AssistantResponse({ threadId, messageId }, process2) {
           forwardStream
         });
       } catch (error) {
-        sendError((_a = error.message) != null ? _a : `${error}`);
+        sendError((_a12 = error.message) != null ? _a12 : `${error}`);
       } finally {
         controller.close();
       }
@@ -16235,9 +21859,9 @@ var experimental_AssistantResponse = AssistantResponse;
 
 // streams/aws-bedrock-stream.ts
 async function* asDeltaIterable(response, extractTextDeltaFromChunk) {
-  var _a, _b;
+  var _a12, _b;
   const decoder = new TextDecoder();
-  for await (const chunk of (_a = response.body) != null ? _a : []) {
+  for await (const chunk of (_a12 = response.body) != null ? _a12 : []) {
     const bytes = (_b = chunk.chunk) == null ? void 0 : _b.bytes;
     if (bytes != null) {
       const chunkText = decoder.decode(bytes);
@@ -16251,8 +21875,8 @@ async function* asDeltaIterable(response, extractTextDeltaFromChunk) {
 }
 function AWSBedrockAnthropicMessagesStream(response, callbacks) {
   return AWSBedrockStream(response, callbacks, (chunk) => {
-    var _a;
-    return (_a = chunk.delta) == null ? void 0 : _a.text;
+    var _a12;
+    return (_a12 = chunk.delta) == null ? void 0 : _a12.text;
   });
 }
 function AWSBedrockAnthropicStream(response, callbacks) {
@@ -16299,8 +21923,8 @@ async function readAndProcessLines(reader, controller) {
   controller.close();
 }
 function createParser2(res) {
-  var _a;
-  const reader = (_a = res.body) == null ? void 0 : _a.getReader();
+  var _a12;
+  const reader = (_a12 = res.body) == null ? void 0 : _a12.getReader();
   return new ReadableStream({
     async start(controller) {
       if (!reader) {
@@ -16330,9 +21954,9 @@ function CohereStream(reader, callbacks) {
 
 // streams/google-generative-ai-stream.ts
 async function* streamable3(response) {
-  var _a, _b, _c;
+  var _a12, _b, _c;
   for await (const chunk of response.stream) {
-    const parts = (_c = (_b = (_a = chunk.candidates) == null ? void 0 : _a[0]) == null ? void 0 : _b.content) == null ? void 0 : _c.parts;
+    const parts = (_c = (_b = (_a12 = chunk.candidates) == null ? void 0 : _a12[0]) == null ? void 0 : _b.content) == null ? void 0 : _c.parts;
     if (parts === void 0) {
       continue;
     }
@@ -16351,13 +21975,13 @@ function createParser3(res) {
   const trimStartOfStream = trimStartOfStreamHelper();
   return new ReadableStream({
     async pull(controller) {
-      var _a, _b;
+      var _a12, _b;
       const { value, done } = await res.next();
       if (done) {
         controller.close();
         return;
       }
-      const text = trimStartOfStream((_b = (_a = value.token) == null ? void 0 : _a.text) != null ? _b : "");
+      const text = trimStartOfStream((_b = (_a12 = value.token) == null ? void 0 : _a12.text) != null ? _b : "");
       if (!text)
         return;
       if (value.generated_text != null && value.generated_text.length > 0) {
@@ -16382,11 +22006,11 @@ function InkeepStream(res, callbacks) {
   let chat_session_id = "";
   let records_cited;
   const inkeepEventParser = (data, options) => {
-    var _a, _b;
+    var _a12, _b;
     const { event } = options;
     if (event === "records_cited") {
       records_cited = JSON.parse(data);
-      (_a = callbacks == null ? void 0 : callbacks.onRecordsCited) == null ? void 0 : _a.call(callbacks, records_cited);
+      (_a12 = callbacks == null ? void 0 : callbacks.onRecordsCited) == null ? void 0 : _a12.call(callbacks, records_cited);
     }
     if (event === "message_chunk") {
       const inkeepMessageChunk = JSON.parse(data);
@@ -16399,12 +22023,12 @@ function InkeepStream(res, callbacks) {
   passThroughCallbacks = {
     ...passThroughCallbacks,
     onFinal: (completion) => {
-      var _a;
+      var _a12;
       const inkeepOnFinalMetadata = {
         chat_session_id,
         records_cited
       };
-      (_a = callbacks == null ? void 0 : callbacks.onFinal) == null ? void 0 : _a.call(callbacks, completion, inkeepOnFinalMetadata);
+      (_a12 = callbacks == null ? void 0 : callbacks.onFinal) == null ? void 0 : _a12.call(callbacks, completion, inkeepOnFinalMetadata);
     }
   };
   return AIStream(res, inkeepEventParser, passThroughCallbacks).pipeThrough(
@@ -16415,27 +22039,62 @@ function InkeepStream(res, callbacks) {
 // streams/langchain-adapter.ts
 var langchain_adapter_exports = {};
 __export(langchain_adapter_exports, {
-  toAIStream: () => toAIStream
+  toAIStream: () => toAIStream,
+  toDataStream: () => toDataStream,
+  toDataStreamResponse: () => toDataStreamResponse
 });
 function toAIStream(stream, callbacks) {
+  return toDataStream(stream, callbacks);
+}
+function toDataStream(stream, callbacks) {
   return stream.pipeThrough(
     new TransformStream({
-      transform: async (chunk, controller) => {
-        if (typeof chunk === "string") {
-          controller.enqueue(chunk);
-        } else if (typeof chunk.content === "string") {
-          controller.enqueue(chunk.content);
-        } else {
-          const content = chunk.content;
-          for (const item of content) {
-            if (item.type === "text") {
-              controller.enqueue(item.text);
-            }
-          }
+      transform: async (value, controller) => {
+        var _a12;
+        if (typeof value === "string") {
+          controller.enqueue(value);
+          return;
         }
+        if ("event" in value) {
+          if (value.event === "on_chat_model_stream") {
+            forwardAIMessageChunk(
+              (_a12 = value.data) == null ? void 0 : _a12.chunk,
+              controller
+            );
+          }
+          return;
+        }
+        forwardAIMessageChunk(value, controller);
       }
     })
   ).pipeThrough(createCallbacksTransformer(callbacks)).pipeThrough(createStreamDataTransformer());
+}
+function toDataStreamResponse(stream, options) {
+  var _a12;
+  const dataStream = toDataStream(stream, options == null ? void 0 : options.callbacks);
+  const data = options == null ? void 0 : options.data;
+  const init = options == null ? void 0 : options.init;
+  const responseStream = data ? mergeStreams(data.stream, dataStream) : dataStream;
+  return new Response(responseStream, {
+    status: (_a12 = init == null ? void 0 : init.status) != null ? _a12 : 200,
+    statusText: init == null ? void 0 : init.statusText,
+    headers: prepareResponseHeaders(init, {
+      contentType: "text/plain; charset=utf-8",
+      dataStreamVersion: "v1"
+    })
+  });
+}
+function forwardAIMessageChunk(chunk, controller) {
+  if (typeof chunk.content === "string") {
+    controller.enqueue(chunk.content);
+  } else {
+    const content = chunk.content;
+    for (const item of content) {
+      if (item.type === "text") {
+        controller.enqueue(item.text);
+      }
+    }
+  }
 }
 
 // streams/langchain-stream.ts
@@ -16499,9 +22158,9 @@ function LangChainStream(callbacks) {
 
 // streams/mistral-stream.ts
 async function* streamable4(stream) {
-  var _a, _b;
+  var _a12, _b;
   for await (const chunk of stream) {
-    const content = (_b = (_a = chunk.choices[0]) == null ? void 0 : _a.delta) == null ? void 0 : _b.content;
+    const content = (_b = (_a12 = chunk.choices[0]) == null ? void 0 : _a12.delta) == null ? void 0 : _b.content;
     if (content === void 0 || content === "") {
       continue;
     }
@@ -16514,7 +22173,7 @@ function MistralStream(response, callbacks) {
 }
 
 // streams/openai-stream.ts
-var import_ui_utils5 = __nccwpck_require__(4809);
+var import_ui_utils9 = __nccwpck_require__(6399);
 function parseOpenAIStream() {
   const extract = chunkToText();
   return (data) => extract(JSON.parse(data));
@@ -16531,10 +22190,10 @@ async function* streamable5(stream) {
         model: chunk.model,
         // not exposed by Azure API
         choices: chunk.choices.map((choice) => {
-          var _a, _b, _c, _d, _e, _f, _g;
+          var _a12, _b, _c, _d, _e, _f, _g;
           return {
             delta: {
-              content: (_a = choice.delta) == null ? void 0 : _a.content,
+              content: (_a12 = choice.delta) == null ? void 0 : _a12.content,
               function_call: (_b = choice.delta) == null ? void 0 : _b.functionCall,
               role: (_c = choice.delta) == null ? void 0 : _c.role,
               tool_calls: ((_e = (_d = choice.delta) == null ? void 0 : _d.toolCalls) == null ? void 0 : _e.length) ? (_g = (_f = choice.delta) == null ? void 0 : _f.toolCalls) == null ? void 0 : _g.map((toolCall, index) => ({
@@ -16559,9 +22218,9 @@ function chunkToText() {
   const trimStartOfStream = trimStartOfStreamHelper();
   let isFunctionStreamingIn;
   return (json) => {
-    var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n, _o, _p, _q, _r;
+    var _a12, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n, _o, _p, _q, _r;
     if (isChatCompletionChunk(json)) {
-      const delta = (_a = json.choices[0]) == null ? void 0 : _a.delta;
+      const delta = (_a12 = json.choices[0]) == null ? void 0 : _a12.delta;
       if ((_b = delta.function_call) == null ? void 0 : _b.name) {
         isFunctionStreamingIn = true;
         return {
@@ -16665,7 +22324,7 @@ function createFunctionCallTransformer(callbacks) {
   let aggregatedFinalCompletionResponse = "";
   let isFunctionStreamingIn = false;
   let functionCallMessages = callbacks[__internal__OpenAIFnMessagesSymbol] || [];
-  const decode = (0, import_ui_utils5.createChunkDecoder)();
+  const decode = (0, import_ui_utils9.createChunkDecoder)();
   return new TransformStream({
     async transform(chunk, controller) {
       const message = decode(chunk);
@@ -16679,7 +22338,7 @@ function createFunctionCallTransformer(callbacks) {
       }
       if (!isFunctionStreamingIn) {
         controller.enqueue(
-          textEncoder.encode((0, import_ui_utils5.formatStreamPart)("text", message))
+          textEncoder.encode((0, import_ui_utils9.formatStreamPart)("text", message))
         );
         return;
       } else {
@@ -16790,7 +22449,7 @@ function createFunctionCallTransformer(callbacks) {
           if (!functionResponse) {
             controller.enqueue(
               textEncoder.encode(
-                (0, import_ui_utils5.formatStreamPart)(
+                (0, import_ui_utils9.formatStreamPart)(
                   payload.function_call ? "function_call" : "tool_calls",
                   // parse to prevent double-encoding:
                   JSON.parse(aggregatedResponse)
@@ -16800,7 +22459,7 @@ function createFunctionCallTransformer(callbacks) {
             return;
           } else if (typeof functionResponse === "string") {
             controller.enqueue(
-              textEncoder.encode((0, import_ui_utils5.formatStreamPart)("text", functionResponse))
+              textEncoder.encode((0, import_ui_utils9.formatStreamPart)("text", functionResponse))
             );
             aggregatedFinalCompletionResponse = functionResponse;
             return;
@@ -16834,8 +22493,8 @@ function createFunctionCallTransformer(callbacks) {
 
 // streams/replicate-stream.ts
 async function ReplicateStream(res, cb, options) {
-  var _a;
-  const url = (_a = res.urls) == null ? void 0 : _a.stream;
+  var _a12;
+  const url = (_a12 = res.urls) == null ? void 0 : _a12.stream;
   if (!url) {
     if (res.error)
       throw new Error(res.error);
@@ -16854,98 +22513,10 @@ async function ReplicateStream(res, cb, options) {
   );
 }
 
-// core/util/merge-streams.ts
-function mergeStreams(stream1, stream2) {
-  const reader1 = stream1.getReader();
-  const reader2 = stream2.getReader();
-  let lastRead1 = void 0;
-  let lastRead2 = void 0;
-  let stream1Done = false;
-  let stream2Done = false;
-  async function readStream1(controller) {
-    try {
-      if (lastRead1 == null) {
-        lastRead1 = reader1.read();
-      }
-      const result = await lastRead1;
-      lastRead1 = void 0;
-      if (!result.done) {
-        controller.enqueue(result.value);
-      } else {
-        controller.close();
-      }
-    } catch (error) {
-      controller.error(error);
-    }
-  }
-  async function readStream2(controller) {
-    try {
-      if (lastRead2 == null) {
-        lastRead2 = reader2.read();
-      }
-      const result = await lastRead2;
-      lastRead2 = void 0;
-      if (!result.done) {
-        controller.enqueue(result.value);
-      } else {
-        controller.close();
-      }
-    } catch (error) {
-      controller.error(error);
-    }
-  }
-  return new ReadableStream({
-    async pull(controller) {
-      try {
-        if (stream1Done) {
-          readStream2(controller);
-          return;
-        }
-        if (stream2Done) {
-          readStream1(controller);
-          return;
-        }
-        if (lastRead1 == null) {
-          lastRead1 = reader1.read();
-        }
-        if (lastRead2 == null) {
-          lastRead2 = reader2.read();
-        }
-        const { result, reader } = await Promise.race([
-          lastRead1.then((result2) => ({ result: result2, reader: reader1 })),
-          lastRead2.then((result2) => ({ result: result2, reader: reader2 }))
-        ]);
-        if (!result.done) {
-          controller.enqueue(result.value);
-        }
-        if (reader === reader1) {
-          lastRead1 = void 0;
-          if (result.done) {
-            readStream2(controller);
-            stream1Done = true;
-          }
-        } else {
-          lastRead2 = void 0;
-          if (result.done) {
-            stream2Done = true;
-            readStream1(controller);
-          }
-        }
-      } catch (error) {
-        controller.error(error);
-      }
-    },
-    cancel() {
-      reader1.cancel();
-      reader2.cancel();
-    }
-  });
-}
-
 // streams/stream-to-response.ts
 function streamToResponse(res, response, init, data) {
-  var _a;
-  response.writeHead((_a = init == null ? void 0 : init.status) != null ? _a : 200, {
+  var _a12;
+  response.writeHead((_a12 = init == null ? void 0 : init.status) != null ? _a12 : 200, {
     "Content-Type": "text/plain; charset=utf-8",
     ...init == null ? void 0 : init.headers
   });
@@ -16993,7 +22564,7 @@ var nanoid = import_provider_utils7.generateId;
 
 /***/ }),
 
-/***/ 129:
+/***/ 248:
 /***/ ((module) => {
 
 "use strict";
@@ -17063,12 +22634,12 @@ function range(a, b, str) {
 
 /***/ }),
 
-/***/ 9477:
+/***/ 2626:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-var register = __nccwpck_require__(8010);
-var addHook = __nccwpck_require__(4524);
-var removeHook = __nccwpck_require__(7786);
+var register = __nccwpck_require__(4984);
+var addHook = __nccwpck_require__(8366);
+var removeHook = __nccwpck_require__(6846);
 
 // bind with array of arguments: https://stackoverflow.com/a/21792913
 var bind = Function.bind;
@@ -17131,7 +22702,7 @@ module.exports.Collection = Hook.Collection;
 
 /***/ }),
 
-/***/ 4524:
+/***/ 8366:
 /***/ ((module) => {
 
 module.exports = addHook;
@@ -17184,7 +22755,7 @@ function addHook(state, kind, name, hook) {
 
 /***/ }),
 
-/***/ 8010:
+/***/ 4984:
 /***/ ((module) => {
 
 module.exports = register;
@@ -17218,7 +22789,7 @@ function register(state, name, method, options) {
 
 /***/ }),
 
-/***/ 7786:
+/***/ 6846:
 /***/ ((module) => {
 
 module.exports = removeHook;
@@ -17244,38 +22815,10 @@ function removeHook(state, name, method) {
 
 /***/ }),
 
-/***/ 8245:
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-
-class Deprecation extends Error {
-  constructor(message) {
-    super(message); // Maintains proper stack trace (only available on V8)
-
-    /* istanbul ignore next */
-
-    if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, this.constructor);
-    }
-
-    this.name = 'Deprecation';
-  }
-
-}
-
-exports.Deprecation = Deprecation;
-
-
-/***/ }),
-
-/***/ 134:
+/***/ 3244:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-var balanced = __nccwpck_require__(129);
+var balanced = __nccwpck_require__(248);
 
 module.exports = expandTop;
 
@@ -17482,7 +23025,35 @@ function expand(str, isTop) {
 
 /***/ }),
 
-/***/ 551:
+/***/ 8861:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+class Deprecation extends Error {
+  constructor(message) {
+    super(message); // Maintains proper stack trace (only available on V8)
+
+    /* istanbul ignore next */
+
+    if (Error.captureStackTrace) {
+      Error.captureStackTrace(this, this.constructor);
+    }
+
+    this.name = 'Deprecation';
+  }
+
+}
+
+exports.Deprecation = Deprecation;
+
+
+/***/ }),
+
+/***/ 2220:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 // This file includes code which was modified from https://github.com/openai/gpt-2
@@ -17666,10 +23237,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ 5255:
+/***/ 5653:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-const { encode, decode } = __nccwpck_require__(551);
+const { encode, decode } = __nccwpck_require__(2220);
 
 module.exports = {
   encode,
@@ -17679,10 +23250,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ 363:
+/***/ 8012:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-var wrappy = __nccwpck_require__(4927)
+var wrappy = __nccwpck_require__(5738)
 module.exports = wrappy(once)
 module.exports.strict = wrappy(onceStrict)
 
@@ -17728,7 +23299,7 @@ function onceStrict (fn) {
 
 /***/ }),
 
-/***/ 3947:
+/***/ 9752:
 /***/ ((module) => {
 
 "use strict";
@@ -17862,15 +23433,15 @@ module.exports.scan = filter
 
 /***/ }),
 
-/***/ 8711:
+/***/ 5880:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-module.exports = __nccwpck_require__(665);
+module.exports = __nccwpck_require__(8802);
 
 
 /***/ }),
 
-/***/ 665:
+/***/ 8802:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -18142,32 +23713,32 @@ exports.debug = debug; // for test
 
 /***/ }),
 
-/***/ 575:
+/***/ 6484:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const Client = __nccwpck_require__(7636)
-const Dispatcher = __nccwpck_require__(1591)
-const errors = __nccwpck_require__(6474)
-const Pool = __nccwpck_require__(2641)
-const BalancedPool = __nccwpck_require__(3402)
-const Agent = __nccwpck_require__(1594)
-const util = __nccwpck_require__(5927)
+const Client = __nccwpck_require__(4444)
+const Dispatcher = __nccwpck_require__(5384)
+const errors = __nccwpck_require__(1793)
+const Pool = __nccwpck_require__(3092)
+const BalancedPool = __nccwpck_require__(3830)
+const Agent = __nccwpck_require__(7864)
+const util = __nccwpck_require__(398)
 const { InvalidArgumentError } = errors
-const api = __nccwpck_require__(2610)
-const buildConnector = __nccwpck_require__(3717)
-const MockClient = __nccwpck_require__(3641)
-const MockAgent = __nccwpck_require__(1646)
-const MockPool = __nccwpck_require__(2105)
-const mockErrors = __nccwpck_require__(3075)
-const ProxyAgent = __nccwpck_require__(2267)
-const RetryHandler = __nccwpck_require__(1110)
-const { getGlobalDispatcher, setGlobalDispatcher } = __nccwpck_require__(2850)
-const DecoratorHandler = __nccwpck_require__(4249)
-const RedirectHandler = __nccwpck_require__(7854)
-const createRedirectInterceptor = __nccwpck_require__(2351)
+const api = __nccwpck_require__(4487)
+const buildConnector = __nccwpck_require__(8594)
+const MockClient = __nccwpck_require__(3914)
+const MockAgent = __nccwpck_require__(6596)
+const MockPool = __nccwpck_require__(3666)
+const mockErrors = __nccwpck_require__(2660)
+const ProxyAgent = __nccwpck_require__(7833)
+const RetryHandler = __nccwpck_require__(5780)
+const { getGlobalDispatcher, setGlobalDispatcher } = __nccwpck_require__(1045)
+const DecoratorHandler = __nccwpck_require__(7286)
+const RedirectHandler = __nccwpck_require__(8197)
+const createRedirectInterceptor = __nccwpck_require__(6905)
 
 let hasCrypto
 try {
@@ -18250,7 +23821,7 @@ if (util.nodeMajor > 16 || (util.nodeMajor === 16 && util.nodeMinor >= 8)) {
   let fetchImpl = null
   module.exports.fetch = async function fetch (resource) {
     if (!fetchImpl) {
-      fetchImpl = (__nccwpck_require__(7836).fetch)
+      fetchImpl = (__nccwpck_require__(4681).fetch)
     }
 
     try {
@@ -18263,20 +23834,20 @@ if (util.nodeMajor > 16 || (util.nodeMajor === 16 && util.nodeMinor >= 8)) {
       throw err
     }
   }
-  module.exports.Headers = __nccwpck_require__(289).Headers
-  module.exports.Response = __nccwpck_require__(6946).Response
-  module.exports.Request = __nccwpck_require__(3515).Request
-  module.exports.FormData = __nccwpck_require__(4310).FormData
-  module.exports.File = __nccwpck_require__(1560).File
-  module.exports.FileReader = __nccwpck_require__(3745).FileReader
+  module.exports.Headers = __nccwpck_require__(5517).Headers
+  module.exports.Response = __nccwpck_require__(3522).Response
+  module.exports.Request = __nccwpck_require__(5253).Request
+  module.exports.FormData = __nccwpck_require__(3699).FormData
+  module.exports.File = __nccwpck_require__(1626).File
+  module.exports.FileReader = __nccwpck_require__(1032).FileReader
 
-  const { setGlobalOrigin, getGlobalOrigin } = __nccwpck_require__(910)
+  const { setGlobalOrigin, getGlobalOrigin } = __nccwpck_require__(2965)
 
   module.exports.setGlobalOrigin = setGlobalOrigin
   module.exports.getGlobalOrigin = getGlobalOrigin
 
-  const { CacheStorage } = __nccwpck_require__(9635)
-  const { kConstruct } = __nccwpck_require__(1153)
+  const { CacheStorage } = __nccwpck_require__(5002)
+  const { kConstruct } = __nccwpck_require__(8811)
 
   // Cache & CacheStorage are tightly coupled with fetch. Even if it may run
   // in an older version of Node, it doesn't have any use without fetch.
@@ -18284,21 +23855,21 @@ if (util.nodeMajor > 16 || (util.nodeMajor === 16 && util.nodeMinor >= 8)) {
 }
 
 if (util.nodeMajor >= 16) {
-  const { deleteCookie, getCookies, getSetCookies, setCookie } = __nccwpck_require__(8556)
+  const { deleteCookie, getCookies, getSetCookies, setCookie } = __nccwpck_require__(8128)
 
   module.exports.deleteCookie = deleteCookie
   module.exports.getCookies = getCookies
   module.exports.getSetCookies = getSetCookies
   module.exports.setCookie = setCookie
 
-  const { parseMIMEType, serializeAMimeType } = __nccwpck_require__(2788)
+  const { parseMIMEType, serializeAMimeType } = __nccwpck_require__(221)
 
   module.exports.parseMIMEType = parseMIMEType
   module.exports.serializeAMimeType = serializeAMimeType
 }
 
 if (util.nodeMajor >= 18 && hasCrypto) {
-  const { WebSocket } = __nccwpck_require__(5898)
+  const { WebSocket } = __nccwpck_require__(3915)
 
   module.exports.WebSocket = WebSocket
 }
@@ -18317,20 +23888,20 @@ module.exports.mockErrors = mockErrors
 
 /***/ }),
 
-/***/ 1594:
+/***/ 7864:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const { InvalidArgumentError } = __nccwpck_require__(6474)
-const { kClients, kRunning, kClose, kDestroy, kDispatch, kInterceptors } = __nccwpck_require__(6401)
-const DispatcherBase = __nccwpck_require__(9114)
-const Pool = __nccwpck_require__(2641)
-const Client = __nccwpck_require__(7636)
-const util = __nccwpck_require__(5927)
-const createRedirectInterceptor = __nccwpck_require__(2351)
-const { WeakRef, FinalizationRegistry } = __nccwpck_require__(3051)()
+const { InvalidArgumentError } = __nccwpck_require__(1793)
+const { kClients, kRunning, kClose, kDestroy, kDispatch, kInterceptors } = __nccwpck_require__(4034)
+const DispatcherBase = __nccwpck_require__(7072)
+const Pool = __nccwpck_require__(3092)
+const Client = __nccwpck_require__(4444)
+const util = __nccwpck_require__(398)
+const createRedirectInterceptor = __nccwpck_require__(6905)
+const { WeakRef, FinalizationRegistry } = __nccwpck_require__(141)()
 
 const kOnConnect = Symbol('onConnect')
 const kOnDisconnect = Symbol('onDisconnect')
@@ -18473,11 +24044,11 @@ module.exports = Agent
 
 /***/ }),
 
-/***/ 9126:
+/***/ 6495:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-const { addAbortListener } = __nccwpck_require__(5927)
-const { RequestAbortedError } = __nccwpck_require__(6474)
+const { addAbortListener } = __nccwpck_require__(398)
+const { RequestAbortedError } = __nccwpck_require__(1793)
 
 const kListener = Symbol('kListener')
 const kSignal = Symbol('kSignal')
@@ -18534,16 +24105,16 @@ module.exports = {
 
 /***/ }),
 
-/***/ 5892:
+/***/ 6028:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
 const { AsyncResource } = __nccwpck_require__(852)
-const { InvalidArgumentError, RequestAbortedError, SocketError } = __nccwpck_require__(6474)
-const util = __nccwpck_require__(5927)
-const { addSignal, removeSignal } = __nccwpck_require__(9126)
+const { InvalidArgumentError, RequestAbortedError, SocketError } = __nccwpck_require__(1793)
+const util = __nccwpck_require__(398)
+const { addSignal, removeSignal } = __nccwpck_require__(6495)
 
 class ConnectHandler extends AsyncResource {
   constructor (opts, callback) {
@@ -18646,7 +24217,7 @@ module.exports = connect
 
 /***/ }),
 
-/***/ 9640:
+/***/ 5857:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -18661,10 +24232,10 @@ const {
   InvalidArgumentError,
   InvalidReturnValueError,
   RequestAbortedError
-} = __nccwpck_require__(6474)
-const util = __nccwpck_require__(5927)
+} = __nccwpck_require__(1793)
+const util = __nccwpck_require__(398)
 const { AsyncResource } = __nccwpck_require__(852)
-const { addSignal, removeSignal } = __nccwpck_require__(9126)
+const { addSignal, removeSignal } = __nccwpck_require__(6495)
 const assert = __nccwpck_require__(9491)
 
 const kResume = Symbol('resume')
@@ -18903,21 +24474,21 @@ module.exports = pipeline
 
 /***/ }),
 
-/***/ 5828:
+/***/ 8349:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const Readable = __nccwpck_require__(6584)
+const Readable = __nccwpck_require__(5335)
 const {
   InvalidArgumentError,
   RequestAbortedError
-} = __nccwpck_require__(6474)
-const util = __nccwpck_require__(5927)
-const { getResolveErrorBodyCallback } = __nccwpck_require__(7289)
+} = __nccwpck_require__(1793)
+const util = __nccwpck_require__(398)
+const { getResolveErrorBodyCallback } = __nccwpck_require__(8338)
 const { AsyncResource } = __nccwpck_require__(852)
-const { addSignal, removeSignal } = __nccwpck_require__(9126)
+const { addSignal, removeSignal } = __nccwpck_require__(6495)
 
 class RequestHandler extends AsyncResource {
   constructor (opts, callback) {
@@ -19091,7 +24662,7 @@ module.exports.RequestHandler = RequestHandler
 
 /***/ }),
 
-/***/ 5691:
+/***/ 9191:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -19102,11 +24673,11 @@ const {
   InvalidArgumentError,
   InvalidReturnValueError,
   RequestAbortedError
-} = __nccwpck_require__(6474)
-const util = __nccwpck_require__(5927)
-const { getResolveErrorBodyCallback } = __nccwpck_require__(7289)
+} = __nccwpck_require__(1793)
+const util = __nccwpck_require__(398)
+const { getResolveErrorBodyCallback } = __nccwpck_require__(8338)
 const { AsyncResource } = __nccwpck_require__(852)
-const { addSignal, removeSignal } = __nccwpck_require__(9126)
+const { addSignal, removeSignal } = __nccwpck_require__(6495)
 
 class StreamHandler extends AsyncResource {
   constructor (opts, factory, callback) {
@@ -19319,16 +24890,16 @@ module.exports = stream
 
 /***/ }),
 
-/***/ 6988:
+/***/ 4630:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const { InvalidArgumentError, RequestAbortedError, SocketError } = __nccwpck_require__(6474)
+const { InvalidArgumentError, RequestAbortedError, SocketError } = __nccwpck_require__(1793)
 const { AsyncResource } = __nccwpck_require__(852)
-const util = __nccwpck_require__(5927)
-const { addSignal, removeSignal } = __nccwpck_require__(9126)
+const util = __nccwpck_require__(398)
+const { addSignal, removeSignal } = __nccwpck_require__(6495)
 const assert = __nccwpck_require__(9491)
 
 class UpgradeHandler extends AsyncResource {
@@ -19432,22 +25003,22 @@ module.exports = upgrade
 
 /***/ }),
 
-/***/ 2610:
+/***/ 4487:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-module.exports.request = __nccwpck_require__(5828)
-module.exports.stream = __nccwpck_require__(5691)
-module.exports.pipeline = __nccwpck_require__(9640)
-module.exports.upgrade = __nccwpck_require__(6988)
-module.exports.connect = __nccwpck_require__(5892)
+module.exports.request = __nccwpck_require__(8349)
+module.exports.stream = __nccwpck_require__(9191)
+module.exports.pipeline = __nccwpck_require__(5857)
+module.exports.upgrade = __nccwpck_require__(4630)
+module.exports.connect = __nccwpck_require__(6028)
 
 
 /***/ }),
 
-/***/ 6584:
+/***/ 5335:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -19457,9 +25028,9 @@ module.exports.connect = __nccwpck_require__(5892)
 
 const assert = __nccwpck_require__(9491)
 const { Readable } = __nccwpck_require__(2781)
-const { RequestAbortedError, NotSupportedError, InvalidArgumentError } = __nccwpck_require__(6474)
-const util = __nccwpck_require__(5927)
-const { ReadableStreamFrom, toUSVString } = __nccwpck_require__(5927)
+const { RequestAbortedError, NotSupportedError, InvalidArgumentError } = __nccwpck_require__(1793)
+const util = __nccwpck_require__(398)
+const { ReadableStreamFrom, toUSVString } = __nccwpck_require__(398)
 
 let Blob
 
@@ -19777,14 +25348,14 @@ function consumeFinish (consume, err) {
 
 /***/ }),
 
-/***/ 7289:
+/***/ 8338:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 const assert = __nccwpck_require__(9491)
 const {
   ResponseStatusCodeError
-} = __nccwpck_require__(6474)
-const { toUSVString } = __nccwpck_require__(5927)
+} = __nccwpck_require__(1793)
+const { toUSVString } = __nccwpck_require__(398)
 
 async function getResolveErrorBodyCallback ({ callback, body, contentType, statusCode, statusMessage, headers }) {
   assert(body)
@@ -19830,7 +25401,7 @@ module.exports = { getResolveErrorBodyCallback }
 
 /***/ }),
 
-/***/ 3402:
+/***/ 3830:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -19839,7 +25410,7 @@ module.exports = { getResolveErrorBodyCallback }
 const {
   BalancedPoolMissingUpstreamError,
   InvalidArgumentError
-} = __nccwpck_require__(6474)
+} = __nccwpck_require__(1793)
 const {
   PoolBase,
   kClients,
@@ -19847,10 +25418,10 @@ const {
   kAddClient,
   kRemoveClient,
   kGetDispatcher
-} = __nccwpck_require__(7742)
-const Pool = __nccwpck_require__(2641)
-const { kUrl, kInterceptors } = __nccwpck_require__(6401)
-const { parseOrigin } = __nccwpck_require__(5927)
+} = __nccwpck_require__(6636)
+const Pool = __nccwpck_require__(3092)
+const { kUrl, kInterceptors } = __nccwpck_require__(4034)
+const { parseOrigin } = __nccwpck_require__(398)
 const kFactory = Symbol('factory')
 
 const kOptions = Symbol('options')
@@ -20028,24 +25599,24 @@ module.exports = BalancedPool
 
 /***/ }),
 
-/***/ 591:
+/***/ 3293:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const { kConstruct } = __nccwpck_require__(1153)
-const { urlEquals, fieldValues: getFieldValues } = __nccwpck_require__(5282)
-const { kEnumerableProperty, isDisturbed } = __nccwpck_require__(5927)
-const { kHeadersList } = __nccwpck_require__(6401)
-const { webidl } = __nccwpck_require__(8197)
-const { Response, cloneResponse } = __nccwpck_require__(6946)
-const { Request } = __nccwpck_require__(3515)
-const { kState, kHeaders, kGuard, kRealm } = __nccwpck_require__(5960)
-const { fetching } = __nccwpck_require__(7836)
-const { urlIsHttpHttpsScheme, createDeferredPromise, readAllBytes } = __nccwpck_require__(8444)
+const { kConstruct } = __nccwpck_require__(8811)
+const { urlEquals, fieldValues: getFieldValues } = __nccwpck_require__(3851)
+const { kEnumerableProperty, isDisturbed } = __nccwpck_require__(398)
+const { kHeadersList } = __nccwpck_require__(4034)
+const { webidl } = __nccwpck_require__(5182)
+const { Response, cloneResponse } = __nccwpck_require__(3522)
+const { Request } = __nccwpck_require__(5253)
+const { kState, kHeaders, kGuard, kRealm } = __nccwpck_require__(7134)
+const { fetching } = __nccwpck_require__(4681)
+const { urlIsHttpHttpsScheme, createDeferredPromise, readAllBytes } = __nccwpck_require__(9355)
 const assert = __nccwpck_require__(9491)
-const { getGlobalDispatcher } = __nccwpck_require__(2850)
+const { getGlobalDispatcher } = __nccwpck_require__(1045)
 
 /**
  * @see https://w3c.github.io/ServiceWorker/#dfn-cache-batch-operation
@@ -20874,16 +26445,16 @@ module.exports = {
 
 /***/ }),
 
-/***/ 9635:
+/***/ 5002:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const { kConstruct } = __nccwpck_require__(1153)
-const { Cache } = __nccwpck_require__(591)
-const { webidl } = __nccwpck_require__(8197)
-const { kEnumerableProperty } = __nccwpck_require__(5927)
+const { kConstruct } = __nccwpck_require__(8811)
+const { Cache } = __nccwpck_require__(3293)
+const { webidl } = __nccwpck_require__(5182)
+const { kEnumerableProperty } = __nccwpck_require__(398)
 
 class CacheStorage {
   /**
@@ -21026,28 +26597,28 @@ module.exports = {
 
 /***/ }),
 
-/***/ 1153:
+/***/ 8811:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
 module.exports = {
-  kConstruct: (__nccwpck_require__(6401).kConstruct)
+  kConstruct: (__nccwpck_require__(4034).kConstruct)
 }
 
 
 /***/ }),
 
-/***/ 5282:
+/***/ 3851:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
 const assert = __nccwpck_require__(9491)
-const { URLSerializer } = __nccwpck_require__(2788)
-const { isValidHeaderName } = __nccwpck_require__(8444)
+const { URLSerializer } = __nccwpck_require__(221)
+const { isValidHeaderName } = __nccwpck_require__(9355)
 
 /**
  * @see https://url.spec.whatwg.org/#concept-url-equals
@@ -21096,7 +26667,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 7636:
+/***/ 4444:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -21110,10 +26681,10 @@ const assert = __nccwpck_require__(9491)
 const net = __nccwpck_require__(1808)
 const http = __nccwpck_require__(3685)
 const { pipeline } = __nccwpck_require__(2781)
-const util = __nccwpck_require__(5927)
-const timers = __nccwpck_require__(1440)
-const Request = __nccwpck_require__(8994)
-const DispatcherBase = __nccwpck_require__(9114)
+const util = __nccwpck_require__(398)
+const timers = __nccwpck_require__(5142)
+const Request = __nccwpck_require__(4008)
+const DispatcherBase = __nccwpck_require__(7072)
 const {
   RequestContentLengthMismatchError,
   ResponseContentLengthMismatchError,
@@ -21127,8 +26698,8 @@ const {
   HTTPParserError,
   ResponseExceededMaxSizeError,
   ClientDestroyedError
-} = __nccwpck_require__(6474)
-const buildConnector = __nccwpck_require__(3717)
+} = __nccwpck_require__(1793)
+const buildConnector = __nccwpck_require__(8594)
 const {
   kUrl,
   kReset,
@@ -21180,7 +26751,7 @@ const {
   kHTTP2BuildRequest,
   kHTTP2CopyHeaders,
   kHTTP1BuildRequest
-} = __nccwpck_require__(6401)
+} = __nccwpck_require__(4034)
 
 /** @type {import('http2')} */
 let http2
@@ -21586,16 +27157,16 @@ function onHTTP2GoAway (code) {
   resume(client)
 }
 
-const constants = __nccwpck_require__(7280)
-const createRedirectInterceptor = __nccwpck_require__(2351)
+const constants = __nccwpck_require__(9395)
+const createRedirectInterceptor = __nccwpck_require__(6905)
 const EMPTY_BUF = Buffer.alloc(0)
 
 async function lazyllhttp () {
-  const llhttpWasmData = process.env.JEST_WORKER_ID ? __nccwpck_require__(711) : undefined
+  const llhttpWasmData = process.env.JEST_WORKER_ID ? __nccwpck_require__(3321) : undefined
 
   let mod
   try {
-    mod = await WebAssembly.compile(Buffer.from(__nccwpck_require__(345), 'base64'))
+    mod = await WebAssembly.compile(Buffer.from(__nccwpck_require__(7925), 'base64'))
   } catch (e) {
     /* istanbul ignore next */
 
@@ -21603,7 +27174,7 @@ async function lazyllhttp () {
     // being enabled, but the occurring of this other error
     // * https://github.com/emscripten-core/emscripten/issues/11495
     // got me to remove that check to avoid breaking Node 12.
-    mod = await WebAssembly.compile(Buffer.from(llhttpWasmData || __nccwpck_require__(711), 'base64'))
+    mod = await WebAssembly.compile(Buffer.from(llhttpWasmData || __nccwpck_require__(3321), 'base64'))
   }
 
   return await WebAssembly.instantiate(mod, {
@@ -23387,7 +28958,7 @@ module.exports = Client
 
 /***/ }),
 
-/***/ 3051:
+/***/ 141:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -23395,7 +28966,7 @@ module.exports = Client
 
 /* istanbul ignore file: only for Node 12 */
 
-const { kConnected, kSize } = __nccwpck_require__(6401)
+const { kConnected, kSize } = __nccwpck_require__(4034)
 
 class CompatWeakRef {
   constructor (value) {
@@ -23443,7 +29014,7 @@ module.exports = function () {
 
 /***/ }),
 
-/***/ 9930:
+/***/ 6030:
 /***/ ((module) => {
 
 "use strict";
@@ -23463,16 +29034,16 @@ module.exports = {
 
 /***/ }),
 
-/***/ 8556:
+/***/ 8128:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const { parseSetCookie } = __nccwpck_require__(8834)
-const { stringify, getHeadersList } = __nccwpck_require__(5141)
-const { webidl } = __nccwpck_require__(8197)
-const { Headers } = __nccwpck_require__(289)
+const { parseSetCookie } = __nccwpck_require__(6585)
+const { stringify, getHeadersList } = __nccwpck_require__(6572)
+const { webidl } = __nccwpck_require__(5182)
+const { Headers } = __nccwpck_require__(5517)
 
 /**
  * @typedef {Object} Cookie
@@ -23655,15 +29226,15 @@ module.exports = {
 
 /***/ }),
 
-/***/ 8834:
+/***/ 6585:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const { maxNameValuePairSize, maxAttributeValueSize } = __nccwpck_require__(9930)
-const { isCTLExcludingHtab } = __nccwpck_require__(5141)
-const { collectASequenceOfCodePointsFast } = __nccwpck_require__(2788)
+const { maxNameValuePairSize, maxAttributeValueSize } = __nccwpck_require__(6030)
+const { isCTLExcludingHtab } = __nccwpck_require__(6572)
+const { collectASequenceOfCodePointsFast } = __nccwpck_require__(221)
 const assert = __nccwpck_require__(9491)
 
 /**
@@ -23980,14 +29551,14 @@ module.exports = {
 
 /***/ }),
 
-/***/ 5141:
+/***/ 6572:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
 const assert = __nccwpck_require__(9491)
-const { kHeadersList } = __nccwpck_require__(6401)
+const { kHeadersList } = __nccwpck_require__(4034)
 
 function isCTLExcludingHtab (value) {
   if (value.length === 0) {
@@ -24279,7 +29850,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3717:
+/***/ 8594:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -24287,8 +29858,8 @@ module.exports = {
 
 const net = __nccwpck_require__(1808)
 const assert = __nccwpck_require__(9491)
-const util = __nccwpck_require__(5927)
-const { InvalidArgumentError, ConnectTimeoutError } = __nccwpck_require__(6474)
+const util = __nccwpck_require__(398)
+const { InvalidArgumentError, ConnectTimeoutError } = __nccwpck_require__(1793)
 
 let tls // include tls conditionally since it is not always available
 
@@ -24476,7 +30047,7 @@ module.exports = buildConnector
 
 /***/ }),
 
-/***/ 1164:
+/***/ 2381:
 /***/ ((module) => {
 
 "use strict";
@@ -24602,7 +30173,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 6474:
+/***/ 1793:
 /***/ ((module) => {
 
 "use strict";
@@ -24840,7 +30411,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 8994:
+/***/ 4008:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -24849,10 +30420,10 @@ module.exports = {
 const {
   InvalidArgumentError,
   NotSupportedError
-} = __nccwpck_require__(6474)
+} = __nccwpck_require__(1793)
 const assert = __nccwpck_require__(9491)
-const { kHTTP2BuildRequest, kHTTP2CopyHeaders, kHTTP1BuildRequest } = __nccwpck_require__(6401)
-const util = __nccwpck_require__(5927)
+const { kHTTP2BuildRequest, kHTTP2CopyHeaders, kHTTP1BuildRequest } = __nccwpck_require__(4034)
+const util = __nccwpck_require__(398)
 
 // tokenRegExp and headerCharRegex have been lifted from
 // https://github.com/nodejs/node/blob/main/lib/_http_common.js
@@ -25047,7 +30618,7 @@ class Request {
       }
 
       if (!extractBody) {
-        extractBody = (__nccwpck_require__(6012).extractBody)
+        extractBody = (__nccwpck_require__(1249).extractBody)
       }
 
       const [bodyStream, contentType] = extractBody(body)
@@ -25347,7 +30918,7 @@ module.exports = Request
 
 /***/ }),
 
-/***/ 6401:
+/***/ 4034:
 /***/ ((module) => {
 
 module.exports = {
@@ -25417,22 +30988,22 @@ module.exports = {
 
 /***/ }),
 
-/***/ 5927:
+/***/ 398:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
 const assert = __nccwpck_require__(9491)
-const { kDestroyed, kBodyUsed } = __nccwpck_require__(6401)
+const { kDestroyed, kBodyUsed } = __nccwpck_require__(4034)
 const { IncomingMessage } = __nccwpck_require__(3685)
 const stream = __nccwpck_require__(2781)
 const net = __nccwpck_require__(1808)
-const { InvalidArgumentError } = __nccwpck_require__(6474)
+const { InvalidArgumentError } = __nccwpck_require__(1793)
 const { Blob } = __nccwpck_require__(4300)
 const nodeUtil = __nccwpck_require__(3837)
 const { stringify } = __nccwpck_require__(3477)
-const { headerNameLowerCasedRecord } = __nccwpck_require__(1164)
+const { headerNameLowerCasedRecord } = __nccwpck_require__(2381)
 
 const [nodeMajor, nodeMinor] = process.versions.node.split('.').map(v => Number(v))
 
@@ -25947,19 +31518,19 @@ module.exports = {
 
 /***/ }),
 
-/***/ 9114:
+/***/ 7072:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const Dispatcher = __nccwpck_require__(1591)
+const Dispatcher = __nccwpck_require__(5384)
 const {
   ClientDestroyedError,
   ClientClosedError,
   InvalidArgumentError
-} = __nccwpck_require__(6474)
-const { kDestroy, kClose, kDispatch, kInterceptors } = __nccwpck_require__(6401)
+} = __nccwpck_require__(1793)
+const { kDestroy, kClose, kDispatch, kInterceptors } = __nccwpck_require__(4034)
 
 const kDestroyed = Symbol('destroyed')
 const kClosed = Symbol('closed')
@@ -26147,7 +31718,7 @@ module.exports = DispatcherBase
 
 /***/ }),
 
-/***/ 1591:
+/***/ 5384:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26174,14 +31745,14 @@ module.exports = Dispatcher
 
 /***/ }),
 
-/***/ 6012:
+/***/ 1249:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const Busboy = __nccwpck_require__(843)
-const util = __nccwpck_require__(5927)
+const Busboy = __nccwpck_require__(7008)
+const util = __nccwpck_require__(398)
 const {
   ReadableStreamFrom,
   isBlobLike,
@@ -26189,18 +31760,18 @@ const {
   readableStreamClose,
   createDeferredPromise,
   fullyReadBody
-} = __nccwpck_require__(8444)
-const { FormData } = __nccwpck_require__(4310)
-const { kState } = __nccwpck_require__(5960)
-const { webidl } = __nccwpck_require__(8197)
-const { DOMException, structuredClone } = __nccwpck_require__(5998)
+} = __nccwpck_require__(9355)
+const { FormData } = __nccwpck_require__(3699)
+const { kState } = __nccwpck_require__(7134)
+const { webidl } = __nccwpck_require__(5182)
+const { DOMException, structuredClone } = __nccwpck_require__(6418)
 const { Blob, File: NativeFile } = __nccwpck_require__(4300)
-const { kBodyUsed } = __nccwpck_require__(6401)
+const { kBodyUsed } = __nccwpck_require__(4034)
 const assert = __nccwpck_require__(9491)
-const { isErrored } = __nccwpck_require__(5927)
+const { isErrored } = __nccwpck_require__(398)
 const { isUint8Array, isArrayBuffer } = __nccwpck_require__(9830)
-const { File: UndiciFile } = __nccwpck_require__(1560)
-const { parseMIMEType, serializeAMimeType } = __nccwpck_require__(2788)
+const { File: UndiciFile } = __nccwpck_require__(1626)
+const { parseMIMEType, serializeAMimeType } = __nccwpck_require__(221)
 
 let ReadableStream = globalThis.ReadableStream
 
@@ -26787,7 +32358,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 5998:
+/***/ 6418:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26946,12 +32517,12 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2788:
+/***/ 221:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 const assert = __nccwpck_require__(9491)
 const { atob } = __nccwpck_require__(4300)
-const { isomorphicDecode } = __nccwpck_require__(8444)
+const { isomorphicDecode } = __nccwpck_require__(9355)
 
 const encoder = new TextEncoder()
 
@@ -27580,7 +33151,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 1560:
+/***/ 1626:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -27588,11 +33159,11 @@ module.exports = {
 
 const { Blob, File: NativeFile } = __nccwpck_require__(4300)
 const { types } = __nccwpck_require__(3837)
-const { kState } = __nccwpck_require__(5960)
-const { isBlobLike } = __nccwpck_require__(8444)
-const { webidl } = __nccwpck_require__(8197)
-const { parseMIMEType, serializeAMimeType } = __nccwpck_require__(2788)
-const { kEnumerableProperty } = __nccwpck_require__(5927)
+const { kState } = __nccwpck_require__(7134)
+const { isBlobLike } = __nccwpck_require__(9355)
+const { webidl } = __nccwpck_require__(5182)
+const { parseMIMEType, serializeAMimeType } = __nccwpck_require__(221)
+const { kEnumerableProperty } = __nccwpck_require__(398)
 const encoder = new TextEncoder()
 
 class File extends Blob {
@@ -27932,16 +33503,16 @@ module.exports = { File, FileLike, isFileLike }
 
 /***/ }),
 
-/***/ 4310:
+/***/ 3699:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const { isBlobLike, toUSVString, makeIterator } = __nccwpck_require__(8444)
-const { kState } = __nccwpck_require__(5960)
-const { File: UndiciFile, FileLike, isFileLike } = __nccwpck_require__(1560)
-const { webidl } = __nccwpck_require__(8197)
+const { isBlobLike, toUSVString, makeIterator } = __nccwpck_require__(9355)
+const { kState } = __nccwpck_require__(7134)
+const { File: UndiciFile, FileLike, isFileLike } = __nccwpck_require__(1626)
+const { webidl } = __nccwpck_require__(5182)
 const { Blob, File: NativeFile } = __nccwpck_require__(4300)
 
 /** @type {globalThis['File']} */
@@ -28205,7 +33776,7 @@ module.exports = { FormData }
 
 /***/ }),
 
-/***/ 910:
+/***/ 2965:
 /***/ ((module) => {
 
 "use strict";
@@ -28253,7 +33824,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 289:
+/***/ 5517:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -28261,15 +33832,15 @@ module.exports = {
 
 
 
-const { kHeadersList, kConstruct } = __nccwpck_require__(6401)
-const { kGuard } = __nccwpck_require__(5960)
-const { kEnumerableProperty } = __nccwpck_require__(5927)
+const { kHeadersList, kConstruct } = __nccwpck_require__(4034)
+const { kGuard } = __nccwpck_require__(7134)
+const { kEnumerableProperty } = __nccwpck_require__(398)
 const {
   makeIterator,
   isValidHeaderName,
   isValidHeaderValue
-} = __nccwpck_require__(8444)
-const { webidl } = __nccwpck_require__(8197)
+} = __nccwpck_require__(9355)
+const { webidl } = __nccwpck_require__(5182)
 const assert = __nccwpck_require__(9491)
 
 const kHeadersMap = Symbol('headers map')
@@ -28850,7 +34421,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 7836:
+/***/ 4681:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -28864,9 +34435,9 @@ const {
   makeAppropriateNetworkError,
   filterResponse,
   makeResponse
-} = __nccwpck_require__(6946)
-const { Headers } = __nccwpck_require__(289)
-const { Request, makeRequest } = __nccwpck_require__(3515)
+} = __nccwpck_require__(3522)
+const { Headers } = __nccwpck_require__(5517)
+const { Request, makeRequest } = __nccwpck_require__(5253)
 const zlib = __nccwpck_require__(9796)
 const {
   bytesMatch,
@@ -28897,10 +34468,10 @@ const {
   urlIsLocal,
   urlIsHttpHttpsScheme,
   urlHasHttpsScheme
-} = __nccwpck_require__(8444)
-const { kState, kHeaders, kGuard, kRealm } = __nccwpck_require__(5960)
+} = __nccwpck_require__(9355)
+const { kState, kHeaders, kGuard, kRealm } = __nccwpck_require__(7134)
 const assert = __nccwpck_require__(9491)
-const { safelyExtractBody } = __nccwpck_require__(6012)
+const { safelyExtractBody } = __nccwpck_require__(1249)
 const {
   redirectStatusSet,
   nullBodyStatus,
@@ -28908,15 +34479,15 @@ const {
   requestBodyHeader,
   subresourceSet,
   DOMException
-} = __nccwpck_require__(5998)
-const { kHeadersList } = __nccwpck_require__(6401)
+} = __nccwpck_require__(6418)
+const { kHeadersList } = __nccwpck_require__(4034)
 const EE = __nccwpck_require__(2361)
 const { Readable, pipeline } = __nccwpck_require__(2781)
-const { addAbortListener, isErrored, isReadable, nodeMajor, nodeMinor } = __nccwpck_require__(5927)
-const { dataURLProcessor, serializeAMimeType } = __nccwpck_require__(2788)
+const { addAbortListener, isErrored, isReadable, nodeMajor, nodeMinor } = __nccwpck_require__(398)
+const { dataURLProcessor, serializeAMimeType } = __nccwpck_require__(221)
 const { TransformStream } = __nccwpck_require__(5356)
-const { getGlobalDispatcher } = __nccwpck_require__(2850)
-const { webidl } = __nccwpck_require__(8197)
+const { getGlobalDispatcher } = __nccwpck_require__(1045)
+const { webidl } = __nccwpck_require__(5182)
 const { STATUS_CODES } = __nccwpck_require__(3685)
 const GET_OR_HEAD = ['GET', 'HEAD']
 
@@ -31006,7 +36577,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3515:
+/***/ 5253:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -31014,17 +36585,17 @@ module.exports = {
 
 
 
-const { extractBody, mixinBody, cloneBody } = __nccwpck_require__(6012)
-const { Headers, fill: fillHeaders, HeadersList } = __nccwpck_require__(289)
-const { FinalizationRegistry } = __nccwpck_require__(3051)()
-const util = __nccwpck_require__(5927)
+const { extractBody, mixinBody, cloneBody } = __nccwpck_require__(1249)
+const { Headers, fill: fillHeaders, HeadersList } = __nccwpck_require__(5517)
+const { FinalizationRegistry } = __nccwpck_require__(141)()
+const util = __nccwpck_require__(398)
 const {
   isValidHTTPToken,
   sameOrigin,
   normalizeMethod,
   makePolicyContainer,
   normalizeMethodRecord
-} = __nccwpck_require__(8444)
+} = __nccwpck_require__(9355)
 const {
   forbiddenMethodsSet,
   corsSafeListedMethodsSet,
@@ -31034,13 +36605,13 @@ const {
   requestCredentials,
   requestCache,
   requestDuplex
-} = __nccwpck_require__(5998)
+} = __nccwpck_require__(6418)
 const { kEnumerableProperty } = util
-const { kHeaders, kSignal, kState, kGuard, kRealm } = __nccwpck_require__(5960)
-const { webidl } = __nccwpck_require__(8197)
-const { getGlobalOrigin } = __nccwpck_require__(910)
-const { URLSerializer } = __nccwpck_require__(2788)
-const { kHeadersList, kConstruct } = __nccwpck_require__(6401)
+const { kHeaders, kSignal, kState, kGuard, kRealm } = __nccwpck_require__(7134)
+const { webidl } = __nccwpck_require__(5182)
+const { getGlobalOrigin } = __nccwpck_require__(2965)
+const { URLSerializer } = __nccwpck_require__(221)
+const { kHeadersList, kConstruct } = __nccwpck_require__(4034)
 const assert = __nccwpck_require__(9491)
 const { getMaxListeners, setMaxListeners, getEventListeners, defaultMaxListeners } = __nccwpck_require__(2361)
 
@@ -31960,15 +37531,15 @@ module.exports = { Request, makeRequest }
 
 /***/ }),
 
-/***/ 6946:
+/***/ 3522:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const { Headers, HeadersList, fill } = __nccwpck_require__(289)
-const { extractBody, cloneBody, mixinBody } = __nccwpck_require__(6012)
-const util = __nccwpck_require__(5927)
+const { Headers, HeadersList, fill } = __nccwpck_require__(5517)
+const { extractBody, cloneBody, mixinBody } = __nccwpck_require__(1249)
+const util = __nccwpck_require__(398)
 const { kEnumerableProperty } = util
 const {
   isValidReasonPhrase,
@@ -31978,18 +37549,18 @@ const {
   serializeJavascriptValueToJSONString,
   isErrorLike,
   isomorphicEncode
-} = __nccwpck_require__(8444)
+} = __nccwpck_require__(9355)
 const {
   redirectStatusSet,
   nullBodyStatus,
   DOMException
-} = __nccwpck_require__(5998)
-const { kState, kHeaders, kGuard, kRealm } = __nccwpck_require__(5960)
-const { webidl } = __nccwpck_require__(8197)
-const { FormData } = __nccwpck_require__(4310)
-const { getGlobalOrigin } = __nccwpck_require__(910)
-const { URLSerializer } = __nccwpck_require__(2788)
-const { kHeadersList, kConstruct } = __nccwpck_require__(6401)
+} = __nccwpck_require__(6418)
+const { kState, kHeaders, kGuard, kRealm } = __nccwpck_require__(7134)
+const { webidl } = __nccwpck_require__(5182)
+const { FormData } = __nccwpck_require__(3699)
+const { getGlobalOrigin } = __nccwpck_require__(2965)
+const { URLSerializer } = __nccwpck_require__(221)
+const { kHeadersList, kConstruct } = __nccwpck_require__(4034)
 const assert = __nccwpck_require__(9491)
 const { types } = __nccwpck_require__(3837)
 
@@ -32539,7 +38110,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 5960:
+/***/ 7134:
 /***/ ((module) => {
 
 "use strict";
@@ -32557,16 +38128,16 @@ module.exports = {
 
 /***/ }),
 
-/***/ 8444:
+/***/ 9355:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const { redirectStatusSet, referrerPolicySet: referrerPolicyTokens, badPortsSet } = __nccwpck_require__(5998)
-const { getGlobalOrigin } = __nccwpck_require__(910)
+const { redirectStatusSet, referrerPolicySet: referrerPolicyTokens, badPortsSet } = __nccwpck_require__(6418)
+const { getGlobalOrigin } = __nccwpck_require__(2965)
 const { performance } = __nccwpck_require__(4074)
-const { isBlobLike, toUSVString, ReadableStreamFrom } = __nccwpck_require__(5927)
+const { isBlobLike, toUSVString, ReadableStreamFrom } = __nccwpck_require__(398)
 const assert = __nccwpck_require__(9491)
 const { isUint8Array } = __nccwpck_require__(9830)
 
@@ -33709,14 +39280,14 @@ module.exports = {
 
 /***/ }),
 
-/***/ 8197:
+/***/ 5182:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
 const { types } = __nccwpck_require__(3837)
-const { hasOwn, toUSVString } = __nccwpck_require__(8444)
+const { hasOwn, toUSVString } = __nccwpck_require__(9355)
 
 /** @type {import('../../types/webidl').Webidl} */
 const webidl = {}
@@ -34363,7 +39934,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3821:
+/***/ 1111:
 /***/ ((module) => {
 
 "use strict";
@@ -34661,7 +40232,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3745:
+/***/ 1032:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -34671,16 +40242,16 @@ const {
   staticPropertyDescriptors,
   readOperation,
   fireAProgressEvent
-} = __nccwpck_require__(8297)
+} = __nccwpck_require__(3229)
 const {
   kState,
   kError,
   kResult,
   kEvents,
   kAborted
-} = __nccwpck_require__(5489)
-const { webidl } = __nccwpck_require__(8197)
-const { kEnumerableProperty } = __nccwpck_require__(5927)
+} = __nccwpck_require__(5693)
+const { webidl } = __nccwpck_require__(5182)
+const { kEnumerableProperty } = __nccwpck_require__(398)
 
 class FileReader extends EventTarget {
   constructor () {
@@ -35013,13 +40584,13 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3607:
+/***/ 4041:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const { webidl } = __nccwpck_require__(8197)
+const { webidl } = __nccwpck_require__(5182)
 
 const kState = Symbol('ProgressEvent state')
 
@@ -35099,7 +40670,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 5489:
+/***/ 5693:
 /***/ ((module) => {
 
 "use strict";
@@ -35117,7 +40688,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 8297:
+/***/ 3229:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -35129,11 +40700,11 @@ const {
   kResult,
   kAborted,
   kLastProgressEventFired
-} = __nccwpck_require__(5489)
-const { ProgressEvent } = __nccwpck_require__(3607)
-const { getEncoding } = __nccwpck_require__(3821)
-const { DOMException } = __nccwpck_require__(5998)
-const { serializeAMimeType, parseMIMEType } = __nccwpck_require__(2788)
+} = __nccwpck_require__(5693)
+const { ProgressEvent } = __nccwpck_require__(4041)
+const { getEncoding } = __nccwpck_require__(1111)
+const { DOMException } = __nccwpck_require__(6418)
+const { serializeAMimeType, parseMIMEType } = __nccwpck_require__(221)
 const { types } = __nccwpck_require__(3837)
 const { StringDecoder } = __nccwpck_require__(1576)
 const { btoa } = __nccwpck_require__(4300)
@@ -35517,7 +41088,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2850:
+/***/ 1045:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -35526,8 +41097,8 @@ module.exports = {
 // We include a version number for the Dispatcher API. In case of breaking changes,
 // this version number must be increased to avoid conflicts.
 const globalDispatcher = Symbol.for('undici.globalDispatcher.1')
-const { InvalidArgumentError } = __nccwpck_require__(6474)
-const Agent = __nccwpck_require__(1594)
+const { InvalidArgumentError } = __nccwpck_require__(1793)
+const Agent = __nccwpck_require__(7864)
 
 if (getGlobalDispatcher() === undefined) {
   setGlobalDispatcher(new Agent())
@@ -35557,7 +41128,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4249:
+/***/ 7286:
 /***/ ((module) => {
 
 "use strict";
@@ -35600,16 +41171,16 @@ module.exports = class DecoratorHandler {
 
 /***/ }),
 
-/***/ 7854:
+/***/ 8197:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const util = __nccwpck_require__(5927)
-const { kBodyUsed } = __nccwpck_require__(6401)
+const util = __nccwpck_require__(398)
+const { kBodyUsed } = __nccwpck_require__(4034)
 const assert = __nccwpck_require__(9491)
-const { InvalidArgumentError } = __nccwpck_require__(6474)
+const { InvalidArgumentError } = __nccwpck_require__(1793)
 const EE = __nccwpck_require__(2361)
 
 const redirectableStatusCodes = [300, 301, 302, 303, 307, 308]
@@ -35829,14 +41400,14 @@ module.exports = RedirectHandler
 
 /***/ }),
 
-/***/ 1110:
+/***/ 5780:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 const assert = __nccwpck_require__(9491)
 
-const { kRetryHandlerDefaultRetry } = __nccwpck_require__(6401)
-const { RequestRetryError } = __nccwpck_require__(6474)
-const { isDisturbed, parseHeaders, parseRangeHeader } = __nccwpck_require__(5927)
+const { kRetryHandlerDefaultRetry } = __nccwpck_require__(4034)
+const { RequestRetryError } = __nccwpck_require__(1793)
+const { isDisturbed, parseHeaders, parseRangeHeader } = __nccwpck_require__(398)
 
 function calculateRetryAfterHeader (retryAfter) {
   const current = Date.now()
@@ -36172,13 +41743,13 @@ module.exports = RetryHandler
 
 /***/ }),
 
-/***/ 2351:
+/***/ 6905:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const RedirectHandler = __nccwpck_require__(7854)
+const RedirectHandler = __nccwpck_require__(8197)
 
 function createRedirectInterceptor ({ maxRedirections: defaultMaxRedirections }) {
   return (dispatch) => {
@@ -36201,14 +41772,14 @@ module.exports = createRedirectInterceptor
 
 /***/ }),
 
-/***/ 7280:
+/***/ 9395:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SPECIAL_HEADERS = exports.HEADER_STATE = exports.MINOR = exports.MAJOR = exports.CONNECTION_TOKEN_CHARS = exports.HEADER_CHARS = exports.TOKEN = exports.STRICT_TOKEN = exports.HEX = exports.URL_CHAR = exports.STRICT_URL_CHAR = exports.USERINFO_CHARS = exports.MARK = exports.ALPHANUM = exports.NUM = exports.HEX_MAP = exports.NUM_MAP = exports.ALPHA = exports.FINISH = exports.H_METHOD_MAP = exports.METHOD_MAP = exports.METHODS_RTSP = exports.METHODS_ICE = exports.METHODS_HTTP = exports.METHODS = exports.LENIENT_FLAGS = exports.FLAGS = exports.TYPE = exports.ERROR = void 0;
-const utils_1 = __nccwpck_require__(2365);
+const utils_1 = __nccwpck_require__(8020);
 // C headers
 var ERROR;
 (function (ERROR) {
@@ -36486,7 +42057,7 @@ exports.SPECIAL_HEADERS = {
 
 /***/ }),
 
-/***/ 711:
+/***/ 3321:
 /***/ ((module) => {
 
 module.exports = 'AGFzbQEAAAABMAhgAX8Bf2ADf39/AX9gBH9/f38Bf2AAAGADf39/AGABfwBgAn9/AGAGf39/f39/AALLAQgDZW52GHdhc21fb25faGVhZGVyc19jb21wbGV0ZQACA2VudhV3YXNtX29uX21lc3NhZ2VfYmVnaW4AAANlbnYLd2FzbV9vbl91cmwAAQNlbnYOd2FzbV9vbl9zdGF0dXMAAQNlbnYUd2FzbV9vbl9oZWFkZXJfZmllbGQAAQNlbnYUd2FzbV9vbl9oZWFkZXJfdmFsdWUAAQNlbnYMd2FzbV9vbl9ib2R5AAEDZW52GHdhc21fb25fbWVzc2FnZV9jb21wbGV0ZQAAA0ZFAwMEAAAFAAAAAAAABQEFAAUFBQAABgAAAAAGBgYGAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQABAAABAQcAAAUFAwABBAUBcAESEgUDAQACBggBfwFBgNQECwfRBSIGbWVtb3J5AgALX2luaXRpYWxpemUACRlfX2luZGlyZWN0X2Z1bmN0aW9uX3RhYmxlAQALbGxodHRwX2luaXQAChhsbGh0dHBfc2hvdWxkX2tlZXBfYWxpdmUAQQxsbGh0dHBfYWxsb2MADAZtYWxsb2MARgtsbGh0dHBfZnJlZQANBGZyZWUASA9sbGh0dHBfZ2V0X3R5cGUADhVsbGh0dHBfZ2V0X2h0dHBfbWFqb3IADxVsbGh0dHBfZ2V0X2h0dHBfbWlub3IAEBFsbGh0dHBfZ2V0X21ldGhvZAARFmxsaHR0cF9nZXRfc3RhdHVzX2NvZGUAEhJsbGh0dHBfZ2V0X3VwZ3JhZGUAEwxsbGh0dHBfcmVzZXQAFA5sbGh0dHBfZXhlY3V0ZQAVFGxsaHR0cF9zZXR0aW5nc19pbml0ABYNbGxodHRwX2ZpbmlzaAAXDGxsaHR0cF9wYXVzZQAYDWxsaHR0cF9yZXN1bWUAGRtsbGh0dHBfcmVzdW1lX2FmdGVyX3VwZ3JhZGUAGhBsbGh0dHBfZ2V0X2Vycm5vABsXbGxodHRwX2dldF9lcnJvcl9yZWFzb24AHBdsbGh0dHBfc2V0X2Vycm9yX3JlYXNvbgAdFGxsaHR0cF9nZXRfZXJyb3JfcG9zAB4RbGxodHRwX2Vycm5vX25hbWUAHxJsbGh0dHBfbWV0aG9kX25hbWUAIBJs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ADcDACAAQShqQgA3AwAgAEEgakIANwMAIABBEGpCADcDACAAQQhqQgA3AwAgAEHdATYCHEEAC3sBAX8CQCAAKAIMIgMNAAJAIAAoAgRFDQAgACABNgIECwJAIAAgASACEMSAgIAAIgMNACAAKAIMDwsgACADNgIcQQAhAyAAKAIEIgFFDQAgACABIAIgACgCCBGBgICAAAAiAUUNACAAIAI2AhQgACABNgIMIAEhAwsgAwvk8wEDDn8DfgR/I4CAgIAAQRBrIgMkgICAgAAgASEEIAEhBSABIQYgASEHIAEhCCABIQkgASEKIAEhCyABIQwgASENIAEhDiABIQ8CQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkAgACgCHCIQQX9qDt0B2gEB2QECAwQFBgcICQoLDA0O2AEPENcBERLWARMUFRYXGBkaG+AB3wEcHR7VAR8gISIjJCXUASYnKCkqKyzTAdIBLS7RAdABLzAxMjM0NTY3ODk6Ozw9Pj9AQUJDREVG2wFHSElKzwHOAUvNAUzMAU1OT1BRUlNUVVZXWFlaW1xdXl9gYWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXp7fH1+f4ABgQGCAYMBhAGFAYYBhwGIAYkB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QAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkAC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FCAAIBA2AgxBACEQDLIBCyAAKAIEIRAgAEEANgIEAkAgACAQIAEQp4CAgAAiEA0AIAEhAQxNCyAAQdMANgIcIAAgATYCFCAAIBA2AgxBACEQDLEBCyAAKAIEIRAgAEEANgIEAkAgACAQIAEQp4CAgAAiEA0AIAEhAQxRCyAAQeUANgIcIAAgATYCFCAAIBA2AgxBACEQDLABCyAAQQA2AhwgACABNgIUIABBxoqAgAA2AhAgAEEHNgIMQQAhEAyvAQsgACgCBCEQIABBADYCBAJAIAAgECABEKeAgIAAIhANACABIQEMSQsgAEHSADYCHCAAIAE2AhQgACAQNgIMQQAhEAyuAQsgACgCBCEQIABBADYCBAJAIAAgECABEKeAgIAAIhANACABIQEMSQsgAEHTADYCHCAAIAE2AhQgACAQNgIMQQAhEAytAQsgACgCBCEQIABBADYCBAJAIAAgECABEKeAgIAAIhANACABIQEMTQsgAEHlADYCHCAAIAE2AhQgACAQNgIMQQAhEAysAQsgAEEANgIcIAAgATYCFCAAQdyIgIAANgIQIABBBzYCDEEAIRAMqwELIBBBP0cNASABQQFqIQELQQUhEAyQAQtBACEQIABBADYCHCAAIAE2AhQgAEH9koCAADYCECAAQQc2AgwMqAELIAAoAgQhECAAQQA2AgQCQCAAIBAgARCngICAACIQDQAgASEBDEILIABB0gA2AhwgACABNgIUIAAgEDYCDEEAIRAMpwELIAAoAgQhECAAQQA2AgQCQCAAIBAgARCngICAACIQDQAgASEBDEILIABB0wA2AhwgACABNgIUIAAgEDYCDEEAIRAMpgELIAAoAgQhECAAQQA2AgQCQCAAIBAgARCngICAACIQDQAgASEBDEYLIABB5QA2AhwgACABNgIUIAAgEDYCDEEAIRAMpQELIAAoAgQhASAAQQA2AgQCQCAAIAEgFBCngICAACIBDQAgFCEBDD8LIABB0gA2AhwgACAUNgIUIAAgATYCDEEAIRAMpAELIAAoAgQhASAAQQA2AgQCQCAAIAEgFBCngICAACIBDQAgFCEBDD8LIABB0wA2AhwgACAUNgIUIAAgATYCDEEAIRAMowELIAAoAgQhASAAQQA2AgQCQCAAIAEgFBCngICAACIBDQAgFCEBDEMLIABB5QA2AhwgACAU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YWdlX2JlZ2luYCBjYWxsYmFjayBlcnJvcgBgb25fY2h1bmtfZXh0ZW5zaW9uX3ZhbHVlYCBjYWxsYmFjayBlcnJvcgBgb25fc3RhdHVzX2NvbXBsZXRlYCBjYWxsYmFjayBlcnJvcgBgb25fdmVyc2lvbl9jb21wbGV0ZWAgY2FsbGJhY2sgZXJyb3IAYG9uX3VybF9jb21wbGV0ZWAgY2FsbGJhY2sgZXJyb3IAYG9uX2NodW5rX2NvbXBsZXRlYCBjYWxsYmFjayBlcnJvcgBgb25faGVhZGVyX3ZhbHVlX2NvbXBsZXRlYCBjYWxsYmFjayBlcnJvcgBgb25fbWVzc2FnZV9jb21wbGV0ZWAgY2FsbGJhY2sgZXJyb3IAYG9uX21ldGhvZF9jb21wbGV0ZWAgY2FsbGJhY2sgZXJyb3IAYG9uX2hlYWRlcl9maWVsZF9jb21wbGV0ZWAgY2FsbGJhY2sgZXJyb3IAYG9uX2NodW5rX2V4dGVuc2lvbl9uYW1lYCBjYWxsYmFjayBlcnJvcgBVbmV4cGVjdGVkIGNoYXIgaW4gdXJsIHNlcnZlcgBJbnZhbGlkIGhlYWRlciB2YWx1ZSBjaGFyAEludmFsaWQgaGVhZGVyIGZpZWxkIGNoYXIAU3BhbiBjYWxsYmFjayBlcnJvciBpbiBvbl92ZXJzaW9uAEludmFsaWQgbWlub3IgdmVyc2lvbgBJbnZhbGlkIG1ham9yIHZlcnNpb24ARXhwZWN0ZWQgc3BhY2UgYWZ0ZXIgdmVyc2lvbgBFeHBlY3RlZCBDUkxGIGFmdGVyIHZlcnNpb24ASW52YWxpZCBIVFRQIHZlcnNpb24ASW52YWxpZCBoZWFkZXIgdG9rZW4AU3BhbiBjYWxsYmFjayBlcnJvciBpbiBvbl91cmwASW52YWxpZCBjaGFyYWN0ZXJzIGluIHVybABVbmV4cGVjdGVkIHN0YXJ0IGNoYXIgaW4gdXJsAERvdWJsZSBAIGluIHVybABFbXB0eSBDb250ZW50LUxlbmd0aABJbnZhbGlkIGNoYXJhY3RlciBpbiBDb250ZW50LUxlbmd0aABEdXBsaWNhdGUgQ29udGVudC1MZW5ndGgASW52YWxpZCBjaGFyIGluIHVybCBwYXRoAENvbnRlbnQtTGVuZ3RoIGNhbid0IGJlIHByZXNlbnQgd2l0aCBUcmFuc2Zlci1FbmNvZGluZwBJbnZhbGlkIGNoYXJhY3RlciBpbiBjaHVuayBzaXplAFNwYW4gY2FsbGJhY2sgZXJyb3IgaW4gb25faGVhZGVyX3ZhbHVlAFNwYW4gY2FsbGJhY2sgZXJyb3IgaW4gb25fY2h1bmtfZXh0ZW5zaW9uX3ZhbHVlAEludmFsaWQgY2hhcmFjdGVyIGluIGNodW5rIGV4dGVuc2lvbnMgdmFsdWUATWlzc2luZyBleHBlY3RlZCBMRiBhZnRlciBoZWFkZXIgdmFsdWUASW52YWxpZCBgVHJhbnNmZXItRW5jb2RpbmdgIGhlYWRlciB2YWx1ZQBJbnZhbGlkIGNoYXJhY3RlciBpbiBjaHVuayBleHRlbnNpb25zIHF1b3RlIHZhbHVlAEludmFsaWQgY2hhcmFjdGVyIGluIGNodW5rIGV4dGVuc2lvbnMgcXVvdGVkIHZhbHVlAFBhdXNlZCBieSBvbl9oZWFkZXJzX2NvbXBsZXRlAEludmFsaWQgRU9GIHN0YXRlAG9uX3Jlc2V0IHBhdXNlAG9uX2NodW5rX2hlYWRlciBwYXVzZQBvbl9tZXNzYWdlX2JlZ2luIHBhdXNlAG9uX2NodW5rX2V4dGVuc2lvbl92YWx1ZSBwYXVzZQBvbl9zdGF0dXNfY29tcGxldGUgcGF1c2UAb25fdmVyc2lvbl9jb21wbGV0ZSBwYXVzZQBvbl91cmxfY29tcGxldGUgcGF1c2UAb25fY2h1bmtfY29tcGxldGUgcGF1c2UAb25faGVhZGVyX3ZhbHVlX2NvbXBsZXRlIHBhdXNlAG9uX21lc3NhZ2VfY29tcGxldGUgcGF1c2UAb25fbWV0aG9kX2NvbXBsZXRlIHBhdXNlAG9uX2hlYWRlcl9maWVsZF9jb21wbGV0ZSBwYXVzZQBvbl9jaHVua19leHRlbnNpb25fbmFtZSBwYXVzZQBVbmV4cGVjdGVkIHNwYWNlIGFmdGVyIHN0YXJ0IGxpbmUAU3BhbiBjYWxsYmFjayBlcnJvciBpbiBvbl9jaHVua19leHRlbnNpb25fbmFtZQBJbnZhbGlkIGNoYXJhY3RlciBpbiBjaHVuayBleHRlbnNpb25zIG5hbWUAUGF1c2Ugb24gQ09OTkVDVC9VcGdyYWRlAFBhdXNlIG9uIFBSSS9VcGdyYWRlAEV4cGVjdGVkIEhUVFAvMiBDb25uZWN0aW9uIFByZWZhY2UAU3BhbiBjYWxsYmFjayBlcnJvciBpbiBvbl9tZXRob2QARXhwZWN0ZWQgc3BhY2UgYWZ0ZXIgbWV0aG9kAFNwYW4gY2FsbGJhY2sgZXJyb3IgaW4gb25faGVhZGVyX2ZpZWxkAFBhdXNlZABJbnZhbGlkIHdvcmQgZW5jb3VudGVyZWQASW52YWxpZCBtZXRob2QgZW5jb3VudGVyZWQAVW5leHBlY3RlZCBjaGFyIGluIHVybCBzY2hlbWEAUmVxdWVzdCBoYXMgaW52YWxpZCBgVHJhbnNmZXItRW5jb2RpbmdgAFNXSVRDSF9QUk9YWQBVU0VfUFJPWFkATUtBQ1RJVklUWQBVTlBST0NFU1NBQkxFX0VOVElUWQBDT1BZAE1PVkVEX1BFUk1BTkVOVExZAFRPT19FQVJMWQBOT1RJRlkARkFJTEVEX0RFUEVOREVOQ1kAQkFEX0dBVEVXQVkAUExBWQBQVVQAQ0hFQ0tPVVQAR0FURVdBWV9USU1FT1VUAFJFUVVFU1RfVElNRU9VVABORVRXT1JLX0NPTk5FQ1RfVElNRU9VVABDT05ORUNUSU9OX1RJTUVPVVQATE9HSU5fVElNRU9VVABORVRXT1JLX1JFQURfVElNRU9VVABQT1NUAE1JU0RJUkVDVEVEX1JFUVVFU1QAQ0xJRU5UX0NMT1NFRF9SRVFVRVNUAENMSUVOVF9DTE9TRURfTE9BRF9CQUxBTkNFRF9SRVFVRVNUAEJBRF9SRVFVRVNUAEhUVFBfUkVRVUVTVF9TRU5UX1RPX0hUVFBTX1BPUlQAUkVQT1JUAElNX0FfVEVBUE9UAFJFU0VUX0NPTlRFTlQATk9fQ09OVEVOVABQQVJUSUFMX0NPTlRFTlQASFBFX0lOVkFMSURfQ09OU1RBTlQASFBFX0NCX1JFU0VUAEdFVABIUEVfU1RSSUNUAENPTkZMSUNUAFRFTVBPUkFSWV9SRURJUkVDVABQRVJNQU5FTlRfUkVESVJFQ1QAQ09OTkVDVABNVUxUSV9TVEFUVVMASFBFX0lOVkFMSURfU1RBVFVTAFRPT19NQU5ZX1JFUVVFU1RTAEVBUkxZX0hJTlRTAFVOQVZBSUxBQkxFX0ZPUl9MRUdBTF9SRUFTT05TAE9QVElPTlMAU1dJVENISU5HX1BST1RPQ09MUwBWQVJJQU5UX0FMU09fTkVHT1RJQVRFUwBNVUxUSVBMRV9DSE9JQ0VTAElOVEVSTkFMX1NFUlZFUl9FUlJPUgBXRUJfU0VSVkVSX1VOS05PV05fRVJST1IAUkFJTEdVTl9FUlJPUgBJREVOVElUWV9QUk9WSURFUl9BVVRIRU5USUNBVElPTl9FUlJPUgBTU0xfQ0VSVElGSUNBVEVfRVJST1IASU5WQUxJRF9YX0ZPUldBUkRFRF9GT1IAU0VUX1BBUkFNRVRFUgBHRVRfUEFSQU1FVEVSAEhQRV9VU0VSAFNFRV9PVEhFUgBIUEVfQ0JfQ0hVTktfSEVBREVSAE1LQ0FMRU5EQVIAU0VUVVAAV0VCX1NFUlZFUl9JU19ET1dOAFRFQVJET1dOAEhQRV9DTE9TRURfQ09OTkVDVElPTgBIRVVSSVNUSUNfRVhQSVJBVElPTgBESVNDT05ORUNURURfT1BFUkFUSU9OAE5PTl9BVVRIT1JJVEFUSVZFX0lORk9STUFUSU9OAEhQRV9JTlZBTElEX1ZFUlNJT04ASFBFX0NCX01FU1NBR0VfQkVHSU4AU0lURV9JU19GUk9aRU4ASFBFX0lOVkFMSURfSEVBREVSX1RPS0VOAElOVkFMSURfVE9LRU4ARk9SQklEREVOAEVOSEFOQ0VfWU9VUl9DQUxNAEhQRV9JTlZBTElEX1VSTABCTE9DS0VEX0JZX1BBUkVOVEFMX0NPTlRST0wATUtDT0wAQUNMAEhQRV9JTlRFUk5BTABSRVFVRVNUX0hFQURFUl9GSUVMRFNfVE9PX0xBUkdFX1VOT0ZGSUNJQUwASFBFX09LAFVOTElOSwBVTkxPQ0sAUFJJAFJFVFJZX1dJVEgASFBFX0lOVkFMSURfQ09OVEVOVF9MRU5HVEgASFBFX1VORVhQRUNURURfQ09OVEVOVF9MRU5HVEgARkxVU0gAUFJPUFBBVENIAE0tU0VBUkNIAFVSSV9UT09fTE9ORwBQUk9DRVNTSU5HAE1JU0NFTExBTkVPVVNfUEVSU0lTVEVOVF9XQVJOSU5HAE1JU0NFTExBTkVPVVNfV0FSTklORwBIUEVfSU5WQUxJRF9UUkFOU0ZFUl9FTkNPRElORwBFeHBlY3RlZCBDUkxGAEhQRV9JTlZBTElEX0NIVU5LX1NJWkUATU9WRQBDT05USU5VRQBIUEVfQ0JfU1RBVFVTX0NPTVBMRVRFAEhQRV9DQl9IRUFERVJTX0NPTVBMRVRFAEhQRV9DQl9WRVJTSU9OX0NPTVBMRVRFAEhQRV9DQl9VUkxfQ09NUExFVEUASFBFX0NCX0NIVU5LX0NPTVBMRVRFAEhQRV9DQl9IRUFERVJfVkFMVUVfQ09NUExFVEUASFBFX0NCX0NIVU5LX0VYVEVOU0lPTl9WQUxVRV9DT01QTEVURQBIUEVfQ0JfQ0hVTktfRVhURU5TSU9OX05BTUVfQ09NUExFVEUASFBFX0NCX01FU1NBR0VfQ09NUExFVEUASFBFX0NCX01FVEhPRF9DT01QTEVURQBIUEVfQ0JfSEVBREVSX0ZJRUxEX0NPTVBMRVRFAERFTEVURQBIUEVfSU5WQUxJRF9FT0ZfU1RBVEUASU5WQUxJRF9TU0xfQ0VSVElGSUNBVEUAUEFVU0UATk9fUkVTUE9OU0UAVU5TVVBQT1JURURfTUVESUFfVFlQRQBHT05FAE5PVF9BQ0NFUFRBQkxFAFNFUlZJQ0VfVU5BVkFJTEFCTEUAUkFOR0VfTk9UX1NBVElTRklBQkxFAE9SSUdJTl9JU19VTlJFQUNIQUJMRQBSRVNQT05TRV9JU19TVEFMRQBQVVJHRQBNRVJHRQBSRVFVRVNUX0hFQURFUl9GSUVMRFNfVE9PX0xBUkdFAFJFUVVFU1RfSEVBREVSX1RPT19MQVJHRQBQQVlMT0FEX1RPT19MQVJHRQBJTlNVRkZJQ0lFTlRfU1RPUkFHRQBIUEVfUEFVU0VEX1VQR1JBREUASFBFX1BBVVNFRF9IMl9VUEdSQURFAFNPVVJDRQBBTk5PVU5DRQBUUkFDRQBIUEVfVU5FWFBFQ1RFRF9TUEFDRQBERVNDUklCRQBVTlNVQlNDUklCRQBSRUNPUkQASFBFX0lOVkFMSURfTUVUSE9EAE5PVF9GT1VORABQUk9QRklORABVTkJJTkQAUkVCSU5EAFVOQVVUSE9SSVpFRABNRVRIT0RfTk9UX0FMTE9XRUQASFRUUF9WRVJTSU9OX05PVF9TVVBQT1JURUQAQUxSRUFEWV9SRVBPUlRFRABBQ0NFUFRFRABOT1RfSU1QTEVNRU5URUQATE9PUF9ERVRFQ1RFRABIUEVfQ1JfRVhQRUNURUQASFBFX0xGX0VYUEVDVEVEAENSRUFURUQASU1fVVNFRABIUEVfUEFVU0VEAFRJTUVPVVRfT0NDVVJFRABQQVlNRU5UX1JFUVVJUkVEAFBSRUNPTkRJVElPTl9SRVFVSVJFRABQUk9YWV9BVVRIRU5USUNBVElPTl9SRVFVSVJFRABORVRXT1JLX0FVVEhFTlRJQ0FUSU9OX1JFUVVJUkVEAExFTkdUSF9SRVFVSVJFRABTU0xfQ0VSVElGSUNBVEVfUkVRVUlSRUQAVVBHUkFERV9SRVFVSVJFRABQQUdFX0VYUElSRUQAUFJFQ09ORElUSU9OX0ZBSUxFRABFWFBFQ1RBVElPTl9GQUlMRUQAUkVWQUxJREFUSU9OX0ZBSUxFRABTU0xfSEFORFNIQUtFX0ZBSUxFRABMT0NLRUQAVFJBTlNGT1JNQVRJT05fQVBQTElFRABOT1RfTU9ESUZJRUQATk9UX0VYVEVOREVEAEJBTkRXSURUSF9MSU1JVF9FWENFRURFRABTSVRFX0lTX09WRVJMT0FERUQASEVBRABFeHBlY3RlZCBIVFRQLwAAXhMAACYTAAAwEAAA8BcAAJ0TAAAVEgAAORcAAPASAAAKEAAAdRIAAK0SAACCEwAATxQAAH8QAACgFQAAIxQAAIkSAACLFAAATRUAANQRAADPFAAAEBgAAMkWAADcFgAAwREAAOAXAAC7FAAAdBQAAHwVAADlFAAACBcAAB8QAABlFQAAoxQAACgVAAACFQAAmRUAACwQAACLGQAATw8AANQOAABqEAAAzhAAAAIXAACJDgAAbhMAABwTAABmFAAAVhcAAMETAADNEwAAbBMAAGgXAABmFwAAXxcAACITAADODwAAaQ4AANgOAABjFgAAyxMAAKoOAAAoFwAAJhcAAMUTAABdFgAA6BEAAGcTAABlEwAA8hYAAHMTAAAdFwAA+RYAAPMRAADPDgAAzhUAAAwSAACzEQAApREAAGEQAAAyFwAAuxMAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQIBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAIDAgICAgIAAAICAAICAAICAgICAgICAgIABAAAAAAAAgICAgICAgICAgICAgICAgICAgICAgICAgIAAAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgACAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAACAAICAgICAAACAgACAgACAgICAgICAgICAAMABAAAAAICAgICAgICAgICAgICAgICAgICAgICAgICAAAAAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAAgACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbG9zZWVlcC1hbGl2ZQAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQIBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBY2h1bmtlZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAQEBAQEAAAEBAAEBAAEBAQEBAQEBAQEAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQABAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABlY3Rpb25lbnQtbGVuZ3Rob25yb3h5LWNvbm5lY3Rpb24AAAAAAAAAAAAAAAAAAAByYW5zZmVyLWVuY29kaW5ncGdyYWRlDQoNCg0KU00NCg0KVFRQL0NFL1RTUC8AAAAAAAAAAAAAAAABAgABAwAAAAAAAAAAAAAAAAAAAAAAAAQBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAQIAAQMAAAAAAAAAAAAAAAAAAAAAAAAEAQEFAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAEAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAQAAAgAAAAAAAAAAAAAAAAAAAAAAAAMEAAAEBAQEBAQEBAQEBAUEBAQEBAQEBAQEBAQABAAGBwQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAEAAQABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAEAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAADAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwAAAAAAAAMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAABAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMAAAAAAAADAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABOT1VOQ0VFQ0tPVVRORUNURVRFQ1JJQkVMVVNIRVRFQURTRUFSQ0hSR0VDVElWSVRZTEVOREFSVkVPVElGWVBUSU9OU0NIU0VBWVNUQVRDSEdFT1JESVJFQ1RPUlRSQ0hQQVJBTUVURVJVUkNFQlNDUklCRUFSRE9XTkFDRUlORE5LQ0tVQlNDUklCRUhUVFAvQURUUC8='
@@ -36494,7 +42065,7 @@ module.exports = 'AGFzbQEAAAABMAhgAX8Bf2ADf39/AX9gBH9/f38Bf2AAAGADf39/AGABfwBgAn
 
 /***/ }),
 
-/***/ 345:
+/***/ 7925:
 /***/ ((module) => {
 
 module.exports = 'AGFzbQEAAAABMAhgAX8Bf2ADf39/AX9gBH9/f38Bf2AAAGADf39/AGABfwBgAn9/AGAGf39/f39/AALLAQgDZW52GHdhc21fb25faGVhZGVyc19jb21wbGV0ZQACA2VudhV3YXNtX29uX21lc3NhZ2VfYmVnaW4AAANlbnYLd2FzbV9vbl91cmwAAQNlbnYOd2FzbV9vbl9zdGF0dXMAAQNlbnYUd2FzbV9vbl9oZWFkZXJfZmllbGQAAQNlbnYUd2FzbV9vbl9oZWFkZXJfdmFsdWUAAQNlbnYMd2FzbV9vbl9ib2R5AAEDZW52GHdhc21fb25fbWVzc2FnZV9jb21wbGV0ZQAAA0ZFAwMEAAAFAAAAAAAABQEFAAUFBQAABgAAAAAGBgYGAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQABAAABAQcAAAUFAwABBAUBcAESEgUDAQACBggBfwFBgNQECwfRBSIGbWVtb3J5AgALX2luaXRpYWxpemUACRlfX2luZGlyZWN0X2Z1bmN0aW9uX3RhYmxlAQALbGxodHRwX2luaXQAChhsbGh0dHBfc2hvdWxkX2tlZXBfYWxpdmUAQQxsbGh0dHBfYWxsb2MADAZtYWxsb2MARgtsbGh0dHBfZnJlZQANBGZyZWUASA9sbGh0dHBfZ2V0X3R5cGUADhVsbGh0dHBfZ2V0X2h0dHBfbWFqb3IADxVsbGh0dHBfZ2V0X2h0dHBfbWlub3IAEBFsbGh0dHBfZ2V0X21ldGhvZAARFmxsaHR0cF9nZXRfc3RhdHVzX2NvZGUAEhJsbGh0dHBfZ2V0X3VwZ3JhZGUAEwxsbGh0dHBfcmVzZXQAFA5sbGh0dHBfZXhlY3V0ZQAVFGxsaHR0cF9zZXR0aW5nc19pbml0ABYNbGxodHRwX2ZpbmlzaAAXDGxsaHR0cF9wYXVzZQAYDWxsaHR0cF9yZXN1bWUAGRtsbGh0dHBfcmVzdW1lX2FmdGVyX3VwZ3JhZGUAGhBsbGh0dHBfZ2V0X2Vycm5vABsXbGxodHRwX2dldF9lcnJvcl9yZWFzb24AHBdsbGh0dHBfc2V0X2Vycm9yX3JlYXNvbgAdFGxsaHR0cF9nZXRfZXJyb3JfcG9zAB4RbGxodHRwX2Vycm5vX25hbWUAHxJsbGh0dHBfbWV0aG9kX25hbWUAIBJs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IAH9CwMAIABBMGogAf0LAwAgAEEgaiAB/QsDACAAQd0BNgIcQQALewEBfwJAIAAoAgwiAw0AAkAgACgCBEUNACAAIAE2AgQLAkAgACABIAIQxICAgAAiAw0AIAAoAgwPCyAAIAM2AhxBACEDIAAoAgQiAUUNACAAIAEgAiAAKAIIEYGAgIAAACIBRQ0AIAAgAjYCFCAAIAE2AgwgASEDCyADC+TzAQMOfwN+BH8jgICAgABBEGsiAySAgICAACABIQQgASEFIAEhBiABIQcgASEIIAEhCSABIQogASELIAEhDCABIQ0gASEOIAEhDwJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQCAAKAIcIhBBf2oO3QHaAQHZAQIDBAUGBwgJCgsMDQ7YAQ8Q1wEREtYBExQVFhcYGRob4AHfARwdHtUBHyAhIiMkJdQBJicoKSorLNMB0gEtLtEB0AEvMDEyMzQ1Njc4OTo7PD0+P0BBQkNERUbbAUdISUrPAc4BS80BTMwBTU5PUFFSU1RVVldYWVpbXF1eX2BhYmNkZWZnaGlqa2xtbm9wcXJzdHV2d3h5ent8fX5/gAGBAYIBgwGEAYUBhgGHAYgBiQGKAYsBjAGNAY4BjwGQAZEB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QAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAAkACQAJAIBAOxwEAAQID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YWNrIGVycm9yAGBvbl9jaHVua19leHRlbnNpb25fdmFsdWVgIGNhbGxiYWNrIGVycm9yAGBvbl9zdGF0dXNfY29tcGxldGVgIGNhbGxiYWNrIGVycm9yAGBvbl92ZXJzaW9uX2NvbXBsZXRlYCBjYWxsYmFjayBlcnJvcgBgb25fdXJsX2NvbXBsZXRlYCBjYWxsYmFjayBlcnJvcgBgb25fY2h1bmtfY29tcGxldGVgIGNhbGxiYWNrIGVycm9yAGBvbl9oZWFkZXJfdmFsdWVfY29tcGxldGVgIGNhbGxiYWNrIGVycm9yAGBvbl9tZXNzYWdlX2NvbXBsZXRlYCBjYWxsYmFjayBlcnJvcgBgb25fbWV0aG9kX2NvbXBsZXRlYCBjYWxsYmFjayBlcnJvcgBgb25faGVhZGVyX2ZpZWxkX2NvbXBsZXRlYCBjYWxsYmFjayBlcnJvcgBgb25fY2h1bmtfZXh0ZW5zaW9uX25hbWVgIGNhbGxiYWNrIGVycm9yAFVuZXhwZWN0ZWQgY2hhciBpbiB1cmwgc2VydmVyAEludmFsaWQgaGVhZGVyIHZhbHVlIGNoYXIASW52YWxpZCBoZWFkZXIgZmllbGQgY2hhcgBTcGFuIGNhbGxiYWNrIGVycm9yIGluIG9uX3ZlcnNpb24ASW52YWxpZCBtaW5vciB2ZXJzaW9uAEludmFsaWQgbWFqb3IgdmVyc2lvbgBFeHBlY3RlZCBzcGFjZSBhZnRlciB2ZXJzaW9uAEV4cGVjdGVkIENSTEYgYWZ0ZXIgdmVyc2lvbgBJbnZhbGlkIEhUVFAgdmVyc2lvbgBJbnZhbGlkIGhlYWRlciB0b2tlbgBTcGFuIGNhbGxiYWNrIGVycm9yIGluIG9uX3VybABJbnZhbGlkIGNoYXJhY3RlcnMgaW4gdXJsAFVuZXhwZWN0ZWQgc3RhcnQgY2hhciBpbiB1cmwARG91YmxlIEAgaW4gdXJsAEVtcHR5IENvbnRlbnQtTGVuZ3RoAEludmFsaWQgY2hhcmFjdGVyIGluIENvbnRlbnQtTGVuZ3RoAER1cGxpY2F0ZSBDb250ZW50LUxlbmd0aABJbnZhbGlkIGNoYXIgaW4gdXJsIHBhdGgAQ29udGVudC1MZW5ndGggY2FuJ3QgYmUgcHJlc2VudCB3aXRoIFRyYW5zZmVyLUVuY29kaW5nAEludmFsaWQgY2hhcmFjdGVyIGluIGNodW5rIHNpemUAU3BhbiBjYWxsYmFjayBlcnJvciBpbiBvbl9oZWFkZXJfdmFsdWUAU3BhbiBjYWxsYmFjayBlcnJvciBpbiBvbl9jaHVua19leHRlbnNpb25fdmFsdWUASW52YWxpZCBjaGFyYWN0ZXIgaW4gY2h1bmsgZXh0ZW5zaW9ucyB2YWx1ZQBNaXNzaW5nIGV4cGVjdGVkIExGIGFmdGVyIGhlYWRlciB2YWx1ZQBJbnZhbGlkIGBUcmFuc2Zlci1FbmNvZGluZ2AgaGVhZGVyIHZhbHVlAEludmFsaWQgY2hhcmFjdGVyIGluIGNodW5rIGV4dGVuc2lvbnMgcXVvdGUgdmFsdWUASW52YWxpZCBjaGFyYWN0ZXIgaW4gY2h1bmsgZXh0ZW5zaW9ucyBxdW90ZWQgdmFsdWUAUGF1c2VkIGJ5IG9uX2hlYWRlcnNfY29tcGxldGUASW52YWxpZCBFT0Ygc3RhdGUAb25fcmVzZXQgcGF1c2UAb25fY2h1bmtfaGVhZGVyIHBhdXNlAG9uX21lc3NhZ2VfYmVnaW4gcGF1c2UAb25fY2h1bmtfZXh0ZW5zaW9uX3ZhbHVlIHBhdXNlAG9uX3N0YXR1c19jb21wbGV0ZSBwYXVzZQBvbl92ZXJzaW9uX2NvbXBsZXRlIHBhdXNlAG9uX3VybF9jb21wbGV0ZSBwYXVzZQBvbl9jaHVua19jb21wbGV0ZSBwYXVzZQBvbl9oZWFkZXJfdmFsdWVfY29tcGxldGUgcGF1c2UAb25fbWVzc2FnZV9jb21wbGV0ZSBwYXVzZQBvbl9tZXRob2RfY29tcGxldGUgcGF1c2UAb25faGVhZGVyX2ZpZWxkX2NvbXBsZXRlIHBhdXNlAG9uX2NodW5rX2V4dGVuc2lvbl9uYW1lIHBhdXNlAFVuZXhwZWN0ZWQgc3BhY2UgYWZ0ZXIgc3RhcnQgbGluZQBTcGFuIGNhbGxiYWNrIGVycm9yIGluIG9uX2NodW5rX2V4dGVuc2lvbl9uYW1lAEludmFsaWQgY2hhcmFjdGVyIGluIGNodW5rIGV4dGVuc2lvbnMgbmFtZQBQYXVzZSBvbiBDT05ORUNUL1VwZ3JhZGUAUGF1c2Ugb24gUFJJL1VwZ3JhZGUARXhwZWN0ZWQgSFRUUC8yIENvbm5lY3Rpb24gUHJlZmFjZQBTcGFuIGNhbGxiYWNrIGVycm9yIGluIG9uX21ldGhvZABFeHBlY3RlZCBzcGFjZSBhZnRlciBtZXRob2QAU3BhbiBjYWxsYmFjayBlcnJvciBpbiBvbl9oZWFkZXJfZmllbGQAUGF1c2VkAEludmFsaWQgd29yZCBlbmNvdW50ZXJlZABJbnZhbGlkIG1ldGhvZCBlbmNvdW50ZXJlZABVbmV4cGVjdGVkIGNoYXIgaW4gdXJsIHNjaGVtYQBSZXF1ZXN0IGhhcyBpbnZhbGlkIGBUcmFuc2Zlci1FbmNvZGluZ2AAU1dJVENIX1BST1hZAFVTRV9QUk9YWQBNS0FDVElWSVRZAFVOUFJPQ0VTU0FCTEVfRU5USVRZAENPUFkATU9WRURfUEVSTUFORU5UTFkAVE9PX0VBUkxZAE5PVElGWQBGQUlMRURfREVQRU5ERU5DWQBCQURfR0FURVdBWQBQTEFZAFBVVABDSEVDS09VVABHQVRFV0FZX1RJTUVPVVQAUkVRVUVTVF9USU1FT1VUAE5FVFdPUktfQ09OTkVDVF9USU1FT1VUAENPTk5FQ1RJT05fVElNRU9VVABMT0dJTl9USU1FT1VUAE5FVFdPUktfUkVBRF9USU1FT1VUAFBPU1QATUlTRElSRUNURURfUkVRVUVTVABDTElFTlRfQ0xPU0VEX1JFUVVFU1QAQ0xJRU5UX0NMT1NFRF9MT0FEX0JBTEFOQ0VEX1JFUVVFU1QAQkFEX1JFUVVFU1QASFRUUF9SRVFVRVNUX1NFTlRfVE9fSFRUUFNfUE9SVABSRVBPUlQASU1fQV9URUFQT1QAUkVTRVRfQ09OVEVOVABOT19DT05URU5UAFBBUlRJQUxfQ09OVEVOVABIUEVfSU5WQUxJRF9DT05TVEFOVABIUEVfQ0JfUkVTRVQAR0VUAEhQRV9TVFJJQ1QAQ09ORkxJQ1QAVEVNUE9SQVJZX1JFRElSRUNUAFBFUk1BTkVOVF9SRURJUkVDVABDT05ORUNUAE1VTFRJX1NUQVRVUwBIUEVfSU5WQUxJRF9TVEFUVVMAVE9PX01BTllfUkVRVUVTVFMARUFSTFlfSElOVFMAVU5BVkFJTEFCTEVfRk9SX0xFR0FMX1JFQVNPTlMAT1BUSU9OUwBTV0lUQ0hJTkdfUFJPVE9DT0xTAFZBUklBTlRfQUxTT19ORUdPVElBVEVTAE1VTFRJUExFX0NIT0lDRVMASU5URVJOQUxfU0VSVkVSX0VSUk9SAFdFQl9TRVJWRVJfVU5LTk9XTl9FUlJPUgBSQUlMR1VOX0VSUk9SAElERU5USVRZX1BST1ZJREVSX0FVVEhFTlRJQ0FUSU9OX0VSUk9SAFNTTF9DRVJUSUZJQ0FURV9FUlJPUgBJTlZBTElEX1hfRk9SV0FSREVEX0ZPUgBTRVRfUEFSQU1FVEVSAEdFVF9QQVJBTUVURVIASFBFX1VTRVIAU0VFX09USEVSAEhQRV9DQl9DSFVOS19IRUFERVIATUtDQUxFTkRBUgBTRVRVUABXRUJfU0VSVkVSX0lTX0RPV04AVEVBUkRPV04ASFBFX0NMT1NFRF9DT05ORUNUSU9OAEhFVVJJU1RJQ19FWFBJUkFUSU9OAERJU0NPTk5FQ1RFRF9PUEVSQVRJT04ATk9OX0FVVEhPUklUQVRJVkVfSU5GT1JNQVRJT04ASFBFX0lOVkFMSURfVkVSU0lPTgBIUEVfQ0JfTUVTU0FHRV9CRUdJTgBTSVRFX0lTX0ZST1pFTgBIUEVfSU5WQUxJRF9IRUFERVJfVE9LRU4ASU5WQUxJRF9UT0tFTgBGT1JCSURERU4ARU5IQU5DRV9ZT1VSX0NBTE0ASFBFX0lOVkFMSURfVVJMAEJMT0NLRURfQllfUEFSRU5UQUxfQ09OVFJPTABNS0NPTABBQ0wASFBFX0lOVEVSTkFMAFJFUVVFU1RfSEVBREVSX0ZJRUxEU19UT09fTEFSR0VfVU5PRkZJQ0lBTABIUEVfT0sAVU5MSU5LAFVOTE9DSwBQUkkAUkVUUllfV0lUSABIUEVfSU5WQUxJRF9DT05URU5UX0xFTkdUSABIUEVfVU5FWFBFQ1RFRF9DT05URU5UX0xFTkdUSABGTFVTSABQUk9QUEFUQ0gATS1TRUFSQ0gAVVJJX1RPT19MT05HAFBST0NFU1NJTkcATUlTQ0VMTEFORU9VU19QRVJTSVNURU5UX1dBUk5JTkcATUlTQ0VMTEFORU9VU19XQVJOSU5HAEhQRV9JTlZBTElEX1RSQU5TRkVSX0VOQ09ESU5HAEV4cGVjdGVkIENSTEYASFBFX0lOVkFMSURfQ0hVTktfU0laRQBNT1ZFAENPTlRJTlVFAEhQRV9DQl9TVEFUVVNfQ09NUExFVEUASFBFX0NCX0hFQURFUlNfQ09NUExFVEUASFBFX0NCX1ZFUlNJT05fQ09NUExFVEUASFBFX0NCX1VSTF9DT01QTEVURQBIUEVfQ0JfQ0hVTktfQ09NUExFVEUASFBFX0NCX0hFQURFUl9WQUxVRV9DT01QTEVURQBIUEVfQ0JfQ0hVTktfRVhURU5TSU9OX1ZBTFVFX0NPTVBMRVRFAEhQRV9DQl9DSFVOS19FWFRFTlNJT05fTkFNRV9DT01QTEVURQBIUEVfQ0JfTUVTU0FHRV9DT01QTEVURQBIUEVfQ0JfTUVUSE9EX0NPTVBMRVRFAEhQRV9DQl9IRUFERVJfRklFTERfQ09NUExFVEUAREVMRVRFAEhQRV9JTlZBTElEX0VPRl9TVEFURQBJTlZBTElEX1NTTF9DRVJUSUZJQ0FURQBQQVVTRQBOT19SRVNQT05TRQBVTlNVUFBPUlRFRF9NRURJQV9UWVBFAEdPTkUATk9UX0FDQ0VQVEFCTEUAU0VSVklDRV9VTkFWQUlMQUJMRQBSQU5HRV9OT1RfU0FUSVNGSUFCTEUAT1JJR0lOX0lTX1VOUkVBQ0hBQkxFAFJFU1BPTlNFX0lTX1NUQUxFAFBVUkdFAE1FUkdFAFJFUVVFU1RfSEVBREVSX0ZJRUxEU19UT09fTEFSR0UAUkVRVUVTVF9IRUFERVJfVE9PX0xBUkdFAFBBWUxPQURfVE9PX0xBUkdFAElOU1VGRklDSUVOVF9TVE9SQUdFAEhQRV9QQVVTRURfVVBHUkFERQBIUEVfUEFVU0VEX0gyX1VQR1JBREUAU09VUkNFAEFOTk9VTkNFAFRSQUNFAEhQRV9VTkVYUEVDVEVEX1NQQUNFAERFU0NSSUJFAFVOU1VCU0NSSUJFAFJFQ09SRABIUEVfSU5WQUxJRF9NRVRIT0QATk9UX0ZPVU5EAFBST1BGSU5EAFVOQklORABSRUJJTkQAVU5BVVRIT1JJWkVEAE1FVEhPRF9OT1RfQUxMT1dFRABIVFRQX1ZFUlNJT05fTk9UX1NVUFBPUlRFRABBTFJFQURZX1JFUE9SVEVEAEFDQ0VQVEVEAE5PVF9JTVBMRU1FTlRFRABMT09QX0RFVEVDVEVEAEhQRV9DUl9FWFBFQ1RFRABIUEVfTEZfRVhQRUNURUQAQ1JFQVRFRABJTV9VU0VEAEhQRV9QQVVTRUQAVElNRU9VVF9PQ0NVUkVEAFBBWU1FTlRfUkVRVUlSRUQAUFJFQ09ORElUSU9OX1JFUVVJUkVEAFBST1hZX0FVVEhFTlRJQ0FUSU9OX1JFUVVJUkVEAE5FVFdPUktfQVVUSEVOVElDQVRJT05fUkVRVUlSRUQATEVOR1RIX1JFUVVJUkVEAFNTTF9DRVJUSUZJQ0FURV9SRVFVSVJFRABVUEdSQURFX1JFUVVJUkVEAFBBR0VfRVhQSVJFRABQUkVDT05ESVRJT05fRkFJTEVEAEVYUEVDVEFUSU9OX0ZBSUxFRABSRVZBTElEQVRJT05fRkFJTEVEAFNTTF9IQU5EU0hBS0VfRkFJTEVEAExPQ0tFRABUUkFOU0ZPUk1BVElPTl9BUFBMSUVEAE5PVF9NT0RJRklFRABOT1RfRVhURU5ERUQAQkFORFdJRFRIX0xJTUlUX0VYQ0VFREVEAFNJVEVfSVNfT1ZFUkxPQURFRABIRUFEAEV4cGVjdGVkIEhUVFAvAABeEwAAJhMAADAQAADwFwAAnRMAABUSAAA5FwAA8BIAAAoQAAB1EgAArRIAAIITAABPFAAAfxAAAKAVAAAjFAAAiRIAAIsUAABNFQAA1BEAAM8UAAAQGAAAyRYAANwWAADBEQAA4BcAALsUAAB0FAAAfBUAAOUUAAAIFwAAHxAAAGUVAACjFAAAKBUAAAIVAACZFQAALBAAAIsZAABPDwAA1A4AAGoQAADOEAAAAhcAAIkOAABuEwAAHBMAAGYUAABWFwAAwRMAAM0TAABsEwAAaBcAAGYXAABfFwAAIhMAAM4PAABpDgAA2A4AAGMWAADLEwAAqg4AACgXAAAmFwAAxRMAAF0WAADoEQAAZxMAAGUTAADyFgAAcxMAAB0XAAD5FgAA8xEAAM8OAADOFQAADBIAALMRAAClEQAAYRAAADIXAAC7EwAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAgEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAgMCAgICAgAAAgIAAgIAAgICAgICAgICAgAEAAAAAAACAgICAgICAgICAgICAgICAgICAgICAgICAgAAAAICAgICAgICAgICAgICAgICAgICAgICAgICAgICAAIAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAIAAgICAgIAAAICAAICAAICAgICAgICAgIAAwAEAAAAAgICAgICAgICAgICAgICAgICAgICAgICAgIAAAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgACAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABsb3NlZWVwLWFsaXZlAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAgEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQFjaHVua2VkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQABAQEBAQAAAQEAAQEAAQEBAQEBAQEBAQAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGVjdGlvbmVudC1sZW5ndGhvbnJveHktY29ubmVjdGlvbgAAAAAAAAAAAAAAAAAAAHJhbnNmZXItZW5jb2RpbmdwZ3JhZGUNCg0KDQpTTQ0KDQpUVFAvQ0UvVFNQLwAAAAAAAAAAAAAAAAECAAEDAAAAAAAAAAAAAAAAAAAAAAAABAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAABAgABAwAAAAAAAAAAAAAAAAAAAAAAAAQBAQUBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAQAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAABAAACAAAAAAAAAAAAAAAAAAAAAAAAAwQAAAQEBAQEBAQEBAQEBQQEBAQEBAQEBAQEBAAEAAYHBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAQABAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAAAAAAAAAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAEAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAgAAAAACAAAAAAAAAAAAAAAAAAAAAAADAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwAAAAAAAAMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE5PVU5DRUVDS09VVE5FQ1RFVEVDUklCRUxVU0hFVEVBRFNFQVJDSFJHRUNUSVZJVFlMRU5EQVJWRU9USUZZUFRJT05TQ0hTRUFZU1RBVENIR0VPUkRJUkVDVE9SVFJDSFBBUkFNRVRFUlVSQ0VCU0NSSUJFQVJET1dOQUNFSU5ETktDS1VCU0NSSUJFSFRUUC9BRFRQLw=='
@@ -36502,7 +42073,7 @@ module.exports = 'AGFzbQEAAAABMAhgAX8Bf2ADf39/AX9gBH9/f38Bf2AAAGADf39/AGABfwBgAn
 
 /***/ }),
 
-/***/ 2365:
+/***/ 8020:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -36524,14 +42095,14 @@ exports.enumToMap = enumToMap;
 
 /***/ }),
 
-/***/ 1646:
+/***/ 6596:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const { kClients } = __nccwpck_require__(6401)
-const Agent = __nccwpck_require__(1594)
+const { kClients } = __nccwpck_require__(4034)
+const Agent = __nccwpck_require__(7864)
 const {
   kAgent,
   kMockAgentSet,
@@ -36542,14 +42113,14 @@ const {
   kGetNetConnect,
   kOptions,
   kFactory
-} = __nccwpck_require__(1586)
-const MockClient = __nccwpck_require__(3641)
-const MockPool = __nccwpck_require__(2105)
-const { matchValue, buildMockOptions } = __nccwpck_require__(5735)
-const { InvalidArgumentError, UndiciError } = __nccwpck_require__(6474)
-const Dispatcher = __nccwpck_require__(1591)
-const Pluralizer = __nccwpck_require__(5712)
-const PendingInterceptorsFormatter = __nccwpck_require__(1136)
+} = __nccwpck_require__(3180)
+const MockClient = __nccwpck_require__(3914)
+const MockPool = __nccwpck_require__(3666)
+const { matchValue, buildMockOptions } = __nccwpck_require__(8127)
+const { InvalidArgumentError, UndiciError } = __nccwpck_require__(1793)
+const Dispatcher = __nccwpck_require__(5384)
+const Pluralizer = __nccwpck_require__(4758)
+const PendingInterceptorsFormatter = __nccwpck_require__(7143)
 
 class FakeWeakRef {
   constructor (value) {
@@ -36703,15 +42274,15 @@ module.exports = MockAgent
 
 /***/ }),
 
-/***/ 3641:
+/***/ 3914:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
 const { promisify } = __nccwpck_require__(3837)
-const Client = __nccwpck_require__(7636)
-const { buildMockDispatch } = __nccwpck_require__(5735)
+const Client = __nccwpck_require__(4444)
+const { buildMockDispatch } = __nccwpck_require__(8127)
 const {
   kDispatches,
   kMockAgent,
@@ -36720,10 +42291,10 @@ const {
   kOrigin,
   kOriginalDispatch,
   kConnected
-} = __nccwpck_require__(1586)
-const { MockInterceptor } = __nccwpck_require__(121)
-const Symbols = __nccwpck_require__(6401)
-const { InvalidArgumentError } = __nccwpck_require__(6474)
+} = __nccwpck_require__(3180)
+const { MockInterceptor } = __nccwpck_require__(441)
+const Symbols = __nccwpck_require__(4034)
+const { InvalidArgumentError } = __nccwpck_require__(1793)
 
 /**
  * MockClient provides an API that extends the Client to influence the mockDispatches.
@@ -36770,13 +42341,13 @@ module.exports = MockClient
 
 /***/ }),
 
-/***/ 3075:
+/***/ 2660:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const { UndiciError } = __nccwpck_require__(6474)
+const { UndiciError } = __nccwpck_require__(1793)
 
 class MockNotMatchedError extends UndiciError {
   constructor (message) {
@@ -36795,13 +42366,13 @@ module.exports = {
 
 /***/ }),
 
-/***/ 121:
+/***/ 441:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const { getResponseData, buildKey, addMockDispatch } = __nccwpck_require__(5735)
+const { getResponseData, buildKey, addMockDispatch } = __nccwpck_require__(8127)
 const {
   kDispatches,
   kDispatchKey,
@@ -36809,9 +42380,9 @@ const {
   kDefaultTrailers,
   kContentLength,
   kMockDispatch
-} = __nccwpck_require__(1586)
-const { InvalidArgumentError } = __nccwpck_require__(6474)
-const { buildURL } = __nccwpck_require__(5927)
+} = __nccwpck_require__(3180)
+const { InvalidArgumentError } = __nccwpck_require__(1793)
+const { buildURL } = __nccwpck_require__(398)
 
 /**
  * Defines the scope API for an interceptor reply
@@ -37009,15 +42580,15 @@ module.exports.MockScope = MockScope
 
 /***/ }),
 
-/***/ 2105:
+/***/ 3666:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
 const { promisify } = __nccwpck_require__(3837)
-const Pool = __nccwpck_require__(2641)
-const { buildMockDispatch } = __nccwpck_require__(5735)
+const Pool = __nccwpck_require__(3092)
+const { buildMockDispatch } = __nccwpck_require__(8127)
 const {
   kDispatches,
   kMockAgent,
@@ -37026,10 +42597,10 @@ const {
   kOrigin,
   kOriginalDispatch,
   kConnected
-} = __nccwpck_require__(1586)
-const { MockInterceptor } = __nccwpck_require__(121)
-const Symbols = __nccwpck_require__(6401)
-const { InvalidArgumentError } = __nccwpck_require__(6474)
+} = __nccwpck_require__(3180)
+const { MockInterceptor } = __nccwpck_require__(441)
+const Symbols = __nccwpck_require__(4034)
+const { InvalidArgumentError } = __nccwpck_require__(1793)
 
 /**
  * MockPool provides an API that extends the Pool to influence the mockDispatches.
@@ -37076,7 +42647,7 @@ module.exports = MockPool
 
 /***/ }),
 
-/***/ 1586:
+/***/ 3180:
 /***/ ((module) => {
 
 "use strict";
@@ -37107,21 +42678,21 @@ module.exports = {
 
 /***/ }),
 
-/***/ 5735:
+/***/ 8127:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const { MockNotMatchedError } = __nccwpck_require__(3075)
+const { MockNotMatchedError } = __nccwpck_require__(2660)
 const {
   kDispatches,
   kMockAgent,
   kOriginalDispatch,
   kOrigin,
   kGetNetConnect
-} = __nccwpck_require__(1586)
-const { buildURL, nop } = __nccwpck_require__(5927)
+} = __nccwpck_require__(3180)
+const { buildURL, nop } = __nccwpck_require__(398)
 const { STATUS_CODES } = __nccwpck_require__(3685)
 const {
   types: {
@@ -37466,7 +43037,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 1136:
+/***/ 7143:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -37514,7 +43085,7 @@ module.exports = class PendingInterceptorsFormatter {
 
 /***/ }),
 
-/***/ 5712:
+/***/ 4758:
 /***/ ((module) => {
 
 "use strict";
@@ -37551,7 +43122,7 @@ module.exports = class Pluralizer {
 
 /***/ }),
 
-/***/ 1284:
+/***/ 7689:
 /***/ ((module) => {
 
 "use strict";
@@ -37676,16 +43247,16 @@ module.exports = class FixedQueue {
 
 /***/ }),
 
-/***/ 7742:
+/***/ 6636:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const DispatcherBase = __nccwpck_require__(9114)
-const FixedQueue = __nccwpck_require__(1284)
-const { kConnected, kSize, kRunning, kPending, kQueued, kBusy, kFree, kUrl, kClose, kDestroy, kDispatch } = __nccwpck_require__(6401)
-const PoolStats = __nccwpck_require__(3432)
+const DispatcherBase = __nccwpck_require__(7072)
+const FixedQueue = __nccwpck_require__(7689)
+const { kConnected, kSize, kRunning, kPending, kQueued, kBusy, kFree, kUrl, kClose, kDestroy, kDispatch } = __nccwpck_require__(4034)
+const PoolStats = __nccwpck_require__(9106)
 
 const kClients = Symbol('clients')
 const kNeedDrain = Symbol('needDrain')
@@ -37878,10 +43449,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3432:
+/***/ 9106:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-const { kFree, kConnected, kPending, kQueued, kRunning, kSize } = __nccwpck_require__(6401)
+const { kFree, kConnected, kPending, kQueued, kRunning, kSize } = __nccwpck_require__(4034)
 const kPool = Symbol('pool')
 
 class PoolStats {
@@ -37919,7 +43490,7 @@ module.exports = PoolStats
 
 /***/ }),
 
-/***/ 2641:
+/***/ 3092:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -37931,14 +43502,14 @@ const {
   kNeedDrain,
   kAddClient,
   kGetDispatcher
-} = __nccwpck_require__(7742)
-const Client = __nccwpck_require__(7636)
+} = __nccwpck_require__(6636)
+const Client = __nccwpck_require__(4444)
 const {
   InvalidArgumentError
-} = __nccwpck_require__(6474)
-const util = __nccwpck_require__(5927)
-const { kUrl, kInterceptors } = __nccwpck_require__(6401)
-const buildConnector = __nccwpck_require__(3717)
+} = __nccwpck_require__(1793)
+const util = __nccwpck_require__(398)
+const { kUrl, kInterceptors } = __nccwpck_require__(4034)
+const buildConnector = __nccwpck_require__(8594)
 
 const kOptions = Symbol('options')
 const kConnections = Symbol('connections')
@@ -38021,19 +43592,19 @@ module.exports = Pool
 
 /***/ }),
 
-/***/ 2267:
+/***/ 7833:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const { kProxy, kClose, kDestroy, kInterceptors } = __nccwpck_require__(6401)
+const { kProxy, kClose, kDestroy, kInterceptors } = __nccwpck_require__(4034)
 const { URL } = __nccwpck_require__(7310)
-const Agent = __nccwpck_require__(1594)
-const Pool = __nccwpck_require__(2641)
-const DispatcherBase = __nccwpck_require__(9114)
-const { InvalidArgumentError, RequestAbortedError } = __nccwpck_require__(6474)
-const buildConnector = __nccwpck_require__(3717)
+const Agent = __nccwpck_require__(7864)
+const Pool = __nccwpck_require__(3092)
+const DispatcherBase = __nccwpck_require__(7072)
+const { InvalidArgumentError, RequestAbortedError } = __nccwpck_require__(1793)
+const buildConnector = __nccwpck_require__(8594)
 
 const kAgent = Symbol('proxy agent')
 const kClient = Symbol('proxy client')
@@ -38218,7 +43789,7 @@ module.exports = ProxyAgent
 
 /***/ }),
 
-/***/ 1440:
+/***/ 5142:
 /***/ ((module) => {
 
 "use strict";
@@ -38323,27 +43894,27 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3871:
+/***/ 5334:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
 const diagnosticsChannel = __nccwpck_require__(7643)
-const { uid, states } = __nccwpck_require__(3141)
+const { uid, states } = __nccwpck_require__(8828)
 const {
   kReadyState,
   kSentClose,
   kByteParser,
   kReceivedClose
-} = __nccwpck_require__(6961)
-const { fireEvent, failWebsocketConnection } = __nccwpck_require__(9523)
-const { CloseEvent } = __nccwpck_require__(4645)
-const { makeRequest } = __nccwpck_require__(3515)
-const { fetching } = __nccwpck_require__(7836)
-const { Headers } = __nccwpck_require__(289)
-const { getGlobalDispatcher } = __nccwpck_require__(2850)
-const { kHeadersList } = __nccwpck_require__(6401)
+} = __nccwpck_require__(3719)
+const { fireEvent, failWebsocketConnection } = __nccwpck_require__(6855)
+const { CloseEvent } = __nccwpck_require__(8572)
+const { makeRequest } = __nccwpck_require__(5253)
+const { fetching } = __nccwpck_require__(4681)
+const { Headers } = __nccwpck_require__(5517)
+const { getGlobalDispatcher } = __nccwpck_require__(1045)
+const { kHeadersList } = __nccwpck_require__(4034)
 
 const channels = {}
 channels.open = diagnosticsChannel.channel('undici:websocket:open')
@@ -38622,7 +44193,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3141:
+/***/ 8828:
 /***/ ((module) => {
 
 "use strict";
@@ -38681,14 +44252,14 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4645:
+/***/ 8572:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const { webidl } = __nccwpck_require__(8197)
-const { kEnumerableProperty } = __nccwpck_require__(5927)
+const { webidl } = __nccwpck_require__(5182)
+const { kEnumerableProperty } = __nccwpck_require__(398)
 const { MessagePort } = __nccwpck_require__(1267)
 
 /**
@@ -38992,13 +44563,13 @@ module.exports = {
 
 /***/ }),
 
-/***/ 5351:
+/***/ 9459:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const { maxUnsigned16Bit } = __nccwpck_require__(3141)
+const { maxUnsigned16Bit } = __nccwpck_require__(8828)
 
 /** @type {import('crypto')} */
 let crypto
@@ -39073,7 +44644,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 1887:
+/***/ 7381:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -39081,10 +44652,10 @@ module.exports = {
 
 const { Writable } = __nccwpck_require__(2781)
 const diagnosticsChannel = __nccwpck_require__(7643)
-const { parserStates, opcodes, states, emptyBuffer } = __nccwpck_require__(3141)
-const { kReadyState, kSentClose, kResponse, kReceivedClose } = __nccwpck_require__(6961)
-const { isValidStatusCode, failWebsocketConnection, websocketMessageReceived } = __nccwpck_require__(9523)
-const { WebsocketFrameSend } = __nccwpck_require__(5351)
+const { parserStates, opcodes, states, emptyBuffer } = __nccwpck_require__(8828)
+const { kReadyState, kSentClose, kResponse, kReceivedClose } = __nccwpck_require__(3719)
+const { isValidStatusCode, failWebsocketConnection, websocketMessageReceived } = __nccwpck_require__(6855)
+const { WebsocketFrameSend } = __nccwpck_require__(9459)
 
 // This code was influenced by ws released under the MIT license.
 // Copyright (c) 2011 Einar Otto Stangvik <einaros@gmail.com>
@@ -39425,7 +44996,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 6961:
+/***/ 3719:
 /***/ ((module) => {
 
 "use strict";
@@ -39445,15 +45016,15 @@ module.exports = {
 
 /***/ }),
 
-/***/ 9523:
+/***/ 6855:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const { kReadyState, kController, kResponse, kBinaryType, kWebSocketURL } = __nccwpck_require__(6961)
-const { states, opcodes } = __nccwpck_require__(3141)
-const { MessageEvent, ErrorEvent } = __nccwpck_require__(4645)
+const { kReadyState, kController, kResponse, kBinaryType, kWebSocketURL } = __nccwpck_require__(3719)
+const { states, opcodes } = __nccwpck_require__(8828)
+const { MessageEvent, ErrorEvent } = __nccwpck_require__(8572)
 
 /* globals Blob */
 
@@ -39653,17 +45224,17 @@ module.exports = {
 
 /***/ }),
 
-/***/ 5898:
+/***/ 3915:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const { webidl } = __nccwpck_require__(8197)
-const { DOMException } = __nccwpck_require__(5998)
-const { URLSerializer } = __nccwpck_require__(2788)
-const { getGlobalOrigin } = __nccwpck_require__(910)
-const { staticPropertyDescriptors, states, opcodes, emptyBuffer } = __nccwpck_require__(3141)
+const { webidl } = __nccwpck_require__(5182)
+const { DOMException } = __nccwpck_require__(6418)
+const { URLSerializer } = __nccwpck_require__(221)
+const { getGlobalOrigin } = __nccwpck_require__(2965)
+const { staticPropertyDescriptors, states, opcodes, emptyBuffer } = __nccwpck_require__(8828)
 const {
   kWebSocketURL,
   kReadyState,
@@ -39672,13 +45243,13 @@ const {
   kResponse,
   kSentClose,
   kByteParser
-} = __nccwpck_require__(6961)
-const { isEstablished, isClosing, isValidSubprotocol, failWebsocketConnection, fireEvent } = __nccwpck_require__(9523)
-const { establishWebSocketConnection } = __nccwpck_require__(3871)
-const { WebsocketFrameSend } = __nccwpck_require__(5351)
-const { ByteParser } = __nccwpck_require__(1887)
-const { kEnumerableProperty, isBlobLike } = __nccwpck_require__(5927)
-const { getGlobalDispatcher } = __nccwpck_require__(2850)
+} = __nccwpck_require__(3719)
+const { isEstablished, isClosing, isValidSubprotocol, failWebsocketConnection, fireEvent } = __nccwpck_require__(6855)
+const { establishWebSocketConnection } = __nccwpck_require__(5334)
+const { WebsocketFrameSend } = __nccwpck_require__(9459)
+const { ByteParser } = __nccwpck_require__(7381)
+const { kEnumerableProperty, isBlobLike } = __nccwpck_require__(398)
+const { getGlobalDispatcher } = __nccwpck_require__(1045)
 const { types } = __nccwpck_require__(3837)
 
 let experimentalWarned = false
@@ -40302,7 +45873,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4828:
+/***/ 8444:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -40328,7 +45899,7 @@ exports.getUserAgent = getUserAgent;
 
 /***/ }),
 
-/***/ 8755:
+/***/ 669:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -40392,29 +45963,29 @@ Object.defineProperty(exports, "parse", ({
   }
 }));
 
-var _v = _interopRequireDefault(__nccwpck_require__(5418));
+var _v = _interopRequireDefault(__nccwpck_require__(6087));
 
-var _v2 = _interopRequireDefault(__nccwpck_require__(4225));
+var _v2 = _interopRequireDefault(__nccwpck_require__(3303));
 
-var _v3 = _interopRequireDefault(__nccwpck_require__(7007));
+var _v3 = _interopRequireDefault(__nccwpck_require__(2586));
 
-var _v4 = _interopRequireDefault(__nccwpck_require__(4505));
+var _v4 = _interopRequireDefault(__nccwpck_require__(4543));
 
-var _nil = _interopRequireDefault(__nccwpck_require__(7939));
+var _nil = _interopRequireDefault(__nccwpck_require__(3425));
 
-var _version = _interopRequireDefault(__nccwpck_require__(6353));
+var _version = _interopRequireDefault(__nccwpck_require__(4585));
 
-var _validate = _interopRequireDefault(__nccwpck_require__(8658));
+var _validate = _interopRequireDefault(__nccwpck_require__(2539));
 
-var _stringify = _interopRequireDefault(__nccwpck_require__(2072));
+var _stringify = _interopRequireDefault(__nccwpck_require__(8022));
 
-var _parse = _interopRequireDefault(__nccwpck_require__(4897));
+var _parse = _interopRequireDefault(__nccwpck_require__(3917));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 
-/***/ 6465:
+/***/ 1674:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -40444,7 +46015,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 7939:
+/***/ 3425:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -40459,7 +46030,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 4897:
+/***/ 3917:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -40470,7 +46041,7 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _validate = _interopRequireDefault(__nccwpck_require__(8658));
+var _validate = _interopRequireDefault(__nccwpck_require__(2539));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -40511,7 +46082,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 8584:
+/***/ 1138:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -40526,7 +46097,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 861:
+/***/ 9622:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -40557,7 +46128,7 @@ function rng() {
 
 /***/ }),
 
-/***/ 1313:
+/***/ 3624:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -40587,7 +46158,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 2072:
+/***/ 8022:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -40598,7 +46169,7 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _validate = _interopRequireDefault(__nccwpck_require__(8658));
+var _validate = _interopRequireDefault(__nccwpck_require__(2539));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -40633,7 +46204,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 5418:
+/***/ 6087:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -40644,9 +46215,9 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _rng = _interopRequireDefault(__nccwpck_require__(861));
+var _rng = _interopRequireDefault(__nccwpck_require__(9622));
 
-var _stringify = _interopRequireDefault(__nccwpck_require__(2072));
+var _stringify = _interopRequireDefault(__nccwpck_require__(8022));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -40747,7 +46318,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 4225:
+/***/ 3303:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -40758,9 +46329,9 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _v = _interopRequireDefault(__nccwpck_require__(9411));
+var _v = _interopRequireDefault(__nccwpck_require__(8331));
 
-var _md = _interopRequireDefault(__nccwpck_require__(6465));
+var _md = _interopRequireDefault(__nccwpck_require__(1674));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -40770,7 +46341,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 9411:
+/***/ 8331:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -40782,9 +46353,9 @@ Object.defineProperty(exports, "__esModule", ({
 exports["default"] = _default;
 exports.URL = exports.DNS = void 0;
 
-var _stringify = _interopRequireDefault(__nccwpck_require__(2072));
+var _stringify = _interopRequireDefault(__nccwpck_require__(8022));
 
-var _parse = _interopRequireDefault(__nccwpck_require__(4897));
+var _parse = _interopRequireDefault(__nccwpck_require__(3917));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -40855,7 +46426,7 @@ function _default(name, version, hashfunc) {
 
 /***/ }),
 
-/***/ 7007:
+/***/ 2586:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -40866,9 +46437,9 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _rng = _interopRequireDefault(__nccwpck_require__(861));
+var _rng = _interopRequireDefault(__nccwpck_require__(9622));
 
-var _stringify = _interopRequireDefault(__nccwpck_require__(2072));
+var _stringify = _interopRequireDefault(__nccwpck_require__(8022));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -40899,7 +46470,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 4505:
+/***/ 4543:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -40910,9 +46481,9 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _v = _interopRequireDefault(__nccwpck_require__(9411));
+var _v = _interopRequireDefault(__nccwpck_require__(8331));
 
-var _sha = _interopRequireDefault(__nccwpck_require__(1313));
+var _sha = _interopRequireDefault(__nccwpck_require__(3624));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -40922,7 +46493,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 8658:
+/***/ 2539:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -40933,7 +46504,7 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _regex = _interopRequireDefault(__nccwpck_require__(8584));
+var _regex = _interopRequireDefault(__nccwpck_require__(1138));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -40946,7 +46517,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 6353:
+/***/ 4585:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -40957,7 +46528,7 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _validate = _interopRequireDefault(__nccwpck_require__(8658));
+var _validate = _interopRequireDefault(__nccwpck_require__(2539));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -40974,7 +46545,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 4927:
+/***/ 5738:
 /***/ ((module) => {
 
 // Returns a wrapper function that returns a wrapped callback
@@ -41014,14 +46585,14 @@ function wrappy (fn, cb) {
 
 /***/ }),
 
-/***/ 1244:
+/***/ 5703:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ZodError = exports.quotelessJson = exports.ZodIssueCode = void 0;
-const util_1 = __nccwpck_require__(2689);
+const util_1 = __nccwpck_require__(7393);
 exports.ZodIssueCode = util_1.util.arrayToEnum([
     "invalid_type",
     "invalid_literal",
@@ -41159,7 +46730,7 @@ ZodError.create = (issues) => {
 
 /***/ }),
 
-/***/ 8484:
+/***/ 4416:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -41169,7 +46740,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getErrorMap = exports.setErrorMap = exports.defaultErrorMap = void 0;
-const en_1 = __importDefault(__nccwpck_require__(2750));
+const en_1 = __importDefault(__nccwpck_require__(521));
 exports.defaultErrorMap = en_1.default;
 let overrideErrorMap = en_1.default;
 function setErrorMap(map) {
@@ -41184,7 +46755,7 @@ exports.getErrorMap = getErrorMap;
 
 /***/ }),
 
-/***/ 4280:
+/***/ 618:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -41200,17 +46771,17 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-__exportStar(__nccwpck_require__(8484), exports);
-__exportStar(__nccwpck_require__(1287), exports);
-__exportStar(__nccwpck_require__(1899), exports);
-__exportStar(__nccwpck_require__(2689), exports);
-__exportStar(__nccwpck_require__(1322), exports);
-__exportStar(__nccwpck_require__(1244), exports);
+__exportStar(__nccwpck_require__(4416), exports);
+__exportStar(__nccwpck_require__(8082), exports);
+__exportStar(__nccwpck_require__(3357), exports);
+__exportStar(__nccwpck_require__(7393), exports);
+__exportStar(__nccwpck_require__(7992), exports);
+__exportStar(__nccwpck_require__(5703), exports);
 
 
 /***/ }),
 
-/***/ 5115:
+/***/ 6665:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -41226,7 +46797,7 @@ var errorUtil;
 
 /***/ }),
 
-/***/ 1287:
+/***/ 8082:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -41236,8 +46807,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.isAsync = exports.isValid = exports.isDirty = exports.isAborted = exports.OK = exports.DIRTY = exports.INVALID = exports.ParseStatus = exports.addIssueToContext = exports.EMPTY_PATH = exports.makeIssue = void 0;
-const errors_1 = __nccwpck_require__(8484);
-const en_1 = __importDefault(__nccwpck_require__(2750));
+const errors_1 = __nccwpck_require__(4416);
+const en_1 = __importDefault(__nccwpck_require__(521));
 const makeIssue = (params) => {
     const { data, path, errorMaps, issueData } = params;
     const fullPath = [...path, ...(issueData.path || [])];
@@ -41359,7 +46930,7 @@ exports.isAsync = isAsync;
 
 /***/ }),
 
-/***/ 1899:
+/***/ 3357:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -41369,7 +46940,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 
 /***/ }),
 
-/***/ 2689:
+/***/ 7393:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -41519,7 +47090,7 @@ exports.getParsedType = getParsedType;
 
 /***/ }),
 
-/***/ 756:
+/***/ 7861:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -41548,22 +47119,22 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.z = void 0;
-const z = __importStar(__nccwpck_require__(4280));
+const z = __importStar(__nccwpck_require__(618));
 exports.z = z;
-__exportStar(__nccwpck_require__(4280), exports);
+__exportStar(__nccwpck_require__(618), exports);
 exports["default"] = z;
 
 
 /***/ }),
 
-/***/ 2750:
+/***/ 521:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const util_1 = __nccwpck_require__(2689);
-const ZodError_1 = __nccwpck_require__(1244);
+const util_1 = __nccwpck_require__(7393);
+const ZodError_1 = __nccwpck_require__(5703);
 const errorMap = (issue, _ctx) => {
     let message;
     switch (issue.code) {
@@ -41693,7 +47264,7 @@ exports["default"] = errorMap;
 
 /***/ }),
 
-/***/ 1322:
+/***/ 7992:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -41713,11 +47284,11 @@ var _ZodEnum_cache, _ZodNativeEnum_cache;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.boolean = exports.bigint = exports.array = exports.any = exports.coerce = exports.ZodFirstPartyTypeKind = exports.late = exports.ZodSchema = exports.Schema = exports.custom = exports.ZodReadonly = exports.ZodPipeline = exports.ZodBranded = exports.BRAND = exports.ZodNaN = exports.ZodCatch = exports.ZodDefault = exports.ZodNullable = exports.ZodOptional = exports.ZodTransformer = exports.ZodEffects = exports.ZodPromise = exports.ZodNativeEnum = exports.ZodEnum = exports.ZodLiteral = exports.ZodLazy = exports.ZodFunction = exports.ZodSet = exports.ZodMap = exports.ZodRecord = exports.ZodTuple = exports.ZodIntersection = exports.ZodDiscriminatedUnion = exports.ZodUnion = exports.ZodObject = exports.ZodArray = exports.ZodVoid = exports.ZodNever = exports.ZodUnknown = exports.ZodAny = exports.ZodNull = exports.ZodUndefined = exports.ZodSymbol = exports.ZodDate = exports.ZodBoolean = exports.ZodBigInt = exports.ZodNumber = exports.ZodString = exports.datetimeRegex = exports.ZodType = void 0;
 exports.NEVER = exports["void"] = exports.unknown = exports.union = exports.undefined = exports.tuple = exports.transformer = exports.symbol = exports.string = exports.strictObject = exports.set = exports.record = exports.promise = exports.preprocess = exports.pipeline = exports.ostring = exports.optional = exports.onumber = exports.oboolean = exports.object = exports.number = exports.nullable = exports["null"] = exports.never = exports.nativeEnum = exports.nan = exports.map = exports.literal = exports.lazy = exports.intersection = exports["instanceof"] = exports["function"] = exports["enum"] = exports.effect = exports.discriminatedUnion = exports.date = void 0;
-const errors_1 = __nccwpck_require__(8484);
-const errorUtil_1 = __nccwpck_require__(5115);
-const parseUtil_1 = __nccwpck_require__(1287);
-const util_1 = __nccwpck_require__(2689);
-const ZodError_1 = __nccwpck_require__(1244);
+const errors_1 = __nccwpck_require__(4416);
+const errorUtil_1 = __nccwpck_require__(6665);
+const parseUtil_1 = __nccwpck_require__(8082);
+const util_1 = __nccwpck_require__(7393);
+const ZodError_1 = __nccwpck_require__(5703);
 class ParseInputLazyPath {
     constructor(parent, value, path, key) {
         this._cachedPath = [];
@@ -45378,23 +50949,23 @@ exports.NEVER = parseUtil_1.INVALID;
 
 /***/ }),
 
-/***/ 1149:
+/***/ 8576:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const ai_1 = __nccwpck_require__(7649);
-const openai_1 = __nccwpck_require__(3652);
-const anthropic_1 = __nccwpck_require__(8564);
-const google_1 = __nccwpck_require__(9092);
-const mistral_1 = __nccwpck_require__(239);
-const azure_1 = __nccwpck_require__(6947);
-const cohere_1 = __nccwpck_require__(785);
-const models_1 = __nccwpck_require__(3978);
-const core_1 = __nccwpck_require__(3945);
-const utils_1 = __nccwpck_require__(3626);
-const gpt_3_encoder_1 = __nccwpck_require__(5255);
+const ai_1 = __nccwpck_require__(8464);
+const openai_1 = __nccwpck_require__(1776);
+const anthropic_1 = __nccwpck_require__(4766);
+const google_1 = __nccwpck_require__(6650);
+const mistral_1 = __nccwpck_require__(5122);
+const azure_1 = __nccwpck_require__(733);
+const cohere_1 = __nccwpck_require__(4752);
+const models_1 = __nccwpck_require__(7135);
+const core_1 = __nccwpck_require__(8490);
+const utils_1 = __nccwpck_require__(3679);
+const gpt_3_encoder_1 = __nccwpck_require__(5653);
 const apiKey = (0, core_1.getInput)('apikey', { required: true });
 const provider = (0, core_1.getInput)('provider', { required: true });
 const basePath = (0, core_1.getInput)('basePath');
@@ -45491,7 +51062,7 @@ exports["default"] = translator;
 
 /***/ }),
 
-/***/ 4903:
+/***/ 2520:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -45504,14 +51075,14 @@ exports.availableFileExtensions = ['.md', '.mdx', '.json'];
 
 /***/ }),
 
-/***/ 2706:
+/***/ 4039:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.INVALID_FILE_EXTENSION = exports.COMMAND_USAGE = void 0;
-const const_1 = __nccwpck_require__(4903);
+const const_1 = __nccwpck_require__(2520);
 exports.COMMAND_USAGE = `usage:
 \`\`\`
 /gpt-translate [input file path] [output file path] [target language]
@@ -45525,16 +51096,16 @@ exports.INVALID_FILE_EXTENSION = `Unsupported file extension. Please use one of 
 
 /***/ }),
 
-/***/ 7199:
+/***/ 4519:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.extractInput = exports.getCommandParams = void 0;
-const core_1 = __nccwpck_require__(3945);
-const github_1 = __nccwpck_require__(8253);
-const validate_1 = __nccwpck_require__(6619);
+const core_1 = __nccwpck_require__(8490);
+const github_1 = __nccwpck_require__(9225);
+const validate_1 = __nccwpck_require__(5349);
 const getCommandParams = async () => {
     const comment = github_1.context.payload.comment?.body;
     if (!comment)
@@ -45572,7 +51143,7 @@ exports.extractInput = extractInput;
 
 /***/ }),
 
-/***/ 420:
+/***/ 4490:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -45688,16 +51259,16 @@ exports.generateOutputFilePaths = generateOutputFilePaths;
 
 /***/ }),
 
-/***/ 4348:
+/***/ 5452:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.authorizeUser = exports.gitAddCommentReaction = exports.gitPostComment = exports.gitCreatePullRequest = exports.gitCommitPush = exports.gitCreateBranch = exports.gitCheckout = exports.gitSetConfig = void 0;
-const exec_1 = __nccwpck_require__(8537);
-const github_1 = __nccwpck_require__(8253);
-const core_1 = __nccwpck_require__(3945);
+const exec_1 = __nccwpck_require__(9715);
+const github_1 = __nccwpck_require__(9225);
+const core_1 = __nccwpck_require__(8490);
 const crypto_1 = __nccwpck_require__(6113);
 const GITHUB_TOKEN = (0, core_1.getInput)('token');
 if (!GITHUB_TOKEN) {
@@ -45796,7 +51367,7 @@ exports.authorizeUser = authorizeUser;
 
 /***/ }),
 
-/***/ 3978:
+/***/ 7135:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -46054,7 +51625,7 @@ exports.modelTokens = {
 
 /***/ }),
 
-/***/ 405:
+/***/ 3784:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -46066,13 +51637,13 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createTranslatedFiles = exports.translateByManual = exports.translateByCommand = void 0;
 const promises_1 = __importDefault(__nccwpck_require__(3292));
 const path_1 = __importDefault(__nccwpck_require__(1017));
-const glob_1 = __nccwpck_require__(9514);
-const github_1 = __nccwpck_require__(8253);
-const core_1 = __nccwpck_require__(3945);
-const utils_1 = __nccwpck_require__(3626);
-const git_1 = __nccwpck_require__(4348);
-const file_1 = __nccwpck_require__(420);
-const ai_1 = __importDefault(__nccwpck_require__(1149));
+const glob_1 = __nccwpck_require__(1075);
+const github_1 = __nccwpck_require__(9225);
+const core_1 = __nccwpck_require__(8490);
+const utils_1 = __nccwpck_require__(3679);
+const git_1 = __nccwpck_require__(5452);
+const file_1 = __nccwpck_require__(4490);
+const ai_1 = __importDefault(__nccwpck_require__(8576));
 const translateByCommand = async (inputFilePath, outputFilePath, targetLang) => {
     await (0, git_1.gitSetConfig)();
     const branch = (0, utils_1.isPR)() ? await (0, git_1.gitCheckout)() : await (0, git_1.gitCreateBranch)();
@@ -46147,16 +51718,16 @@ exports.createTranslatedFiles = createTranslatedFiles;
 
 /***/ }),
 
-/***/ 3626:
+/***/ 3679:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getInputAsNumber = exports.generatePRBody = exports.delay = exports.removeSymbols = exports.isPR = exports.postError = void 0;
-const core_1 = __nccwpck_require__(3945);
-const git_1 = __nccwpck_require__(4348);
-const github_1 = __nccwpck_require__(8253);
+const core_1 = __nccwpck_require__(8490);
+const git_1 = __nccwpck_require__(5452);
+const github_1 = __nccwpck_require__(9225);
 const postError = async (message) => {
     await (0, git_1.gitPostComment)(`❌${message}`);
     (0, core_1.setFailed)(message);
@@ -46225,7 +51796,7 @@ exports.getInputAsNumber = getInputAsNumber;
 
 /***/ }),
 
-/***/ 6619:
+/***/ 5349:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -46235,10 +51806,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.commandValidator = exports.isValidFileExt = void 0;
-const const_1 = __nccwpck_require__(4903);
+const const_1 = __nccwpck_require__(2520);
 const path_1 = __importDefault(__nccwpck_require__(1017));
-const utils_1 = __nccwpck_require__(3626);
-const error_1 = __nccwpck_require__(2706);
+const utils_1 = __nccwpck_require__(3679);
+const error_1 = __nccwpck_require__(4039);
 const isValidFileExt = (filename) => {
     const availabilities = new Set([...const_1.availableFileExtensions, '*']);
     const fileExt = path_1.default.extname(filename);
@@ -46414,7 +51985,7 @@ module.exports = require("node:fs/promises");
 
 /***/ }),
 
-/***/ 8330:
+/***/ 9411:
 /***/ ((module) => {
 
 "use strict";
@@ -46566,7 +52137,7 @@ module.exports = require("zlib");
 
 /***/ }),
 
-/***/ 6522:
+/***/ 3749:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -46575,10 +52146,10 @@ module.exports = require("zlib");
 const WritableStream = (__nccwpck_require__(4492).Writable)
 const inherits = (__nccwpck_require__(7261).inherits)
 
-const StreamSearch = __nccwpck_require__(5163)
+const StreamSearch = __nccwpck_require__(5949)
 
-const PartStream = __nccwpck_require__(1772)
-const HeaderParser = __nccwpck_require__(3707)
+const PartStream = __nccwpck_require__(2309)
+const HeaderParser = __nccwpck_require__(3568)
 
 const DASH = 45
 const B_ONEDASH = Buffer.from('-')
@@ -46787,7 +52358,7 @@ module.exports = Dicer
 
 /***/ }),
 
-/***/ 3707:
+/***/ 3568:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -46795,9 +52366,9 @@ module.exports = Dicer
 
 const EventEmitter = (__nccwpck_require__(5673).EventEmitter)
 const inherits = (__nccwpck_require__(7261).inherits)
-const getLimit = __nccwpck_require__(4298)
+const getLimit = __nccwpck_require__(3534)
 
-const StreamSearch = __nccwpck_require__(5163)
+const StreamSearch = __nccwpck_require__(5949)
 
 const B_DCRLF = Buffer.from('\r\n\r\n')
 const RE_CRLF = /\r\n/g
@@ -46895,7 +52466,7 @@ module.exports = HeaderParser
 
 /***/ }),
 
-/***/ 1772:
+/***/ 2309:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -46916,7 +52487,7 @@ module.exports = PartStream
 
 /***/ }),
 
-/***/ 5163:
+/***/ 5949:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -47152,7 +52723,7 @@ module.exports = SBMH
 
 /***/ }),
 
-/***/ 843:
+/***/ 7008:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -47160,11 +52731,11 @@ module.exports = SBMH
 
 const WritableStream = (__nccwpck_require__(4492).Writable)
 const { inherits } = __nccwpck_require__(7261)
-const Dicer = __nccwpck_require__(6522)
+const Dicer = __nccwpck_require__(3749)
 
-const MultipartParser = __nccwpck_require__(236)
-const UrlencodedParser = __nccwpck_require__(45)
-const parseParams = __nccwpck_require__(5594)
+const MultipartParser = __nccwpck_require__(7570)
+const UrlencodedParser = __nccwpck_require__(782)
+const parseParams = __nccwpck_require__(7928)
 
 function Busboy (opts) {
   if (!(this instanceof Busboy)) { return new Busboy(opts) }
@@ -47245,7 +52816,7 @@ module.exports.Dicer = Dicer
 
 /***/ }),
 
-/***/ 236:
+/***/ 7570:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -47261,12 +52832,12 @@ module.exports.Dicer = Dicer
 const { Readable } = __nccwpck_require__(4492)
 const { inherits } = __nccwpck_require__(7261)
 
-const Dicer = __nccwpck_require__(6522)
+const Dicer = __nccwpck_require__(3749)
 
-const parseParams = __nccwpck_require__(5594)
-const decodeText = __nccwpck_require__(9404)
-const basename = __nccwpck_require__(3128)
-const getLimit = __nccwpck_require__(4298)
+const parseParams = __nccwpck_require__(7928)
+const decodeText = __nccwpck_require__(4169)
+const basename = __nccwpck_require__(7948)
+const getLimit = __nccwpck_require__(3534)
 
 const RE_BOUNDARY = /^boundary$/i
 const RE_FIELD = /^form-data$/i
@@ -47559,15 +53130,15 @@ module.exports = Multipart
 
 /***/ }),
 
-/***/ 45:
+/***/ 782:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const Decoder = __nccwpck_require__(2080)
-const decodeText = __nccwpck_require__(9404)
-const getLimit = __nccwpck_require__(4298)
+const Decoder = __nccwpck_require__(2187)
+const decodeText = __nccwpck_require__(4169)
+const getLimit = __nccwpck_require__(3534)
 
 const RE_CHARSET = /^charset$/i
 
@@ -47757,7 +53328,7 @@ module.exports = UrlEncoded
 
 /***/ }),
 
-/***/ 2080:
+/***/ 2187:
 /***/ ((module) => {
 
 "use strict";
@@ -47819,7 +53390,7 @@ module.exports = Decoder
 
 /***/ }),
 
-/***/ 3128:
+/***/ 7948:
 /***/ ((module) => {
 
 "use strict";
@@ -47841,7 +53412,7 @@ module.exports = function basename (path) {
 
 /***/ }),
 
-/***/ 9404:
+/***/ 4169:
 /***/ (function(module) {
 
 "use strict";
@@ -47963,7 +53534,7 @@ module.exports = decodeText
 
 /***/ }),
 
-/***/ 4298:
+/***/ 3534:
 /***/ ((module) => {
 
 "use strict";
@@ -47987,14 +53558,14 @@ module.exports = function getLimit (limits, name, defaultLimit) {
 
 /***/ }),
 
-/***/ 5594:
+/***/ 7928:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 /* eslint-disable object-property-newline */
 
 
-const decodeText = __nccwpck_require__(9404)
+const decodeText = __nccwpck_require__(4169)
 
 const RE_ENCODED = /%[a-fA-F0-9][a-fA-F0-9]/g
 
@@ -48191,18 +53762,18 @@ module.exports = parseParams
 
 /***/ }),
 
-/***/ 2807:
+/***/ 4857:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Glob = void 0;
-const minimatch_1 = __nccwpck_require__(3721);
+const minimatch_1 = __nccwpck_require__(5978);
 const node_url_1 = __nccwpck_require__(1041);
-const path_scurry_1 = __nccwpck_require__(5033);
-const pattern_js_1 = __nccwpck_require__(5802);
-const walker_js_1 = __nccwpck_require__(9263);
+const path_scurry_1 = __nccwpck_require__(6598);
+const pattern_js_1 = __nccwpck_require__(6841);
+const walker_js_1 = __nccwpck_require__(6243);
 // if no process global, just call it linux.
 // so we default to case-sensitive, / separators
 const defaultPlatform = (typeof process === 'object' &&
@@ -48445,14 +54016,14 @@ exports.Glob = Glob;
 
 /***/ }),
 
-/***/ 6040:
+/***/ 2490:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.hasMagic = void 0;
-const minimatch_1 = __nccwpck_require__(3721);
+const minimatch_1 = __nccwpck_require__(5978);
 /**
  * Return true if the patterns provided contain any magic glob characters,
  * given the options provided.
@@ -48479,7 +54050,7 @@ exports.hasMagic = hasMagic;
 
 /***/ }),
 
-/***/ 4207:
+/***/ 8075:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -48490,8 +54061,8 @@ exports.hasMagic = hasMagic;
 // Ignores are always parsed in dot:true mode
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Ignore = void 0;
-const minimatch_1 = __nccwpck_require__(3721);
-const pattern_js_1 = __nccwpck_require__(5802);
+const minimatch_1 = __nccwpck_require__(5978);
+const pattern_js_1 = __nccwpck_require__(6841);
 const defaultPlatform = (typeof process === 'object' &&
     process &&
     typeof process.platform === 'string') ?
@@ -48605,48 +54176,48 @@ exports.Ignore = Ignore;
 
 /***/ }),
 
-/***/ 9514:
+/***/ 1075:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.glob = exports.sync = exports.iterate = exports.iterateSync = exports.stream = exports.streamSync = exports.globIterate = exports.globIterateSync = exports.globSync = exports.globStream = exports.globStreamSync = exports.Ignore = exports.hasMagic = exports.Glob = exports.unescape = exports.escape = void 0;
-const minimatch_1 = __nccwpck_require__(3721);
-const glob_js_1 = __nccwpck_require__(2807);
-const has_magic_js_1 = __nccwpck_require__(6040);
-var minimatch_2 = __nccwpck_require__(3721);
+exports.glob = exports.sync = exports.iterate = exports.iterateSync = exports.stream = exports.streamSync = exports.Ignore = exports.hasMagic = exports.Glob = exports.unescape = exports.escape = void 0;
+exports.globStreamSync = globStreamSync;
+exports.globStream = globStream;
+exports.globSync = globSync;
+exports.globIterateSync = globIterateSync;
+exports.globIterate = globIterate;
+const minimatch_1 = __nccwpck_require__(5978);
+const glob_js_1 = __nccwpck_require__(4857);
+const has_magic_js_1 = __nccwpck_require__(2490);
+var minimatch_2 = __nccwpck_require__(5978);
 Object.defineProperty(exports, "escape", ({ enumerable: true, get: function () { return minimatch_2.escape; } }));
 Object.defineProperty(exports, "unescape", ({ enumerable: true, get: function () { return minimatch_2.unescape; } }));
-var glob_js_2 = __nccwpck_require__(2807);
+var glob_js_2 = __nccwpck_require__(4857);
 Object.defineProperty(exports, "Glob", ({ enumerable: true, get: function () { return glob_js_2.Glob; } }));
-var has_magic_js_2 = __nccwpck_require__(6040);
+var has_magic_js_2 = __nccwpck_require__(2490);
 Object.defineProperty(exports, "hasMagic", ({ enumerable: true, get: function () { return has_magic_js_2.hasMagic; } }));
-var ignore_js_1 = __nccwpck_require__(4207);
+var ignore_js_1 = __nccwpck_require__(8075);
 Object.defineProperty(exports, "Ignore", ({ enumerable: true, get: function () { return ignore_js_1.Ignore; } }));
 function globStreamSync(pattern, options = {}) {
     return new glob_js_1.Glob(pattern, options).streamSync();
 }
-exports.globStreamSync = globStreamSync;
 function globStream(pattern, options = {}) {
     return new glob_js_1.Glob(pattern, options).stream();
 }
-exports.globStream = globStream;
 function globSync(pattern, options = {}) {
     return new glob_js_1.Glob(pattern, options).walkSync();
 }
-exports.globSync = globSync;
 async function glob_(pattern, options = {}) {
     return new glob_js_1.Glob(pattern, options).walk();
 }
 function globIterateSync(pattern, options = {}) {
     return new glob_js_1.Glob(pattern, options).iterateSync();
 }
-exports.globIterateSync = globIterateSync;
 function globIterate(pattern, options = {}) {
     return new glob_js_1.Glob(pattern, options).iterate();
 }
-exports.globIterate = globIterate;
 // aliases: glob.sync.stream() glob.stream.sync() glob.sync() etc
 exports.streamSync = globStreamSync;
 exports.stream = Object.assign(globStream, { sync: globStreamSync });
@@ -48680,7 +54251,7 @@ exports.glob.glob = exports.glob;
 
 /***/ }),
 
-/***/ 5802:
+/***/ 6841:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -48688,7 +54259,7 @@ exports.glob.glob = exports.glob;
 // this is just a very light wrapper around 2 arrays with an offset index
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Pattern = void 0;
-const minimatch_1 = __nccwpck_require__(3721);
+const minimatch_1 = __nccwpck_require__(5978);
 const isPatternList = (pl) => pl.length >= 1;
 const isGlobList = (gl) => gl.length >= 1;
 /**
@@ -48906,7 +54477,7 @@ exports.Pattern = Pattern;
 
 /***/ }),
 
-/***/ 256:
+/***/ 5735:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -48914,7 +54485,7 @@ exports.Pattern = Pattern;
 // synchronous utility for filtering entries and calculating subwalks
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Processor = exports.SubWalks = exports.MatchRecord = exports.HasWalkedCache = void 0;
-const minimatch_1 = __nccwpck_require__(3721);
+const minimatch_1 = __nccwpck_require__(5978);
 /**
  * A cache of which patterns have been processed for a given Path
  */
@@ -49214,7 +54785,7 @@ exports.Processor = Processor;
 
 /***/ }),
 
-/***/ 9263:
+/***/ 6243:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -49227,9 +54798,9 @@ exports.GlobStream = exports.GlobWalker = exports.GlobUtil = void 0;
  *
  * @module
  */
-const minipass_1 = __nccwpck_require__(7990);
-const ignore_js_1 = __nccwpck_require__(4207);
-const processor_js_1 = __nccwpck_require__(256);
+const minipass_1 = __nccwpck_require__(2066);
+const ignore_js_1 = __nccwpck_require__(8075);
+const processor_js_1 = __nccwpck_require__(5735);
 const makeIgnore = (ignore, opts) => typeof ignore === 'string' ? new ignore_js_1.Ignore([ignore], opts)
     : Array.isArray(ignore) ? new ignore_js_1.Ignore(ignore, opts)
         : ignore;
@@ -49608,1870 +55179,7 @@ exports.GlobStream = GlobStream;
 
 /***/ }),
 
-/***/ 120:
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.assertValidPattern = void 0;
-const MAX_PATTERN_LENGTH = 1024 * 64;
-const assertValidPattern = (pattern) => {
-    if (typeof pattern !== 'string') {
-        throw new TypeError('invalid pattern');
-    }
-    if (pattern.length > MAX_PATTERN_LENGTH) {
-        throw new TypeError('pattern is too long');
-    }
-};
-exports.assertValidPattern = assertValidPattern;
-//# sourceMappingURL=assert-valid-pattern.js.map
-
-/***/ }),
-
-/***/ 4776:
-/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
-
-"use strict";
-
-// parse a single path portion
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.AST = void 0;
-const brace_expressions_js_1 = __nccwpck_require__(5413);
-const unescape_js_1 = __nccwpck_require__(3318);
-const types = new Set(['!', '?', '+', '*', '@']);
-const isExtglobType = (c) => types.has(c);
-// Patterns that get prepended to bind to the start of either the
-// entire string, or just a single path portion, to prevent dots
-// and/or traversal patterns, when needed.
-// Exts don't need the ^ or / bit, because the root binds that already.
-const startNoTraversal = '(?!(?:^|/)\\.\\.?(?:$|/))';
-const startNoDot = '(?!\\.)';
-// characters that indicate a start of pattern needs the "no dots" bit,
-// because a dot *might* be matched. ( is not in the list, because in
-// the case of a child extglob, it will handle the prevention itself.
-const addPatternStart = new Set(['[', '.']);
-// cases where traversal is A-OK, no dot prevention needed
-const justDots = new Set(['..', '.']);
-const reSpecials = new Set('().*{}+?[]^$\\!');
-const regExpEscape = (s) => s.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
-// any single thing other than /
-const qmark = '[^/]';
-// * => any number of characters
-const star = qmark + '*?';
-// use + when we need to ensure that *something* matches, because the * is
-// the only thing in the path portion.
-const starNoEmpty = qmark + '+?';
-// remove the \ chars that we added if we end up doing a nonmagic compare
-// const deslash = (s: string) => s.replace(/\\(.)/g, '$1')
-class AST {
-    type;
-    #root;
-    #hasMagic;
-    #uflag = false;
-    #parts = [];
-    #parent;
-    #parentIndex;
-    #negs;
-    #filledNegs = false;
-    #options;
-    #toString;
-    // set to true if it's an extglob with no children
-    // (which really means one child of '')
-    #emptyExt = false;
-    constructor(type, parent, options = {}) {
-        this.type = type;
-        // extglobs are inherently magical
-        if (type)
-            this.#hasMagic = true;
-        this.#parent = parent;
-        this.#root = this.#parent ? this.#parent.#root : this;
-        this.#options = this.#root === this ? options : this.#root.#options;
-        this.#negs = this.#root === this ? [] : this.#root.#negs;
-        if (type === '!' && !this.#root.#filledNegs)
-            this.#negs.push(this);
-        this.#parentIndex = this.#parent ? this.#parent.#parts.length : 0;
-    }
-    get hasMagic() {
-        /* c8 ignore start */
-        if (this.#hasMagic !== undefined)
-            return this.#hasMagic;
-        /* c8 ignore stop */
-        for (const p of this.#parts) {
-            if (typeof p === 'string')
-                continue;
-            if (p.type || p.hasMagic)
-                return (this.#hasMagic = true);
-        }
-        // note: will be undefined until we generate the regexp src and find out
-        return this.#hasMagic;
-    }
-    // reconstructs the pattern
-    toString() {
-        if (this.#toString !== undefined)
-            return this.#toString;
-        if (!this.type) {
-            return (this.#toString = this.#parts.map(p => String(p)).join(''));
-        }
-        else {
-            return (this.#toString =
-                this.type + '(' + this.#parts.map(p => String(p)).join('|') + ')');
-        }
-    }
-    #fillNegs() {
-        /* c8 ignore start */
-        if (this !== this.#root)
-            throw new Error('should only call on root');
-        if (this.#filledNegs)
-            return this;
-        /* c8 ignore stop */
-        // call toString() once to fill this out
-        this.toString();
-        this.#filledNegs = true;
-        let n;
-        while ((n = this.#negs.pop())) {
-            if (n.type !== '!')
-                continue;
-            // walk up the tree, appending everthing that comes AFTER parentIndex
-            let p = n;
-            let pp = p.#parent;
-            while (pp) {
-                for (let i = p.#parentIndex + 1; !pp.type && i < pp.#parts.length; i++) {
-                    for (const part of n.#parts) {
-                        /* c8 ignore start */
-                        if (typeof part === 'string') {
-                            throw new Error('string part in extglob AST??');
-                        }
-                        /* c8 ignore stop */
-                        part.copyIn(pp.#parts[i]);
-                    }
-                }
-                p = pp;
-                pp = p.#parent;
-            }
-        }
-        return this;
-    }
-    push(...parts) {
-        for (const p of parts) {
-            if (p === '')
-                continue;
-            /* c8 ignore start */
-            if (typeof p !== 'string' && !(p instanceof AST && p.#parent === this)) {
-                throw new Error('invalid part: ' + p);
-            }
-            /* c8 ignore stop */
-            this.#parts.push(p);
-        }
-    }
-    toJSON() {
-        const ret = this.type === null
-            ? this.#parts.slice().map(p => (typeof p === 'string' ? p : p.toJSON()))
-            : [this.type, ...this.#parts.map(p => p.toJSON())];
-        if (this.isStart() && !this.type)
-            ret.unshift([]);
-        if (this.isEnd() &&
-            (this === this.#root ||
-                (this.#root.#filledNegs && this.#parent?.type === '!'))) {
-            ret.push({});
-        }
-        return ret;
-    }
-    isStart() {
-        if (this.#root === this)
-            return true;
-        // if (this.type) return !!this.#parent?.isStart()
-        if (!this.#parent?.isStart())
-            return false;
-        if (this.#parentIndex === 0)
-            return true;
-        // if everything AHEAD of this is a negation, then it's still the "start"
-        const p = this.#parent;
-        for (let i = 0; i < this.#parentIndex; i++) {
-            const pp = p.#parts[i];
-            if (!(pp instanceof AST && pp.type === '!')) {
-                return false;
-            }
-        }
-        return true;
-    }
-    isEnd() {
-        if (this.#root === this)
-            return true;
-        if (this.#parent?.type === '!')
-            return true;
-        if (!this.#parent?.isEnd())
-            return false;
-        if (!this.type)
-            return this.#parent?.isEnd();
-        // if not root, it'll always have a parent
-        /* c8 ignore start */
-        const pl = this.#parent ? this.#parent.#parts.length : 0;
-        /* c8 ignore stop */
-        return this.#parentIndex === pl - 1;
-    }
-    copyIn(part) {
-        if (typeof part === 'string')
-            this.push(part);
-        else
-            this.push(part.clone(this));
-    }
-    clone(parent) {
-        const c = new AST(this.type, parent);
-        for (const p of this.#parts) {
-            c.copyIn(p);
-        }
-        return c;
-    }
-    static #parseAST(str, ast, pos, opt) {
-        let escaping = false;
-        let inBrace = false;
-        let braceStart = -1;
-        let braceNeg = false;
-        if (ast.type === null) {
-            // outside of a extglob, append until we find a start
-            let i = pos;
-            let acc = '';
-            while (i < str.length) {
-                const c = str.charAt(i++);
-                // still accumulate escapes at this point, but we do ignore
-                // starts that are escaped
-                if (escaping || c === '\\') {
-                    escaping = !escaping;
-                    acc += c;
-                    continue;
-                }
-                if (inBrace) {
-                    if (i === braceStart + 1) {
-                        if (c === '^' || c === '!') {
-                            braceNeg = true;
-                        }
-                    }
-                    else if (c === ']' && !(i === braceStart + 2 && braceNeg)) {
-                        inBrace = false;
-                    }
-                    acc += c;
-                    continue;
-                }
-                else if (c === '[') {
-                    inBrace = true;
-                    braceStart = i;
-                    braceNeg = false;
-                    acc += c;
-                    continue;
-                }
-                if (!opt.noext && isExtglobType(c) && str.charAt(i) === '(') {
-                    ast.push(acc);
-                    acc = '';
-                    const ext = new AST(c, ast);
-                    i = AST.#parseAST(str, ext, i, opt);
-                    ast.push(ext);
-                    continue;
-                }
-                acc += c;
-            }
-            ast.push(acc);
-            return i;
-        }
-        // some kind of extglob, pos is at the (
-        // find the next | or )
-        let i = pos + 1;
-        let part = new AST(null, ast);
-        const parts = [];
-        let acc = '';
-        while (i < str.length) {
-            const c = str.charAt(i++);
-            // still accumulate escapes at this point, but we do ignore
-            // starts that are escaped
-            if (escaping || c === '\\') {
-                escaping = !escaping;
-                acc += c;
-                continue;
-            }
-            if (inBrace) {
-                if (i === braceStart + 1) {
-                    if (c === '^' || c === '!') {
-                        braceNeg = true;
-                    }
-                }
-                else if (c === ']' && !(i === braceStart + 2 && braceNeg)) {
-                    inBrace = false;
-                }
-                acc += c;
-                continue;
-            }
-            else if (c === '[') {
-                inBrace = true;
-                braceStart = i;
-                braceNeg = false;
-                acc += c;
-                continue;
-            }
-            if (isExtglobType(c) && str.charAt(i) === '(') {
-                part.push(acc);
-                acc = '';
-                const ext = new AST(c, part);
-                part.push(ext);
-                i = AST.#parseAST(str, ext, i, opt);
-                continue;
-            }
-            if (c === '|') {
-                part.push(acc);
-                acc = '';
-                parts.push(part);
-                part = new AST(null, ast);
-                continue;
-            }
-            if (c === ')') {
-                if (acc === '' && ast.#parts.length === 0) {
-                    ast.#emptyExt = true;
-                }
-                part.push(acc);
-                acc = '';
-                ast.push(...parts, part);
-                return i;
-            }
-            acc += c;
-        }
-        // unfinished extglob
-        // if we got here, it was a malformed extglob! not an extglob, but
-        // maybe something else in there.
-        ast.type = null;
-        ast.#hasMagic = undefined;
-        ast.#parts = [str.substring(pos - 1)];
-        return i;
-    }
-    static fromGlob(pattern, options = {}) {
-        const ast = new AST(null, undefined, options);
-        AST.#parseAST(pattern, ast, 0, options);
-        return ast;
-    }
-    // returns the regular expression if there's magic, or the unescaped
-    // string if not.
-    toMMPattern() {
-        // should only be called on root
-        /* c8 ignore start */
-        if (this !== this.#root)
-            return this.#root.toMMPattern();
-        /* c8 ignore stop */
-        const glob = this.toString();
-        const [re, body, hasMagic, uflag] = this.toRegExpSource();
-        // if we're in nocase mode, and not nocaseMagicOnly, then we do
-        // still need a regular expression if we have to case-insensitively
-        // match capital/lowercase characters.
-        const anyMagic = hasMagic ||
-            this.#hasMagic ||
-            (this.#options.nocase &&
-                !this.#options.nocaseMagicOnly &&
-                glob.toUpperCase() !== glob.toLowerCase());
-        if (!anyMagic) {
-            return body;
-        }
-        const flags = (this.#options.nocase ? 'i' : '') + (uflag ? 'u' : '');
-        return Object.assign(new RegExp(`^${re}$`, flags), {
-            _src: re,
-            _glob: glob,
-        });
-    }
-    get options() {
-        return this.#options;
-    }
-    // returns the string match, the regexp source, whether there's magic
-    // in the regexp (so a regular expression is required) and whether or
-    // not the uflag is needed for the regular expression (for posix classes)
-    // TODO: instead of injecting the start/end at this point, just return
-    // the BODY of the regexp, along with the start/end portions suitable
-    // for binding the start/end in either a joined full-path makeRe context
-    // (where we bind to (^|/), or a standalone matchPart context (where
-    // we bind to ^, and not /).  Otherwise slashes get duped!
-    //
-    // In part-matching mode, the start is:
-    // - if not isStart: nothing
-    // - if traversal possible, but not allowed: ^(?!\.\.?$)
-    // - if dots allowed or not possible: ^
-    // - if dots possible and not allowed: ^(?!\.)
-    // end is:
-    // - if not isEnd(): nothing
-    // - else: $
-    //
-    // In full-path matching mode, we put the slash at the START of the
-    // pattern, so start is:
-    // - if first pattern: same as part-matching mode
-    // - if not isStart(): nothing
-    // - if traversal possible, but not allowed: /(?!\.\.?(?:$|/))
-    // - if dots allowed or not possible: /
-    // - if dots possible and not allowed: /(?!\.)
-    // end is:
-    // - if last pattern, same as part-matching mode
-    // - else nothing
-    //
-    // Always put the (?:$|/) on negated tails, though, because that has to be
-    // there to bind the end of the negated pattern portion, and it's easier to
-    // just stick it in now rather than try to inject it later in the middle of
-    // the pattern.
-    //
-    // We can just always return the same end, and leave it up to the caller
-    // to know whether it's going to be used joined or in parts.
-    // And, if the start is adjusted slightly, can do the same there:
-    // - if not isStart: nothing
-    // - if traversal possible, but not allowed: (?:/|^)(?!\.\.?$)
-    // - if dots allowed or not possible: (?:/|^)
-    // - if dots possible and not allowed: (?:/|^)(?!\.)
-    //
-    // But it's better to have a simpler binding without a conditional, for
-    // performance, so probably better to return both start options.
-    //
-    // Then the caller just ignores the end if it's not the first pattern,
-    // and the start always gets applied.
-    //
-    // But that's always going to be $ if it's the ending pattern, or nothing,
-    // so the caller can just attach $ at the end of the pattern when building.
-    //
-    // So the todo is:
-    // - better detect what kind of start is needed
-    // - return both flavors of starting pattern
-    // - attach $ at the end of the pattern when creating the actual RegExp
-    //
-    // Ah, but wait, no, that all only applies to the root when the first pattern
-    // is not an extglob. If the first pattern IS an extglob, then we need all
-    // that dot prevention biz to live in the extglob portions, because eg
-    // +(*|.x*) can match .xy but not .yx.
-    //
-    // So, return the two flavors if it's #root and the first child is not an
-    // AST, otherwise leave it to the child AST to handle it, and there,
-    // use the (?:^|/) style of start binding.
-    //
-    // Even simplified further:
-    // - Since the start for a join is eg /(?!\.) and the start for a part
-    // is ^(?!\.), we can just prepend (?!\.) to the pattern (either root
-    // or start or whatever) and prepend ^ or / at the Regexp construction.
-    toRegExpSource(allowDot) {
-        const dot = allowDot ?? !!this.#options.dot;
-        if (this.#root === this)
-            this.#fillNegs();
-        if (!this.type) {
-            const noEmpty = this.isStart() && this.isEnd();
-            const src = this.#parts
-                .map(p => {
-                const [re, _, hasMagic, uflag] = typeof p === 'string'
-                    ? AST.#parseGlob(p, this.#hasMagic, noEmpty)
-                    : p.toRegExpSource(allowDot);
-                this.#hasMagic = this.#hasMagic || hasMagic;
-                this.#uflag = this.#uflag || uflag;
-                return re;
-            })
-                .join('');
-            let start = '';
-            if (this.isStart()) {
-                if (typeof this.#parts[0] === 'string') {
-                    // this is the string that will match the start of the pattern,
-                    // so we need to protect against dots and such.
-                    // '.' and '..' cannot match unless the pattern is that exactly,
-                    // even if it starts with . or dot:true is set.
-                    const dotTravAllowed = this.#parts.length === 1 && justDots.has(this.#parts[0]);
-                    if (!dotTravAllowed) {
-                        const aps = addPatternStart;
-                        // check if we have a possibility of matching . or ..,
-                        // and prevent that.
-                        const needNoTrav = 
-                        // dots are allowed, and the pattern starts with [ or .
-                        (dot && aps.has(src.charAt(0))) ||
-                            // the pattern starts with \., and then [ or .
-                            (src.startsWith('\\.') && aps.has(src.charAt(2))) ||
-                            // the pattern starts with \.\., and then [ or .
-                            (src.startsWith('\\.\\.') && aps.has(src.charAt(4)));
-                        // no need to prevent dots if it can't match a dot, or if a
-                        // sub-pattern will be preventing it anyway.
-                        const needNoDot = !dot && !allowDot && aps.has(src.charAt(0));
-                        start = needNoTrav ? startNoTraversal : needNoDot ? startNoDot : '';
-                    }
-                }
-            }
-            // append the "end of path portion" pattern to negation tails
-            let end = '';
-            if (this.isEnd() &&
-                this.#root.#filledNegs &&
-                this.#parent?.type === '!') {
-                end = '(?:$|\\/)';
-            }
-            const final = start + src + end;
-            return [
-                final,
-                (0, unescape_js_1.unescape)(src),
-                (this.#hasMagic = !!this.#hasMagic),
-                this.#uflag,
-            ];
-        }
-        // We need to calculate the body *twice* if it's a repeat pattern
-        // at the start, once in nodot mode, then again in dot mode, so a
-        // pattern like *(?) can match 'x.y'
-        const repeated = this.type === '*' || this.type === '+';
-        // some kind of extglob
-        const start = this.type === '!' ? '(?:(?!(?:' : '(?:';
-        let body = this.#partsToRegExp(dot);
-        if (this.isStart() && this.isEnd() && !body && this.type !== '!') {
-            // invalid extglob, has to at least be *something* present, if it's
-            // the entire path portion.
-            const s = this.toString();
-            this.#parts = [s];
-            this.type = null;
-            this.#hasMagic = undefined;
-            return [s, (0, unescape_js_1.unescape)(this.toString()), false, false];
-        }
-        // XXX abstract out this map method
-        let bodyDotAllowed = !repeated || allowDot || dot || !startNoDot
-            ? ''
-            : this.#partsToRegExp(true);
-        if (bodyDotAllowed === body) {
-            bodyDotAllowed = '';
-        }
-        if (bodyDotAllowed) {
-            body = `(?:${body})(?:${bodyDotAllowed})*?`;
-        }
-        // an empty !() is exactly equivalent to a starNoEmpty
-        let final = '';
-        if (this.type === '!' && this.#emptyExt) {
-            final = (this.isStart() && !dot ? startNoDot : '') + starNoEmpty;
-        }
-        else {
-            const close = this.type === '!'
-                ? // !() must match something,but !(x) can match ''
-                    '))' +
-                        (this.isStart() && !dot && !allowDot ? startNoDot : '') +
-                        star +
-                        ')'
-                : this.type === '@'
-                    ? ')'
-                    : this.type === '?'
-                        ? ')?'
-                        : this.type === '+' && bodyDotAllowed
-                            ? ')'
-                            : this.type === '*' && bodyDotAllowed
-                                ? `)?`
-                                : `)${this.type}`;
-            final = start + body + close;
-        }
-        return [
-            final,
-            (0, unescape_js_1.unescape)(body),
-            (this.#hasMagic = !!this.#hasMagic),
-            this.#uflag,
-        ];
-    }
-    #partsToRegExp(dot) {
-        return this.#parts
-            .map(p => {
-            // extglob ASTs should only contain parent ASTs
-            /* c8 ignore start */
-            if (typeof p === 'string') {
-                throw new Error('string type in extglob ast??');
-            }
-            /* c8 ignore stop */
-            // can ignore hasMagic, because extglobs are already always magic
-            const [re, _, _hasMagic, uflag] = p.toRegExpSource(dot);
-            this.#uflag = this.#uflag || uflag;
-            return re;
-        })
-            .filter(p => !(this.isStart() && this.isEnd()) || !!p)
-            .join('|');
-    }
-    static #parseGlob(glob, hasMagic, noEmpty = false) {
-        let escaping = false;
-        let re = '';
-        let uflag = false;
-        for (let i = 0; i < glob.length; i++) {
-            const c = glob.charAt(i);
-            if (escaping) {
-                escaping = false;
-                re += (reSpecials.has(c) ? '\\' : '') + c;
-                continue;
-            }
-            if (c === '\\') {
-                if (i === glob.length - 1) {
-                    re += '\\\\';
-                }
-                else {
-                    escaping = true;
-                }
-                continue;
-            }
-            if (c === '[') {
-                const [src, needUflag, consumed, magic] = (0, brace_expressions_js_1.parseClass)(glob, i);
-                if (consumed) {
-                    re += src;
-                    uflag = uflag || needUflag;
-                    i += consumed - 1;
-                    hasMagic = hasMagic || magic;
-                    continue;
-                }
-            }
-            if (c === '*') {
-                if (noEmpty && glob === '*')
-                    re += starNoEmpty;
-                else
-                    re += star;
-                hasMagic = true;
-                continue;
-            }
-            if (c === '?') {
-                re += qmark;
-                hasMagic = true;
-                continue;
-            }
-            re += regExpEscape(c);
-        }
-        return [re, (0, unescape_js_1.unescape)(glob), !!hasMagic, uflag];
-    }
-}
-exports.AST = AST;
-//# sourceMappingURL=ast.js.map
-
-/***/ }),
-
-/***/ 5413:
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-// translate the various posix character classes into unicode properties
-// this works across all unicode locales
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.parseClass = void 0;
-// { <posix class>: [<translation>, /u flag required, negated]
-const posixClasses = {
-    '[:alnum:]': ['\\p{L}\\p{Nl}\\p{Nd}', true],
-    '[:alpha:]': ['\\p{L}\\p{Nl}', true],
-    '[:ascii:]': ['\\x' + '00-\\x' + '7f', false],
-    '[:blank:]': ['\\p{Zs}\\t', true],
-    '[:cntrl:]': ['\\p{Cc}', true],
-    '[:digit:]': ['\\p{Nd}', true],
-    '[:graph:]': ['\\p{Z}\\p{C}', true, true],
-    '[:lower:]': ['\\p{Ll}', true],
-    '[:print:]': ['\\p{C}', true],
-    '[:punct:]': ['\\p{P}', true],
-    '[:space:]': ['\\p{Z}\\t\\r\\n\\v\\f', true],
-    '[:upper:]': ['\\p{Lu}', true],
-    '[:word:]': ['\\p{L}\\p{Nl}\\p{Nd}\\p{Pc}', true],
-    '[:xdigit:]': ['A-Fa-f0-9', false],
-};
-// only need to escape a few things inside of brace expressions
-// escapes: [ \ ] -
-const braceEscape = (s) => s.replace(/[[\]\\-]/g, '\\$&');
-// escape all regexp magic characters
-const regexpEscape = (s) => s.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
-// everything has already been escaped, we just have to join
-const rangesToString = (ranges) => ranges.join('');
-// takes a glob string at a posix brace expression, and returns
-// an equivalent regular expression source, and boolean indicating
-// whether the /u flag needs to be applied, and the number of chars
-// consumed to parse the character class.
-// This also removes out of order ranges, and returns ($.) if the
-// entire class just no good.
-const parseClass = (glob, position) => {
-    const pos = position;
-    /* c8 ignore start */
-    if (glob.charAt(pos) !== '[') {
-        throw new Error('not in a brace expression');
-    }
-    /* c8 ignore stop */
-    const ranges = [];
-    const negs = [];
-    let i = pos + 1;
-    let sawStart = false;
-    let uflag = false;
-    let escaping = false;
-    let negate = false;
-    let endPos = pos;
-    let rangeStart = '';
-    WHILE: while (i < glob.length) {
-        const c = glob.charAt(i);
-        if ((c === '!' || c === '^') && i === pos + 1) {
-            negate = true;
-            i++;
-            continue;
-        }
-        if (c === ']' && sawStart && !escaping) {
-            endPos = i + 1;
-            break;
-        }
-        sawStart = true;
-        if (c === '\\') {
-            if (!escaping) {
-                escaping = true;
-                i++;
-                continue;
-            }
-            // escaped \ char, fall through and treat like normal char
-        }
-        if (c === '[' && !escaping) {
-            // either a posix class, a collation equivalent, or just a [
-            for (const [cls, [unip, u, neg]] of Object.entries(posixClasses)) {
-                if (glob.startsWith(cls, i)) {
-                    // invalid, [a-[] is fine, but not [a-[:alpha]]
-                    if (rangeStart) {
-                        return ['$.', false, glob.length - pos, true];
-                    }
-                    i += cls.length;
-                    if (neg)
-                        negs.push(unip);
-                    else
-                        ranges.push(unip);
-                    uflag = uflag || u;
-                    continue WHILE;
-                }
-            }
-        }
-        // now it's just a normal character, effectively
-        escaping = false;
-        if (rangeStart) {
-            // throw this range away if it's not valid, but others
-            // can still match.
-            if (c > rangeStart) {
-                ranges.push(braceEscape(rangeStart) + '-' + braceEscape(c));
-            }
-            else if (c === rangeStart) {
-                ranges.push(braceEscape(c));
-            }
-            rangeStart = '';
-            i++;
-            continue;
-        }
-        // now might be the start of a range.
-        // can be either c-d or c-] or c<more...>] or c] at this point
-        if (glob.startsWith('-]', i + 1)) {
-            ranges.push(braceEscape(c + '-'));
-            i += 2;
-            continue;
-        }
-        if (glob.startsWith('-', i + 1)) {
-            rangeStart = c;
-            i += 2;
-            continue;
-        }
-        // not the start of a range, just a single character
-        ranges.push(braceEscape(c));
-        i++;
-    }
-    if (endPos < i) {
-        // didn't see the end of the class, not a valid class,
-        // but might still be valid as a literal match.
-        return ['', false, 0, false];
-    }
-    // if we got no ranges and no negates, then we have a range that
-    // cannot possibly match anything, and that poisons the whole glob
-    if (!ranges.length && !negs.length) {
-        return ['$.', false, glob.length - pos, true];
-    }
-    // if we got one positive range, and it's a single character, then that's
-    // not actually a magic pattern, it's just that one literal character.
-    // we should not treat that as "magic", we should just return the literal
-    // character. [_] is a perfectly valid way to escape glob magic chars.
-    if (negs.length === 0 &&
-        ranges.length === 1 &&
-        /^\\?.$/.test(ranges[0]) &&
-        !negate) {
-        const r = ranges[0].length === 2 ? ranges[0].slice(-1) : ranges[0];
-        return [regexpEscape(r), false, endPos - pos, false];
-    }
-    const sranges = '[' + (negate ? '^' : '') + rangesToString(ranges) + ']';
-    const snegs = '[' + (negate ? '' : '^') + rangesToString(negs) + ']';
-    const comb = ranges.length && negs.length
-        ? '(' + sranges + '|' + snegs + ')'
-        : ranges.length
-            ? sranges
-            : snegs;
-    return [comb, uflag, endPos - pos, true];
-};
-exports.parseClass = parseClass;
-//# sourceMappingURL=brace-expressions.js.map
-
-/***/ }),
-
-/***/ 6021:
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.escape = void 0;
-/**
- * Escape all magic characters in a glob pattern.
- *
- * If the {@link windowsPathsNoEscape | GlobOptions.windowsPathsNoEscape}
- * option is used, then characters are escaped by wrapping in `[]`, because
- * a magic character wrapped in a character class can only be satisfied by
- * that exact character.  In this mode, `\` is _not_ escaped, because it is
- * not interpreted as a magic character, but instead as a path separator.
- */
-const escape = (s, { windowsPathsNoEscape = false, } = {}) => {
-    // don't need to escape +@! because we escape the parens
-    // that make those magic, and escaping ! as [!] isn't valid,
-    // because [!]] is a valid glob class meaning not ']'.
-    return windowsPathsNoEscape
-        ? s.replace(/[?*()[\]]/g, '[$&]')
-        : s.replace(/[?*()[\]\\]/g, '\\$&');
-};
-exports.escape = escape;
-//# sourceMappingURL=escape.js.map
-
-/***/ }),
-
-/***/ 3721:
-/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
-
-"use strict";
-
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.unescape = exports.escape = exports.AST = exports.Minimatch = exports.match = exports.makeRe = exports.braceExpand = exports.defaults = exports.filter = exports.GLOBSTAR = exports.sep = exports.minimatch = void 0;
-const brace_expansion_1 = __importDefault(__nccwpck_require__(134));
-const assert_valid_pattern_js_1 = __nccwpck_require__(120);
-const ast_js_1 = __nccwpck_require__(4776);
-const escape_js_1 = __nccwpck_require__(6021);
-const unescape_js_1 = __nccwpck_require__(3318);
-const minimatch = (p, pattern, options = {}) => {
-    (0, assert_valid_pattern_js_1.assertValidPattern)(pattern);
-    // shortcut: comments match nothing.
-    if (!options.nocomment && pattern.charAt(0) === '#') {
-        return false;
-    }
-    return new Minimatch(pattern, options).match(p);
-};
-exports.minimatch = minimatch;
-// Optimized checking for the most common glob patterns.
-const starDotExtRE = /^\*+([^+@!?\*\[\(]*)$/;
-const starDotExtTest = (ext) => (f) => !f.startsWith('.') && f.endsWith(ext);
-const starDotExtTestDot = (ext) => (f) => f.endsWith(ext);
-const starDotExtTestNocase = (ext) => {
-    ext = ext.toLowerCase();
-    return (f) => !f.startsWith('.') && f.toLowerCase().endsWith(ext);
-};
-const starDotExtTestNocaseDot = (ext) => {
-    ext = ext.toLowerCase();
-    return (f) => f.toLowerCase().endsWith(ext);
-};
-const starDotStarRE = /^\*+\.\*+$/;
-const starDotStarTest = (f) => !f.startsWith('.') && f.includes('.');
-const starDotStarTestDot = (f) => f !== '.' && f !== '..' && f.includes('.');
-const dotStarRE = /^\.\*+$/;
-const dotStarTest = (f) => f !== '.' && f !== '..' && f.startsWith('.');
-const starRE = /^\*+$/;
-const starTest = (f) => f.length !== 0 && !f.startsWith('.');
-const starTestDot = (f) => f.length !== 0 && f !== '.' && f !== '..';
-const qmarksRE = /^\?+([^+@!?\*\[\(]*)?$/;
-const qmarksTestNocase = ([$0, ext = '']) => {
-    const noext = qmarksTestNoExt([$0]);
-    if (!ext)
-        return noext;
-    ext = ext.toLowerCase();
-    return (f) => noext(f) && f.toLowerCase().endsWith(ext);
-};
-const qmarksTestNocaseDot = ([$0, ext = '']) => {
-    const noext = qmarksTestNoExtDot([$0]);
-    if (!ext)
-        return noext;
-    ext = ext.toLowerCase();
-    return (f) => noext(f) && f.toLowerCase().endsWith(ext);
-};
-const qmarksTestDot = ([$0, ext = '']) => {
-    const noext = qmarksTestNoExtDot([$0]);
-    return !ext ? noext : (f) => noext(f) && f.endsWith(ext);
-};
-const qmarksTest = ([$0, ext = '']) => {
-    const noext = qmarksTestNoExt([$0]);
-    return !ext ? noext : (f) => noext(f) && f.endsWith(ext);
-};
-const qmarksTestNoExt = ([$0]) => {
-    const len = $0.length;
-    return (f) => f.length === len && !f.startsWith('.');
-};
-const qmarksTestNoExtDot = ([$0]) => {
-    const len = $0.length;
-    return (f) => f.length === len && f !== '.' && f !== '..';
-};
-/* c8 ignore start */
-const defaultPlatform = (typeof process === 'object' && process
-    ? (typeof process.env === 'object' &&
-        process.env &&
-        process.env.__MINIMATCH_TESTING_PLATFORM__) ||
-        process.platform
-    : 'posix');
-const path = {
-    win32: { sep: '\\' },
-    posix: { sep: '/' },
-};
-/* c8 ignore stop */
-exports.sep = defaultPlatform === 'win32' ? path.win32.sep : path.posix.sep;
-exports.minimatch.sep = exports.sep;
-exports.GLOBSTAR = Symbol('globstar **');
-exports.minimatch.GLOBSTAR = exports.GLOBSTAR;
-// any single thing other than /
-// don't need to escape / when using new RegExp()
-const qmark = '[^/]';
-// * => any number of characters
-const star = qmark + '*?';
-// ** when dots are allowed.  Anything goes, except .. and .
-// not (^ or / followed by one or two dots followed by $ or /),
-// followed by anything, any number of times.
-const twoStarDot = '(?:(?!(?:\\/|^)(?:\\.{1,2})($|\\/)).)*?';
-// not a ^ or / followed by a dot,
-// followed by anything, any number of times.
-const twoStarNoDot = '(?:(?!(?:\\/|^)\\.).)*?';
-const filter = (pattern, options = {}) => (p) => (0, exports.minimatch)(p, pattern, options);
-exports.filter = filter;
-exports.minimatch.filter = exports.filter;
-const ext = (a, b = {}) => Object.assign({}, a, b);
-const defaults = (def) => {
-    if (!def || typeof def !== 'object' || !Object.keys(def).length) {
-        return exports.minimatch;
-    }
-    const orig = exports.minimatch;
-    const m = (p, pattern, options = {}) => orig(p, pattern, ext(def, options));
-    return Object.assign(m, {
-        Minimatch: class Minimatch extends orig.Minimatch {
-            constructor(pattern, options = {}) {
-                super(pattern, ext(def, options));
-            }
-            static defaults(options) {
-                return orig.defaults(ext(def, options)).Minimatch;
-            }
-        },
-        AST: class AST extends orig.AST {
-            /* c8 ignore start */
-            constructor(type, parent, options = {}) {
-                super(type, parent, ext(def, options));
-            }
-            /* c8 ignore stop */
-            static fromGlob(pattern, options = {}) {
-                return orig.AST.fromGlob(pattern, ext(def, options));
-            }
-        },
-        unescape: (s, options = {}) => orig.unescape(s, ext(def, options)),
-        escape: (s, options = {}) => orig.escape(s, ext(def, options)),
-        filter: (pattern, options = {}) => orig.filter(pattern, ext(def, options)),
-        defaults: (options) => orig.defaults(ext(def, options)),
-        makeRe: (pattern, options = {}) => orig.makeRe(pattern, ext(def, options)),
-        braceExpand: (pattern, options = {}) => orig.braceExpand(pattern, ext(def, options)),
-        match: (list, pattern, options = {}) => orig.match(list, pattern, ext(def, options)),
-        sep: orig.sep,
-        GLOBSTAR: exports.GLOBSTAR,
-    });
-};
-exports.defaults = defaults;
-exports.minimatch.defaults = exports.defaults;
-// Brace expansion:
-// a{b,c}d -> abd acd
-// a{b,}c -> abc ac
-// a{0..3}d -> a0d a1d a2d a3d
-// a{b,c{d,e}f}g -> abg acdfg acefg
-// a{b,c}d{e,f}g -> abdeg acdeg abdeg abdfg
-//
-// Invalid sets are not expanded.
-// a{2..}b -> a{2..}b
-// a{b}c -> a{b}c
-const braceExpand = (pattern, options = {}) => {
-    (0, assert_valid_pattern_js_1.assertValidPattern)(pattern);
-    // Thanks to Yeting Li <https://github.com/yetingli> for
-    // improving this regexp to avoid a ReDOS vulnerability.
-    if (options.nobrace || !/\{(?:(?!\{).)*\}/.test(pattern)) {
-        // shortcut. no need to expand.
-        return [pattern];
-    }
-    return (0, brace_expansion_1.default)(pattern);
-};
-exports.braceExpand = braceExpand;
-exports.minimatch.braceExpand = exports.braceExpand;
-// parse a component of the expanded set.
-// At this point, no pattern may contain "/" in it
-// so we're going to return a 2d array, where each entry is the full
-// pattern, split on '/', and then turned into a regular expression.
-// A regexp is made at the end which joins each array with an
-// escaped /, and another full one which joins each regexp with |.
-//
-// Following the lead of Bash 4.1, note that "**" only has special meaning
-// when it is the *only* thing in a path portion.  Otherwise, any series
-// of * is equivalent to a single *.  Globstar behavior is enabled by
-// default, and can be disabled by setting options.noglobstar.
-const makeRe = (pattern, options = {}) => new Minimatch(pattern, options).makeRe();
-exports.makeRe = makeRe;
-exports.minimatch.makeRe = exports.makeRe;
-const match = (list, pattern, options = {}) => {
-    const mm = new Minimatch(pattern, options);
-    list = list.filter(f => mm.match(f));
-    if (mm.options.nonull && !list.length) {
-        list.push(pattern);
-    }
-    return list;
-};
-exports.match = match;
-exports.minimatch.match = exports.match;
-// replace stuff like \* with *
-const globMagic = /[?*]|[+@!]\(.*?\)|\[|\]/;
-const regExpEscape = (s) => s.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
-class Minimatch {
-    options;
-    set;
-    pattern;
-    windowsPathsNoEscape;
-    nonegate;
-    negate;
-    comment;
-    empty;
-    preserveMultipleSlashes;
-    partial;
-    globSet;
-    globParts;
-    nocase;
-    isWindows;
-    platform;
-    windowsNoMagicRoot;
-    regexp;
-    constructor(pattern, options = {}) {
-        (0, assert_valid_pattern_js_1.assertValidPattern)(pattern);
-        options = options || {};
-        this.options = options;
-        this.pattern = pattern;
-        this.platform = options.platform || defaultPlatform;
-        this.isWindows = this.platform === 'win32';
-        this.windowsPathsNoEscape =
-            !!options.windowsPathsNoEscape || options.allowWindowsEscape === false;
-        if (this.windowsPathsNoEscape) {
-            this.pattern = this.pattern.replace(/\\/g, '/');
-        }
-        this.preserveMultipleSlashes = !!options.preserveMultipleSlashes;
-        this.regexp = null;
-        this.negate = false;
-        this.nonegate = !!options.nonegate;
-        this.comment = false;
-        this.empty = false;
-        this.partial = !!options.partial;
-        this.nocase = !!this.options.nocase;
-        this.windowsNoMagicRoot =
-            options.windowsNoMagicRoot !== undefined
-                ? options.windowsNoMagicRoot
-                : !!(this.isWindows && this.nocase);
-        this.globSet = [];
-        this.globParts = [];
-        this.set = [];
-        // make the set of regexps etc.
-        this.make();
-    }
-    hasMagic() {
-        if (this.options.magicalBraces && this.set.length > 1) {
-            return true;
-        }
-        for (const pattern of this.set) {
-            for (const part of pattern) {
-                if (typeof part !== 'string')
-                    return true;
-            }
-        }
-        return false;
-    }
-    debug(..._) { }
-    make() {
-        const pattern = this.pattern;
-        const options = this.options;
-        // empty patterns and comments match nothing.
-        if (!options.nocomment && pattern.charAt(0) === '#') {
-            this.comment = true;
-            return;
-        }
-        if (!pattern) {
-            this.empty = true;
-            return;
-        }
-        // step 1: figure out negation, etc.
-        this.parseNegate();
-        // step 2: expand braces
-        this.globSet = [...new Set(this.braceExpand())];
-        if (options.debug) {
-            this.debug = (...args) => console.error(...args);
-        }
-        this.debug(this.pattern, this.globSet);
-        // step 3: now we have a set, so turn each one into a series of
-        // path-portion matching patterns.
-        // These will be regexps, except in the case of "**", which is
-        // set to the GLOBSTAR object for globstar behavior,
-        // and will not contain any / characters
-        //
-        // First, we preprocess to make the glob pattern sets a bit simpler
-        // and deduped.  There are some perf-killing patterns that can cause
-        // problems with a glob walk, but we can simplify them down a bit.
-        const rawGlobParts = this.globSet.map(s => this.slashSplit(s));
-        this.globParts = this.preprocess(rawGlobParts);
-        this.debug(this.pattern, this.globParts);
-        // glob --> regexps
-        let set = this.globParts.map((s, _, __) => {
-            if (this.isWindows && this.windowsNoMagicRoot) {
-                // check if it's a drive or unc path.
-                const isUNC = s[0] === '' &&
-                    s[1] === '' &&
-                    (s[2] === '?' || !globMagic.test(s[2])) &&
-                    !globMagic.test(s[3]);
-                const isDrive = /^[a-z]:/i.test(s[0]);
-                if (isUNC) {
-                    return [...s.slice(0, 4), ...s.slice(4).map(ss => this.parse(ss))];
-                }
-                else if (isDrive) {
-                    return [s[0], ...s.slice(1).map(ss => this.parse(ss))];
-                }
-            }
-            return s.map(ss => this.parse(ss));
-        });
-        this.debug(this.pattern, set);
-        // filter out everything that didn't compile properly.
-        this.set = set.filter(s => s.indexOf(false) === -1);
-        // do not treat the ? in UNC paths as magic
-        if (this.isWindows) {
-            for (let i = 0; i < this.set.length; i++) {
-                const p = this.set[i];
-                if (p[0] === '' &&
-                    p[1] === '' &&
-                    this.globParts[i][2] === '?' &&
-                    typeof p[3] === 'string' &&
-                    /^[a-z]:$/i.test(p[3])) {
-                    p[2] = '?';
-                }
-            }
-        }
-        this.debug(this.pattern, this.set);
-    }
-    // various transforms to equivalent pattern sets that are
-    // faster to process in a filesystem walk.  The goal is to
-    // eliminate what we can, and push all ** patterns as far
-    // to the right as possible, even if it increases the number
-    // of patterns that we have to process.
-    preprocess(globParts) {
-        // if we're not in globstar mode, then turn all ** into *
-        if (this.options.noglobstar) {
-            for (let i = 0; i < globParts.length; i++) {
-                for (let j = 0; j < globParts[i].length; j++) {
-                    if (globParts[i][j] === '**') {
-                        globParts[i][j] = '*';
-                    }
-                }
-            }
-        }
-        const { optimizationLevel = 1 } = this.options;
-        if (optimizationLevel >= 2) {
-            // aggressive optimization for the purpose of fs walking
-            globParts = this.firstPhasePreProcess(globParts);
-            globParts = this.secondPhasePreProcess(globParts);
-        }
-        else if (optimizationLevel >= 1) {
-            // just basic optimizations to remove some .. parts
-            globParts = this.levelOneOptimize(globParts);
-        }
-        else {
-            // just collapse multiple ** portions into one
-            globParts = this.adjascentGlobstarOptimize(globParts);
-        }
-        return globParts;
-    }
-    // just get rid of adjascent ** portions
-    adjascentGlobstarOptimize(globParts) {
-        return globParts.map(parts => {
-            let gs = -1;
-            while (-1 !== (gs = parts.indexOf('**', gs + 1))) {
-                let i = gs;
-                while (parts[i + 1] === '**') {
-                    i++;
-                }
-                if (i !== gs) {
-                    parts.splice(gs, i - gs);
-                }
-            }
-            return parts;
-        });
-    }
-    // get rid of adjascent ** and resolve .. portions
-    levelOneOptimize(globParts) {
-        return globParts.map(parts => {
-            parts = parts.reduce((set, part) => {
-                const prev = set[set.length - 1];
-                if (part === '**' && prev === '**') {
-                    return set;
-                }
-                if (part === '..') {
-                    if (prev && prev !== '..' && prev !== '.' && prev !== '**') {
-                        set.pop();
-                        return set;
-                    }
-                }
-                set.push(part);
-                return set;
-            }, []);
-            return parts.length === 0 ? [''] : parts;
-        });
-    }
-    levelTwoFileOptimize(parts) {
-        if (!Array.isArray(parts)) {
-            parts = this.slashSplit(parts);
-        }
-        let didSomething = false;
-        do {
-            didSomething = false;
-            // <pre>/<e>/<rest> -> <pre>/<rest>
-            if (!this.preserveMultipleSlashes) {
-                for (let i = 1; i < parts.length - 1; i++) {
-                    const p = parts[i];
-                    // don't squeeze out UNC patterns
-                    if (i === 1 && p === '' && parts[0] === '')
-                        continue;
-                    if (p === '.' || p === '') {
-                        didSomething = true;
-                        parts.splice(i, 1);
-                        i--;
-                    }
-                }
-                if (parts[0] === '.' &&
-                    parts.length === 2 &&
-                    (parts[1] === '.' || parts[1] === '')) {
-                    didSomething = true;
-                    parts.pop();
-                }
-            }
-            // <pre>/<p>/../<rest> -> <pre>/<rest>
-            let dd = 0;
-            while (-1 !== (dd = parts.indexOf('..', dd + 1))) {
-                const p = parts[dd - 1];
-                if (p && p !== '.' && p !== '..' && p !== '**') {
-                    didSomething = true;
-                    parts.splice(dd - 1, 2);
-                    dd -= 2;
-                }
-            }
-        } while (didSomething);
-        return parts.length === 0 ? [''] : parts;
-    }
-    // First phase: single-pattern processing
-    // <pre> is 1 or more portions
-    // <rest> is 1 or more portions
-    // <p> is any portion other than ., .., '', or **
-    // <e> is . or ''
-    //
-    // **/.. is *brutal* for filesystem walking performance, because
-    // it effectively resets the recursive walk each time it occurs,
-    // and ** cannot be reduced out by a .. pattern part like a regexp
-    // or most strings (other than .., ., and '') can be.
-    //
-    // <pre>/**/../<p>/<p>/<rest> -> {<pre>/../<p>/<p>/<rest>,<pre>/**/<p>/<p>/<rest>}
-    // <pre>/<e>/<rest> -> <pre>/<rest>
-    // <pre>/<p>/../<rest> -> <pre>/<rest>
-    // **/**/<rest> -> **/<rest>
-    //
-    // **/*/<rest> -> */**/<rest> <== not valid because ** doesn't follow
-    // this WOULD be allowed if ** did follow symlinks, or * didn't
-    firstPhasePreProcess(globParts) {
-        let didSomething = false;
-        do {
-            didSomething = false;
-            // <pre>/**/../<p>/<p>/<rest> -> {<pre>/../<p>/<p>/<rest>,<pre>/**/<p>/<p>/<rest>}
-            for (let parts of globParts) {
-                let gs = -1;
-                while (-1 !== (gs = parts.indexOf('**', gs + 1))) {
-                    let gss = gs;
-                    while (parts[gss + 1] === '**') {
-                        // <pre>/**/**/<rest> -> <pre>/**/<rest>
-                        gss++;
-                    }
-                    // eg, if gs is 2 and gss is 4, that means we have 3 **
-                    // parts, and can remove 2 of them.
-                    if (gss > gs) {
-                        parts.splice(gs + 1, gss - gs);
-                    }
-                    let next = parts[gs + 1];
-                    const p = parts[gs + 2];
-                    const p2 = parts[gs + 3];
-                    if (next !== '..')
-                        continue;
-                    if (!p ||
-                        p === '.' ||
-                        p === '..' ||
-                        !p2 ||
-                        p2 === '.' ||
-                        p2 === '..') {
-                        continue;
-                    }
-                    didSomething = true;
-                    // edit parts in place, and push the new one
-                    parts.splice(gs, 1);
-                    const other = parts.slice(0);
-                    other[gs] = '**';
-                    globParts.push(other);
-                    gs--;
-                }
-                // <pre>/<e>/<rest> -> <pre>/<rest>
-                if (!this.preserveMultipleSlashes) {
-                    for (let i = 1; i < parts.length - 1; i++) {
-                        const p = parts[i];
-                        // don't squeeze out UNC patterns
-                        if (i === 1 && p === '' && parts[0] === '')
-                            continue;
-                        if (p === '.' || p === '') {
-                            didSomething = true;
-                            parts.splice(i, 1);
-                            i--;
-                        }
-                    }
-                    if (parts[0] === '.' &&
-                        parts.length === 2 &&
-                        (parts[1] === '.' || parts[1] === '')) {
-                        didSomething = true;
-                        parts.pop();
-                    }
-                }
-                // <pre>/<p>/../<rest> -> <pre>/<rest>
-                let dd = 0;
-                while (-1 !== (dd = parts.indexOf('..', dd + 1))) {
-                    const p = parts[dd - 1];
-                    if (p && p !== '.' && p !== '..' && p !== '**') {
-                        didSomething = true;
-                        const needDot = dd === 1 && parts[dd + 1] === '**';
-                        const splin = needDot ? ['.'] : [];
-                        parts.splice(dd - 1, 2, ...splin);
-                        if (parts.length === 0)
-                            parts.push('');
-                        dd -= 2;
-                    }
-                }
-            }
-        } while (didSomething);
-        return globParts;
-    }
-    // second phase: multi-pattern dedupes
-    // {<pre>/*/<rest>,<pre>/<p>/<rest>} -> <pre>/*/<rest>
-    // {<pre>/<rest>,<pre>/<rest>} -> <pre>/<rest>
-    // {<pre>/**/<rest>,<pre>/<rest>} -> <pre>/**/<rest>
-    //
-    // {<pre>/**/<rest>,<pre>/**/<p>/<rest>} -> <pre>/**/<rest>
-    // ^-- not valid because ** doens't follow symlinks
-    secondPhasePreProcess(globParts) {
-        for (let i = 0; i < globParts.length - 1; i++) {
-            for (let j = i + 1; j < globParts.length; j++) {
-                const matched = this.partsMatch(globParts[i], globParts[j], !this.preserveMultipleSlashes);
-                if (matched) {
-                    globParts[i] = [];
-                    globParts[j] = matched;
-                    break;
-                }
-            }
-        }
-        return globParts.filter(gs => gs.length);
-    }
-    partsMatch(a, b, emptyGSMatch = false) {
-        let ai = 0;
-        let bi = 0;
-        let result = [];
-        let which = '';
-        while (ai < a.length && bi < b.length) {
-            if (a[ai] === b[bi]) {
-                result.push(which === 'b' ? b[bi] : a[ai]);
-                ai++;
-                bi++;
-            }
-            else if (emptyGSMatch && a[ai] === '**' && b[bi] === a[ai + 1]) {
-                result.push(a[ai]);
-                ai++;
-            }
-            else if (emptyGSMatch && b[bi] === '**' && a[ai] === b[bi + 1]) {
-                result.push(b[bi]);
-                bi++;
-            }
-            else if (a[ai] === '*' &&
-                b[bi] &&
-                (this.options.dot || !b[bi].startsWith('.')) &&
-                b[bi] !== '**') {
-                if (which === 'b')
-                    return false;
-                which = 'a';
-                result.push(a[ai]);
-                ai++;
-                bi++;
-            }
-            else if (b[bi] === '*' &&
-                a[ai] &&
-                (this.options.dot || !a[ai].startsWith('.')) &&
-                a[ai] !== '**') {
-                if (which === 'a')
-                    return false;
-                which = 'b';
-                result.push(b[bi]);
-                ai++;
-                bi++;
-            }
-            else {
-                return false;
-            }
-        }
-        // if we fall out of the loop, it means they two are identical
-        // as long as their lengths match
-        return a.length === b.length && result;
-    }
-    parseNegate() {
-        if (this.nonegate)
-            return;
-        const pattern = this.pattern;
-        let negate = false;
-        let negateOffset = 0;
-        for (let i = 0; i < pattern.length && pattern.charAt(i) === '!'; i++) {
-            negate = !negate;
-            negateOffset++;
-        }
-        if (negateOffset)
-            this.pattern = pattern.slice(negateOffset);
-        this.negate = negate;
-    }
-    // set partial to true to test if, for example,
-    // "/a/b" matches the start of "/*/b/*/d"
-    // Partial means, if you run out of file before you run
-    // out of pattern, then that's fine, as long as all
-    // the parts match.
-    matchOne(file, pattern, partial = false) {
-        const options = this.options;
-        // UNC paths like //?/X:/... can match X:/... and vice versa
-        // Drive letters in absolute drive or unc paths are always compared
-        // case-insensitively.
-        if (this.isWindows) {
-            const fileDrive = typeof file[0] === 'string' && /^[a-z]:$/i.test(file[0]);
-            const fileUNC = !fileDrive &&
-                file[0] === '' &&
-                file[1] === '' &&
-                file[2] === '?' &&
-                /^[a-z]:$/i.test(file[3]);
-            const patternDrive = typeof pattern[0] === 'string' && /^[a-z]:$/i.test(pattern[0]);
-            const patternUNC = !patternDrive &&
-                pattern[0] === '' &&
-                pattern[1] === '' &&
-                pattern[2] === '?' &&
-                typeof pattern[3] === 'string' &&
-                /^[a-z]:$/i.test(pattern[3]);
-            const fdi = fileUNC ? 3 : fileDrive ? 0 : undefined;
-            const pdi = patternUNC ? 3 : patternDrive ? 0 : undefined;
-            if (typeof fdi === 'number' && typeof pdi === 'number') {
-                const [fd, pd] = [file[fdi], pattern[pdi]];
-                if (fd.toLowerCase() === pd.toLowerCase()) {
-                    pattern[pdi] = fd;
-                    if (pdi > fdi) {
-                        pattern = pattern.slice(pdi);
-                    }
-                    else if (fdi > pdi) {
-                        file = file.slice(fdi);
-                    }
-                }
-            }
-        }
-        // resolve and reduce . and .. portions in the file as well.
-        // dont' need to do the second phase, because it's only one string[]
-        const { optimizationLevel = 1 } = this.options;
-        if (optimizationLevel >= 2) {
-            file = this.levelTwoFileOptimize(file);
-        }
-        this.debug('matchOne', this, { file, pattern });
-        this.debug('matchOne', file.length, pattern.length);
-        for (var fi = 0, pi = 0, fl = file.length, pl = pattern.length; fi < fl && pi < pl; fi++, pi++) {
-            this.debug('matchOne loop');
-            var p = pattern[pi];
-            var f = file[fi];
-            this.debug(pattern, p, f);
-            // should be impossible.
-            // some invalid regexp stuff in the set.
-            /* c8 ignore start */
-            if (p === false) {
-                return false;
-            }
-            /* c8 ignore stop */
-            if (p === exports.GLOBSTAR) {
-                this.debug('GLOBSTAR', [pattern, p, f]);
-                // "**"
-                // a/**/b/**/c would match the following:
-                // a/b/x/y/z/c
-                // a/x/y/z/b/c
-                // a/b/x/b/x/c
-                // a/b/c
-                // To do this, take the rest of the pattern after
-                // the **, and see if it would match the file remainder.
-                // If so, return success.
-                // If not, the ** "swallows" a segment, and try again.
-                // This is recursively awful.
-                //
-                // a/**/b/**/c matching a/b/x/y/z/c
-                // - a matches a
-                // - doublestar
-                //   - matchOne(b/x/y/z/c, b/**/c)
-                //     - b matches b
-                //     - doublestar
-                //       - matchOne(x/y/z/c, c) -> no
-                //       - matchOne(y/z/c, c) -> no
-                //       - matchOne(z/c, c) -> no
-                //       - matchOne(c, c) yes, hit
-                var fr = fi;
-                var pr = pi + 1;
-                if (pr === pl) {
-                    this.debug('** at the end');
-                    // a ** at the end will just swallow the rest.
-                    // We have found a match.
-                    // however, it will not swallow /.x, unless
-                    // options.dot is set.
-                    // . and .. are *never* matched by **, for explosively
-                    // exponential reasons.
-                    for (; fi < fl; fi++) {
-                        if (file[fi] === '.' ||
-                            file[fi] === '..' ||
-                            (!options.dot && file[fi].charAt(0) === '.'))
-                            return false;
-                    }
-                    return true;
-                }
-                // ok, let's see if we can swallow whatever we can.
-                while (fr < fl) {
-                    var swallowee = file[fr];
-                    this.debug('\nglobstar while', file, fr, pattern, pr, swallowee);
-                    // XXX remove this slice.  Just pass the start index.
-                    if (this.matchOne(file.slice(fr), pattern.slice(pr), partial)) {
-                        this.debug('globstar found match!', fr, fl, swallowee);
-                        // found a match.
-                        return true;
-                    }
-                    else {
-                        // can't swallow "." or ".." ever.
-                        // can only swallow ".foo" when explicitly asked.
-                        if (swallowee === '.' ||
-                            swallowee === '..' ||
-                            (!options.dot && swallowee.charAt(0) === '.')) {
-                            this.debug('dot detected!', file, fr, pattern, pr);
-                            break;
-                        }
-                        // ** swallows a segment, and continue.
-                        this.debug('globstar swallow a segment, and continue');
-                        fr++;
-                    }
-                }
-                // no match was found.
-                // However, in partial mode, we can't say this is necessarily over.
-                /* c8 ignore start */
-                if (partial) {
-                    // ran out of file
-                    this.debug('\n>>> no match, partial?', file, fr, pattern, pr);
-                    if (fr === fl) {
-                        return true;
-                    }
-                }
-                /* c8 ignore stop */
-                return false;
-            }
-            // something other than **
-            // non-magic patterns just have to match exactly
-            // patterns with magic have been turned into regexps.
-            let hit;
-            if (typeof p === 'string') {
-                hit = f === p;
-                this.debug('string match', p, f, hit);
-            }
-            else {
-                hit = p.test(f);
-                this.debug('pattern match', p, f, hit);
-            }
-            if (!hit)
-                return false;
-        }
-        // Note: ending in / means that we'll get a final ""
-        // at the end of the pattern.  This can only match a
-        // corresponding "" at the end of the file.
-        // If the file ends in /, then it can only match a
-        // a pattern that ends in /, unless the pattern just
-        // doesn't have any more for it. But, a/b/ should *not*
-        // match "a/b/*", even though "" matches against the
-        // [^/]*? pattern, except in partial mode, where it might
-        // simply not be reached yet.
-        // However, a/b/ should still satisfy a/*
-        // now either we fell off the end of the pattern, or we're done.
-        if (fi === fl && pi === pl) {
-            // ran out of pattern and filename at the same time.
-            // an exact hit!
-            return true;
-        }
-        else if (fi === fl) {
-            // ran out of file, but still had pattern left.
-            // this is ok if we're doing the match as part of
-            // a glob fs traversal.
-            return partial;
-        }
-        else if (pi === pl) {
-            // ran out of pattern, still have file left.
-            // this is only acceptable if we're on the very last
-            // empty segment of a file with a trailing slash.
-            // a/* should match a/b/
-            return fi === fl - 1 && file[fi] === '';
-            /* c8 ignore start */
-        }
-        else {
-            // should be unreachable.
-            throw new Error('wtf?');
-        }
-        /* c8 ignore stop */
-    }
-    braceExpand() {
-        return (0, exports.braceExpand)(this.pattern, this.options);
-    }
-    parse(pattern) {
-        (0, assert_valid_pattern_js_1.assertValidPattern)(pattern);
-        const options = this.options;
-        // shortcuts
-        if (pattern === '**')
-            return exports.GLOBSTAR;
-        if (pattern === '')
-            return '';
-        // far and away, the most common glob pattern parts are
-        // *, *.*, and *.<ext>  Add a fast check method for those.
-        let m;
-        let fastTest = null;
-        if ((m = pattern.match(starRE))) {
-            fastTest = options.dot ? starTestDot : starTest;
-        }
-        else if ((m = pattern.match(starDotExtRE))) {
-            fastTest = (options.nocase
-                ? options.dot
-                    ? starDotExtTestNocaseDot
-                    : starDotExtTestNocase
-                : options.dot
-                    ? starDotExtTestDot
-                    : starDotExtTest)(m[1]);
-        }
-        else if ((m = pattern.match(qmarksRE))) {
-            fastTest = (options.nocase
-                ? options.dot
-                    ? qmarksTestNocaseDot
-                    : qmarksTestNocase
-                : options.dot
-                    ? qmarksTestDot
-                    : qmarksTest)(m);
-        }
-        else if ((m = pattern.match(starDotStarRE))) {
-            fastTest = options.dot ? starDotStarTestDot : starDotStarTest;
-        }
-        else if ((m = pattern.match(dotStarRE))) {
-            fastTest = dotStarTest;
-        }
-        const re = ast_js_1.AST.fromGlob(pattern, this.options).toMMPattern();
-        if (fastTest && typeof re === 'object') {
-            // Avoids overriding in frozen environments
-            Reflect.defineProperty(re, 'test', { value: fastTest });
-        }
-        return re;
-    }
-    makeRe() {
-        if (this.regexp || this.regexp === false)
-            return this.regexp;
-        // at this point, this.set is a 2d array of partial
-        // pattern strings, or "**".
-        //
-        // It's better to use .match().  This function shouldn't
-        // be used, really, but it's pretty convenient sometimes,
-        // when you just want to work with a regex.
-        const set = this.set;
-        if (!set.length) {
-            this.regexp = false;
-            return this.regexp;
-        }
-        const options = this.options;
-        const twoStar = options.noglobstar
-            ? star
-            : options.dot
-                ? twoStarDot
-                : twoStarNoDot;
-        const flags = new Set(options.nocase ? ['i'] : []);
-        // regexpify non-globstar patterns
-        // if ** is only item, then we just do one twoStar
-        // if ** is first, and there are more, prepend (\/|twoStar\/)? to next
-        // if ** is last, append (\/twoStar|) to previous
-        // if ** is in the middle, append (\/|\/twoStar\/) to previous
-        // then filter out GLOBSTAR symbols
-        let re = set
-            .map(pattern => {
-            const pp = pattern.map(p => {
-                if (p instanceof RegExp) {
-                    for (const f of p.flags.split(''))
-                        flags.add(f);
-                }
-                return typeof p === 'string'
-                    ? regExpEscape(p)
-                    : p === exports.GLOBSTAR
-                        ? exports.GLOBSTAR
-                        : p._src;
-            });
-            pp.forEach((p, i) => {
-                const next = pp[i + 1];
-                const prev = pp[i - 1];
-                if (p !== exports.GLOBSTAR || prev === exports.GLOBSTAR) {
-                    return;
-                }
-                if (prev === undefined) {
-                    if (next !== undefined && next !== exports.GLOBSTAR) {
-                        pp[i + 1] = '(?:\\/|' + twoStar + '\\/)?' + next;
-                    }
-                    else {
-                        pp[i] = twoStar;
-                    }
-                }
-                else if (next === undefined) {
-                    pp[i - 1] = prev + '(?:\\/|' + twoStar + ')?';
-                }
-                else if (next !== exports.GLOBSTAR) {
-                    pp[i - 1] = prev + '(?:\\/|\\/' + twoStar + '\\/)' + next;
-                    pp[i + 1] = exports.GLOBSTAR;
-                }
-            });
-            return pp.filter(p => p !== exports.GLOBSTAR).join('/');
-        })
-            .join('|');
-        // need to wrap in parens if we had more than one thing with |,
-        // otherwise only the first will be anchored to ^ and the last to $
-        const [open, close] = set.length > 1 ? ['(?:', ')'] : ['', ''];
-        // must match entire pattern
-        // ending in a * or ** will make it less strict.
-        re = '^' + open + re + close + '$';
-        // can match anything, as long as it's not this.
-        if (this.negate)
-            re = '^(?!' + re + ').+$';
-        try {
-            this.regexp = new RegExp(re, [...flags].join(''));
-            /* c8 ignore start */
-        }
-        catch (ex) {
-            // should be impossible
-            this.regexp = false;
-        }
-        /* c8 ignore stop */
-        return this.regexp;
-    }
-    slashSplit(p) {
-        // if p starts with // on windows, we preserve that
-        // so that UNC paths aren't broken.  Otherwise, any number of
-        // / characters are coalesced into one, unless
-        // preserveMultipleSlashes is set to true.
-        if (this.preserveMultipleSlashes) {
-            return p.split('/');
-        }
-        else if (this.isWindows && /^\/\/[^\/]+/.test(p)) {
-            // add an extra '' for the one we lose
-            return ['', ...p.split(/\/+/)];
-        }
-        else {
-            return p.split(/\/+/);
-        }
-    }
-    match(f, partial = this.partial) {
-        this.debug('match', f, this.pattern);
-        // short-circuit in the case of busted things.
-        // comments, etc.
-        if (this.comment) {
-            return false;
-        }
-        if (this.empty) {
-            return f === '';
-        }
-        if (f === '/' && partial) {
-            return true;
-        }
-        const options = this.options;
-        // windows: need to use /, not \
-        if (this.isWindows) {
-            f = f.split('\\').join('/');
-        }
-        // treat the test path as a set of pathparts.
-        const ff = this.slashSplit(f);
-        this.debug(this.pattern, 'split', ff);
-        // just ONE of the pattern sets in this.set needs to match
-        // in order for it to be valid.  If negating, then just one
-        // match means that we have failed.
-        // Either way, return on the first hit.
-        const set = this.set;
-        this.debug(this.pattern, 'set', set);
-        // Find the basename of the path by looking for the last non-empty segment
-        let filename = ff[ff.length - 1];
-        if (!filename) {
-            for (let i = ff.length - 2; !filename && i >= 0; i--) {
-                filename = ff[i];
-            }
-        }
-        for (let i = 0; i < set.length; i++) {
-            const pattern = set[i];
-            let file = ff;
-            if (options.matchBase && pattern.length === 1) {
-                file = [filename];
-            }
-            const hit = this.matchOne(file, pattern, partial);
-            if (hit) {
-                if (options.flipNegate) {
-                    return true;
-                }
-                return !this.negate;
-            }
-        }
-        // didn't get any hits.  this is success if it's a negative
-        // pattern, failure otherwise.
-        if (options.flipNegate) {
-            return false;
-        }
-        return this.negate;
-    }
-    static defaults(def) {
-        return exports.minimatch.defaults(def).Minimatch;
-    }
-}
-exports.Minimatch = Minimatch;
-/* c8 ignore start */
-var ast_js_2 = __nccwpck_require__(4776);
-Object.defineProperty(exports, "AST", ({ enumerable: true, get: function () { return ast_js_2.AST; } }));
-var escape_js_2 = __nccwpck_require__(6021);
-Object.defineProperty(exports, "escape", ({ enumerable: true, get: function () { return escape_js_2.escape; } }));
-var unescape_js_2 = __nccwpck_require__(3318);
-Object.defineProperty(exports, "unescape", ({ enumerable: true, get: function () { return unescape_js_2.unescape; } }));
-/* c8 ignore stop */
-exports.minimatch.AST = ast_js_1.AST;
-exports.minimatch.Minimatch = Minimatch;
-exports.minimatch.escape = escape_js_1.escape;
-exports.minimatch.unescape = unescape_js_1.unescape;
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-
-/***/ 3318:
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.unescape = void 0;
-/**
- * Un-escape a string that has been escaped with {@link escape}.
- *
- * If the {@link windowsPathsNoEscape} option is used, then square-brace
- * escapes are removed, but not backslash escapes.  For example, it will turn
- * the string `'[*]'` into `*`, but it will not turn `'\\*'` into `'*'`,
- * becuase `\` is a path separator in `windowsPathsNoEscape` mode.
- *
- * When `windowsPathsNoEscape` is not set, then both brace escapes and
- * backslash escapes are removed.
- *
- * Slashes (and backslashes in `windowsPathsNoEscape` mode) cannot be escaped
- * or unescaped.
- */
-const unescape = (s, { windowsPathsNoEscape = false, } = {}) => {
-    return windowsPathsNoEscape
-        ? s.replace(/\[([^\/\\])\]/g, '$1')
-        : s.replace(/((?!\\).|^)\[([^\/\\])\]/g, '$1$2').replace(/\\([^\/])/g, '$1');
-};
-exports.unescape = unescape;
-//# sourceMappingURL=unescape.js.map
-
-/***/ }),
-
-/***/ 2478:
+/***/ 5544:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -53024,7 +56732,1870 @@ exports.LRUCache = LRUCache;
 
 /***/ }),
 
-/***/ 7990:
+/***/ 2479:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.assertValidPattern = void 0;
+const MAX_PATTERN_LENGTH = 1024 * 64;
+const assertValidPattern = (pattern) => {
+    if (typeof pattern !== 'string') {
+        throw new TypeError('invalid pattern');
+    }
+    if (pattern.length > MAX_PATTERN_LENGTH) {
+        throw new TypeError('pattern is too long');
+    }
+};
+exports.assertValidPattern = assertValidPattern;
+//# sourceMappingURL=assert-valid-pattern.js.map
+
+/***/ }),
+
+/***/ 2025:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+// parse a single path portion
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.AST = void 0;
+const brace_expressions_js_1 = __nccwpck_require__(3872);
+const unescape_js_1 = __nccwpck_require__(4901);
+const types = new Set(['!', '?', '+', '*', '@']);
+const isExtglobType = (c) => types.has(c);
+// Patterns that get prepended to bind to the start of either the
+// entire string, or just a single path portion, to prevent dots
+// and/or traversal patterns, when needed.
+// Exts don't need the ^ or / bit, because the root binds that already.
+const startNoTraversal = '(?!(?:^|/)\\.\\.?(?:$|/))';
+const startNoDot = '(?!\\.)';
+// characters that indicate a start of pattern needs the "no dots" bit,
+// because a dot *might* be matched. ( is not in the list, because in
+// the case of a child extglob, it will handle the prevention itself.
+const addPatternStart = new Set(['[', '.']);
+// cases where traversal is A-OK, no dot prevention needed
+const justDots = new Set(['..', '.']);
+const reSpecials = new Set('().*{}+?[]^$\\!');
+const regExpEscape = (s) => s.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+// any single thing other than /
+const qmark = '[^/]';
+// * => any number of characters
+const star = qmark + '*?';
+// use + when we need to ensure that *something* matches, because the * is
+// the only thing in the path portion.
+const starNoEmpty = qmark + '+?';
+// remove the \ chars that we added if we end up doing a nonmagic compare
+// const deslash = (s: string) => s.replace(/\\(.)/g, '$1')
+class AST {
+    type;
+    #root;
+    #hasMagic;
+    #uflag = false;
+    #parts = [];
+    #parent;
+    #parentIndex;
+    #negs;
+    #filledNegs = false;
+    #options;
+    #toString;
+    // set to true if it's an extglob with no children
+    // (which really means one child of '')
+    #emptyExt = false;
+    constructor(type, parent, options = {}) {
+        this.type = type;
+        // extglobs are inherently magical
+        if (type)
+            this.#hasMagic = true;
+        this.#parent = parent;
+        this.#root = this.#parent ? this.#parent.#root : this;
+        this.#options = this.#root === this ? options : this.#root.#options;
+        this.#negs = this.#root === this ? [] : this.#root.#negs;
+        if (type === '!' && !this.#root.#filledNegs)
+            this.#negs.push(this);
+        this.#parentIndex = this.#parent ? this.#parent.#parts.length : 0;
+    }
+    get hasMagic() {
+        /* c8 ignore start */
+        if (this.#hasMagic !== undefined)
+            return this.#hasMagic;
+        /* c8 ignore stop */
+        for (const p of this.#parts) {
+            if (typeof p === 'string')
+                continue;
+            if (p.type || p.hasMagic)
+                return (this.#hasMagic = true);
+        }
+        // note: will be undefined until we generate the regexp src and find out
+        return this.#hasMagic;
+    }
+    // reconstructs the pattern
+    toString() {
+        if (this.#toString !== undefined)
+            return this.#toString;
+        if (!this.type) {
+            return (this.#toString = this.#parts.map(p => String(p)).join(''));
+        }
+        else {
+            return (this.#toString =
+                this.type + '(' + this.#parts.map(p => String(p)).join('|') + ')');
+        }
+    }
+    #fillNegs() {
+        /* c8 ignore start */
+        if (this !== this.#root)
+            throw new Error('should only call on root');
+        if (this.#filledNegs)
+            return this;
+        /* c8 ignore stop */
+        // call toString() once to fill this out
+        this.toString();
+        this.#filledNegs = true;
+        let n;
+        while ((n = this.#negs.pop())) {
+            if (n.type !== '!')
+                continue;
+            // walk up the tree, appending everthing that comes AFTER parentIndex
+            let p = n;
+            let pp = p.#parent;
+            while (pp) {
+                for (let i = p.#parentIndex + 1; !pp.type && i < pp.#parts.length; i++) {
+                    for (const part of n.#parts) {
+                        /* c8 ignore start */
+                        if (typeof part === 'string') {
+                            throw new Error('string part in extglob AST??');
+                        }
+                        /* c8 ignore stop */
+                        part.copyIn(pp.#parts[i]);
+                    }
+                }
+                p = pp;
+                pp = p.#parent;
+            }
+        }
+        return this;
+    }
+    push(...parts) {
+        for (const p of parts) {
+            if (p === '')
+                continue;
+            /* c8 ignore start */
+            if (typeof p !== 'string' && !(p instanceof AST && p.#parent === this)) {
+                throw new Error('invalid part: ' + p);
+            }
+            /* c8 ignore stop */
+            this.#parts.push(p);
+        }
+    }
+    toJSON() {
+        const ret = this.type === null
+            ? this.#parts.slice().map(p => (typeof p === 'string' ? p : p.toJSON()))
+            : [this.type, ...this.#parts.map(p => p.toJSON())];
+        if (this.isStart() && !this.type)
+            ret.unshift([]);
+        if (this.isEnd() &&
+            (this === this.#root ||
+                (this.#root.#filledNegs && this.#parent?.type === '!'))) {
+            ret.push({});
+        }
+        return ret;
+    }
+    isStart() {
+        if (this.#root === this)
+            return true;
+        // if (this.type) return !!this.#parent?.isStart()
+        if (!this.#parent?.isStart())
+            return false;
+        if (this.#parentIndex === 0)
+            return true;
+        // if everything AHEAD of this is a negation, then it's still the "start"
+        const p = this.#parent;
+        for (let i = 0; i < this.#parentIndex; i++) {
+            const pp = p.#parts[i];
+            if (!(pp instanceof AST && pp.type === '!')) {
+                return false;
+            }
+        }
+        return true;
+    }
+    isEnd() {
+        if (this.#root === this)
+            return true;
+        if (this.#parent?.type === '!')
+            return true;
+        if (!this.#parent?.isEnd())
+            return false;
+        if (!this.type)
+            return this.#parent?.isEnd();
+        // if not root, it'll always have a parent
+        /* c8 ignore start */
+        const pl = this.#parent ? this.#parent.#parts.length : 0;
+        /* c8 ignore stop */
+        return this.#parentIndex === pl - 1;
+    }
+    copyIn(part) {
+        if (typeof part === 'string')
+            this.push(part);
+        else
+            this.push(part.clone(this));
+    }
+    clone(parent) {
+        const c = new AST(this.type, parent);
+        for (const p of this.#parts) {
+            c.copyIn(p);
+        }
+        return c;
+    }
+    static #parseAST(str, ast, pos, opt) {
+        let escaping = false;
+        let inBrace = false;
+        let braceStart = -1;
+        let braceNeg = false;
+        if (ast.type === null) {
+            // outside of a extglob, append until we find a start
+            let i = pos;
+            let acc = '';
+            while (i < str.length) {
+                const c = str.charAt(i++);
+                // still accumulate escapes at this point, but we do ignore
+                // starts that are escaped
+                if (escaping || c === '\\') {
+                    escaping = !escaping;
+                    acc += c;
+                    continue;
+                }
+                if (inBrace) {
+                    if (i === braceStart + 1) {
+                        if (c === '^' || c === '!') {
+                            braceNeg = true;
+                        }
+                    }
+                    else if (c === ']' && !(i === braceStart + 2 && braceNeg)) {
+                        inBrace = false;
+                    }
+                    acc += c;
+                    continue;
+                }
+                else if (c === '[') {
+                    inBrace = true;
+                    braceStart = i;
+                    braceNeg = false;
+                    acc += c;
+                    continue;
+                }
+                if (!opt.noext && isExtglobType(c) && str.charAt(i) === '(') {
+                    ast.push(acc);
+                    acc = '';
+                    const ext = new AST(c, ast);
+                    i = AST.#parseAST(str, ext, i, opt);
+                    ast.push(ext);
+                    continue;
+                }
+                acc += c;
+            }
+            ast.push(acc);
+            return i;
+        }
+        // some kind of extglob, pos is at the (
+        // find the next | or )
+        let i = pos + 1;
+        let part = new AST(null, ast);
+        const parts = [];
+        let acc = '';
+        while (i < str.length) {
+            const c = str.charAt(i++);
+            // still accumulate escapes at this point, but we do ignore
+            // starts that are escaped
+            if (escaping || c === '\\') {
+                escaping = !escaping;
+                acc += c;
+                continue;
+            }
+            if (inBrace) {
+                if (i === braceStart + 1) {
+                    if (c === '^' || c === '!') {
+                        braceNeg = true;
+                    }
+                }
+                else if (c === ']' && !(i === braceStart + 2 && braceNeg)) {
+                    inBrace = false;
+                }
+                acc += c;
+                continue;
+            }
+            else if (c === '[') {
+                inBrace = true;
+                braceStart = i;
+                braceNeg = false;
+                acc += c;
+                continue;
+            }
+            if (isExtglobType(c) && str.charAt(i) === '(') {
+                part.push(acc);
+                acc = '';
+                const ext = new AST(c, part);
+                part.push(ext);
+                i = AST.#parseAST(str, ext, i, opt);
+                continue;
+            }
+            if (c === '|') {
+                part.push(acc);
+                acc = '';
+                parts.push(part);
+                part = new AST(null, ast);
+                continue;
+            }
+            if (c === ')') {
+                if (acc === '' && ast.#parts.length === 0) {
+                    ast.#emptyExt = true;
+                }
+                part.push(acc);
+                acc = '';
+                ast.push(...parts, part);
+                return i;
+            }
+            acc += c;
+        }
+        // unfinished extglob
+        // if we got here, it was a malformed extglob! not an extglob, but
+        // maybe something else in there.
+        ast.type = null;
+        ast.#hasMagic = undefined;
+        ast.#parts = [str.substring(pos - 1)];
+        return i;
+    }
+    static fromGlob(pattern, options = {}) {
+        const ast = new AST(null, undefined, options);
+        AST.#parseAST(pattern, ast, 0, options);
+        return ast;
+    }
+    // returns the regular expression if there's magic, or the unescaped
+    // string if not.
+    toMMPattern() {
+        // should only be called on root
+        /* c8 ignore start */
+        if (this !== this.#root)
+            return this.#root.toMMPattern();
+        /* c8 ignore stop */
+        const glob = this.toString();
+        const [re, body, hasMagic, uflag] = this.toRegExpSource();
+        // if we're in nocase mode, and not nocaseMagicOnly, then we do
+        // still need a regular expression if we have to case-insensitively
+        // match capital/lowercase characters.
+        const anyMagic = hasMagic ||
+            this.#hasMagic ||
+            (this.#options.nocase &&
+                !this.#options.nocaseMagicOnly &&
+                glob.toUpperCase() !== glob.toLowerCase());
+        if (!anyMagic) {
+            return body;
+        }
+        const flags = (this.#options.nocase ? 'i' : '') + (uflag ? 'u' : '');
+        return Object.assign(new RegExp(`^${re}$`, flags), {
+            _src: re,
+            _glob: glob,
+        });
+    }
+    get options() {
+        return this.#options;
+    }
+    // returns the string match, the regexp source, whether there's magic
+    // in the regexp (so a regular expression is required) and whether or
+    // not the uflag is needed for the regular expression (for posix classes)
+    // TODO: instead of injecting the start/end at this point, just return
+    // the BODY of the regexp, along with the start/end portions suitable
+    // for binding the start/end in either a joined full-path makeRe context
+    // (where we bind to (^|/), or a standalone matchPart context (where
+    // we bind to ^, and not /).  Otherwise slashes get duped!
+    //
+    // In part-matching mode, the start is:
+    // - if not isStart: nothing
+    // - if traversal possible, but not allowed: ^(?!\.\.?$)
+    // - if dots allowed or not possible: ^
+    // - if dots possible and not allowed: ^(?!\.)
+    // end is:
+    // - if not isEnd(): nothing
+    // - else: $
+    //
+    // In full-path matching mode, we put the slash at the START of the
+    // pattern, so start is:
+    // - if first pattern: same as part-matching mode
+    // - if not isStart(): nothing
+    // - if traversal possible, but not allowed: /(?!\.\.?(?:$|/))
+    // - if dots allowed or not possible: /
+    // - if dots possible and not allowed: /(?!\.)
+    // end is:
+    // - if last pattern, same as part-matching mode
+    // - else nothing
+    //
+    // Always put the (?:$|/) on negated tails, though, because that has to be
+    // there to bind the end of the negated pattern portion, and it's easier to
+    // just stick it in now rather than try to inject it later in the middle of
+    // the pattern.
+    //
+    // We can just always return the same end, and leave it up to the caller
+    // to know whether it's going to be used joined or in parts.
+    // And, if the start is adjusted slightly, can do the same there:
+    // - if not isStart: nothing
+    // - if traversal possible, but not allowed: (?:/|^)(?!\.\.?$)
+    // - if dots allowed or not possible: (?:/|^)
+    // - if dots possible and not allowed: (?:/|^)(?!\.)
+    //
+    // But it's better to have a simpler binding without a conditional, for
+    // performance, so probably better to return both start options.
+    //
+    // Then the caller just ignores the end if it's not the first pattern,
+    // and the start always gets applied.
+    //
+    // But that's always going to be $ if it's the ending pattern, or nothing,
+    // so the caller can just attach $ at the end of the pattern when building.
+    //
+    // So the todo is:
+    // - better detect what kind of start is needed
+    // - return both flavors of starting pattern
+    // - attach $ at the end of the pattern when creating the actual RegExp
+    //
+    // Ah, but wait, no, that all only applies to the root when the first pattern
+    // is not an extglob. If the first pattern IS an extglob, then we need all
+    // that dot prevention biz to live in the extglob portions, because eg
+    // +(*|.x*) can match .xy but not .yx.
+    //
+    // So, return the two flavors if it's #root and the first child is not an
+    // AST, otherwise leave it to the child AST to handle it, and there,
+    // use the (?:^|/) style of start binding.
+    //
+    // Even simplified further:
+    // - Since the start for a join is eg /(?!\.) and the start for a part
+    // is ^(?!\.), we can just prepend (?!\.) to the pattern (either root
+    // or start or whatever) and prepend ^ or / at the Regexp construction.
+    toRegExpSource(allowDot) {
+        const dot = allowDot ?? !!this.#options.dot;
+        if (this.#root === this)
+            this.#fillNegs();
+        if (!this.type) {
+            const noEmpty = this.isStart() && this.isEnd();
+            const src = this.#parts
+                .map(p => {
+                const [re, _, hasMagic, uflag] = typeof p === 'string'
+                    ? AST.#parseGlob(p, this.#hasMagic, noEmpty)
+                    : p.toRegExpSource(allowDot);
+                this.#hasMagic = this.#hasMagic || hasMagic;
+                this.#uflag = this.#uflag || uflag;
+                return re;
+            })
+                .join('');
+            let start = '';
+            if (this.isStart()) {
+                if (typeof this.#parts[0] === 'string') {
+                    // this is the string that will match the start of the pattern,
+                    // so we need to protect against dots and such.
+                    // '.' and '..' cannot match unless the pattern is that exactly,
+                    // even if it starts with . or dot:true is set.
+                    const dotTravAllowed = this.#parts.length === 1 && justDots.has(this.#parts[0]);
+                    if (!dotTravAllowed) {
+                        const aps = addPatternStart;
+                        // check if we have a possibility of matching . or ..,
+                        // and prevent that.
+                        const needNoTrav = 
+                        // dots are allowed, and the pattern starts with [ or .
+                        (dot && aps.has(src.charAt(0))) ||
+                            // the pattern starts with \., and then [ or .
+                            (src.startsWith('\\.') && aps.has(src.charAt(2))) ||
+                            // the pattern starts with \.\., and then [ or .
+                            (src.startsWith('\\.\\.') && aps.has(src.charAt(4)));
+                        // no need to prevent dots if it can't match a dot, or if a
+                        // sub-pattern will be preventing it anyway.
+                        const needNoDot = !dot && !allowDot && aps.has(src.charAt(0));
+                        start = needNoTrav ? startNoTraversal : needNoDot ? startNoDot : '';
+                    }
+                }
+            }
+            // append the "end of path portion" pattern to negation tails
+            let end = '';
+            if (this.isEnd() &&
+                this.#root.#filledNegs &&
+                this.#parent?.type === '!') {
+                end = '(?:$|\\/)';
+            }
+            const final = start + src + end;
+            return [
+                final,
+                (0, unescape_js_1.unescape)(src),
+                (this.#hasMagic = !!this.#hasMagic),
+                this.#uflag,
+            ];
+        }
+        // We need to calculate the body *twice* if it's a repeat pattern
+        // at the start, once in nodot mode, then again in dot mode, so a
+        // pattern like *(?) can match 'x.y'
+        const repeated = this.type === '*' || this.type === '+';
+        // some kind of extglob
+        const start = this.type === '!' ? '(?:(?!(?:' : '(?:';
+        let body = this.#partsToRegExp(dot);
+        if (this.isStart() && this.isEnd() && !body && this.type !== '!') {
+            // invalid extglob, has to at least be *something* present, if it's
+            // the entire path portion.
+            const s = this.toString();
+            this.#parts = [s];
+            this.type = null;
+            this.#hasMagic = undefined;
+            return [s, (0, unescape_js_1.unescape)(this.toString()), false, false];
+        }
+        // XXX abstract out this map method
+        let bodyDotAllowed = !repeated || allowDot || dot || !startNoDot
+            ? ''
+            : this.#partsToRegExp(true);
+        if (bodyDotAllowed === body) {
+            bodyDotAllowed = '';
+        }
+        if (bodyDotAllowed) {
+            body = `(?:${body})(?:${bodyDotAllowed})*?`;
+        }
+        // an empty !() is exactly equivalent to a starNoEmpty
+        let final = '';
+        if (this.type === '!' && this.#emptyExt) {
+            final = (this.isStart() && !dot ? startNoDot : '') + starNoEmpty;
+        }
+        else {
+            const close = this.type === '!'
+                ? // !() must match something,but !(x) can match ''
+                    '))' +
+                        (this.isStart() && !dot && !allowDot ? startNoDot : '') +
+                        star +
+                        ')'
+                : this.type === '@'
+                    ? ')'
+                    : this.type === '?'
+                        ? ')?'
+                        : this.type === '+' && bodyDotAllowed
+                            ? ')'
+                            : this.type === '*' && bodyDotAllowed
+                                ? `)?`
+                                : `)${this.type}`;
+            final = start + body + close;
+        }
+        return [
+            final,
+            (0, unescape_js_1.unescape)(body),
+            (this.#hasMagic = !!this.#hasMagic),
+            this.#uflag,
+        ];
+    }
+    #partsToRegExp(dot) {
+        return this.#parts
+            .map(p => {
+            // extglob ASTs should only contain parent ASTs
+            /* c8 ignore start */
+            if (typeof p === 'string') {
+                throw new Error('string type in extglob ast??');
+            }
+            /* c8 ignore stop */
+            // can ignore hasMagic, because extglobs are already always magic
+            const [re, _, _hasMagic, uflag] = p.toRegExpSource(dot);
+            this.#uflag = this.#uflag || uflag;
+            return re;
+        })
+            .filter(p => !(this.isStart() && this.isEnd()) || !!p)
+            .join('|');
+    }
+    static #parseGlob(glob, hasMagic, noEmpty = false) {
+        let escaping = false;
+        let re = '';
+        let uflag = false;
+        for (let i = 0; i < glob.length; i++) {
+            const c = glob.charAt(i);
+            if (escaping) {
+                escaping = false;
+                re += (reSpecials.has(c) ? '\\' : '') + c;
+                continue;
+            }
+            if (c === '\\') {
+                if (i === glob.length - 1) {
+                    re += '\\\\';
+                }
+                else {
+                    escaping = true;
+                }
+                continue;
+            }
+            if (c === '[') {
+                const [src, needUflag, consumed, magic] = (0, brace_expressions_js_1.parseClass)(glob, i);
+                if (consumed) {
+                    re += src;
+                    uflag = uflag || needUflag;
+                    i += consumed - 1;
+                    hasMagic = hasMagic || magic;
+                    continue;
+                }
+            }
+            if (c === '*') {
+                if (noEmpty && glob === '*')
+                    re += starNoEmpty;
+                else
+                    re += star;
+                hasMagic = true;
+                continue;
+            }
+            if (c === '?') {
+                re += qmark;
+                hasMagic = true;
+                continue;
+            }
+            re += regExpEscape(c);
+        }
+        return [re, (0, unescape_js_1.unescape)(glob), !!hasMagic, uflag];
+    }
+}
+exports.AST = AST;
+//# sourceMappingURL=ast.js.map
+
+/***/ }),
+
+/***/ 3872:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+// translate the various posix character classes into unicode properties
+// this works across all unicode locales
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.parseClass = void 0;
+// { <posix class>: [<translation>, /u flag required, negated]
+const posixClasses = {
+    '[:alnum:]': ['\\p{L}\\p{Nl}\\p{Nd}', true],
+    '[:alpha:]': ['\\p{L}\\p{Nl}', true],
+    '[:ascii:]': ['\\x' + '00-\\x' + '7f', false],
+    '[:blank:]': ['\\p{Zs}\\t', true],
+    '[:cntrl:]': ['\\p{Cc}', true],
+    '[:digit:]': ['\\p{Nd}', true],
+    '[:graph:]': ['\\p{Z}\\p{C}', true, true],
+    '[:lower:]': ['\\p{Ll}', true],
+    '[:print:]': ['\\p{C}', true],
+    '[:punct:]': ['\\p{P}', true],
+    '[:space:]': ['\\p{Z}\\t\\r\\n\\v\\f', true],
+    '[:upper:]': ['\\p{Lu}', true],
+    '[:word:]': ['\\p{L}\\p{Nl}\\p{Nd}\\p{Pc}', true],
+    '[:xdigit:]': ['A-Fa-f0-9', false],
+};
+// only need to escape a few things inside of brace expressions
+// escapes: [ \ ] -
+const braceEscape = (s) => s.replace(/[[\]\\-]/g, '\\$&');
+// escape all regexp magic characters
+const regexpEscape = (s) => s.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+// everything has already been escaped, we just have to join
+const rangesToString = (ranges) => ranges.join('');
+// takes a glob string at a posix brace expression, and returns
+// an equivalent regular expression source, and boolean indicating
+// whether the /u flag needs to be applied, and the number of chars
+// consumed to parse the character class.
+// This also removes out of order ranges, and returns ($.) if the
+// entire class just no good.
+const parseClass = (glob, position) => {
+    const pos = position;
+    /* c8 ignore start */
+    if (glob.charAt(pos) !== '[') {
+        throw new Error('not in a brace expression');
+    }
+    /* c8 ignore stop */
+    const ranges = [];
+    const negs = [];
+    let i = pos + 1;
+    let sawStart = false;
+    let uflag = false;
+    let escaping = false;
+    let negate = false;
+    let endPos = pos;
+    let rangeStart = '';
+    WHILE: while (i < glob.length) {
+        const c = glob.charAt(i);
+        if ((c === '!' || c === '^') && i === pos + 1) {
+            negate = true;
+            i++;
+            continue;
+        }
+        if (c === ']' && sawStart && !escaping) {
+            endPos = i + 1;
+            break;
+        }
+        sawStart = true;
+        if (c === '\\') {
+            if (!escaping) {
+                escaping = true;
+                i++;
+                continue;
+            }
+            // escaped \ char, fall through and treat like normal char
+        }
+        if (c === '[' && !escaping) {
+            // either a posix class, a collation equivalent, or just a [
+            for (const [cls, [unip, u, neg]] of Object.entries(posixClasses)) {
+                if (glob.startsWith(cls, i)) {
+                    // invalid, [a-[] is fine, but not [a-[:alpha]]
+                    if (rangeStart) {
+                        return ['$.', false, glob.length - pos, true];
+                    }
+                    i += cls.length;
+                    if (neg)
+                        negs.push(unip);
+                    else
+                        ranges.push(unip);
+                    uflag = uflag || u;
+                    continue WHILE;
+                }
+            }
+        }
+        // now it's just a normal character, effectively
+        escaping = false;
+        if (rangeStart) {
+            // throw this range away if it's not valid, but others
+            // can still match.
+            if (c > rangeStart) {
+                ranges.push(braceEscape(rangeStart) + '-' + braceEscape(c));
+            }
+            else if (c === rangeStart) {
+                ranges.push(braceEscape(c));
+            }
+            rangeStart = '';
+            i++;
+            continue;
+        }
+        // now might be the start of a range.
+        // can be either c-d or c-] or c<more...>] or c] at this point
+        if (glob.startsWith('-]', i + 1)) {
+            ranges.push(braceEscape(c + '-'));
+            i += 2;
+            continue;
+        }
+        if (glob.startsWith('-', i + 1)) {
+            rangeStart = c;
+            i += 2;
+            continue;
+        }
+        // not the start of a range, just a single character
+        ranges.push(braceEscape(c));
+        i++;
+    }
+    if (endPos < i) {
+        // didn't see the end of the class, not a valid class,
+        // but might still be valid as a literal match.
+        return ['', false, 0, false];
+    }
+    // if we got no ranges and no negates, then we have a range that
+    // cannot possibly match anything, and that poisons the whole glob
+    if (!ranges.length && !negs.length) {
+        return ['$.', false, glob.length - pos, true];
+    }
+    // if we got one positive range, and it's a single character, then that's
+    // not actually a magic pattern, it's just that one literal character.
+    // we should not treat that as "magic", we should just return the literal
+    // character. [_] is a perfectly valid way to escape glob magic chars.
+    if (negs.length === 0 &&
+        ranges.length === 1 &&
+        /^\\?.$/.test(ranges[0]) &&
+        !negate) {
+        const r = ranges[0].length === 2 ? ranges[0].slice(-1) : ranges[0];
+        return [regexpEscape(r), false, endPos - pos, false];
+    }
+    const sranges = '[' + (negate ? '^' : '') + rangesToString(ranges) + ']';
+    const snegs = '[' + (negate ? '' : '^') + rangesToString(negs) + ']';
+    const comb = ranges.length && negs.length
+        ? '(' + sranges + '|' + snegs + ')'
+        : ranges.length
+            ? sranges
+            : snegs;
+    return [comb, uflag, endPos - pos, true];
+};
+exports.parseClass = parseClass;
+//# sourceMappingURL=brace-expressions.js.map
+
+/***/ }),
+
+/***/ 2396:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.escape = void 0;
+/**
+ * Escape all magic characters in a glob pattern.
+ *
+ * If the {@link windowsPathsNoEscape | GlobOptions.windowsPathsNoEscape}
+ * option is used, then characters are escaped by wrapping in `[]`, because
+ * a magic character wrapped in a character class can only be satisfied by
+ * that exact character.  In this mode, `\` is _not_ escaped, because it is
+ * not interpreted as a magic character, but instead as a path separator.
+ */
+const escape = (s, { windowsPathsNoEscape = false, } = {}) => {
+    // don't need to escape +@! because we escape the parens
+    // that make those magic, and escaping ! as [!] isn't valid,
+    // because [!]] is a valid glob class meaning not ']'.
+    return windowsPathsNoEscape
+        ? s.replace(/[?*()[\]]/g, '[$&]')
+        : s.replace(/[?*()[\]\\]/g, '\\$&');
+};
+exports.escape = escape;
+//# sourceMappingURL=escape.js.map
+
+/***/ }),
+
+/***/ 5978:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.unescape = exports.escape = exports.AST = exports.Minimatch = exports.match = exports.makeRe = exports.braceExpand = exports.defaults = exports.filter = exports.GLOBSTAR = exports.sep = exports.minimatch = void 0;
+const brace_expansion_1 = __importDefault(__nccwpck_require__(3244));
+const assert_valid_pattern_js_1 = __nccwpck_require__(2479);
+const ast_js_1 = __nccwpck_require__(2025);
+const escape_js_1 = __nccwpck_require__(2396);
+const unescape_js_1 = __nccwpck_require__(4901);
+const minimatch = (p, pattern, options = {}) => {
+    (0, assert_valid_pattern_js_1.assertValidPattern)(pattern);
+    // shortcut: comments match nothing.
+    if (!options.nocomment && pattern.charAt(0) === '#') {
+        return false;
+    }
+    return new Minimatch(pattern, options).match(p);
+};
+exports.minimatch = minimatch;
+// Optimized checking for the most common glob patterns.
+const starDotExtRE = /^\*+([^+@!?\*\[\(]*)$/;
+const starDotExtTest = (ext) => (f) => !f.startsWith('.') && f.endsWith(ext);
+const starDotExtTestDot = (ext) => (f) => f.endsWith(ext);
+const starDotExtTestNocase = (ext) => {
+    ext = ext.toLowerCase();
+    return (f) => !f.startsWith('.') && f.toLowerCase().endsWith(ext);
+};
+const starDotExtTestNocaseDot = (ext) => {
+    ext = ext.toLowerCase();
+    return (f) => f.toLowerCase().endsWith(ext);
+};
+const starDotStarRE = /^\*+\.\*+$/;
+const starDotStarTest = (f) => !f.startsWith('.') && f.includes('.');
+const starDotStarTestDot = (f) => f !== '.' && f !== '..' && f.includes('.');
+const dotStarRE = /^\.\*+$/;
+const dotStarTest = (f) => f !== '.' && f !== '..' && f.startsWith('.');
+const starRE = /^\*+$/;
+const starTest = (f) => f.length !== 0 && !f.startsWith('.');
+const starTestDot = (f) => f.length !== 0 && f !== '.' && f !== '..';
+const qmarksRE = /^\?+([^+@!?\*\[\(]*)?$/;
+const qmarksTestNocase = ([$0, ext = '']) => {
+    const noext = qmarksTestNoExt([$0]);
+    if (!ext)
+        return noext;
+    ext = ext.toLowerCase();
+    return (f) => noext(f) && f.toLowerCase().endsWith(ext);
+};
+const qmarksTestNocaseDot = ([$0, ext = '']) => {
+    const noext = qmarksTestNoExtDot([$0]);
+    if (!ext)
+        return noext;
+    ext = ext.toLowerCase();
+    return (f) => noext(f) && f.toLowerCase().endsWith(ext);
+};
+const qmarksTestDot = ([$0, ext = '']) => {
+    const noext = qmarksTestNoExtDot([$0]);
+    return !ext ? noext : (f) => noext(f) && f.endsWith(ext);
+};
+const qmarksTest = ([$0, ext = '']) => {
+    const noext = qmarksTestNoExt([$0]);
+    return !ext ? noext : (f) => noext(f) && f.endsWith(ext);
+};
+const qmarksTestNoExt = ([$0]) => {
+    const len = $0.length;
+    return (f) => f.length === len && !f.startsWith('.');
+};
+const qmarksTestNoExtDot = ([$0]) => {
+    const len = $0.length;
+    return (f) => f.length === len && f !== '.' && f !== '..';
+};
+/* c8 ignore start */
+const defaultPlatform = (typeof process === 'object' && process
+    ? (typeof process.env === 'object' &&
+        process.env &&
+        process.env.__MINIMATCH_TESTING_PLATFORM__) ||
+        process.platform
+    : 'posix');
+const path = {
+    win32: { sep: '\\' },
+    posix: { sep: '/' },
+};
+/* c8 ignore stop */
+exports.sep = defaultPlatform === 'win32' ? path.win32.sep : path.posix.sep;
+exports.minimatch.sep = exports.sep;
+exports.GLOBSTAR = Symbol('globstar **');
+exports.minimatch.GLOBSTAR = exports.GLOBSTAR;
+// any single thing other than /
+// don't need to escape / when using new RegExp()
+const qmark = '[^/]';
+// * => any number of characters
+const star = qmark + '*?';
+// ** when dots are allowed.  Anything goes, except .. and .
+// not (^ or / followed by one or two dots followed by $ or /),
+// followed by anything, any number of times.
+const twoStarDot = '(?:(?!(?:\\/|^)(?:\\.{1,2})($|\\/)).)*?';
+// not a ^ or / followed by a dot,
+// followed by anything, any number of times.
+const twoStarNoDot = '(?:(?!(?:\\/|^)\\.).)*?';
+const filter = (pattern, options = {}) => (p) => (0, exports.minimatch)(p, pattern, options);
+exports.filter = filter;
+exports.minimatch.filter = exports.filter;
+const ext = (a, b = {}) => Object.assign({}, a, b);
+const defaults = (def) => {
+    if (!def || typeof def !== 'object' || !Object.keys(def).length) {
+        return exports.minimatch;
+    }
+    const orig = exports.minimatch;
+    const m = (p, pattern, options = {}) => orig(p, pattern, ext(def, options));
+    return Object.assign(m, {
+        Minimatch: class Minimatch extends orig.Minimatch {
+            constructor(pattern, options = {}) {
+                super(pattern, ext(def, options));
+            }
+            static defaults(options) {
+                return orig.defaults(ext(def, options)).Minimatch;
+            }
+        },
+        AST: class AST extends orig.AST {
+            /* c8 ignore start */
+            constructor(type, parent, options = {}) {
+                super(type, parent, ext(def, options));
+            }
+            /* c8 ignore stop */
+            static fromGlob(pattern, options = {}) {
+                return orig.AST.fromGlob(pattern, ext(def, options));
+            }
+        },
+        unescape: (s, options = {}) => orig.unescape(s, ext(def, options)),
+        escape: (s, options = {}) => orig.escape(s, ext(def, options)),
+        filter: (pattern, options = {}) => orig.filter(pattern, ext(def, options)),
+        defaults: (options) => orig.defaults(ext(def, options)),
+        makeRe: (pattern, options = {}) => orig.makeRe(pattern, ext(def, options)),
+        braceExpand: (pattern, options = {}) => orig.braceExpand(pattern, ext(def, options)),
+        match: (list, pattern, options = {}) => orig.match(list, pattern, ext(def, options)),
+        sep: orig.sep,
+        GLOBSTAR: exports.GLOBSTAR,
+    });
+};
+exports.defaults = defaults;
+exports.minimatch.defaults = exports.defaults;
+// Brace expansion:
+// a{b,c}d -> abd acd
+// a{b,}c -> abc ac
+// a{0..3}d -> a0d a1d a2d a3d
+// a{b,c{d,e}f}g -> abg acdfg acefg
+// a{b,c}d{e,f}g -> abdeg acdeg abdeg abdfg
+//
+// Invalid sets are not expanded.
+// a{2..}b -> a{2..}b
+// a{b}c -> a{b}c
+const braceExpand = (pattern, options = {}) => {
+    (0, assert_valid_pattern_js_1.assertValidPattern)(pattern);
+    // Thanks to Yeting Li <https://github.com/yetingli> for
+    // improving this regexp to avoid a ReDOS vulnerability.
+    if (options.nobrace || !/\{(?:(?!\{).)*\}/.test(pattern)) {
+        // shortcut. no need to expand.
+        return [pattern];
+    }
+    return (0, brace_expansion_1.default)(pattern);
+};
+exports.braceExpand = braceExpand;
+exports.minimatch.braceExpand = exports.braceExpand;
+// parse a component of the expanded set.
+// At this point, no pattern may contain "/" in it
+// so we're going to return a 2d array, where each entry is the full
+// pattern, split on '/', and then turned into a regular expression.
+// A regexp is made at the end which joins each array with an
+// escaped /, and another full one which joins each regexp with |.
+//
+// Following the lead of Bash 4.1, note that "**" only has special meaning
+// when it is the *only* thing in a path portion.  Otherwise, any series
+// of * is equivalent to a single *.  Globstar behavior is enabled by
+// default, and can be disabled by setting options.noglobstar.
+const makeRe = (pattern, options = {}) => new Minimatch(pattern, options).makeRe();
+exports.makeRe = makeRe;
+exports.minimatch.makeRe = exports.makeRe;
+const match = (list, pattern, options = {}) => {
+    const mm = new Minimatch(pattern, options);
+    list = list.filter(f => mm.match(f));
+    if (mm.options.nonull && !list.length) {
+        list.push(pattern);
+    }
+    return list;
+};
+exports.match = match;
+exports.minimatch.match = exports.match;
+// replace stuff like \* with *
+const globMagic = /[?*]|[+@!]\(.*?\)|\[|\]/;
+const regExpEscape = (s) => s.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+class Minimatch {
+    options;
+    set;
+    pattern;
+    windowsPathsNoEscape;
+    nonegate;
+    negate;
+    comment;
+    empty;
+    preserveMultipleSlashes;
+    partial;
+    globSet;
+    globParts;
+    nocase;
+    isWindows;
+    platform;
+    windowsNoMagicRoot;
+    regexp;
+    constructor(pattern, options = {}) {
+        (0, assert_valid_pattern_js_1.assertValidPattern)(pattern);
+        options = options || {};
+        this.options = options;
+        this.pattern = pattern;
+        this.platform = options.platform || defaultPlatform;
+        this.isWindows = this.platform === 'win32';
+        this.windowsPathsNoEscape =
+            !!options.windowsPathsNoEscape || options.allowWindowsEscape === false;
+        if (this.windowsPathsNoEscape) {
+            this.pattern = this.pattern.replace(/\\/g, '/');
+        }
+        this.preserveMultipleSlashes = !!options.preserveMultipleSlashes;
+        this.regexp = null;
+        this.negate = false;
+        this.nonegate = !!options.nonegate;
+        this.comment = false;
+        this.empty = false;
+        this.partial = !!options.partial;
+        this.nocase = !!this.options.nocase;
+        this.windowsNoMagicRoot =
+            options.windowsNoMagicRoot !== undefined
+                ? options.windowsNoMagicRoot
+                : !!(this.isWindows && this.nocase);
+        this.globSet = [];
+        this.globParts = [];
+        this.set = [];
+        // make the set of regexps etc.
+        this.make();
+    }
+    hasMagic() {
+        if (this.options.magicalBraces && this.set.length > 1) {
+            return true;
+        }
+        for (const pattern of this.set) {
+            for (const part of pattern) {
+                if (typeof part !== 'string')
+                    return true;
+            }
+        }
+        return false;
+    }
+    debug(..._) { }
+    make() {
+        const pattern = this.pattern;
+        const options = this.options;
+        // empty patterns and comments match nothing.
+        if (!options.nocomment && pattern.charAt(0) === '#') {
+            this.comment = true;
+            return;
+        }
+        if (!pattern) {
+            this.empty = true;
+            return;
+        }
+        // step 1: figure out negation, etc.
+        this.parseNegate();
+        // step 2: expand braces
+        this.globSet = [...new Set(this.braceExpand())];
+        if (options.debug) {
+            this.debug = (...args) => console.error(...args);
+        }
+        this.debug(this.pattern, this.globSet);
+        // step 3: now we have a set, so turn each one into a series of
+        // path-portion matching patterns.
+        // These will be regexps, except in the case of "**", which is
+        // set to the GLOBSTAR object for globstar behavior,
+        // and will not contain any / characters
+        //
+        // First, we preprocess to make the glob pattern sets a bit simpler
+        // and deduped.  There are some perf-killing patterns that can cause
+        // problems with a glob walk, but we can simplify them down a bit.
+        const rawGlobParts = this.globSet.map(s => this.slashSplit(s));
+        this.globParts = this.preprocess(rawGlobParts);
+        this.debug(this.pattern, this.globParts);
+        // glob --> regexps
+        let set = this.globParts.map((s, _, __) => {
+            if (this.isWindows && this.windowsNoMagicRoot) {
+                // check if it's a drive or unc path.
+                const isUNC = s[0] === '' &&
+                    s[1] === '' &&
+                    (s[2] === '?' || !globMagic.test(s[2])) &&
+                    !globMagic.test(s[3]);
+                const isDrive = /^[a-z]:/i.test(s[0]);
+                if (isUNC) {
+                    return [...s.slice(0, 4), ...s.slice(4).map(ss => this.parse(ss))];
+                }
+                else if (isDrive) {
+                    return [s[0], ...s.slice(1).map(ss => this.parse(ss))];
+                }
+            }
+            return s.map(ss => this.parse(ss));
+        });
+        this.debug(this.pattern, set);
+        // filter out everything that didn't compile properly.
+        this.set = set.filter(s => s.indexOf(false) === -1);
+        // do not treat the ? in UNC paths as magic
+        if (this.isWindows) {
+            for (let i = 0; i < this.set.length; i++) {
+                const p = this.set[i];
+                if (p[0] === '' &&
+                    p[1] === '' &&
+                    this.globParts[i][2] === '?' &&
+                    typeof p[3] === 'string' &&
+                    /^[a-z]:$/i.test(p[3])) {
+                    p[2] = '?';
+                }
+            }
+        }
+        this.debug(this.pattern, this.set);
+    }
+    // various transforms to equivalent pattern sets that are
+    // faster to process in a filesystem walk.  The goal is to
+    // eliminate what we can, and push all ** patterns as far
+    // to the right as possible, even if it increases the number
+    // of patterns that we have to process.
+    preprocess(globParts) {
+        // if we're not in globstar mode, then turn all ** into *
+        if (this.options.noglobstar) {
+            for (let i = 0; i < globParts.length; i++) {
+                for (let j = 0; j < globParts[i].length; j++) {
+                    if (globParts[i][j] === '**') {
+                        globParts[i][j] = '*';
+                    }
+                }
+            }
+        }
+        const { optimizationLevel = 1 } = this.options;
+        if (optimizationLevel >= 2) {
+            // aggressive optimization for the purpose of fs walking
+            globParts = this.firstPhasePreProcess(globParts);
+            globParts = this.secondPhasePreProcess(globParts);
+        }
+        else if (optimizationLevel >= 1) {
+            // just basic optimizations to remove some .. parts
+            globParts = this.levelOneOptimize(globParts);
+        }
+        else {
+            // just collapse multiple ** portions into one
+            globParts = this.adjascentGlobstarOptimize(globParts);
+        }
+        return globParts;
+    }
+    // just get rid of adjascent ** portions
+    adjascentGlobstarOptimize(globParts) {
+        return globParts.map(parts => {
+            let gs = -1;
+            while (-1 !== (gs = parts.indexOf('**', gs + 1))) {
+                let i = gs;
+                while (parts[i + 1] === '**') {
+                    i++;
+                }
+                if (i !== gs) {
+                    parts.splice(gs, i - gs);
+                }
+            }
+            return parts;
+        });
+    }
+    // get rid of adjascent ** and resolve .. portions
+    levelOneOptimize(globParts) {
+        return globParts.map(parts => {
+            parts = parts.reduce((set, part) => {
+                const prev = set[set.length - 1];
+                if (part === '**' && prev === '**') {
+                    return set;
+                }
+                if (part === '..') {
+                    if (prev && prev !== '..' && prev !== '.' && prev !== '**') {
+                        set.pop();
+                        return set;
+                    }
+                }
+                set.push(part);
+                return set;
+            }, []);
+            return parts.length === 0 ? [''] : parts;
+        });
+    }
+    levelTwoFileOptimize(parts) {
+        if (!Array.isArray(parts)) {
+            parts = this.slashSplit(parts);
+        }
+        let didSomething = false;
+        do {
+            didSomething = false;
+            // <pre>/<e>/<rest> -> <pre>/<rest>
+            if (!this.preserveMultipleSlashes) {
+                for (let i = 1; i < parts.length - 1; i++) {
+                    const p = parts[i];
+                    // don't squeeze out UNC patterns
+                    if (i === 1 && p === '' && parts[0] === '')
+                        continue;
+                    if (p === '.' || p === '') {
+                        didSomething = true;
+                        parts.splice(i, 1);
+                        i--;
+                    }
+                }
+                if (parts[0] === '.' &&
+                    parts.length === 2 &&
+                    (parts[1] === '.' || parts[1] === '')) {
+                    didSomething = true;
+                    parts.pop();
+                }
+            }
+            // <pre>/<p>/../<rest> -> <pre>/<rest>
+            let dd = 0;
+            while (-1 !== (dd = parts.indexOf('..', dd + 1))) {
+                const p = parts[dd - 1];
+                if (p && p !== '.' && p !== '..' && p !== '**') {
+                    didSomething = true;
+                    parts.splice(dd - 1, 2);
+                    dd -= 2;
+                }
+            }
+        } while (didSomething);
+        return parts.length === 0 ? [''] : parts;
+    }
+    // First phase: single-pattern processing
+    // <pre> is 1 or more portions
+    // <rest> is 1 or more portions
+    // <p> is any portion other than ., .., '', or **
+    // <e> is . or ''
+    //
+    // **/.. is *brutal* for filesystem walking performance, because
+    // it effectively resets the recursive walk each time it occurs,
+    // and ** cannot be reduced out by a .. pattern part like a regexp
+    // or most strings (other than .., ., and '') can be.
+    //
+    // <pre>/**/../<p>/<p>/<rest> -> {<pre>/../<p>/<p>/<rest>,<pre>/**/<p>/<p>/<rest>}
+    // <pre>/<e>/<rest> -> <pre>/<rest>
+    // <pre>/<p>/../<rest> -> <pre>/<rest>
+    // **/**/<rest> -> **/<rest>
+    //
+    // **/*/<rest> -> */**/<rest> <== not valid because ** doesn't follow
+    // this WOULD be allowed if ** did follow symlinks, or * didn't
+    firstPhasePreProcess(globParts) {
+        let didSomething = false;
+        do {
+            didSomething = false;
+            // <pre>/**/../<p>/<p>/<rest> -> {<pre>/../<p>/<p>/<rest>,<pre>/**/<p>/<p>/<rest>}
+            for (let parts of globParts) {
+                let gs = -1;
+                while (-1 !== (gs = parts.indexOf('**', gs + 1))) {
+                    let gss = gs;
+                    while (parts[gss + 1] === '**') {
+                        // <pre>/**/**/<rest> -> <pre>/**/<rest>
+                        gss++;
+                    }
+                    // eg, if gs is 2 and gss is 4, that means we have 3 **
+                    // parts, and can remove 2 of them.
+                    if (gss > gs) {
+                        parts.splice(gs + 1, gss - gs);
+                    }
+                    let next = parts[gs + 1];
+                    const p = parts[gs + 2];
+                    const p2 = parts[gs + 3];
+                    if (next !== '..')
+                        continue;
+                    if (!p ||
+                        p === '.' ||
+                        p === '..' ||
+                        !p2 ||
+                        p2 === '.' ||
+                        p2 === '..') {
+                        continue;
+                    }
+                    didSomething = true;
+                    // edit parts in place, and push the new one
+                    parts.splice(gs, 1);
+                    const other = parts.slice(0);
+                    other[gs] = '**';
+                    globParts.push(other);
+                    gs--;
+                }
+                // <pre>/<e>/<rest> -> <pre>/<rest>
+                if (!this.preserveMultipleSlashes) {
+                    for (let i = 1; i < parts.length - 1; i++) {
+                        const p = parts[i];
+                        // don't squeeze out UNC patterns
+                        if (i === 1 && p === '' && parts[0] === '')
+                            continue;
+                        if (p === '.' || p === '') {
+                            didSomething = true;
+                            parts.splice(i, 1);
+                            i--;
+                        }
+                    }
+                    if (parts[0] === '.' &&
+                        parts.length === 2 &&
+                        (parts[1] === '.' || parts[1] === '')) {
+                        didSomething = true;
+                        parts.pop();
+                    }
+                }
+                // <pre>/<p>/../<rest> -> <pre>/<rest>
+                let dd = 0;
+                while (-1 !== (dd = parts.indexOf('..', dd + 1))) {
+                    const p = parts[dd - 1];
+                    if (p && p !== '.' && p !== '..' && p !== '**') {
+                        didSomething = true;
+                        const needDot = dd === 1 && parts[dd + 1] === '**';
+                        const splin = needDot ? ['.'] : [];
+                        parts.splice(dd - 1, 2, ...splin);
+                        if (parts.length === 0)
+                            parts.push('');
+                        dd -= 2;
+                    }
+                }
+            }
+        } while (didSomething);
+        return globParts;
+    }
+    // second phase: multi-pattern dedupes
+    // {<pre>/*/<rest>,<pre>/<p>/<rest>} -> <pre>/*/<rest>
+    // {<pre>/<rest>,<pre>/<rest>} -> <pre>/<rest>
+    // {<pre>/**/<rest>,<pre>/<rest>} -> <pre>/**/<rest>
+    //
+    // {<pre>/**/<rest>,<pre>/**/<p>/<rest>} -> <pre>/**/<rest>
+    // ^-- not valid because ** doens't follow symlinks
+    secondPhasePreProcess(globParts) {
+        for (let i = 0; i < globParts.length - 1; i++) {
+            for (let j = i + 1; j < globParts.length; j++) {
+                const matched = this.partsMatch(globParts[i], globParts[j], !this.preserveMultipleSlashes);
+                if (matched) {
+                    globParts[i] = [];
+                    globParts[j] = matched;
+                    break;
+                }
+            }
+        }
+        return globParts.filter(gs => gs.length);
+    }
+    partsMatch(a, b, emptyGSMatch = false) {
+        let ai = 0;
+        let bi = 0;
+        let result = [];
+        let which = '';
+        while (ai < a.length && bi < b.length) {
+            if (a[ai] === b[bi]) {
+                result.push(which === 'b' ? b[bi] : a[ai]);
+                ai++;
+                bi++;
+            }
+            else if (emptyGSMatch && a[ai] === '**' && b[bi] === a[ai + 1]) {
+                result.push(a[ai]);
+                ai++;
+            }
+            else if (emptyGSMatch && b[bi] === '**' && a[ai] === b[bi + 1]) {
+                result.push(b[bi]);
+                bi++;
+            }
+            else if (a[ai] === '*' &&
+                b[bi] &&
+                (this.options.dot || !b[bi].startsWith('.')) &&
+                b[bi] !== '**') {
+                if (which === 'b')
+                    return false;
+                which = 'a';
+                result.push(a[ai]);
+                ai++;
+                bi++;
+            }
+            else if (b[bi] === '*' &&
+                a[ai] &&
+                (this.options.dot || !a[ai].startsWith('.')) &&
+                a[ai] !== '**') {
+                if (which === 'a')
+                    return false;
+                which = 'b';
+                result.push(b[bi]);
+                ai++;
+                bi++;
+            }
+            else {
+                return false;
+            }
+        }
+        // if we fall out of the loop, it means they two are identical
+        // as long as their lengths match
+        return a.length === b.length && result;
+    }
+    parseNegate() {
+        if (this.nonegate)
+            return;
+        const pattern = this.pattern;
+        let negate = false;
+        let negateOffset = 0;
+        for (let i = 0; i < pattern.length && pattern.charAt(i) === '!'; i++) {
+            negate = !negate;
+            negateOffset++;
+        }
+        if (negateOffset)
+            this.pattern = pattern.slice(negateOffset);
+        this.negate = negate;
+    }
+    // set partial to true to test if, for example,
+    // "/a/b" matches the start of "/*/b/*/d"
+    // Partial means, if you run out of file before you run
+    // out of pattern, then that's fine, as long as all
+    // the parts match.
+    matchOne(file, pattern, partial = false) {
+        const options = this.options;
+        // UNC paths like //?/X:/... can match X:/... and vice versa
+        // Drive letters in absolute drive or unc paths are always compared
+        // case-insensitively.
+        if (this.isWindows) {
+            const fileDrive = typeof file[0] === 'string' && /^[a-z]:$/i.test(file[0]);
+            const fileUNC = !fileDrive &&
+                file[0] === '' &&
+                file[1] === '' &&
+                file[2] === '?' &&
+                /^[a-z]:$/i.test(file[3]);
+            const patternDrive = typeof pattern[0] === 'string' && /^[a-z]:$/i.test(pattern[0]);
+            const patternUNC = !patternDrive &&
+                pattern[0] === '' &&
+                pattern[1] === '' &&
+                pattern[2] === '?' &&
+                typeof pattern[3] === 'string' &&
+                /^[a-z]:$/i.test(pattern[3]);
+            const fdi = fileUNC ? 3 : fileDrive ? 0 : undefined;
+            const pdi = patternUNC ? 3 : patternDrive ? 0 : undefined;
+            if (typeof fdi === 'number' && typeof pdi === 'number') {
+                const [fd, pd] = [file[fdi], pattern[pdi]];
+                if (fd.toLowerCase() === pd.toLowerCase()) {
+                    pattern[pdi] = fd;
+                    if (pdi > fdi) {
+                        pattern = pattern.slice(pdi);
+                    }
+                    else if (fdi > pdi) {
+                        file = file.slice(fdi);
+                    }
+                }
+            }
+        }
+        // resolve and reduce . and .. portions in the file as well.
+        // dont' need to do the second phase, because it's only one string[]
+        const { optimizationLevel = 1 } = this.options;
+        if (optimizationLevel >= 2) {
+            file = this.levelTwoFileOptimize(file);
+        }
+        this.debug('matchOne', this, { file, pattern });
+        this.debug('matchOne', file.length, pattern.length);
+        for (var fi = 0, pi = 0, fl = file.length, pl = pattern.length; fi < fl && pi < pl; fi++, pi++) {
+            this.debug('matchOne loop');
+            var p = pattern[pi];
+            var f = file[fi];
+            this.debug(pattern, p, f);
+            // should be impossible.
+            // some invalid regexp stuff in the set.
+            /* c8 ignore start */
+            if (p === false) {
+                return false;
+            }
+            /* c8 ignore stop */
+            if (p === exports.GLOBSTAR) {
+                this.debug('GLOBSTAR', [pattern, p, f]);
+                // "**"
+                // a/**/b/**/c would match the following:
+                // a/b/x/y/z/c
+                // a/x/y/z/b/c
+                // a/b/x/b/x/c
+                // a/b/c
+                // To do this, take the rest of the pattern after
+                // the **, and see if it would match the file remainder.
+                // If so, return success.
+                // If not, the ** "swallows" a segment, and try again.
+                // This is recursively awful.
+                //
+                // a/**/b/**/c matching a/b/x/y/z/c
+                // - a matches a
+                // - doublestar
+                //   - matchOne(b/x/y/z/c, b/**/c)
+                //     - b matches b
+                //     - doublestar
+                //       - matchOne(x/y/z/c, c) -> no
+                //       - matchOne(y/z/c, c) -> no
+                //       - matchOne(z/c, c) -> no
+                //       - matchOne(c, c) yes, hit
+                var fr = fi;
+                var pr = pi + 1;
+                if (pr === pl) {
+                    this.debug('** at the end');
+                    // a ** at the end will just swallow the rest.
+                    // We have found a match.
+                    // however, it will not swallow /.x, unless
+                    // options.dot is set.
+                    // . and .. are *never* matched by **, for explosively
+                    // exponential reasons.
+                    for (; fi < fl; fi++) {
+                        if (file[fi] === '.' ||
+                            file[fi] === '..' ||
+                            (!options.dot && file[fi].charAt(0) === '.'))
+                            return false;
+                    }
+                    return true;
+                }
+                // ok, let's see if we can swallow whatever we can.
+                while (fr < fl) {
+                    var swallowee = file[fr];
+                    this.debug('\nglobstar while', file, fr, pattern, pr, swallowee);
+                    // XXX remove this slice.  Just pass the start index.
+                    if (this.matchOne(file.slice(fr), pattern.slice(pr), partial)) {
+                        this.debug('globstar found match!', fr, fl, swallowee);
+                        // found a match.
+                        return true;
+                    }
+                    else {
+                        // can't swallow "." or ".." ever.
+                        // can only swallow ".foo" when explicitly asked.
+                        if (swallowee === '.' ||
+                            swallowee === '..' ||
+                            (!options.dot && swallowee.charAt(0) === '.')) {
+                            this.debug('dot detected!', file, fr, pattern, pr);
+                            break;
+                        }
+                        // ** swallows a segment, and continue.
+                        this.debug('globstar swallow a segment, and continue');
+                        fr++;
+                    }
+                }
+                // no match was found.
+                // However, in partial mode, we can't say this is necessarily over.
+                /* c8 ignore start */
+                if (partial) {
+                    // ran out of file
+                    this.debug('\n>>> no match, partial?', file, fr, pattern, pr);
+                    if (fr === fl) {
+                        return true;
+                    }
+                }
+                /* c8 ignore stop */
+                return false;
+            }
+            // something other than **
+            // non-magic patterns just have to match exactly
+            // patterns with magic have been turned into regexps.
+            let hit;
+            if (typeof p === 'string') {
+                hit = f === p;
+                this.debug('string match', p, f, hit);
+            }
+            else {
+                hit = p.test(f);
+                this.debug('pattern match', p, f, hit);
+            }
+            if (!hit)
+                return false;
+        }
+        // Note: ending in / means that we'll get a final ""
+        // at the end of the pattern.  This can only match a
+        // corresponding "" at the end of the file.
+        // If the file ends in /, then it can only match a
+        // a pattern that ends in /, unless the pattern just
+        // doesn't have any more for it. But, a/b/ should *not*
+        // match "a/b/*", even though "" matches against the
+        // [^/]*? pattern, except in partial mode, where it might
+        // simply not be reached yet.
+        // However, a/b/ should still satisfy a/*
+        // now either we fell off the end of the pattern, or we're done.
+        if (fi === fl && pi === pl) {
+            // ran out of pattern and filename at the same time.
+            // an exact hit!
+            return true;
+        }
+        else if (fi === fl) {
+            // ran out of file, but still had pattern left.
+            // this is ok if we're doing the match as part of
+            // a glob fs traversal.
+            return partial;
+        }
+        else if (pi === pl) {
+            // ran out of pattern, still have file left.
+            // this is only acceptable if we're on the very last
+            // empty segment of a file with a trailing slash.
+            // a/* should match a/b/
+            return fi === fl - 1 && file[fi] === '';
+            /* c8 ignore start */
+        }
+        else {
+            // should be unreachable.
+            throw new Error('wtf?');
+        }
+        /* c8 ignore stop */
+    }
+    braceExpand() {
+        return (0, exports.braceExpand)(this.pattern, this.options);
+    }
+    parse(pattern) {
+        (0, assert_valid_pattern_js_1.assertValidPattern)(pattern);
+        const options = this.options;
+        // shortcuts
+        if (pattern === '**')
+            return exports.GLOBSTAR;
+        if (pattern === '')
+            return '';
+        // far and away, the most common glob pattern parts are
+        // *, *.*, and *.<ext>  Add a fast check method for those.
+        let m;
+        let fastTest = null;
+        if ((m = pattern.match(starRE))) {
+            fastTest = options.dot ? starTestDot : starTest;
+        }
+        else if ((m = pattern.match(starDotExtRE))) {
+            fastTest = (options.nocase
+                ? options.dot
+                    ? starDotExtTestNocaseDot
+                    : starDotExtTestNocase
+                : options.dot
+                    ? starDotExtTestDot
+                    : starDotExtTest)(m[1]);
+        }
+        else if ((m = pattern.match(qmarksRE))) {
+            fastTest = (options.nocase
+                ? options.dot
+                    ? qmarksTestNocaseDot
+                    : qmarksTestNocase
+                : options.dot
+                    ? qmarksTestDot
+                    : qmarksTest)(m);
+        }
+        else if ((m = pattern.match(starDotStarRE))) {
+            fastTest = options.dot ? starDotStarTestDot : starDotStarTest;
+        }
+        else if ((m = pattern.match(dotStarRE))) {
+            fastTest = dotStarTest;
+        }
+        const re = ast_js_1.AST.fromGlob(pattern, this.options).toMMPattern();
+        if (fastTest && typeof re === 'object') {
+            // Avoids overriding in frozen environments
+            Reflect.defineProperty(re, 'test', { value: fastTest });
+        }
+        return re;
+    }
+    makeRe() {
+        if (this.regexp || this.regexp === false)
+            return this.regexp;
+        // at this point, this.set is a 2d array of partial
+        // pattern strings, or "**".
+        //
+        // It's better to use .match().  This function shouldn't
+        // be used, really, but it's pretty convenient sometimes,
+        // when you just want to work with a regex.
+        const set = this.set;
+        if (!set.length) {
+            this.regexp = false;
+            return this.regexp;
+        }
+        const options = this.options;
+        const twoStar = options.noglobstar
+            ? star
+            : options.dot
+                ? twoStarDot
+                : twoStarNoDot;
+        const flags = new Set(options.nocase ? ['i'] : []);
+        // regexpify non-globstar patterns
+        // if ** is only item, then we just do one twoStar
+        // if ** is first, and there are more, prepend (\/|twoStar\/)? to next
+        // if ** is last, append (\/twoStar|) to previous
+        // if ** is in the middle, append (\/|\/twoStar\/) to previous
+        // then filter out GLOBSTAR symbols
+        let re = set
+            .map(pattern => {
+            const pp = pattern.map(p => {
+                if (p instanceof RegExp) {
+                    for (const f of p.flags.split(''))
+                        flags.add(f);
+                }
+                return typeof p === 'string'
+                    ? regExpEscape(p)
+                    : p === exports.GLOBSTAR
+                        ? exports.GLOBSTAR
+                        : p._src;
+            });
+            pp.forEach((p, i) => {
+                const next = pp[i + 1];
+                const prev = pp[i - 1];
+                if (p !== exports.GLOBSTAR || prev === exports.GLOBSTAR) {
+                    return;
+                }
+                if (prev === undefined) {
+                    if (next !== undefined && next !== exports.GLOBSTAR) {
+                        pp[i + 1] = '(?:\\/|' + twoStar + '\\/)?' + next;
+                    }
+                    else {
+                        pp[i] = twoStar;
+                    }
+                }
+                else if (next === undefined) {
+                    pp[i - 1] = prev + '(?:\\/|' + twoStar + ')?';
+                }
+                else if (next !== exports.GLOBSTAR) {
+                    pp[i - 1] = prev + '(?:\\/|\\/' + twoStar + '\\/)' + next;
+                    pp[i + 1] = exports.GLOBSTAR;
+                }
+            });
+            return pp.filter(p => p !== exports.GLOBSTAR).join('/');
+        })
+            .join('|');
+        // need to wrap in parens if we had more than one thing with |,
+        // otherwise only the first will be anchored to ^ and the last to $
+        const [open, close] = set.length > 1 ? ['(?:', ')'] : ['', ''];
+        // must match entire pattern
+        // ending in a * or ** will make it less strict.
+        re = '^' + open + re + close + '$';
+        // can match anything, as long as it's not this.
+        if (this.negate)
+            re = '^(?!' + re + ').+$';
+        try {
+            this.regexp = new RegExp(re, [...flags].join(''));
+            /* c8 ignore start */
+        }
+        catch (ex) {
+            // should be impossible
+            this.regexp = false;
+        }
+        /* c8 ignore stop */
+        return this.regexp;
+    }
+    slashSplit(p) {
+        // if p starts with // on windows, we preserve that
+        // so that UNC paths aren't broken.  Otherwise, any number of
+        // / characters are coalesced into one, unless
+        // preserveMultipleSlashes is set to true.
+        if (this.preserveMultipleSlashes) {
+            return p.split('/');
+        }
+        else if (this.isWindows && /^\/\/[^\/]+/.test(p)) {
+            // add an extra '' for the one we lose
+            return ['', ...p.split(/\/+/)];
+        }
+        else {
+            return p.split(/\/+/);
+        }
+    }
+    match(f, partial = this.partial) {
+        this.debug('match', f, this.pattern);
+        // short-circuit in the case of busted things.
+        // comments, etc.
+        if (this.comment) {
+            return false;
+        }
+        if (this.empty) {
+            return f === '';
+        }
+        if (f === '/' && partial) {
+            return true;
+        }
+        const options = this.options;
+        // windows: need to use /, not \
+        if (this.isWindows) {
+            f = f.split('\\').join('/');
+        }
+        // treat the test path as a set of pathparts.
+        const ff = this.slashSplit(f);
+        this.debug(this.pattern, 'split', ff);
+        // just ONE of the pattern sets in this.set needs to match
+        // in order for it to be valid.  If negating, then just one
+        // match means that we have failed.
+        // Either way, return on the first hit.
+        const set = this.set;
+        this.debug(this.pattern, 'set', set);
+        // Find the basename of the path by looking for the last non-empty segment
+        let filename = ff[ff.length - 1];
+        if (!filename) {
+            for (let i = ff.length - 2; !filename && i >= 0; i--) {
+                filename = ff[i];
+            }
+        }
+        for (let i = 0; i < set.length; i++) {
+            const pattern = set[i];
+            let file = ff;
+            if (options.matchBase && pattern.length === 1) {
+                file = [filename];
+            }
+            const hit = this.matchOne(file, pattern, partial);
+            if (hit) {
+                if (options.flipNegate) {
+                    return true;
+                }
+                return !this.negate;
+            }
+        }
+        // didn't get any hits.  this is success if it's a negative
+        // pattern, failure otherwise.
+        if (options.flipNegate) {
+            return false;
+        }
+        return this.negate;
+    }
+    static defaults(def) {
+        return exports.minimatch.defaults(def).Minimatch;
+    }
+}
+exports.Minimatch = Minimatch;
+/* c8 ignore start */
+var ast_js_2 = __nccwpck_require__(2025);
+Object.defineProperty(exports, "AST", ({ enumerable: true, get: function () { return ast_js_2.AST; } }));
+var escape_js_2 = __nccwpck_require__(2396);
+Object.defineProperty(exports, "escape", ({ enumerable: true, get: function () { return escape_js_2.escape; } }));
+var unescape_js_2 = __nccwpck_require__(4901);
+Object.defineProperty(exports, "unescape", ({ enumerable: true, get: function () { return unescape_js_2.unescape; } }));
+/* c8 ignore stop */
+exports.minimatch.AST = ast_js_1.AST;
+exports.minimatch.Minimatch = Minimatch;
+exports.minimatch.escape = escape_js_1.escape;
+exports.minimatch.unescape = unescape_js_1.unescape;
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 4901:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.unescape = void 0;
+/**
+ * Un-escape a string that has been escaped with {@link escape}.
+ *
+ * If the {@link windowsPathsNoEscape} option is used, then square-brace
+ * escapes are removed, but not backslash escapes.  For example, it will turn
+ * the string `'[*]'` into `*`, but it will not turn `'\\*'` into `'*'`,
+ * becuase `\` is a path separator in `windowsPathsNoEscape` mode.
+ *
+ * When `windowsPathsNoEscape` is not set, then both brace escapes and
+ * backslash escapes are removed.
+ *
+ * Slashes (and backslashes in `windowsPathsNoEscape` mode) cannot be escaped
+ * or unescaped.
+ */
+const unescape = (s, { windowsPathsNoEscape = false, } = {}) => {
+    return windowsPathsNoEscape
+        ? s.replace(/\[([^\/\\])\]/g, '$1')
+        : s.replace(/((?!\\).|^)\[([^\/\\])\]/g, '$1$2').replace(/\\([^\/])/g, '$1');
+};
+exports.unescape = unescape;
+//# sourceMappingURL=unescape.js.map
+
+/***/ }),
+
+/***/ 2066:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -54059,7 +59630,7 @@ exports.Minipass = Minipass;
 
 /***/ }),
 
-/***/ 5033:
+/***/ 6598:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -54089,8 +59660,8 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PathScurry = exports.Path = exports.PathScurryDarwin = exports.PathScurryPosix = exports.PathScurryWin32 = exports.PathScurryBase = exports.PathPosix = exports.PathWin32 = exports.PathBase = exports.ChildrenCache = exports.ResolveCache = void 0;
-const lru_cache_1 = __nccwpck_require__(2478);
-const node_path_1 = __nccwpck_require__(8330);
+const lru_cache_1 = __nccwpck_require__(5544);
+const node_path_1 = __nccwpck_require__(9411);
 const node_url_1 = __nccwpck_require__(1041);
 const fs_1 = __nccwpck_require__(7147);
 const actualFS = __importStar(__nccwpck_require__(7561));
@@ -54098,7 +59669,7 @@ const realpathSync = fs_1.realpathSync.native;
 // TODO: test perf of fs/promises realpath vs realpathCB,
 // since the promises one uses realpath.native
 const promises_1 = __nccwpck_require__(3977);
-const minipass_1 = __nccwpck_require__(7990);
+const minipass_1 = __nccwpck_require__(2066);
 const defaultFS = {
     lstatSync: fs_1.lstatSync,
     readdir: fs_1.readdir,
@@ -56080,7 +61651,7 @@ exports.PathScurry = process.platform === 'win32' ? PathScurryWin32
 
 /***/ }),
 
-/***/ 4010:
+/***/ 760:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -56120,14 +61691,14 @@ exports.getDefaultOptions = getDefaultOptions;
 
 /***/ }),
 
-/***/ 1747:
+/***/ 2333:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRefs = void 0;
-const Options_js_1 = __nccwpck_require__(4010);
+const Options_js_1 = __nccwpck_require__(760);
 const getRefs = (options) => {
     const _options = (0, Options_js_1.getDefaultOptions)(options);
     const currentPath = _options.name !== undefined
@@ -56153,7 +61724,7 @@ exports.getRefs = getRefs;
 
 /***/ }),
 
-/***/ 8576:
+/***/ 5210:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -56180,7 +61751,7 @@ exports.setResponseValueAndErrors = setResponseValueAndErrors;
 
 /***/ }),
 
-/***/ 5862:
+/***/ 3706:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -56200,86 +61771,86 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-__exportStar(__nccwpck_require__(8576), exports);
-__exportStar(__nccwpck_require__(4010), exports);
-__exportStar(__nccwpck_require__(2585), exports);
-__exportStar(__nccwpck_require__(8966), exports);
-__exportStar(__nccwpck_require__(629), exports);
-__exportStar(__nccwpck_require__(3802), exports);
-__exportStar(__nccwpck_require__(373), exports);
-__exportStar(__nccwpck_require__(3747), exports);
-__exportStar(__nccwpck_require__(1096), exports);
-__exportStar(__nccwpck_require__(2437), exports);
-__exportStar(__nccwpck_require__(7218), exports);
-__exportStar(__nccwpck_require__(7903), exports);
-__exportStar(__nccwpck_require__(1022), exports);
-__exportStar(__nccwpck_require__(5653), exports);
-__exportStar(__nccwpck_require__(6539), exports);
-__exportStar(__nccwpck_require__(5131), exports);
-__exportStar(__nccwpck_require__(2878), exports);
-__exportStar(__nccwpck_require__(7436), exports);
-__exportStar(__nccwpck_require__(5986), exports);
-__exportStar(__nccwpck_require__(4096), exports);
-__exportStar(__nccwpck_require__(6437), exports);
-__exportStar(__nccwpck_require__(705), exports);
-__exportStar(__nccwpck_require__(9690), exports);
-__exportStar(__nccwpck_require__(2436), exports);
-__exportStar(__nccwpck_require__(7239), exports);
-__exportStar(__nccwpck_require__(9290), exports);
-__exportStar(__nccwpck_require__(2018), exports);
-__exportStar(__nccwpck_require__(9217), exports);
-__exportStar(__nccwpck_require__(3645), exports);
-__exportStar(__nccwpck_require__(2825), exports);
-__exportStar(__nccwpck_require__(5935), exports);
-__exportStar(__nccwpck_require__(9322), exports);
-__exportStar(__nccwpck_require__(5318), exports);
-__exportStar(__nccwpck_require__(1747), exports);
-__exportStar(__nccwpck_require__(4002), exports);
-const zodToJsonSchema_js_1 = __nccwpck_require__(4002);
+__exportStar(__nccwpck_require__(5210), exports);
+__exportStar(__nccwpck_require__(760), exports);
+__exportStar(__nccwpck_require__(7083), exports);
+__exportStar(__nccwpck_require__(4578), exports);
+__exportStar(__nccwpck_require__(3165), exports);
+__exportStar(__nccwpck_require__(6448), exports);
+__exportStar(__nccwpck_require__(3344), exports);
+__exportStar(__nccwpck_require__(8477), exports);
+__exportStar(__nccwpck_require__(5393), exports);
+__exportStar(__nccwpck_require__(7119), exports);
+__exportStar(__nccwpck_require__(3963), exports);
+__exportStar(__nccwpck_require__(3187), exports);
+__exportStar(__nccwpck_require__(6358), exports);
+__exportStar(__nccwpck_require__(5640), exports);
+__exportStar(__nccwpck_require__(3148), exports);
+__exportStar(__nccwpck_require__(2246), exports);
+__exportStar(__nccwpck_require__(6628), exports);
+__exportStar(__nccwpck_require__(8287), exports);
+__exportStar(__nccwpck_require__(936), exports);
+__exportStar(__nccwpck_require__(60), exports);
+__exportStar(__nccwpck_require__(3450), exports);
+__exportStar(__nccwpck_require__(1825), exports);
+__exportStar(__nccwpck_require__(7945), exports);
+__exportStar(__nccwpck_require__(3028), exports);
+__exportStar(__nccwpck_require__(3006), exports);
+__exportStar(__nccwpck_require__(5165), exports);
+__exportStar(__nccwpck_require__(3119), exports);
+__exportStar(__nccwpck_require__(4722), exports);
+__exportStar(__nccwpck_require__(142), exports);
+__exportStar(__nccwpck_require__(1574), exports);
+__exportStar(__nccwpck_require__(5003), exports);
+__exportStar(__nccwpck_require__(5742), exports);
+__exportStar(__nccwpck_require__(9751), exports);
+__exportStar(__nccwpck_require__(2333), exports);
+__exportStar(__nccwpck_require__(7972), exports);
+const zodToJsonSchema_js_1 = __nccwpck_require__(7972);
 exports["default"] = zodToJsonSchema_js_1.zodToJsonSchema;
 
 
 /***/ }),
 
-/***/ 2585:
+/***/ 7083:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseDef = void 0;
-const zod_1 = __nccwpck_require__(756);
-const any_js_1 = __nccwpck_require__(8966);
-const array_js_1 = __nccwpck_require__(629);
-const bigint_js_1 = __nccwpck_require__(3802);
-const boolean_js_1 = __nccwpck_require__(373);
-const branded_js_1 = __nccwpck_require__(3747);
-const catch_js_1 = __nccwpck_require__(1096);
-const date_js_1 = __nccwpck_require__(2437);
-const default_js_1 = __nccwpck_require__(7218);
-const effects_js_1 = __nccwpck_require__(7903);
-const enum_js_1 = __nccwpck_require__(1022);
-const intersection_js_1 = __nccwpck_require__(5653);
-const literal_js_1 = __nccwpck_require__(6539);
-const map_js_1 = __nccwpck_require__(5131);
-const nativeEnum_js_1 = __nccwpck_require__(2878);
-const never_js_1 = __nccwpck_require__(7436);
-const null_js_1 = __nccwpck_require__(5986);
-const nullable_js_1 = __nccwpck_require__(4096);
-const number_js_1 = __nccwpck_require__(6437);
-const object_js_1 = __nccwpck_require__(705);
-const optional_js_1 = __nccwpck_require__(9690);
-const pipeline_js_1 = __nccwpck_require__(2436);
-const promise_js_1 = __nccwpck_require__(7239);
-const record_js_1 = __nccwpck_require__(2018);
-const set_js_1 = __nccwpck_require__(9217);
-const string_js_1 = __nccwpck_require__(3645);
-const tuple_js_1 = __nccwpck_require__(2825);
-const undefined_js_1 = __nccwpck_require__(5935);
-const union_js_1 = __nccwpck_require__(9322);
-const unknown_js_1 = __nccwpck_require__(5318);
-const readonly_js_1 = __nccwpck_require__(9290);
-const Options_js_1 = __nccwpck_require__(4010);
+const zod_1 = __nccwpck_require__(7861);
+const any_js_1 = __nccwpck_require__(4578);
+const array_js_1 = __nccwpck_require__(3165);
+const bigint_js_1 = __nccwpck_require__(6448);
+const boolean_js_1 = __nccwpck_require__(3344);
+const branded_js_1 = __nccwpck_require__(8477);
+const catch_js_1 = __nccwpck_require__(5393);
+const date_js_1 = __nccwpck_require__(7119);
+const default_js_1 = __nccwpck_require__(3963);
+const effects_js_1 = __nccwpck_require__(3187);
+const enum_js_1 = __nccwpck_require__(6358);
+const intersection_js_1 = __nccwpck_require__(5640);
+const literal_js_1 = __nccwpck_require__(3148);
+const map_js_1 = __nccwpck_require__(2246);
+const nativeEnum_js_1 = __nccwpck_require__(6628);
+const never_js_1 = __nccwpck_require__(8287);
+const null_js_1 = __nccwpck_require__(936);
+const nullable_js_1 = __nccwpck_require__(60);
+const number_js_1 = __nccwpck_require__(3450);
+const object_js_1 = __nccwpck_require__(1825);
+const optional_js_1 = __nccwpck_require__(7945);
+const pipeline_js_1 = __nccwpck_require__(3028);
+const promise_js_1 = __nccwpck_require__(3006);
+const record_js_1 = __nccwpck_require__(3119);
+const set_js_1 = __nccwpck_require__(4722);
+const string_js_1 = __nccwpck_require__(142);
+const tuple_js_1 = __nccwpck_require__(1574);
+const undefined_js_1 = __nccwpck_require__(5003);
+const union_js_1 = __nccwpck_require__(5742);
+const unknown_js_1 = __nccwpck_require__(9751);
+const readonly_js_1 = __nccwpck_require__(5165);
+const Options_js_1 = __nccwpck_require__(760);
 function parseDef(def, refs, forceResolution = false) {
     const seenItem = refs.seen.get(def);
     if (refs.override) {
@@ -56416,7 +61987,7 @@ const addMeta = (def, refs, jsonSchema) => {
 
 /***/ }),
 
-/***/ 8966:
+/***/ 4578:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -56431,16 +62002,16 @@ exports.parseAnyDef = parseAnyDef;
 
 /***/ }),
 
-/***/ 629:
+/***/ 3165:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseArrayDef = void 0;
-const zod_1 = __nccwpck_require__(756);
-const errorMessages_js_1 = __nccwpck_require__(8576);
-const parseDef_js_1 = __nccwpck_require__(2585);
+const zod_1 = __nccwpck_require__(7861);
+const errorMessages_js_1 = __nccwpck_require__(5210);
+const parseDef_js_1 = __nccwpck_require__(7083);
 function parseArrayDef(def, refs) {
     const res = {
         type: "array",
@@ -56468,14 +62039,14 @@ exports.parseArrayDef = parseArrayDef;
 
 /***/ }),
 
-/***/ 3802:
+/***/ 6448:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseBigintDef = void 0;
-const errorMessages_js_1 = __nccwpck_require__(8576);
+const errorMessages_js_1 = __nccwpck_require__(5210);
 function parseBigintDef(def, refs) {
     const res = {
         type: "integer",
@@ -56529,7 +62100,7 @@ exports.parseBigintDef = parseBigintDef;
 
 /***/ }),
 
-/***/ 373:
+/***/ 3344:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -56546,14 +62117,14 @@ exports.parseBooleanDef = parseBooleanDef;
 
 /***/ }),
 
-/***/ 3747:
+/***/ 8477:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseBrandedDef = void 0;
-const parseDef_js_1 = __nccwpck_require__(2585);
+const parseDef_js_1 = __nccwpck_require__(7083);
 function parseBrandedDef(_def, refs) {
     return (0, parseDef_js_1.parseDef)(_def.type._def, refs);
 }
@@ -56562,14 +62133,14 @@ exports.parseBrandedDef = parseBrandedDef;
 
 /***/ }),
 
-/***/ 1096:
+/***/ 5393:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseCatchDef = void 0;
-const parseDef_js_1 = __nccwpck_require__(2585);
+const parseDef_js_1 = __nccwpck_require__(7083);
 const parseCatchDef = (def, refs) => {
     return (0, parseDef_js_1.parseDef)(def.innerType._def, refs);
 };
@@ -56578,14 +62149,14 @@ exports.parseCatchDef = parseCatchDef;
 
 /***/ }),
 
-/***/ 2437:
+/***/ 7119:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseDateDef = void 0;
-const errorMessages_js_1 = __nccwpck_require__(8576);
+const errorMessages_js_1 = __nccwpck_require__(5210);
 function parseDateDef(def, refs, overrideDateStrategy) {
     const strategy = overrideDateStrategy ?? refs.dateStrategy;
     if (Array.isArray(strategy)) {
@@ -56636,14 +62207,14 @@ const integerDateParser = (def, refs) => {
 
 /***/ }),
 
-/***/ 7218:
+/***/ 3963:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseDefaultDef = void 0;
-const parseDef_js_1 = __nccwpck_require__(2585);
+const parseDef_js_1 = __nccwpck_require__(7083);
 function parseDefaultDef(_def, refs) {
     return {
         ...(0, parseDef_js_1.parseDef)(_def.innerType._def, refs),
@@ -56655,14 +62226,14 @@ exports.parseDefaultDef = parseDefaultDef;
 
 /***/ }),
 
-/***/ 7903:
+/***/ 3187:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseEffectsDef = void 0;
-const parseDef_js_1 = __nccwpck_require__(2585);
+const parseDef_js_1 = __nccwpck_require__(7083);
 function parseEffectsDef(_def, refs) {
     return refs.effectStrategy === "input"
         ? (0, parseDef_js_1.parseDef)(_def.schema._def, refs)
@@ -56673,7 +62244,7 @@ exports.parseEffectsDef = parseEffectsDef;
 
 /***/ }),
 
-/***/ 1022:
+/***/ 6358:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -56691,14 +62262,14 @@ exports.parseEnumDef = parseEnumDef;
 
 /***/ }),
 
-/***/ 5653:
+/***/ 5640:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseIntersectionDef = void 0;
-const parseDef_js_1 = __nccwpck_require__(2585);
+const parseDef_js_1 = __nccwpck_require__(7083);
 const isJsonSchema7AllOfType = (type) => {
     if ("type" in type && type.type === "string")
         return false;
@@ -56755,7 +62326,7 @@ exports.parseIntersectionDef = parseIntersectionDef;
 
 /***/ }),
 
-/***/ 6539:
+/***/ 3148:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -56788,15 +62359,15 @@ exports.parseLiteralDef = parseLiteralDef;
 
 /***/ }),
 
-/***/ 5131:
+/***/ 2246:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseMapDef = void 0;
-const parseDef_js_1 = __nccwpck_require__(2585);
-const record_js_1 = __nccwpck_require__(2018);
+const parseDef_js_1 = __nccwpck_require__(7083);
+const record_js_1 = __nccwpck_require__(3119);
 function parseMapDef(def, refs) {
     if (refs.mapStrategy === "record") {
         return (0, record_js_1.parseRecordDef)(def, refs);
@@ -56825,7 +62396,7 @@ exports.parseMapDef = parseMapDef;
 
 /***/ }),
 
-/***/ 2878:
+/***/ 6628:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -56853,7 +62424,7 @@ exports.parseNativeEnumDef = parseNativeEnumDef;
 
 /***/ }),
 
-/***/ 7436:
+/***/ 8287:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -56870,7 +62441,7 @@ exports.parseNeverDef = parseNeverDef;
 
 /***/ }),
 
-/***/ 5986:
+/***/ 936:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -56892,15 +62463,15 @@ exports.parseNullDef = parseNullDef;
 
 /***/ }),
 
-/***/ 4096:
+/***/ 60:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseNullableDef = void 0;
-const parseDef_js_1 = __nccwpck_require__(2585);
-const union_js_1 = __nccwpck_require__(9322);
+const parseDef_js_1 = __nccwpck_require__(7083);
+const union_js_1 = __nccwpck_require__(5742);
 function parseNullableDef(def, refs) {
     if (["ZodString", "ZodNumber", "ZodBigInt", "ZodBoolean", "ZodNull"].includes(def.innerType._def.typeName) &&
         (!def.innerType._def.checks || !def.innerType._def.checks.length)) {
@@ -56937,14 +62508,14 @@ exports.parseNullableDef = parseNullableDef;
 
 /***/ }),
 
-/***/ 6437:
+/***/ 3450:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseNumberDef = void 0;
-const errorMessages_js_1 = __nccwpck_require__(8576);
+const errorMessages_js_1 = __nccwpck_require__(5210);
 function parseNumberDef(def, refs) {
     const res = {
         type: "number",
@@ -57001,14 +62572,14 @@ exports.parseNumberDef = parseNumberDef;
 
 /***/ }),
 
-/***/ 705:
+/***/ 1825:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseObjectDef = exports.parseObjectDefX = void 0;
-const parseDef_js_1 = __nccwpck_require__(2585);
+const parseDef_js_1 = __nccwpck_require__(7083);
 function decideAdditionalProperties(def, refs) {
     if (refs.removeAdditionalStrategy === "strict") {
         return def.catchall._def.typeName === "ZodNever"
@@ -57112,14 +62683,14 @@ exports.parseObjectDef = parseObjectDef;
 
 /***/ }),
 
-/***/ 9690:
+/***/ 7945:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseOptionalDef = void 0;
-const parseDef_js_1 = __nccwpck_require__(2585);
+const parseDef_js_1 = __nccwpck_require__(7083);
 const parseOptionalDef = (def, refs) => {
     if (refs.currentPath.toString() === refs.propertyPath?.toString()) {
         return (0, parseDef_js_1.parseDef)(def.innerType._def, refs);
@@ -57144,14 +62715,14 @@ exports.parseOptionalDef = parseOptionalDef;
 
 /***/ }),
 
-/***/ 2436:
+/***/ 3028:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parsePipelineDef = void 0;
-const parseDef_js_1 = __nccwpck_require__(2585);
+const parseDef_js_1 = __nccwpck_require__(7083);
 const parsePipelineDef = (def, refs) => {
     if (refs.pipeStrategy === "input") {
         return (0, parseDef_js_1.parseDef)(def.in._def, refs);
@@ -57176,14 +62747,14 @@ exports.parsePipelineDef = parsePipelineDef;
 
 /***/ }),
 
-/***/ 7239:
+/***/ 3006:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parsePromiseDef = void 0;
-const parseDef_js_1 = __nccwpck_require__(2585);
+const parseDef_js_1 = __nccwpck_require__(7083);
 function parsePromiseDef(def, refs) {
     return (0, parseDef_js_1.parseDef)(def.type._def, refs);
 }
@@ -57192,14 +62763,14 @@ exports.parsePromiseDef = parsePromiseDef;
 
 /***/ }),
 
-/***/ 9290:
+/***/ 5165:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseReadonlyDef = void 0;
-const parseDef_js_1 = __nccwpck_require__(2585);
+const parseDef_js_1 = __nccwpck_require__(7083);
 const parseReadonlyDef = (def, refs) => {
     return (0, parseDef_js_1.parseDef)(def.innerType._def, refs);
 };
@@ -57208,16 +62779,16 @@ exports.parseReadonlyDef = parseReadonlyDef;
 
 /***/ }),
 
-/***/ 2018:
+/***/ 3119:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseRecordDef = void 0;
-const zod_1 = __nccwpck_require__(756);
-const parseDef_js_1 = __nccwpck_require__(2585);
-const string_js_1 = __nccwpck_require__(3645);
+const zod_1 = __nccwpck_require__(7861);
+const parseDef_js_1 = __nccwpck_require__(7083);
+const string_js_1 = __nccwpck_require__(142);
 function parseRecordDef(def, refs) {
     if (refs.target === "openApi3" &&
         def.keyType?._def.typeName === zod_1.ZodFirstPartyTypeKind.ZodEnum) {
@@ -57267,15 +62838,15 @@ exports.parseRecordDef = parseRecordDef;
 
 /***/ }),
 
-/***/ 9217:
+/***/ 4722:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseSetDef = void 0;
-const errorMessages_js_1 = __nccwpck_require__(8576);
-const parseDef_js_1 = __nccwpck_require__(2585);
+const errorMessages_js_1 = __nccwpck_require__(5210);
+const parseDef_js_1 = __nccwpck_require__(7083);
 function parseSetDef(def, refs) {
     const items = (0, parseDef_js_1.parseDef)(def.valueType._def, {
         ...refs,
@@ -57299,14 +62870,14 @@ exports.parseSetDef = parseSetDef;
 
 /***/ }),
 
-/***/ 3645:
+/***/ 142:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseStringDef = exports.zodPatterns = void 0;
-const errorMessages_js_1 = __nccwpck_require__(8576);
+const errorMessages_js_1 = __nccwpck_require__(5210);
 /**
  * Generated from the .source property of regular expressins found here:
  * https://github.com/colinhacks/zod/blob/master/src/types.ts.
@@ -57507,14 +63078,14 @@ const addPattern = (schema, value, message, refs) => {
 
 /***/ }),
 
-/***/ 2825:
+/***/ 1574:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseTupleDef = void 0;
-const parseDef_js_1 = __nccwpck_require__(2585);
+const parseDef_js_1 = __nccwpck_require__(7083);
 function parseTupleDef(def, refs) {
     if (def.rest) {
         return {
@@ -57551,7 +63122,7 @@ exports.parseTupleDef = parseTupleDef;
 
 /***/ }),
 
-/***/ 5935:
+/***/ 5003:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -57568,14 +63139,14 @@ exports.parseUndefinedDef = parseUndefinedDef;
 
 /***/ }),
 
-/***/ 9322:
+/***/ 5742:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseUnionDef = exports.primitiveMappings = void 0;
-const parseDef_js_1 = __nccwpck_require__(2585);
+const parseDef_js_1 = __nccwpck_require__(7083);
 exports.primitiveMappings = {
     ZodString: "string",
     ZodNumber: "number",
@@ -57660,7 +63231,7 @@ const asAnyOf = (def, refs) => {
 
 /***/ }),
 
-/***/ 5318:
+/***/ 9751:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -57675,15 +63246,15 @@ exports.parseUnknownDef = parseUnknownDef;
 
 /***/ }),
 
-/***/ 4002:
+/***/ 7972:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.zodToJsonSchema = void 0;
-const parseDef_js_1 = __nccwpck_require__(2585);
-const Refs_js_1 = __nccwpck_require__(1747);
+const parseDef_js_1 = __nccwpck_require__(7083);
+const Refs_js_1 = __nccwpck_require__(2333);
 const zodToJsonSchema = (schema, options) => {
     const refs = (0, Refs_js_1.getRefs)(options);
     const definitions = typeof options === "object" && options.definitions
@@ -57733,7 +63304,7 @@ exports.zodToJsonSchema = zodToJsonSchema;
 
 /***/ }),
 
-/***/ 6742:
+/***/ 392:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -57868,7 +63439,7 @@ exports.createParser = createParser;
 
 /***/ }),
 
-/***/ 588:
+/***/ 6457:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -57877,7 +63448,7 @@ exports.createParser = createParser;
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-var index = __nccwpck_require__(6742);
+var index = __nccwpck_require__(392);
 class EventSourceParserStream extends TransformStream {
   constructor() {
     let parser;
@@ -57901,7 +63472,7 @@ exports.EventSourceParserStream = EventSourceParserStream;
 
 /***/ }),
 
-/***/ 6458:
+/***/ 3084:
 /***/ ((module) => {
 
 let urlAlphabet =
@@ -57974,12 +63545,12 @@ var __webpack_exports__ = {};
 var exports = __webpack_exports__;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const github_1 = __nccwpck_require__(8253);
-const core_1 = __nccwpck_require__(3945);
-const utils_1 = __nccwpck_require__(3626);
-const translate_1 = __nccwpck_require__(405);
-const git_1 = __nccwpck_require__(4348);
-const extract_1 = __nccwpck_require__(7199);
+const github_1 = __nccwpck_require__(9225);
+const core_1 = __nccwpck_require__(8490);
+const utils_1 = __nccwpck_require__(3679);
+const translate_1 = __nccwpck_require__(3784);
+const git_1 = __nccwpck_require__(5452);
+const extract_1 = __nccwpck_require__(4519);
 async function main() {
     switch (github_1.context.eventName) {
         case 'issue_comment':

@@ -1,4 +1,4 @@
-# 🌎 Markdown Translation BOT
+# 🌎 Markdown 翻译机器人
 [![Maintainability](https://api.codeclimate.com/v1/badges/a13ea4f37913ba6ba570/maintainability)](https://codeclimate.com/github/3ru/gpt-translate/maintainability)
 [![GPT Translate](https://github.com/3ru/gpt-translate/actions/workflows/gpt-translate.yml/badge.svg)](https://github.com/3ru/gpt-translate/actions/workflows/gpt-translate.yml)
 
@@ -12,7 +12,6 @@
 [![Mistral](https://img.shields.io/badge/-Mistral%20AI-black?style=flat-square&color=ff7000)](https://mistral.ai/)
 [![Cohere](https://img.shields.io/badge/-Cohere-black?style=flat-square&color=39594c)](https://cohere.com/)
 
-
 [English](/README.md) |
 [简体中文](/README/README.zh-CN.md) |
 [繁體中文](/README/README.zh-TW.md) |
@@ -21,55 +20,53 @@
 [한국어](/README/README.ko.md) |
 [日本語](/README/README.ja.md)
 
-This GitHub action translates your markdown files into multiple languages using multiple AI models.
+这个 GitHub 动作使用多个 AI 模型将你的 markdown 文件翻译成多种语言。
 
-> [!TIP]
-> Now Available: **AI Models from Multiple Providers✨**  \
-> We've expanded beyond OpenAI to support various AI model providers.  \
-> For a comprehensive [list of supported providers](https://g-t.vercel.app/docs/references/supported-model-provider) and detailed information, please refer to our [release notes](https://github.com/3ru/gpt-translate/releases/tag/v1.2.0-beta).
+> [!Important]
+> 现已推出：**来自多个提供商的 AI 模型✨**  \
+> 我们已扩展支持多种 AI 模型提供商，不再局限于 OpenAI。  \
+> 有关支持的提供商的完整列表和详细信息，请参阅我们的[发布说明](https://github.com/3ru/gpt-translate/releases/tag/v1.2.0-beta)。
 
 <br/>
 
-<details><summary>🧐 Current Status</summary>
+<details><summary>🧐 当前状态</summary>
 <p>
 
-- The action supports translating **markdown(`.md`), markdown-jsx(`.mdx`), json(`.json`) files only**.
+- 该动作仅支持翻译 **markdown(`.md`)、markdown-jsx(`.mdx`)、json(`.json`) 文件**。
 
-- The command can be executed exclusively by individuals with **write permissions to the repository**.
+- 该命令只能由具有 **仓库写权限** 的个人执行。
 
-These limitations prevent API abuse by non-trusted parties.
+这些限制防止了非信任方滥用 API。
 
 </p>
 </details> 
 
-## 🔧 Setup
+## 🔧 设置
 
-### Repository Settings
+### 仓库设置
 
-#### 1. Settings > Actions > General
+#### 1. 设置 > Actions > 常规
 
-- Enable `Read and write permissions`
-- Enable `Allow GitHub Actions to create and approve pull requests`
+- 启用 `读写权限`
+- 启用 `允许 GitHub Actions 创建和批准拉取请求`
   ![permissions](https://user-images.githubusercontent.com/69892552/228692074-d8d009a8-9272-4023-97b1-3cbc637d5d84.jpg)
 
-#### 2. Settings > Secrets and variables > Actions
+#### 2. 设置 > Secrets 和变量 > Actions
 
-- Set [your API key](https://platform.openai.com/account/api-keys)(`OPENAI_API_KEY`) to secrets
+- 将 [你的 API 密钥](https://platform.openai.com/account/api-keys)(`OPENAI_API_KEY`) 设置为密钥
   ![secrets](https://user-images.githubusercontent.com/69892552/228692421-22d7db33-4e32-4f28-b166-45b4d3ce2b11.jpg)
 
+### GitHub Actions 工作流设置
 
-### GitHub Actions Workflow Settings
+#### 必需
+- 提供 OPENAI_API_KEY 作为 apiKey。
+- 设置 `on` 以在创建评论时触发（`types: [ created ]`）。
+- 预先签出（`actions/checkout@v3`）。
 
-#### Required
-- Provide the OPENAI_API_KEY as apiKey.
-- Set `on` to trigger when a comment is created (`types: [ created ]`).
-- Checkout in advance(`actions/checkout@v3`).
+#### 推荐（以最小化不必要的运行时间）
+- 配置仅在评论中包含 `/gpt-translate` 或 `/gt` 时运行。
 
-#### Recommended (To minimize unnecessary run time)
-- Configure if to run only when `/gpt-translate` or `/gt` is present in the comment.
-
-
-👇 Here is a minimal workflow example:
+👇 下面是一个最小的工作流示例：
 ```yaml
 # .github/workflows/gpt-translate.yml
 name: GPT Translate
@@ -85,7 +82,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Run GPT Translate
+      - name: 运行 GPT Translate
         if: |
           contains(github.event.comment.body, '/gpt-translate') || 
           contains(github.event.comment.body, '/gt')
@@ -94,50 +91,49 @@ jobs:
           apikey: ${{ secrets.OPENAI_API_KEY }}
 ```
 
-
-## 💡 Usage
+## 💡 使用方法
 
 ```
-/gpt-translate [input filepath] [output filepath] [target language] 
+/gpt-translate [输入文件路径] [输出文件路径] [目标语言] 
 ```
-You can use /gt as a shorthand for /gpt-translate.
+你可以使用 /gt 作为 /gpt-translate 的简写。
 
-1.Create a comment with `/gpt-translate` or `/gt` in an issue or pull request.
+1. 在问题或拉取请求中创建包含 `/gpt-translate` 或 `/gt` 的评论。
 
-2.【On issue】Translated files will be created as a **pull request**.
+2.【在问题中】翻译后的文件将作为 **拉取请求** 创建。
 
-2.【On pull request】Translated files will be **added to the pull request with new commit**.
+2.【在拉取请求中】翻译后的文件将 **以新提交的形式添加到拉取请求中**。
 
-In other words, if you keep commenting on an issue, new PRs will continuously be created.
-If you keep commenting on a PR, new commits will continuously be added to that PR.
+换句话说，如果你不断在问题中评论，将会不断创建新的 PR。
+如果你不断在 PR 中评论，将会不断向该 PR 添加新的提交。
 
-## 📝 Example
+## 📝 示例
 ```
 /gpt-translate README.md zh-TW/README.md traditional-chinese
 ```
-Translate `README.md` into traditional Chinese and place it under the `zh-TW` directory.
+将 `README.md` 翻译成繁体中文并放置在 `zh-TW` 目录下。
 
-### Multiple file support
+### 多文件支持
 
-You can translate multiple files at once by specifying a wildcard in the input file path.
+你可以通过在输入文件路径中指定通配符一次翻译多个文件。
 
-Here is a sample
+这是一个示例
 ```
 /gpt-translate *.md *.ja.md Japanese
 ```
-If `A.md` and `B.md` are in the root directory, the output will be `A.ja.md` and `B.ja.md`. The file names are inherited from the input files.
-I am considering outputting the file with an arbitrary file name, but if you have a smart idea, please suggest it through the issue!
+如果根目录中有 `A.md` 和 `B.md`，输出将是 `A.ja.md` 和 `B.ja.md`。文件名继承自输入文件。
+我正在考虑以任意文件名输出文件，但如果你有聪明的想法，请通过问题提出建议！
 
-For more information, please refer to the [website](https://g-t.vercel.app/docs/references/path-builder)
+有关更多信息，请参阅[网站](https://g-t.vercel.app/docs/references/path-builder)
 
-## 🌐 Supported Languages
-**Any language** interpreted by GPT-4 or GPT-3.5
+## 🌐 支持的语言
+**任何**由 GPT-4 或 GPT-3.5 解释的语言
 
-## 🏘️ Community
-- [Discussions](https://github.com/3ru/gpt-translate/discussions)
-  - If you have any questions, please feel free to ask in the GitHub Discussions :)
-- [Issues](https://github.com/3ru/gpt-translate/issues)
-  - Please submit bugs and new feature suggestions to GitHub Issues
+## 🏘️ 社区
+- [讨论](https://github.com/3ru/gpt-translate/discussions)
+  - 如果你有任何问题，请随时在 GitHub 讨论中提问 :)
+- [问题](https://github.com/3ru/gpt-translate/issues)
+  - 请将错误和新功能建议提交到 GitHub 问题
 
-## 📃 License
-MIT License
+## 📃 许可证
+MIT 许可证
