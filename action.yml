@@ -13,7 +13,7 @@ inputs:
     default: 'openai'
   model:
     description: 'The language model to use.'
-    required: false
+    required: true
     default: 'gpt-4o'
   prompt:
     description: 'The input prompt to generate the text from'
